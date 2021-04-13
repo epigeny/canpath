@@ -12,7 +12,7 @@
               Study</a></li>
           <li><a href="http://www.cartagene.qc.ca/${.lang}" target="_blank" class="text-muted text-decoration-none">CARTaGENE</a></li>
           <li><a href="http://atlanticpath.ca/" target="_blank" class="text-muted text-decoration-none">Atlantic PATH</a></li>
-          <li>&nbsp;</li>
+          <li><a href="https://www.cancercare.mb.ca/Research/manitoba-tomorrow-project" target="_blank" class="text-muted text-decoration-none">Manitoba Tomorrow Project</a></li>
         </ul>
         <div>
           <a href="https://canpath.ca/aoda-compliance/" target="_blank" class="text-dark text-decoration-none"><@message "aoda-compliance"/></a>

@@ -1,4 +1,37 @@
 <#macro samplesModel>
+    <h5 class="mt-5 mb-3">La collecte d'échantillons biologiques de CanPath</h5>
+    <p>
+      <table class="table table-striped" style="width:600px;">
+        <thead>
+          <tr>
+            <th scope="col">Nombre de participants qui ont fourni des échantillons biologiques</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sang veineux</td>
+            <td>145 760</td>
+          </tr>
+          <tr>
+            <td>Urine</td>
+            <td>99 500</td>
+          </tr>
+          <tr>
+            <td>Taches de sang</td>
+            <td>10 642</td>
+          </tr>
+          <tr>
+            <td>Salive</td>
+            <td>18 799</td>
+          </tr>
+          <tr>
+            <td>Matériel source d’ADN</td>
+            <td>159 266</td>
+          </tr>
+        </tbody>
+      </table>
+    </p>
     <h5 class="mt-5 mb-3">Aperçu des échantillons biologiques disponibles</h5>
     <p>Les dons d'échantillons biologiques ont été fournis peu après l'inscription ou lors de campagnes de collecte d'échantillons subséquentes. Les <a href="/page/samples-available">échantillons biologiques</a> disponibles comprennent le sérum, le plasma, l'ADN, les globules rouges, le sang entier cryoconservé et les échantillons d'urine. L'heure depuis le dernier repas a été consignée au moment du don de sang. Les échantillons d’urine sont collectés à différents moments dans la journée. Si un participant était dans l'impossibilité de fournir un échantillon sanguin pour des raisons médicales ou géographiques, il a été tenté, dans la mesure du possible, d'obtenir un échantillon de salive ou une goutte de sang.</p>
     <h5 class="mt-5 mb-3">Collecte des échantillons biologiques</h5>
