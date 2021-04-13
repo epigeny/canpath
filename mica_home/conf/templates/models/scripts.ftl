@@ -43,11 +43,6 @@
     }, {});
   }
 
-  if (!('NG_TRANSLATE_LANG_KEY' in cookieMap) || cookieMap['NG_TRANSLATE_LANG_KEY'] !== 'en') {
-    document.cookie = 'NG_TRANSLATE_LANG_KEY=en';
-    window.location.reload();
-  }
-
   let mlstrDataTablesDefaultOpts = {
     paging: true,
     pageLength: 50,
