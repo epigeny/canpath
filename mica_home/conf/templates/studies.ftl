@@ -84,22 +84,11 @@
 
             <div>
               <#if config.studyDatasetEnabled && config.harmonizationDatasetEnabled>
-              <div class="pb-2">
+              <div class="pb-2 d-none">
                 <div class="row">
-                  <div class="col">
-                    <div role="group" class="btn-group">
-                      <button onclick="window.location.href='${contextPath}/studies'" type="button" class="btn btn-info <#if !type??>active</#if>"><@message "all"/></button>
-                      <button onclick="window.location.href='${contextPath}/individual-studies'" type="button" class="btn btn-info <#if type?? && type == "Individual">active</#if>"><@message "individual"/></button>
-                      <button onclick="window.location.href='${contextPath}/harmonization-studies'" type="button" class="btn btn-info <#if type?? && type == "Harmonization">active</#if>"><@message "harmonization"/></button>
-                    </div>
-                  </div>
-
                   <div class="col">
                     <div class="d-inline-flex float-right">
                       <sorting @sort-update="onSortUpdate" :initial-choice="initialSort" :options-translations="sortOptionsTranslations"></sorting>
-                      <span class="ml-2 mr-1">
-                        <select class="custom-select" id="obiba-page-size-selector-top"></select>
-                      </span>
                       <nav id="obiba-pagination-top" aria-label="Top pagination" class="mt-0">
                         <ul class="pagination mb-0"></ul>
                       </nav>
@@ -173,9 +162,6 @@
               </div>
 
               <div class="d-inline-flex pt-0 ml-auto float-right">
-                <span>
-                    <select class="custom-select" id="obiba-page-size-selector-bottom"></select>
-                </span>
                 <nav id="obiba-pagination-bottom" aria-label="Bottom pagination" class="mt-0">
                   <ul class="pagination"></ul>
                 </nav>
@@ -225,12 +211,7 @@
   };
 
   const sortOptionsTranslations = {
-    'name': '<@message "global.name"/>',
-    'acronym': '<@message "acronym"/>',
-    'lastModifiedDate': '<@message "last-modified"/>',
-    <#if title == "individual-studies">
-    'numberOfParticipants-participant-number': '<@message "numberOfParticipants.label"/>'
-    </#if>
+    'sortWeight': '<@message "global.sort-weight"/>'
   };
 
   MlstrStudiesApp.build("#studies-app", "${title}", "en", sortOptionsTranslations);

@@ -21,13 +21,16 @@ class OBiBaPageSizeSelector {
 
   __createOptions() {
     const parent = document.querySelector(`select#${this.elementId}`);
-    parent.addEventListener('change', this.__onPageSizeChanged.bind(this));
 
-    this.pageSizes.forEach(pageSize => {
-      parent.insertAdjacentHTML('beforeend', `<option id="PAGE-SIZE-${pageSize}" value="${pageSize}">${pageSize}</option>`);
-    });
+    if (parent) {
+      parent.addEventListener('change', this.__onPageSizeChanged.bind(this));
 
-    parent.value = this.pageSize;
+      this.pageSizes.forEach(pageSize => {
+        parent.insertAdjacentHTML('beforeend', `<option id="PAGE-SIZE-${pageSize}" value="${pageSize}">${pageSize}</option>`);
+      });
+
+      parent.value = this.pageSize;
+    }
   }
 
   __onPageSizeChanged(event) {

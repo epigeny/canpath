@@ -735,7 +735,7 @@ class MlstrStudiesApp {
         return {
           locale,
           sortOptionsTranslations,
-          initialSort: type === 'harmonization-studies' ? '-lastModifiedDate' : 'name'
+          initialSort: 'sortWeight'
         };
       },
       components: {
