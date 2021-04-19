@@ -735,7 +735,7 @@ class MlstrStudiesApp {
         return {
           locale,
           sortOptionsTranslations,
-          initialSort: 'sortWeight'
+          initialSort: 'weight'
         };
       },
       components: {

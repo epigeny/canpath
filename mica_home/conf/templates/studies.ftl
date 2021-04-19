@@ -211,7 +211,7 @@
   };
 
   const sortOptionsTranslations = {
-    'sortWeight': '<@message "global.sort-weight"/>'
+    'weight': '<@message "global.sort-weight"/>'
   };
 
   MlstrStudiesApp.build("#studies-app", "${title}", "en", sortOptionsTranslations);
