@@ -226,11 +226,14 @@
 
   const mlstrStudyService = MlstrStudyService.newInstance();
 
-  mlstrStudyService.createDatasetsTable("${study.id}", "${.lang}");
+  let datasetsSortKey = 'weight';
   <#if type != "Harmonization">
+    datasetsSortKey = null;
     mlstrStudyService.createNetworksTable("${study.id}", "${.lang}");
     mlstrStudyService.ensurePopulationDceSelection();
   </#if>
+
+  mlstrStudyService.createDatasetsTable("${study.id}", "${.lang}", datasetsSortKey);
 
   <#if draft>
     let params = window.location.search;

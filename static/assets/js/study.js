@@ -23,8 +23,9 @@ class MlstrStudyService extends MlstrEntityService {
     this.__getResource(url, onsuccess, onfailure);
   }
 
-  __getDatasets(studyId, start, length, lang, onsuccess, onfailure) {
-    let url = `/ws/datasets/_rql?query=dataset(limit(${start},${length}),exists(Mica_dataset.id),sort(studyTable.studyId,studyTable.populationWeight,studyTable.dataCollectionEventWeight,acronym),fields((name.*,studyTable.studyId,studyTable.populationId,studyTable.dataCollectionEventId,studyTable.project,studyTable.table))),locale(${lang}),study(in(Mica_study.id,(${studyId})))`;
+  __getDatasets(studyId, start, length, lang, sortKey, onsuccess, onfailure) {
+    const sort = sortKey ? sortKey : 'studyTable.studyId,studyTable.populationWeight,studyTable.dataCollectionEventWeight,acronym';
+    let url = `/ws/datasets/_rql?query=dataset(limit(${start},${length}),exists(Mica_dataset.id),sort(${sort}),fields((name.*,studyTable.studyId,studyTable.populationId,studyTable.dataCollectionEventId,studyTable.project,studyTable.table))),locale(${lang}),study(in(Mica_study.id,(${studyId})))`;
     this.__getResource(url, onsuccess, onfailure);
   }
 
@@ -89,9 +90,9 @@ class MlstrStudyService extends MlstrEntityService {
     $(`#${studyId}-networks`).DataTable({...mlstrDataTablesDefaultOpts, ...tableOptions});
   }
 
-  createDatasetsTable(studyId, lang) {
+  createDatasetsTable(studyId, lang, sortKey) {
     const getDatasetsCallback = (data, callback) => {
-      this.__getDatasets(studyId, data.start, data.length, lang, (response) => {
+      this.__getDatasets(studyId, data.start, data.length, lang, sortKey, (response) => {
         $('#loading-datasets-summary').hide();
         if (response.datasetResultDto && response.datasetResultDto['obiba.mica.DatasetResultDto.result']) {
           const total = response.datasetResultDto.totalHits;
