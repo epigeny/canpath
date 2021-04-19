@@ -224,6 +224,57 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-12">
+              <#if type == "Harmonized">
+                <div class="card card-${harmoAnnotations.statusClass} card-outline">
+                  <div class="card-header">
+                    <h3 class="card-title"><@message "harmonization"/>
+                        <#if harmoAnnotations.hasStatus()>
+                          <span class=" badge badge-${harmoAnnotations.statusClass}">
+                      ${localize(harmoAnnotations.statusValueTitle, harmoAnnotations.statusValue!"-")}
+                    </span>
+                        </#if>
+                    </h3>
+                  </div>
+                  <div class="card-body">
+                      <#if !harmoAnnotations.hasStatusDetail() && !harmoAnnotations.hasAlgorithm() && !harmoAnnotations.hasComment()>
+                        <span class="text-muted"><@message "no-harmonization-description"/></span>
+                      <#else>
+                        <dl>
+                            <#if harmoAnnotations.hasStatusDetail()>
+                              <dt title="${localize(harmoAnnotations.statusDetailDescription)}">
+                                  ${localize(harmoAnnotations.statusDetailTitle, "Status detail")}
+                              </dt>
+                              <dd title="${localize(harmoAnnotations.statusDetailValueDescription)}">
+                                  ${localize(harmoAnnotations.statusDetailValueTitle, harmoAnnotations.statusDetailValue!"-")}
+                              </dd>
+                            </#if>
+
+                            <#if harmoAnnotations.hasAlgorithm()>
+                              <dt title="${localize(harmoAnnotations.algorithmDescription)}">
+                                  ${localize(harmoAnnotations.algorithmTitle, "Algorithm")}
+                              </dt>
+                              <dd class="py-2 bg-light">
+                                <span class="marked mt-3"><template>${localize(harmoAnnotations.algorithmValue!"")}</template></span>
+                              </dd>
+                            </#if>
+
+                            <#if harmoAnnotations.hasComment()>
+                              <dt title="${localize(harmoAnnotations.commentDescription)}">
+                                  ${localize(harmoAnnotations.commentTitle, "Comment")}
+                              </dt>
+                              <dd>
+                                <span class="marked"><template>${localize(harmoAnnotations.commentValue!"")}</template></span>
+                              </dd>
+                            </#if>
+                        </dl>
+                      </#if>
+                  </div>
+                </div>
+              </#if>
+          </div>
+        </div>
 
         <#if type == "Dataschema">
           <div class="row">
