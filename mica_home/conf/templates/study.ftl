@@ -188,8 +188,6 @@
 
         <@harmonizationStudyList study.id/>
 
-        <@networkList study.id/>
-
         <@datasetList study.id type/>
 
         <!-- Variables classifications -->

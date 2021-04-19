@@ -116,7 +116,8 @@
 
           <@harmonizationStudyList dataset.id/>
 
-          <div class="card card-info card-outline">
+          <#if !(dataset.model.hide_var)?? || !dataset.model.hide_var>
+            <div class="card card-info card-outline">
             <div class="card-header">
               <h3 class="card-title"><@message "harmonization"/></h3>
             </div>
@@ -138,6 +139,7 @@
               </div>
             </div>
           </div>
+          </#if>
 
           <!-- Variables classifications -->
           <#if datasetVariablesClassificationsTaxonomies?? && datasetVariablesClassificationsTaxonomies?size gt 0>

@@ -365,7 +365,7 @@ const DatasetStatItemComponent =  {
   },
   template: `
     <a v-if="count" href="javascript:void(0)" style="cursor: initial;" class="btn btn-sm col text-left">
-      <span class="h6 pb-0 mb-0 d-block">{{count | localize-number}}</span>
+      <span class="h6 pb-0 mb-0 d-block text-muted">{{count | localize-number}}</span>
       <span class="text-muted"><small>{{this.countLabel}}</small></span>
     </a>
   `,

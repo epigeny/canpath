@@ -89,9 +89,11 @@
                   <div class="col">
                     <div class="d-inline-flex float-right">
                       <sorting @sort-update="onSortUpdate" :initial-choice="initialSort" :options-translations="sortOptionsTranslations"></sorting>
+                      <#if showPaginationInListingPages>
                       <nav id="obiba-pagination-top" aria-label="Top pagination" class="mt-0">
                         <ul class="pagination mb-0"></ul>
                       </nav>
+                      </#if>
                     </div>
                   </div>
 
@@ -103,11 +105,7 @@
                 
                 <div class="row d-flex align-items-stretch">
                   <div class="col-md-12 col-lg-6 d-flex align-items-stretch" v-for="study in entities" v-bind:key="study.id">
-                    <div v-if="study.id === ''" class="card w-100">
-                      <div class="card-body pt-0 bg-light">
-                      </div>
-                    </div>
-                    <div v-else class="card w-100">
+                    <div v-if="study.id !== ''" class="card w-100">
                       <div class="card-body">
                         <div class="row h-100">
                           <div class="col-xs-12 col">
@@ -116,7 +114,7 @@
                                 <b>{{study.name | localize-string}}</b>
                               </a>
                             </h4>
-                            <span class="marked"><small :inner-html.prop="study.objectives | localize-string | ellipsis(300, ('${contextPath}/study/' + study.id)) | markdown"></small></span>
+                            <span class="marked"><span :inner-html.prop="study.objectives | localize-string | ellipsis(300, ('${contextPath}/study/' + study.id)) | markdown"></span></span>
                           </div>
                           <div class="col-3 mx-auto my-auto" v-if="study.logo">
                             <a v-bind:href="'${contextPath}/study/' + study.id" class="text-decoration-none text-info text-center">
@@ -129,11 +127,11 @@
                         <div class="row pt-1 row-cols-4">
                           <template v-if="hasStats(study)">
                             <a v-if="study.model && study.model.methods" href="javascript:void(0)" style="cursor: initial;" class="btn btn-sm col text-left">
-                              <span class="h6 pb-0 mb-0 d-block">{{study.model.methods.design | translate}}</span>
+                              <span class="h6 pb-0 mb-0 d-block text-muted">{{study.model.methods.design | translate}}</span>
                               <span class="text-muted"><small>Study Design</small></span>
                             </a>
                             <a v-if="study.model && study.model.numberOfParticipants" href="javascript:void(0)" style="cursor: initial;" class="btn btn-sm col text-left">
-                              <span class="h6 pb-0 mb-0 d-block">{{study.model.numberOfParticipants.participant.number | localize-number}}</span>
+                              <span class="h6 pb-0 mb-0 d-block text-muted">{{study.model.numberOfParticipants.participant.number | localize-number}}</span>
                               <span class="text-muted"><small>Number of Participants</small></span>
                             </a>
                             <dataset-stat-item
@@ -161,11 +159,13 @@
 
               </div>
 
-              <div class="d-inline-flex pt-0 ml-auto float-right">
-                <nav id="obiba-pagination-bottom" aria-label="Bottom pagination" class="mt-0">
-                  <ul class="pagination"></ul>
-                </nav>
-              </div>
+              <#if showPaginationInListingPages>
+                <div class="d-inline-flex pt-0 ml-auto float-right">
+                  <nav id="obiba-pagination-bottom" aria-label="Bottom pagination" class="mt-0">
+                    <ul class="pagination"></ul>
+                  </nav>
+                </div>
+              </#if>
 
             </div>
           </div>

@@ -13,7 +13,7 @@
 
           </a>
             <#if member.person.institution?? && member.person.institution.name??>
-              <span class="text-muted small">(${localize(member.person.institution.name)})</span>
+              <span class="text-muted">(${localize(member.person.institution.name)})</span>
             </#if>
 
           <@memberDialog id="${role}-${i}" member=member/>
@@ -57,7 +57,7 @@
           </a>
           <#if member.person.institution?? && member.person.institution.name??>
             <br/>
-            <span class="text-muted"><small>${localize(member.person.institution.name)}</small></span>
+            <span class="text-muted">${localize(member.person.institution.name)}</span>
           </#if>
             <@memberDialog id="${role}-${i}" member=member/>
         </li>

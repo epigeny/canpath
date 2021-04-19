@@ -19,6 +19,8 @@
 <!-- To reinstate the cart as views in Opal -->
 <#assign showCartViewDownload = (isAdministrator || isReviewer || isEditor || isDAO)/>
 
+<#assign showPaginationInListingPages = false />
+
 <!-- Repository list pages -->
 <#assign listDisplays = ["lines"]/>
 <#assign listDefaultDisplay = "lines"/>

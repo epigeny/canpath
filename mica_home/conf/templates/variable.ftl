@@ -98,7 +98,7 @@
     <#if opalTable?? && opalTable.name??>
       <#assign title = (variable.name + " [" + localize(opalTable.name) + "]")/>
     </#if>
-    <@header titlePrefix=(type?lower_case + "-variable") title=title subtitle=""/>
+    <@header titlePrefix=(type?lower_case + "-variable") title="variable" subtitle=""/>
     <!-- /.content-header -->
 
     <!-- Main content -->
