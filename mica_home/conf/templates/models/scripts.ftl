@@ -206,7 +206,7 @@
     "na": "<@message "harmonization-status-na"/>"
   };
 
-  const Mica = {
+  const DefaultMica = {
     locale: "${.lang}",
     tr: MlstrTranslations
   };

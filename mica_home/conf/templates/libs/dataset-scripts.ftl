@@ -10,6 +10,8 @@
 <script src="${assetsPath}/js/mica-repo.js"></script>
 
 <script>
+  const Mica = {...DefaultMica};
+
   // cart
   <#if cartEnabled>
   const onVariablesCartAdd = function(id) {

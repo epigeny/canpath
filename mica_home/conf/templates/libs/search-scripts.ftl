@@ -3,6 +3,7 @@
 
 <!-- MicaConfig in JSON Format -->
 <script>
+  const Mica = {...DefaultMica};
   Mica.config = ${configJson!"{}"};
   Mica.defaultLocale = "${defaultLang}";
 
