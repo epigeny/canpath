@@ -214,7 +214,7 @@
     'weight': '<@message "global.sort-weight"/>'
   };
 
-  MlstrStudiesApp.build("#studies-app", "${title}", "en", sortOptionsTranslations);
+  MlstrStudiesApp.build("#studies-app", "${title}", "${.lang}", sortOptionsTranslations);
 </script>
 </body>
 </html>

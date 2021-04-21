@@ -5,7 +5,7 @@
 <script>
   const Mica = {
     config: ${configJson!"{}"},
-    locale: "en",
+    locale: "${.lang}",
     defaultLocale: "${defaultLang}"
   };
 
