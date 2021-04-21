@@ -25,7 +25,7 @@ class MlstrStudyService extends MlstrEntityService {
 
   __getDatasets(studyId, start, length, lang, sortKey, onsuccess, onfailure) {
     const sort = sortKey ? sortKey : 'studyTable.studyId,studyTable.populationWeight,studyTable.dataCollectionEventWeight,acronym';
-    let url = `/ws/datasets/_rql?query=dataset(limit(${start},${length}),exists(Mica_dataset.id),sort(${sort}),fields((name.*,studyTable.studyId,studyTable.populationId,studyTable.dataCollectionEventId,studyTable.project,studyTable.table))),locale(${lang}),study(in(Mica_study.id,(${studyId})))`;
+    let url = `/ws/datasets/_rql?query=dataset(limit(${start},${length}),exists(Mica_dataset.id),sort(${sort}),fields((name.*,studyTable.studyId,studyTable.populationId,studyTable.dataCollectionEventId,studyTable.project,studyTable.table,model.hide_var))),locale(${lang}),study(in(Mica_study.id,(${studyId})))`;
     this.__getResource(url, onsuccess, onfailure);
   }
 
@@ -101,6 +101,8 @@ class MlstrStudyService extends MlstrEntityService {
             $(`#${studyId}-datasets-card`).removeClass('d-none');
             let rows = [];
             datasets.forEach(dataset => {
+              const content = JSON.parse(dataset.content);
+              let hideVariableCounts = content && 'hide_var' in content && content.hide_var;
               const datasetType = `${dataset.variableType.toLowerCase()}-dataset`;
 
               const dceName = 'collected-dataset' === datasetType
@@ -110,7 +112,9 @@ class MlstrStudyService extends MlstrEntityService {
               let row = [];
               const url = MicaService.normalizeUrl(`/dataset/${dataset.id}`);
               const searchUrl = MicaService.normalizeUrl(`/search#lists?type=variables&query=dataset(in(Mica_dataset.id,${dataset.id}))`);
-              const variables = dataset['obiba.mica.CountStatsDto.datasetCountStats'] ? dataset['obiba.mica.CountStatsDto.datasetCountStats'].variables : '';
+              const variables = hideVariableCounts
+                  ? '-'
+                  : dataset['obiba.mica.CountStatsDto.datasetCountStats'] ? dataset['obiba.mica.CountStatsDto.datasetCountStats'].variables : '-';
 
               row.push(`<a href="${url}">${LocalizedValues.forLang(dataset.name, lang)}</a>`);
               row.push(Mica.tr[datasetType] || datasetType);
@@ -120,7 +124,7 @@ class MlstrStudyService extends MlstrEntityService {
                 row.push(`<a href="#" data-toggle="modal" data-target="#modal-${dceId}">${dceName}</a>`);
               }
 
-              row.push(`<a href=${searchUrl}>${variables}</a>`);
+              row.push(variables === '-' ? `${variables}` : `<a href=${searchUrl}>${variables}</a>`);
               rows.push(row);
             });
             callback({
