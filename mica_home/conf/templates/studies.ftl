@@ -128,11 +128,11 @@
                           <template v-if="hasStats(study)">
                             <a v-if="study.model && study.model.methods" href="javascript:void(0)" style="cursor: initial;" class="btn btn-sm col text-left">
                               <span class="h6 pb-0 mb-0 d-block text-muted">{{study.model.methods.design | translate}}</span>
-                              <span class="text-muted"><small>Study Design</small></span>
+                              <span class="text-muted"><small><@message "study.design"/></small></span>
                             </a>
                             <a v-if="study.model && study.model.numberOfParticipants" href="javascript:void(0)" style="cursor: initial;" class="btn btn-sm col text-left">
                               <span class="h6 pb-0 mb-0 d-block text-muted">{{study.model.numberOfParticipants.participant.number | localize-number}}</span>
-                              <span class="text-muted"><small>Number of Participants</small></span>
+                              <span class="text-muted"><small><@message "numberOfParticipants.label"/></small></span>
                             </a>
                             <dataset-stat-item
                                     v-bind:type="study.studyResourcePath"
@@ -206,10 +206,6 @@
 <script src="${assetsPath}/js/entities.js"></script>
 
 <script>
-  const Mica = {
-    tr: MlstrTranslations
-  };
-
   const sortOptionsTranslations = {
     'weight': '<@message "global.sort-weight"/>'
   };

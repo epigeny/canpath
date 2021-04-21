@@ -155,7 +155,7 @@ class StringLocalizer {
 
   static localize(entries) {
     if (entries) {
-      const result = StringLocalizer.__localizeInternal(entries, "${.lang}")
+      const result = StringLocalizer.__localizeInternal(entries, Mica.locale)
         || StringLocalizer.__localizeInternal(entries, "en")
         || StringLocalizer.__localizeInternal(entries, 'und');
 
