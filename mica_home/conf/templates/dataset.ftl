@@ -88,12 +88,14 @@
                       <dd class="col-sm-8">
                           <@message title/>
                       </dd>
-                      <dt class="col-sm-4">
-                          <@message "client.label.dataset.number-of-variables"/>
-                      </dt>
-                      <dd class="col-sm-8">
-                        <span id="dataset-${dataset.id}-variables-count"></span>
-                      </dd>
+                      <#if !(dataset.model.hide_var)?? || !dataset.model.hide_var>
+                        <dt class="col-sm-4">
+                            <@message "client.label.dataset.number-of-variables"/>
+                        </dt>
+                        <dd class="col-sm-8">
+                          <span id="dataset-${dataset.id}-variables-count"></span>
+                        </dd>
+                      </#if>
                     </dl>
                   </div>
                 </div>
