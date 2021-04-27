@@ -321,6 +321,8 @@
 
 <#include "libs/scripts.ftl">
 <#include "libs/variable-scripts.ftl">
-
+<script>
+  Mica.dataTableOpts.order =  [[0, "asc"]];
+</script>
 </body>
 </html>
