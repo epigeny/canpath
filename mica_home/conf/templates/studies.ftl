@@ -206,6 +206,8 @@
 <script src="${assetsPath}/js/entities.js"></script>
 
 <script>
+  const Mica = {...DefaultMica};
+
   const sortOptionsTranslations = {
     'weight': '<@message "global.sort-weight"/>'
   };

@@ -54,4 +54,7 @@
 <!-- Harmonization Dataset -->
 <#assign harmonizationDatasetStudyTableShowVariables = false/>
 
+<!-- Data Access pages -->
+<#assign dataAccessInstructionsEnabled = false/>
+
 <#assign studyDesignColors = ["#4c722a","#73a432","#ffe637","#fcb814","#d9461d","#940c12"]/>
