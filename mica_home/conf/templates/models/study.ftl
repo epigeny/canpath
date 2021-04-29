@@ -240,24 +240,22 @@
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-      <dl class="row">
-        <dt class="col" title="<@message "study_taxonomy.vocabulary.methods-recruitments.description"/>">
-          <@message "study.access.for"/>
-        </dt>
-        <dd class="col">
-          <ul class="pl-3">
+      <p><@message "study.access.for"/></p>
+          <dl class="row striped">
             <#list study.model.access as type>
-              <li>
+              <dt class="col-4">
                 <#assign text = "study_taxonomy.vocabulary.access.term." + type + ".title"/>
                 <@message text/>
+              </dt>
+              <dd class="col-8">
                 <#if type == "other" && study.model.otherAccess??>
-                  : ${localize(study.model.otherAccess)}
+                  ${localize(study.model.otherAccess)}
+                <#else>
+                  <i class="fas fa-check"></i>
                 </#if>
-              </li>
+              </dd>
             </#list>
-          </ul>
-        </dd>
-      </dl>
+          </dl>
     </div>
   </div>
 </#macro>
