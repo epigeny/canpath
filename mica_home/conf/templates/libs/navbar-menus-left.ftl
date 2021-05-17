@@ -1,6 +1,6 @@
-<#macro leftmenus>
+<#macro leftmenus hideBarsIcon=false>
   <li id="homeMenu" class="nav-item <#if rc.requestUri == "/">active</#if>">
-    <a href="${contextPath}/" class="nav-link pl-0"><@message "home"/></a>
+    <a href="${contextPath}/" class="nav-link <#if !hideBarsIcon>pl-0</#if>"><@message "home"/></a>
   </li>
   <li id="cohortMenu" class="nav-item <#if rc.requestUri?ends_with("/individual-studies")>active</#if>">
     <a href="${contextPath}/individual-studies" class="nav-link"><@message "cohort"/></a>

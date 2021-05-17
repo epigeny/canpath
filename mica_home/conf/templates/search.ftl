@@ -13,6 +13,7 @@
 <div class="wrapper" id="search-application" v-cloak>
 
   <!-- Navbar -->
+  <#assign hideBarsIcon=true>
   <#include "libs/aside-navbar.ftl">
   <!-- /.navbar -->
 
