@@ -37,7 +37,7 @@
             into their CanPath Portal User account, and creating a <strong><@message "new-data-access-request"/></strong>.
           </p>
           <p class="mb-3">
-            <a href="${contextPath}/data-accesses" class="btn btn-outline-warning"><@message "data-access"/> <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="${contextPath}/data-accesses" class="btn btn-outline-primary"><@message "data-access"/> <i class="fas fa-arrow-circle-right"></i></a>
           </p>
         </div>
         <div class="col-md-4">
@@ -47,7 +47,7 @@
             logging into their CanPath Portal User account, and checking <strong><@message "my-data-access-requests"/></strong>.
           </p>
           <p>
-            <a href="${contextPath}/data-accesses" class="btn btn-outline-warning"><@message "data-access"/> <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="${contextPath}/data-accesses" class="btn btn-outline-primary"><@message "data-access"/> <i class="fas fa-arrow-circle-right"></i></a>
           </p>
         </div>
       </div>

@@ -40,7 +40,7 @@
             à leur compte d'utilisateur de CanPath et en créant une <strong><@message "new-data-access-request"/></strong>.
           </p>
           <p class="mb-3">
-            <a href="${contextPath}/data-accesses" class="btn btn-outline-warning"><@message "data-access"/> <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="${contextPath}/data-accesses" class="btn btn-outline-primary"><@message "data-access"/> <i class="fas fa-arrow-circle-right"></i></a>
           </p>
         </div>
         <div class="col-md-4">
@@ -50,7 +50,7 @@
             connectant à leur compte d'utilisateur du portail de CanPath et en consultant <strong><@message "my-data-access-requests"/></strong>.
           </p>
           <p>
-            <a href="${contextPath}/data-accesses" class="btn btn-outline-warning"><@message "data-access"/> <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="${contextPath}/data-accesses" class="btn btn-outline-primary"><@message "data-access"/> <i class="fas fa-arrow-circle-right"></i></a>
           </p>
         </div>
       </div>
