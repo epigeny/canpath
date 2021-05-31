@@ -32,7 +32,7 @@
             impliquées avant d'envoyer une demande.
           </p>
           <p>
-            <a href="${contextPath}/contact" class="btn btn-outline-info"><@message "contact-menu"/> <i class="fas fa-info-circle"></i></a>
+            <a href="${contextPath}/contact" class="btn btn-outline-primary"><@message "contact-menu"/> <i class="fas fa-info-circle"></i></a>
           </p>
           <p>
             Lorsque les chercheurs sont prêts à remplir et à envoyer une demande d'accès, ils doivent remplir et soumettre un

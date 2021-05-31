@@ -29,7 +29,7 @@
             before submitting an application.
           </p>
           <p>
-            <a href="${contextPath}/contact" class="btn btn-outline-info"><@message "contact-menu"/> <i class="fas fa-info-circle"></i></a>
+            <a href="${contextPath}/contact" class="btn btn-outline-primary"><@message "contact-menu"/> <i class="fas fa-info-circle"></i></a>
           </p>
           <p>
             When researchers are ready to submit an access request, they must complete and submit an
