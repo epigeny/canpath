@@ -8,11 +8,11 @@
           <li><a href="http://www.bcgenerationsproject.ca/" target="_blank" class="text-muted text-decoration-none">BC Generations
               Project</a></li>
           <li><a href="http://myatp.ca" target="_blank" class="text-muted text-decoration-none">Alberta's Tomorrow Project</a></li>
+          <li><a href="https://www.cancercare.mb.ca/Research/manitoba-tomorrow-project" target="_blank" class="text-muted text-decoration-none">Manitoba Tomorrow Project</a></li>
           <li><a href="https://www.ontariohealthstudy.ca/" target="_blank" class="text-muted text-decoration-none">Ontario Health
               Study</a></li>
           <li><a href="http://www.cartagene.qc.ca/${.lang}" target="_blank" class="text-muted text-decoration-none">CARTaGENE</a></li>
           <li><a href="http://atlanticpath.ca/" target="_blank" class="text-muted text-decoration-none">Atlantic PATH</a></li>
-          <li><a href="https://www.cancercare.mb.ca/Research/manitoba-tomorrow-project" target="_blank" class="text-muted text-decoration-none">Manitoba Tomorrow Project</a></li>
         </ul>
         <div>
           <a href="https://canpath.ca/aoda-compliance/" target="_blank" class="text-dark text-decoration-none"><@message "aoda-compliance"/></a>
@@ -50,10 +50,10 @@
     <div class="container">
       <div class="row pt-3">
         <div class="col-sm-6">
-          <h2 class="mt-5"><@message "host-info"/></h2>
+          <h4 class="mt-5"><@message "host-info"/></h4>
         </div>
         <div class="col-sm-6"><img alt="" src="/assets/images/dlsph-logo.svg"
-                       style="width: 100%; height: 147px;">
+                       style="width: 100%; height: 120px;">
         </div>
       </div>
       <div class="row">
