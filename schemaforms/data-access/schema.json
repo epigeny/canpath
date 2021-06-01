@@ -25,14 +25,6 @@
         "202": "t(data-access-request.default.email-validation-message)"
       }
     },
-    "emailAlt": {
-      "title": "t(data-access-request.default.email-alt)",
-      "type": "string",
-      "pattern": "^\\S+@\\S+$",
-      "validationMessage": {
-        "202": "t(data-access-request.default.email-validation-message)"
-      }
-    },
     "mailingAddress": {
       "title": "t(data-access-request.default.address)",
       "type": "string"
@@ -40,6 +32,9 @@
     "phone": {
       "title": "t(data-access-request.default.phone)",
       "type": "string"
+    },
+    "earlyCareerResearcher": {
+      "type": "boolean"
     },
     "repName": {
       "title": "t(data-access-request.default.name)",
@@ -86,6 +81,9 @@
       "type": "string",
       "format": "datepicker"
     },
+    "accessDataOnly": {
+      "type": "boolean"
+    },
     "hasNoStaff": {
       "title": "t(data-access-request.default.I.D.check)",
       "type": "boolean"
@@ -124,96 +122,33 @@
             "title": "t(data-access-request.custom.principal-institution)",
             "type": "string",
             "required": true
+          },
+          "accessIndividualLevel": {
+            "title": "t(data-access-request.staff.access-individual-level)",
+            "type": "boolean"
+          },
+          "accessBiosamples": {
+            "title": "t(data-access-request.staff.access-biosamples)",
+            "type": "boolean"
           }
         }
       }
     },
-    "hasInvestigatorOtherInstitution": {
-      "title": "t(data-access-request.custom.co-investigator-other)",
-      "type": "boolean"
+    "hasMembersAnotherInst": {
+      "type": "boolean",
+      "title": "t(data-access-request.members.has-member)"
     },
-    "otherInstitution": {
-      "title": "t(data-access-request.custom.other-institution.title)",
+    "membersAnotherInst": {
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "object",
         "properties": {
-          "invName": {
-            "title": "t(data-access-request.default.name)",
+          "member": {
+            "title": "t(data-access-request.default.member-name)",
             "type": "string",
             "required": true
           },
-          "invPosition": {
-            "title": "t(data-access-request.default.position)",
-            "type": "string",
-            "required": true
-          },
-          "invInstitution": {
-            "title": "t(data-access-request.custom.principal-institution)",
-            "type": "string",
-            "required": true
-          },
-          "invRole": {
-            "title": "t(data-access-request.custom.research-project-role)",
-            "type": "string",
-            "required": true
-          },
-          "invEmail": {
-            "title": "t(data-access-request.default.email)",
-            "type": "string",
-            "pattern": "^\\S+@\\S+$",
-            "required": true,
-            "validationMessage": {
-              "202": "t(data-access-request.default.email-validation-message)"
-            }
-          },
-          "repName": {
-            "title": "t(data-access-request.default.name)",
-            "type": "string",
-            "required": true
-          },
-          "repPosition": {
-            "title": "t(data-access-request.default.position)",
-            "type": "string",
-            "required": true
-          },
-          "repInstitution": {
-            "title": "t(data-access-request.default.institution)",
-            "type": "string",
-            "required": true
-          },
-          "repEmail": {
-            "title": "t(data-access-request.default.email)",
-            "type": "string",
-            "pattern": "^\\S+@\\S+$",
-            "required": true,
-            "validationMessage": {
-              "202": "t(data-access-request.default.email-validation-message)"
-            }
-          },
-          "repPhone": {
-            "title": "t(data-access-request.default.phone)",
-            "type": "string",
-            "required": true
-          },
-          "repAddress": {
-            "title": "t(data-access-request.default.address)",
-            "type": "string",
-            "required": true
-          }
-        }
-      }
-    },
-    "hasResearchStaffOtherInstitution": {
-      "title": "t(data-access-request.custom.research-staff-other)",
-      "type": "boolean"
-    },
-    "otherStaff": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
           "name": {
             "title": "t(data-access-request.default.name)",
             "type": "string",
@@ -221,16 +156,6 @@
           },
           "position": {
             "title": "t(data-access-request.default.position)",
-            "type": "string",
-            "required": true
-          },
-          "institution": {
-            "title": "t(data-access-request.custom.principal-institution)",
-            "type": "string",
-            "required": true
-          },
-          "role": {
-            "title": "t(data-access-request.custom.research-project-role)",
             "type": "string",
             "required": true
           },
@@ -242,12 +167,23 @@
             "validationMessage": {
               "202": "t(data-access-request.default.email-validation-message)"
             }
+          },
+          "phone": {
+            "title": "t(data-access-request.default.phone)",
+            "type": "string"
+          },
+          "address": {
+            "title": "t(data-access-request.default.address)",
+            "type": "string"
           }
         }
       }
     },
     "hasServiceProvider": {
       "title": "t(data-access-request.custom.has-service-provider)",
+      "type": "boolean"
+    },
+    "requestThesisPostDoc": {
       "type": "boolean"
     },
     "serviceProvider": {
@@ -302,8 +238,8 @@
       "default": false,
       "name": "geneticAssStudy"
     },
-    "genomeWideAssStudy": {
-      "title": "t(data-access-request.custom.genomeWideAssStudy)",
+    "geneByEnvStudy": {
+      "title": "t(data-access-request.custom.geneByEnvStudy)",
       "type": "boolean",
       "default": false,
       "name": "genomeWideAssStudy"
@@ -313,18 +249,6 @@
       "type": "boolean",
       "default": false,
       "name": "envAssStudy"
-    },
-    "geneInteractionStudy": {
-      "title": "t(data-access-request.custom.geneInteractionStudy)",
-      "type": "boolean",
-      "default": false,
-      "name": "geneInteractionStudy"
-    },
-    "genotypeCompStudy": {
-      "title": "t(data-access-request.custom.genotypeCompStudy)",
-      "type": "boolean",
-      "default": false,
-      "name": "genotypeCompStudy"
     },
     "caseControlStudy": {
       "title": "t(data-access-request.custom.caseControlStudy)",
@@ -344,6 +268,12 @@
       "default": false,
       "name": "surveillanceStudy"
     },
+    "dataLinkage": {
+      "title": "t(data-access-request.custom.dataLinkage)",
+      "type": "boolean",
+      "default": false,
+      "name": "dataLinkage"
+    },
     "biomarker": {
       "title": "t(data-access-request.custom.biomarker)",
       "type": "boolean",
@@ -356,41 +286,11 @@
       "default": false,
       "name": "riskScore"
     },
-    "gisStudy": {
-      "title": "t(data-access-request.custom.gisStudy)",
-      "type": "boolean",
-      "default": false,
-      "name": "gisStudy"
-    },
-    "fundamentalStudy": {
-      "title": "t(data-access-request.custom.fundamentalStudy)",
-      "type": "boolean",
-      "default": false,
-      "name": "fundamentalStudy"
-    },
     "dataPoolingStudy": {
       "title": "t(data-access-request.custom.dataPoolingStudy)",
       "type": "boolean",
       "default": false,
       "name": "dataPoolingStudy"
-    },
-    "prospectiveStudy": {
-      "title": "t(data-access-request.custom.prospectiveStudy)",
-      "type": "boolean",
-      "defaulte": false,
-      "name": "prospectiveStudy"
-    },
-    "genealogicalStudy": {
-      "title": "t(data-access-request.custom.genealogicalStudy)",
-      "type": "boolean",
-      "default": false,
-      "name": "genealogicalStudy"
-    },
-    "multiStudy": {
-      "title": "t(data-access-request.custom.multiStudy)",
-      "type": "boolean",
-      "default": false,
-      "name": "multiStudy"
     },
     "otherResearch": {
       "title": "t(data-access-request.custom.otherResearch)",
@@ -399,9 +299,6 @@
       "name": "otherResearch"
     },
     "otherResearchSpecify": {
-      "type": "string"
-    },
-    "keywords": {
       "type": "string"
     },
     "hasNoStudents": {
@@ -427,6 +324,10 @@
       "title": "t(data-access-request.custom.stratification)",
       "type": "string"
     },
+    "additionalParams": {
+      "title": "t(data-access-request.custom.additionalParams)",
+      "type": "string"
+    },
     "matchingCriteria": {
       "title": "t(data-access-request.custom.matching-criteria)",
       "type": "string"
@@ -435,8 +336,10 @@
       "title": "t(data-access-request.custom.case-control-ratio)",
       "type": "string"
     },
+    "designMethodology": {
+      "type": "string"
+    },
     "summary": {
-      "title": "Financial Support Granted",
       "type": "string"
     },
     "funding": {
@@ -468,23 +371,25 @@
     "evaluation": {
       "type": "boolean"
     },
+    "noCostExtension": {
+      "type": "boolean"
+    },
     "peerReviewProcess": {
       "type": "string"
     },
-    "peerReviewPlan": {
+    "ethicsApproval": {
       "type": "boolean"
     },
-    "peerReviewDate": {
-      "type": "string",
-      "format": "datepicker"
-    },
-    "ethicsApproval": {
-      "title": "t(data-access-request.custom.ethics-approval)",
-      "type": "boolean",
-      "default": false
+    "ethicsNotApprovedReason": {
+      "title": "t(data-access-request.ethics-approval.not-approved-reason)",
+      "type": "string"
     },
     "noBiologicalSample": {
       "title": "t(data-access-request.custom.no-biological-sample-needed)",
+      "type": "boolean"
+    },
+    "labAnalysisNoBiologicalSample": {
+      "title": "t(data-access-request.lab-analysis.no-biological-sample-needed)",
       "type": "boolean"
     },
     "rdRebResearchProtocol": {
@@ -507,9 +412,33 @@
       "format": "obibaFiles",
       "title": "t(data-access-request.default.documents.peer-review)"
     },
+    "rdFundingProof": {
+      "type": "object",
+      "format": "obibaFiles",
+      "title": "t(data-access-request.default.documents.funding-proof)"
+    },
+    "paName": {
+      "title": "t(data-access-request.default.name)",
+      "type": "string"
+    },
+    "paPosition": {
+      "title": "t(data-access-request.default.position)",
+      "type": "string"
+    },
+    "ailrName": {
+      "title": "t(data-access-request.default.name)",
+      "type": "string"
+    },
+    "ailrPosition": {
+      "title": "t(data-access-request.default.position)",
+      "type": "string"
+    },
     "isFormCompleted": {
       "title": "t(data-access-request.default.signature.check)",
       "type": "boolean"
+    },
+    "knowCanPathFrom": {
+      "type": "string"
     },
     "sst": {
       "type": "boolean",
@@ -540,6 +469,10 @@
       "type": "string",
       "title": "t(data-access-request.custom.total-volume-requested)"
     },
+    "sstPreferredDeliveryYear": {
+      "type": "integer",
+      "title": "t(data-access-request.custom.preferred-delivery-year)"
+    },
     "edtaPlasma": {
       "type": "boolean",
       "default": false,
@@ -569,6 +502,10 @@
       "type": "string",
       "title": "t(data-access-request.custom.total-volume-requested)"
     },
+    "edtaPlasmaPreferredDeliveryYear": {
+      "type": "integer",
+      "title": "t(data-access-request.custom.preferred-delivery-year)"
+    },
     "edtaRbc": {
       "type": "boolean",
       "default": false,
@@ -591,12 +528,16 @@
       "title": "t(data-access-request.custom.total-required-assay-volume)"
     },
     "edtaRbcDeadVolume": {
-      "type": "sting",
+      "type": "string",
       "title": "t(data-access-request.custom.total-required-dead-volume)"
     },
     "edtaRbcTotalVolume": {
       "type": "string",
       "title": "t(data-access-request.custom.total-volume-requested)"
+    },
+    "edtaRbcPreferredDeliveryYear": {
+      "type": "integer",
+      "title": "t(data-access-request.custom.preferred-delivery-year)"
     },
     "urine": {
       "type": "boolean",
@@ -627,63 +568,9 @@
       "type": "string",
       "title": "t(data-access-request.custom.total-volume-requested)"
     },
-    "acd": {
-      "type": "boolean",
-      "default": false,
-      "title": "t(data-access-request.custom.acd)"
-    },
-    "acdNbParticipants": {
-      "type": "string",
-      "title": "t(data-access-request.custom.nb-participants)"
-    },
-    "acdNbAssays": {
-      "type": "string",
-      "title": "t(data-access-request.custom.total-nb-assays-planned)"
-    },
-    "acdBiomarkers": {
-      "type": "string",
-      "title": "t(data-access-request.custom.nb-biomarker-measurements)"
-    },
-    "acdAssayVolume": {
-      "type": "string",
-      "title": "t(data-access-request.custom.total-required-assay-volume)"
-    },
-    "acdDeadVolume": {
-      "type": "string",
-      "title": "t(data-access-request.custom.total-required-dead-volume)"
-    },
-    "acdTotalVolume": {
-      "type": "string",
-      "title": "t(data-access-request.custom.total-volume-requested)"
-    },
-    "pstPlasma": {
-      "type": "boolean",
-      "default": false,
-      "title": "t(data-access-request.custom.pst-plasma)"
-    },
-    "pstPlasmaNbParticipants": {
-      "type": "string",
-      "title": "t(data-access-request.custom.nb-participants)"
-    },
-    "pstPlasmaNbAssays": {
-      "type": "string",
-      "title": "t(data-access-request.custom.total-nb-assays-planned)"
-    },
-    "pstPlasmaBiomarkers": {
-      "type": "string",
-      "title": "t(data-access-request.custom.nb-biomarker-measurements)"
-    },
-    "pstPlasmaAssayVolume": {
-      "type": "string",
-      "title": "t(data-access-request.custom.total-required-assay-volume)"
-    },
-    "pstPlasmaDeadVolume": {
-      "type": "string",
-      "title": "t(data-access-request.custom.total-required-dead-volume)"
-    },
-    "pstPlasmaTotalVolume": {
-      "type": "string",
-      "title": "t(data-access-request.custom.total-volume-requested)"
+    "urinePreferredDeliveryYear": {
+      "type": "integer",
+      "title": "t(data-access-request.custom.preferred-delivery-year)"
     },
     "dna": {
       "type": "boolean",
@@ -714,6 +601,23 @@
       "type": "string",
       "title": "t(data-access-request.custom.total-volume-requested)"
     },
+    "dnaPreferredDeliveryYear": {
+      "type": "integer",
+      "title": "t(data-access-request.custom.preferred-delivery-year)"
+    },
+    "freezeThawAffect": {
+      "type": "string",
+      "title": "t(data-access-request.biosamples.freeze-thaw-affect)",
+      "enum": [
+        "no",
+        "unknown",
+        "yes"
+      ]
+    },
+    "nbFreezeThawEvents": {
+      "type": "integer",
+      "title": "t(data-access-request.biosamples.nb-freeze-thaw-events)"
+    },
     "hasBiosampleRestrictions": {
       "type": "boolean",
       "default": false,
@@ -733,9 +637,15 @@
       "type": "string",
       "title": "t(data-access-request.custom.status-request)"
     },
+    "nbSampleRequested": {
+      "type": "integer",
+      "title": "t(data-access-request.biosamples.nb-sample-requested)"
+    },
     "biomarkerInformation": {
-      "type": "string",
-      "title": "Biomarker Information"
+      "type": "string"
+    },
+    "methodologyInformation": {
+      "type": "string"
     },
     "assay": {
       "type": "array",
@@ -747,11 +657,6 @@
             "type": "string",
             "required": true
           },
-          "methodology": {
-            "title": "t(data-access-request.custom.assay-methodology-info)",
-            "type": "string",
-            "required": true
-          },
           "labName": {
             "title": "t(data-access-request.custom.assay-lab-name)",
             "type": "string",
@@ -760,11 +665,6 @@
           "labQualifyers": {
             "title": "t(data-access-request.custom.assay-lab-qualifyers)",
             "type": "string"
-          },
-          "labAddress": {
-            "title": "t(data-access-request.custom.assay-lab-shipping-address)",
-            "type": "string",
-            "required": true
           },
           "nbYearsAssay": {
             "title": "t(data-access-request.custom.assay-nb-years-performed)",
@@ -792,84 +692,66 @@
       "title": "t(data-access-request.custom.inform-biosamples-staggered)",
       "default": false
     },
-    "socioCharacteristics": {
+    "variablesList": {
+      "type": "object",
+      "format": "obibaFiles",
+      "title": "t(data-access-request.variables-list.variables-file)"
+    },
+    "dsBlHealthRiskFactorQuestionnaire": {
+      "title": "t(data-access-request.variables-list.dsBlHealthRiskFactorQuestionnaire)",
       "type": "boolean",
-      "title": "t(data-access-request.custom.socio-characteristics)",
+      "default": false,
+      "name": "dsBlHealthRiskFactorQuestionnaire"
+    },
+    "dsBlMentalHealth": {
+      "title": "t(data-access-request.variables-list.dsBlMentalHealth)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsBlMentalHealth"
+    },
+    "dsBlPhysicalMeasures": {
+      "title": "t(data-access-request.variables-list.dsBlPhysicalMeasures)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsBlPhysicalMeasures"
+    },
+    "dsFuHealthRiskFactorQustionnaire": {
+      "title": "t(data-access-request.variables-list.dsFuHealthRiskFactorQustionnaire)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsFuHealthRiskFactorQustionnaire"
+    },
+    "dsFuCovid19Questionnaire": {
+      "title": "t(data-access-request.variables-list.dsFuCovid19Questionnaire)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsFuCovid19Questionnaire"
+    },
+    "dsGenotypeData": {
+      "title": "t(data-access-request.variables-list.dsGenotypeData)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsGenotypeData"
+    },
+    "dsEnvironmentalExposureData": {
+      "title": "t(data-access-request.variables-list.dsEnvironmentalExposureData)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsEnvironmentalExposureData"
+    },
+    "dsRegionalDatasets": {
+      "title": "t(data-access-request.variables-list.dsRegionalDatasets)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsRegionalDatasets"
+    },
+    "noDataLinkage": {
+      "title": "t(data-access-request.data-linkage.na)",
+      "type": "boolean",
       "default": false
     },
-    "lifestyle": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.lifestyle)",
-      "default": false
-    },
-    "reproductiveHealthHistory": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.reproductive-health-history)",
-      "default": false
-    },
-    "personalFamilyDiseases": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.personal-family-diseases)",
-      "default": false
-    },
-    "usePrescriptionMedications": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.use-prescription-medications)",
-      "default": false
-    },
-    "nonPharmacologicalInterventionsDiseases": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.non-pharmacological-interventions-diseases)",
-      "default": false
-    },
-    "selfReportedPhysicalMeasures": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.self-reported-physical-measures)",
-      "default": false
-    },
-    "physicalEnvironmentExposures": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.physical-environment-exposures)",
-      "default": false
-    },
-    "variablesBasedOpenEndedResponses": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.variables-base-open-ended-responses)",
-      "default": false
-    },
-    "mentalHealthCognitionMeasures": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.mental-health-cognition-personality-psychological-measures)",
-      "default": false
-    },
-    "anthropometricMeasures": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.enthropometric-measures)",
-      "default": false
-    },
-    "noPhysicalMeasure": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.no-physical-measure)"
-    },
-    "bloodPressure": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.blood-pressure)",
-      "default": false
-    },
-    "gripStrength": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.grip-strength)",
-      "default": false
-    },
-    "bioimpedance": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.bioimpedences)",
-      "default": false
-    },
-    "bonedensity": {
-      "type": "boolean",
-      "title": "t(data-access-request.custom.bone-density)",
-      "default": false
+    "dataLinkageList": {
+      "type": "string"
     },
     "additionalInfo": {
       "type": "string"
@@ -902,6 +784,11 @@
       "type": "boolean",
       "default": false,
       "title": "E. t(data-access-request.custom.aggreement-E)"
+    },
+    "aggreementF": {
+      "type": "boolean",
+      "default": false,
+      "title": "F. t(data-access-request.custom.aggreement-F)"
     },
     "bioAggreementA": {
       "type": "boolean",
@@ -937,6 +824,9 @@
     "institution",
     "phone",
     "mailingAddress",
+    "earlyCareerResearcher",
+    "requestThesisPostDoc",
+    "designMethodology",
     "repName",
     "repEmail",
     "repPosition",
@@ -946,12 +836,12 @@
     "projectTitle",
     "projectStartDate",
     "otherResearchSpecify",
-    "keywords",
     "totalNbParticipants",
     "inclusionCriteria",
     "fundingBody",
     "peerReviewProcess",
     "ethicsApproval",
+    "ethicsNotApprovedReason",
     "preAnalyticalRestrictions",
     "biosampleRequestStatus",
     "informedBiosampleStaggered",
@@ -961,6 +851,7 @@
     "aggreementC",
     "aggreementD",
     "aggreementE",
+    "aggreementF",
     "bioAggreementA",
     "bioAggreementB",
     "bioAggreementC",
@@ -971,43 +862,38 @@
     "rdRebResearchProtocol",
     "rdRebDecisionLetter",
     "rdCV",
+    "rdFundingProof",
     "isFormCompleted",
+    "paName",
+    "paPosition",
     "sstNbParticipants",
     "sstNbAssays",
     "sstNbBiomarkers",
     "sstAssayVolume",
     "sstDeadVolume",
     "sstTotalVolume",
+    "sstPreferredDeliveryYear",
     "edtaPlasmaNbParticipants",
     "edtaPlasmaNbAssays",
     "edtaPlasmaBiomarkers",
     "edtaPlasmaAssayVolume",
     "edtaPlasmaDeadVolume",
     "edtaPlasmaTotalVolume",
+    "edtaPlasmaPreferredDeliveryYear",
     "edtaRbcNbParticipants",
     "edtaRbcNbAssays",
     "edtaRbcBiomarkers",
     "edtaRbcAssayVolume",
     "edtaRbcDeadVolume",
     "edtaRbcTotalVolume",
+    "edtaRbcPreferredDeliveryYear",
     "urineNbParticipants",
     "urineNbAssays",
     "urineBiomarkers",
     "urineAssayVolume",
     "urineDeadVolume",
     "urineTotalVolume",
-    "acdNbParticipants",
-    "acdNbAssays",
-    "acdBiomarkers",
-    "acdAssayVolume",
-    "acdDeadVolume",
-    "acdTotalVolume",
-    "pstPlasmaNbParticipants",
-    "pstPlasmaNbAssays",
-    "pstPlasmaBiomarkers",
-    "pstPlasmaAssayVolume",
-    "pstPlasmaDeadVolume",
-    "pstPlasmaTotalVolume",
+    "urinePreferredDeliveryYear",
     "dnaNbParticipants",
     "dnaNbAssays",
     "dnaBiomarkers",
@@ -1016,9 +902,11 @@
     "dnaTotalVolume",
     "SpecifyBiosampleSource",
     "biomarkerInformation",
+    "methodologyInformation",
     "evaluation",
-    "peerReviewPlan",
+    "noCostExtension",
     "otherBiosampleSource",
-    "funding"
+    "funding",
+    "dataLinkageList"
   ]
 }

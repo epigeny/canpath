@@ -2,15 +2,16 @@
   "en": {
     "global": {
       "close-panel": "Display Results",
-      "harmonization-study": "Data"
+      "harmonization-study": "Data",
+      "weight": "Weight"
     },
     "config": {
-      "sets": "Lists",
-      "set-time-to-live": "List Time Span",
-      "set-time-to-live-help": "List time span in days.",
-      "max-number-sets": "Maximum number of lists",
-      "max-number-sets-help": "Maximum number of lists that a user can create.",
-      "max-items-per-set-help": "Maximum number of documents a list or the cart can contain.",
+      "sets": "Saved Lists",
+      "set-time-to-live": "Saved List Time Span",
+      "set-time-to-live-help": "Saved List time span in days.",
+      "max-number-sets": "Maximum number of saved lists",
+      "max-number-sets-help": "Maximum number of saved lists that a user can create.",
+      "max-items-per-set-help": "Maximum number of documents a saved list or the cart can contain.",
       "single-study-enabled-help": "Only one study is present in Mica.",
       "roles-help": "A person can be member of a study or of a network with one of the listed roles.",
       "harmonization-dataset-enabled": "Harmonization datasets section enabled",
@@ -44,7 +45,9 @@
       "design": "Design",
       "recruitment-target": "Recruitment target",
       "access": {
-        "for": "Access to external researchers or third parties provided or foreseen for"
+        "data": "Data",
+        "for": "Access to external researchers or third parties provided or foreseen for",
+        "biosamples": "Biosamples"
       },
       "timeline": "Timeline",
       "selection-criteria": {
@@ -79,7 +82,12 @@
         "title": "Data Schema",
         "info": "The variables of the Data Schema are the reference variables of the Harmonization dataset. This is a simple data dictionary: no data summaries will be extracted from the Opal table."
       },
-      "no_var": "Hide Variables information of current Dataset"
+      "no_var": "Hide Variables information of current Dataset",
+      "harmonization-study-table": {
+        "title": {
+          "weight": "Weight"
+        }
+      }
     },
     "population": {
       "info": "Supplementary information",
@@ -98,26 +106,26 @@
       "member-list": "List of {{type}}"
     },
     "sets": {
-      "empty": "No list",
-      "maximum-number-attained": "Your limit of {{arg0}} <a href='{{arg1}}' target='_self'><strong><u>lists</u></strong></a> have been attained.",
+      "empty": "No saved list",
+      "maximum-number-attained": "Your limit of {{arg0}} <a href='{{arg1}}' target='_self'><strong><u>saved lists</u></strong></a> have been attained.",
       "set": {
-        "title": "Lists",
-        "help": "Manage saved lists of variables. Each list can be analyzed or can be viewed in the search page.",
-        "no-variable-added": "No variable has been added to the {{arg0}} list.",
-        "variables-added": "<a href='{{arg0}}?id={{arg1}}' target='_self'><u>{{arg2}} variable(s) were added to list {{arg3}}.</u></a>"
+        "title": "Saved Lists",
+        "help": "",
+        "no-variable-added": "No variable has been added to the {{arg0}} saved list.",
+        "variables-added": "<a href='{{arg0}}?id={{arg1}}' target='_self'><u>{{arg2}} variable(s) were added to saved list {{arg3}}.</u></a>"
       },
       "add": {
         "button": {
-          "set-label": "Add to a list"
+          "set-label": "Add to Saved List"
         },
         "modal": {
-          "create-new": "Create a new list",
-          "to-existing": "Add to an existing list"
+          "create-new": "Create a new saved list",
+          "to-existing": "Add to an existing saved list"
         }
       },
       "delete-dialog": {
-        "title": "Delete Selected Lists",
-        "message": "Are you sure you want to delete the selected lists."
+        "title": "Delete Selected Saved Lists",
+        "message": "Are you sure you want to delete the selected saved lists."
       }
     },
     "search": {
@@ -146,7 +154,7 @@
       "help": {
         "network-config": "Configure network form.",
         "data-access-config": "Configure Access Request form.",
-        "sets": "Lists of variables.",
+        "sets": "Saved lists of variables.",
         "dataset-config": "Configure dataset form.",
         "study-config": "Configure study form."
       }
@@ -173,18 +181,20 @@
         "message": "Are you sure you want to delete Access '{{arg0}}' request by '{{arg1}}'?"
       },
       "default": {
-        "title": "Credentials (PhD, MD, etc.)",
-        "position": "Position (Rank, Faculty, Department)",
+        "title": "Educational Qualifications (PhD, MD, etc.)",
         "email": "Institutional E-mail Address",
         "institution-email": "Institutional E-mail Address",
         "email-alt": "Alternate E-mail Address",
         "address": "Institutional Mailing Address",
         "I": {
+          "title": "SECTION 1: Contact and Research Project Information",
           "A": {
-            "info": "Please include a full postal address and a valid institutional e-mail address. If you have more than one affiliation, only provide the contact information pertaining to the institution you are affiliated with for the purpose of the research project."
+            "info": "<p class='help-block'>Please include a full postal address and a valid institutional e-mail address. If you have more than one affiliation, only provide the contact information pertaining to the institution you are affiliated with for the purpose of the research project.</p><p class='help-block'><em>For PhD projects, the PI on the application must be the supervisor, not the student. Please do not enter the name of the student as the PI.</em></p>",
+            "early-career-researcher": "The Canadian Institutes of Health Research defines an <a href=\"https://cihr-irsc.gc.ca/e/34190.html#r14\" target=\"_blank\">early career researcher</a> as \u201cA researcher who, at the time of application, has held a full time, independent research appointment, for a period of 0 to 5 years (60 months).\u201d Is this request for a project being led by an early career researcher?"
           },
           "B": {
-            "title": "Name, institution, and contact details of the authorized institutional legal representative"
+            "title": "Name, institution, and contact details of the Authorized Institutional Legal Representative",
+            "info": "Please include a full postal address and a valid institutional e-mail address for your Authorized Institutional Legal Representative. This individual must be in a position to legally bind the institution."
           },
           "C": {
             "title": "Title of Research Project",
@@ -205,9 +215,29 @@
         },
         "documents": {
           "reb-research-protocol": "Research Ethics Board (REB) approved research protocol",
-          "reb-decision-letter": "Decision letter from a Research Ethics Board (REB) (English or French) (an institutional approval number should also be provided if available)"
+          "reb-decision-letter": "Decision letter from a Research Ethics Board (REB) or comparable decisional committee (English or French; an institutional approval number should also be provided if available)",
+          "funding-proof": "Evidence of funding"
         },
-        "email-validation-message": "E-mail address is not valid"
+        "email-validation-message": "E-mail address is not valid",
+        "II": {
+          "title": "SECTION 2: Research Project",
+          "F": {
+            "access-data-only": "This proposal is a request for access to data only"
+          }
+        },
+        "III": {
+          "title": "SECTION 3: Funding and Scientific Review"
+        },
+        "IV": {
+          "title": "SECTION 4: Data and Biosamples"
+        },
+        "V": {
+          "title": "SECTION 5: Return of Data"
+        },
+        "VI": {
+          "title": "SECTION 6: Security"
+        },
+        "member-name": "Name of Research Team Member"
       },
       "custom": {
         "100-word-limit-error": "The 100 words limit has been exceeded.",
@@ -218,11 +248,11 @@
           },
           "D": {
             "1": {
-              "info": "Please provide details for all members of the Research Team working with the Principal Applicant who would have access to the requested Research Data and/or Material in order to work on the research project (e.g. co-investigators, collaborators, research assistants, study coordinators, lab technicians and students). For Research Team members from other institutions see D2 and D3.",
+              "info": "<p class='help-block'>Please provide details for all members of the Research Team working with the Principal Applicant who would have access to the requested Research Data and/or Biosamples in order to work on the research project (e.g. co-investigators, collaborators, research assistants, study coordinators, lab technicians and students).</p><p class='help-block'>While only one <em>Data and Biosample Access Application Form</em> is required, any authorized personnel with access to Research Data and/or Biosamples that is affiliated with an institution other than that of the Principal Applicant is required to provide information on their Authorized Institutional Legal Representative(s), and have them and/or their Institution sign a separate Access Agreement.</p>",
               "title": "Names, institutions and contact details of the members of the Research Team working with the Applicant"
             },
             "2": {
-              "details": "Please provide details for the authorized institutional representative for each co-applicant’s primary institution mentioned above.",
+              "details": "Please provide details for the authorized institutional representative for each co-applicant\u2019s primary institution mentioned above.",
               "title": "Names, institutions and contact details of co-applicants from other institutions"
             },
             "3": {
@@ -230,150 +260,152 @@
             }
           },
           "H": {
-            "info": "Please provide a clear scientific description of the research project, its specific aims, methodology and deliverables and how it meets the objectives of the CanPath, in no more than 500 words. Also, please clearly explain how the CanPath data and/or biosamples would be used in the research project.",
-            "title": "Research Project (scientific abstract)"
+            "info": "Please provide a clear scientific description of the research project, its specific hypotheses, methodology and deliverables. Be sure to explain how the Research Data and/or Biosamples would be used, and how the project meets CanPath's objectives. Word limit is 500.",
+            "title": "Scientific Abstract"
           },
           "I": {
             "info": "Please provide the following information about the population you require.",
-            "title": "Research Project Design"
+            "title": "Research Participants"
           },
           "J": {
-            "info": "Please provide a short, accessible description of the research project for the general public in no more than 250 words. Scientific jargon should be avoided or minimized. This description will be made available on the public CanPath Access Registry and may be used in a variety of CanPath communications (e.g. newsletters, brochures, reports to stakeholders, press releases, blogs etc.).",
-            "title": "Lay summary of the project"
+            "info": "Please provide a short description of the project for the general public. Scientific jargon and acronyms should be avoided as much as possible. Word limit is 500.",
+            "title": "Lay Summary of Project"
           },
           "K": {
-            "documents-info": "Please provide the following supporting documents specifically related to this access application",
-            "evaluated-by-who": "Please specify by whom?",
+            "documents-info": "Please provide the following supporting documents specifically related to this access application:",
+            "evaluated-by-who": "Who evaluated the project?",
             "funding-approximate-date": "Please provide the approximate date when funding will be available",
             "funding-body-query": "From which funding body?",
             "funding-check": "Has financial support been granted?",
-            "funding-date": "Please provide dates of funding",
+            "funding-date": "",
             "funding-details": "Please provide details on how the research project will be funded",
             "info": "Please answer the following questions regarding the funding and scientific review of your research project.",
             "peer-review-expected-date": "Expected date of peer review",
-            "peer-review-plan": "Is a peer review process planned?",
+            "peer-review-plan": "",
             "project-evaluated-query": "Has the project been evaluated by a recognized peer review process?",
-            "title": "Funding and Scientific Review"
+            "title": "Funding"
           },
           "L": {
             "title": "Ethics Approval",
-            "title-documents-additional": "Additionally, please provide the following supporting documents specifically related to this access application",
-            "title-documents-caution": "Note: Applications will not be reviewed until all required ethics documents have been submitted.",
-            "title-documents-note": "The Access Office reserves the right to request further documentation related to the Research Ethics Review from the Applicant, where necessary. It is the Applicant’s responsibility to ensure that all local/national ethical requirements have been met prior to submission"
+            "title-documents-additional": "Please provide the following supporting documents specifically related to this access application:",
+            "title-documents-caution": "<p>* <em>Please note that Access Application will not be reviewed until all required ethics documents have been submitted</em>.</p>",
+            "title-documents-note": "The Access Office reserves the right to request further documentation related to the Research Ethics Review from the Applicant, where necessary. It is the Applicant\u2019s responsibility to ensure that all local/national ethical requirements have been met prior to submission."
           },
           "M": {
-            "applicant-only": "For applicant’s and/or co-investigator’s laboratory only, please provide information for at least one of the laboratory qualifiers fields below",
+            "applicant-only": "",
             "biomarker-info": "Biomarker information (required for each biomarker)",
             "biomarker-info-help": "Describe the biomarker/category of biomarkers proposed for analysis including its usual range(s) measured in an adult population for the biosample type being requested and the anticipated results for the biosamples. Provide evidence that the biomarker/category of biomarkers in the proposed biosample type measurement is stable and that a single time point analysis provides a reliable representation of the question being asked. If this information is available within your submitted research proposal you may reference the page(s) where the information can be found.",
             "biosamples-other-source": "For this research proposal, have you applied for biosamples from another source?",
-            "evidence-lab": "Provide evidence of the laboratory’s assay usage record and precision",
-            "info": "<p>Please describe the required type and amount of biosamples needed to support the research project. Supplementary details on the biosamples requested can be added to the additional information field.</p><p>Please refer to the CanPath portal for more information on the available <a href=\"https://portal.CanPath.ca/page/samples\" target=\"_blank\">biosamples</a>, or contact the Access Office. All approved biosample requests will include co-release of the associated biosample dataset.</p>",
+            "evidence-lab": "",
+            "info": "<p class='help-block'>Please describe the required type and amount of biosamples needed to support this research project. Standard information is provided when biological samples are requested. </p>",
             "mastery": "Please refer to the CanPath portal for more information and to consult the catalogue of available biosamples, or contact the Access Office. All approved biosample requests will include co-release of the associated biosample dataset.",
             "methodology-lab": "Methodology and laboratory information (required for each assay)",
-            "methodology-lab-info": "Describe the proposed methodology for biosample analysis that will be performed for each requested biosample. This should include what methodologies are available and the rationale for using the proposed assay; and include the reagent source. Provide evidence of the assay’s performance and list 2 to 5 publications where this quality has been demonstrated including one from you or your collaborator’s own publication record. If the methodology information is available within your submitted research proposal you may reference the page(s) where the information can be found.",
-            "title": "Biosamples"
+            "methodology-lab-info": "Describe the proposed methodology for biosample analysis that will be performed for each requested biosample. This should include what methodologies are available and the rationale for using the proposed assay; and include the reagent source. Provide evidence of the assay\u2019s performance and list 2 to 5 publications where this quality has been demonstrated including one from you or your collaborator\u2019s own publication record. If the methodology information is available within your submitted research proposal you may reference the page(s) where the information can be found.",
+            "title": "Biosamples",
+            "methodology-info": "Methodology information (required for each assay)",
+            "methodology-info-help": "Describe the proposed methodology for biosamples analysis that will be performed for each requested biosamples. This should include what methodologies are available and the rationale for using the proposed assay. Include the reagent source. Provide evidence of the assay\u2019s performance and list 2 to 5 publications where this quality has been demonstrated. If the methodology information is available within your submitted research proposal you may reference the page(s) where the information can be found."
           },
           "N": {
             "always-included": "Age, sex, country of birth, provinces - always included",
             "biosample-data": "Standard information  is provided when biological samples are requested.",
-            "biosample-data-title": "Biosample data",
-            "info": "Select the set of variables that specifically support the research project that you have identified in section H. The set of variables below is identified as ‘’core’’ as they are part of the CanPath core protocol (i.e. collected on most participants). When needed, you can request variables that are not listed by filling the appropriate fields. Please refer to the CanPath data portal for more information",
-            "physical-measures": "Physical measures",
-            "questionnaire": "Health & Risk Factor Questionnaire",
+            "biosample-data-title": "",
+            "info": "<p class='help-block'>Select the dataset(s) that specifically support the research project that you have identified above. Number of participants will vary per dataset. Visit <a href=\"https://canpath-mica-stage.oicr.on.ca/search#lists?type=variables\" target=\"_blank\">portal.canpath.ca/search</a> for more information and to create a \"shopping cart\" of individual variables to attach with your access application.</p><p class='help-block'></p>",
+            "physical-measures": "",
+            "questionnaire": "",
             "supplementary-info": "Please specify any other information requested",
             "supplementary-title": "Supplementary information",
-            "title": "Variables",
-            "mental-health": "Mental Health",
+            "title": "List of Variables",
+            "mental-health": "",
             "canue-heading": "Canadian Urban Environmental Health Research Consortium (CANUE)",
-            "canue-text-accompany": "Note – any request for the CANUE dataset requires the completion and execution of a <a target=\"_blank\" href =\"https://canue.ca/wp-content/uploads/2018/11/CANUE-Data-Use-and-Sharing-via-Third-Party-Agreement.pdf\">Data Sharing and Use via Approved Third Party Agreement</a>",
+            "canue-text-accompany": "Note - any request for the CANUE dataset requires the completion and execution of a <a target=\"_blank\" href =\"https://canue.ca/wp-content/uploads/2018/11/CANUE-Data-Use-and-Sharing-via-Third-Party-Agreement.pdf\">Data Sharing and Use via Approved Third Party Agreement</a>",
             "questionnaire-followup": "Follow-up Questionnaire",
-            "mental-health-cognition-personality-psychological-measures": "Cognition, personality and other psychological measures"
+            "mental-health-cognition-personality-psychological-measures": ""
           },
           "O": {
-            "info": "<p class='help-block'>Please provide a brief description (100 words) of the derived data that will be returned to CanPath generated during the analyses undertaken for your research project using Research Data and/or Material analysis. Data that must be returned include new variables issued from assay results (if applicable) and derived variables generated from existing variables using an expression including all intermediates of these derived variables. For example, a derived variables can be an index combining several variables (e.g. risk scores) or a numeric variable created by doing the sum of values stored in two or more numeric variables.</p><p class='help-block'>The derived data must be returned in the analytical format used to create your final working dataset such as SAS (.sas), SPSS (.sps), .CSV or the equivalent, along with the data dictionary or codebook. The derived data must include the original anonymized IDs supplied by CanPath.</p><p class='help-block'>All biosample analysis data is to be accompanied by the corresponding methodology source, in the form of a statement defining what quality control steps were taken and whether they were met or not.</p>",
+            "info": "<p class=\"help-block\">Please provide a brief description (100 words) of the derived data that will be returned to CanPath generated during the analyses undertaken for your research project using Research Data and/or Biosamples. Data that must be returned include new variables issued from assay results (if applicable) and derived variables generated from existing variables using an expression including all intermediates of these derived variables. For example, a derived variable can be an index combining several variables (e.g. risk scores) or a numeric variable created by doing the sum of values stored in two or more numeric variables.</p> <p class=\"help-block\">The Derived Data must be returned in the analytical format used to create your final working dataset such as SAS (.sas), SPSS (.sps), .CSV or the equivalent, along with the data dictionary or codebook. The Derived Data must include the original anonymized IDs supplied by CanPath.</p> <p class=\"help-block\">All biosample analysis data is to be returned in both raw (initial data generated from laboratory instrument) and analyzed (analysis extracted from raw data) formats and is to be accompanied by a completed CanPath Derived Data Report. Raw and analyzed data for the assay\u2019s standards and controls are also to be provided.</p>",
             "title": "Return of Data"
           }
         },
         "II": {
-          "info": "To avoid any privacy breaches, you must follow reasonable IT security practices and procedures. You must not disclose any Research Data to third parties who have not agreed to CanPath’s privacy requirements. You must ensure that this is also the case for Research Staff and any external collaborators mentioned in section D. To be eligible for access, all boxes from A to E must be checked.",
+          "info": "To avoid any privacy breaches, you must follow reasonable IT security practices and procedures. You must not disclose any Research Data to third parties who have not agreed to CanPath\u2019s privacy requirements. You must ensure that this is also the case for research staff and any external collaborators mentioned in Section 1. To be eligible for access, all boxes from A to F must be checked.",
           "title": "Information Technology (IT) Security Assessment"
         },
         "III": {
-          "info": "To avoid any privacy breaches, you must follow reasonable biosamples security practices and procedures. You must ensure that this is also the case for Research Staff and any external service providers and commercial laboratories mentioned in sections D and E. To be eligible for access, all boxes from A to E must be checked.",
+          "info": "To avoid any privacy breaches, you must follow reasonable biosamples security practices and procedures. You must ensure that this is also the case for research staff and any external service providers and commercial laboratories mentioned in Section 1. To be eligible for access, all boxes from A to E must be checked.",
           "title": "Biosamples Security Assessment"
         },
-        "acd": "ACD: whole blood in DMSO (µL)",
+        "acd": "ACD: whole blood in DMSO (\u00b5L)",
         "aggreement-A": "My institution has a formal IT security policy.",
         "aggreement-B": "I will store Research Data in secure physical computer systems. If Research Data is stored on portable computers (whether laptops or other mobile devices), it must be encrypted to avoid any unauthorized disclosure in case the portable system is lost or stolen.",
-        "aggreement-C": "I will implement appropriate access security to ensure that only the authorized individuals mentioned in Section I of this Access Application Form be allowed to access the Research Data. This requires, for example, that if Research Data is stored on a shared computer system or on a file server, that it be password or encryption-protected. If Research Data is stored on a network-accessible computer, there should be measures in place to prevent access by computer hackers or contamination by viruses and spyware. Moreover, if the computer(s) that hold Research Data are backed up, the backed up media must also be encrypted and stored in a secure location.",
-        "aggreement-D": "I understand that anyone (mentioned in Section I of this Access Application Form) who will use Research Data should be trained in the responsible use of Research Participant information and be familiar with the terms and conditions of the Access Policy, this Access Application Form and the Access Agreement. I am responsible for ensuring Research Staff comply with these terms and conditions.",
-        "aggreement-E": "I understand that upon completion of my research project, I must destroy all local copies, including backups, of the Research Data. However, if necessary, I can still keep the Research Data for archival purposes in conformity with national audits, publication or legal requirements. I must also either store my analysis code or send a copy of it to CanPath in case of potential needs to reproduce my variables or findings at a later date.",
+        "aggreement-C": "I will implement appropriate access security to ensure that only the authorized individuals mentioned in Section 1 of this Access Application Form be allowed to access the Research Data. This requires, for example, that if Research Data is stored on a shared computer system or on a file server, that it be password or encryption-protected. If Research Data is stored on a network-accessible computer, there should be measures in place to prevent access by computer hackers or contamination by viruses and spyware. Moreover, if the computer(s) that hold Research Data are backed up, the backed up media must also be encrypted and stored in a secure location.",
+        "aggreement-D": "I understand that anyone (mentioned in Section 1 of this Access Application Form) who will use Research Data should be trained in the responsible use of Research Participant information and be familiar with the terms and conditions of the Access Policy, this Access Application Form and the Access Agreement. I am responsible for ensuring research staff comply with these terms and conditions.",
+        "aggreement-E": "I understand that upon completion of my research project, I must destroy all local copies, including backups, of the Research Data by <em>the date specified in the Access Agreement</em>.",
         "alcohol": "Alcohol",
         "array-add": "Add",
-        "assay-avg-nb-test-per-year": "Number of assay test conducted on average per year by the laboratory",
-        "assay-inter-cv": "Laboratory’s inter-assay % CV from a recent publication or analysis",
-        "assay-intra-cv": "Laboratory’s intra-assay % CV from a recent publication or analysis",
+        "assay-avg-nb-test-per-year": "Number of assay tests conducted on average per year by the laboratory",
+        "assay-inter-cv": "Laboratory\u2019s inter-assay % CV from a recent publication or analysis",
+        "assay-intra-cv": "Laboratory\u2019s intra-assay % CV from a recent publication or analysis",
         "assay-lab-name": "Laboratory name (investigator or service provider name)",
-        "assay-lab-qualifyers": "Other relevant laboratory qualifiers, as applicable for the assay",
-        "assay-lab-shipping-address": "Laboratory shipping address",
-        "assay-methodology-info": "Methodology information",
+        "assay-lab-qualifyers": "Provide other relevant laboratory qualifiers, as applicable for the assay",
+        "assay-lab-shipping-address": "",
+        "assay-methodology-info": "",
         "assay-name": "Assay",
         "assay-nb-years-performed": "Number of years laboratory has performed the assay",
         "bio-agreement-A": "My institution has a biosamples security policy.",
         "bio-agreement-B": "The services provider(s) and/or commercial laboratory(ies), if applicable, each has a formal biosamples security policy.",
-        "bio-agreement-C": "I will implement appropriate access security so as to ensure that only the authorized individuals mentioned in Section I of this Access Application Form are able to access the Material. This requires, for example, that Material be stored in a room with restricted access and, if not, in a locked freezer/refrigerator.",
-        "bio-agreement-D": "I understand that anyone (mentioned in Section I of this Access Application Form) who will use Material should be trained in the responsible use of Research Participant information and be familiar with the terms and conditions of the Access Policy, this Access Application Form and the Access Agreement. I am responsible for ensuring Research Staff comply with these terms and conditions.",
+        "bio-agreement-C": "I will implement appropriate access security so as to ensure that only the authorized individuals mentioned in Section 1 of this Access Application Form are able to access the Material. This requires, for example, that Material be stored in a room with restricted access and, if not, in a locked freezer/refrigerator.",
+        "bio-agreement-D": "I understand that anyone (mentioned in Section 1 of this Access Application Form) who will use Material should be trained in the responsible use of Research Participant information and be familiar with the terms and conditions of the Access Policy, this Access Application Form and the Access Agreement. I am responsible for ensuring Research Staff comply with these terms and conditions.",
         "bio-agreement-E": "I understand that upon completion of my research project, I may be asked to either destroy or return Material, as per CanPath's request.",
-        "bioimpedences": "Bio-impedance",
+        "bioimpedences": "",
         "biomarker": "Biomarker validation or discovery",
         "biosample-pre-analytical-restriction": "Biosample pre-analytical restriction(s) required",
-        "biosample-pre-analytical-restriction-reason": "Describe and justify the need for biosample pre-analytical restrictions",
+        "biosample-pre-analytical-restriction-reason": "Describe and justify the need for biosample pre-analytical restrictions:",
         "biosamples-other-source-where": "Where?",
         "biosamples-requested": "Biosamples Requested",
-        "blood-pressure": "Blood pressure and heart rate",
-        "bone-density": "Bone Density",
+        "blood-pressure": "",
+        "bone-density": "",
         "case-control-ratio": "Case-control ratio",
         "caseControlStudy": "Case-control study",
-        "co-investigator-other": "This application is a collaboration with co-applicants from an institution other than that of the principal applicant to carry out this research project.",
+        "co-investigator-other": "",
         "contact-name": "Contact Name",
         "dataPoolingStudy": "Study using data from multiple cohorts (e.g. data pooling project)",
-        "descriptiveStudy": "Descriptive study (e.g. health care utilisation)",
-        "dna": "DNA (µg) (may be extracted from blood or saliva)",
-        "edta-plasma": "EDTA: plasma (µL)",
-        "edta-rbc": "EDTA: RBC (µL)",
-        "end-date": "End Date",
-        "enthropometric-measures": "Anthropometric measures",
-        "envAssStudy": "Environment association study",
-        "ethics-approval": "This project has been approved by an institutional review board or a comparable decisional committee that has been formally designated to approve and/or monitor research involving humans with the aim of protecting the rights and welfare of research participants.",
+        "descriptiveStudy": "Descriptive study",
+        "dna": "DNA (\u00b5g) (may be extracted from blood or saliva)",
+        "edta-plasma": "EDTA: plasma (\u00b5L)",
+        "edta-rbc": "EDTA: RBC (\u00b5L)",
+        "end-date": "Funding End Date",
+        "enthropometric-measures": "",
+        "envAssStudy": "Environment Association",
+        "ethics-approval": "Has this study been approved by a research ethics board or a comparable decisional committee that has been formally designated to approve and/or monitor research involving humans with the aim of protecting the rights and welfare of the research participants?",
         "exclusion-criteria": "Exclusion criteria",
         "family-diseases": "Family history of diseases",
         "for-case-control-studies": "For case-control studies",
-        "fundamentalStudy": "Fundamental research study (e.g. in vitro)",
-        "geneInteractionStudy": "Gene by gene and gene by environment interaction study",
-        "genealogicalStudy": "Genealogical study",
-        "geneticAssStudy": "Genetic association study",
-        "genomeWideAssStudy": "Genome wide association study",
-        "genotypeCompStudy": "Genotype-based comparative study",
-        "gisStudy": "GIS-based or mapping study",
-        "grip-strength": "Grip strength",
+        "fundamentalStudy": "",
+        "geneInteractionStudy": "",
+        "genealogicalStudy": "",
+        "geneticAssStudy": "Genetic studies",
+        "genomeWideAssStudy": "",
+        "genotypeCompStudy": "",
+        "gisStudy": "",
+        "grip-strength": "",
         "has-service-provider": "This application involves a service provider or commercial laboratory that will require access to the requested data and/or biosamples.",
         "health-service-use": "Usage of health services (routine medical exams, cancer screening tests)",
         "inclusion-criteria": "Inclusion criteria",
         "individual-diseases": "Individual history of diseases",
         "individual-diseases-spec": "Please specify conditions to be included",
         "inform-biosamples-staggered": "I acknowledge that biosamples may be released in a staggered and conditional release upon approval.",
-        "intro-description": "<p class='help-block'>This Access Application Form is to be used by all researchers seeking access to Research Data and/or Biosamples, referred to as Material in the Data and Material Sharing Agreement. Please refer to the CanPath Access Policy for the meaning of all capitalized terms used in this form, which is available on the CanPath portal.</p><p class='help-block'>Applicants should review the <b>Access Policy</b> , <b>Publications Policy</b>  and <b>Intellectual Property Policy</b> in the <a href=\"/mica/data_access/home\" target=\"_blank\">CanPath Policies & Guidelines Section (Access Process Page)</a> before completing this Access Application Form.</p><p class='help-block'>Applicants must complete all mandatory sections and provide supporting documentation before the access request will be considered. Further information on CanPath’s review and approval process can be found in the Access Policy.</p><p class='help-block'>Upon approval of an access request by the Access Committee, access to Research Data and/or Material will be granted for the timeframe set out in the approved Access Application Form and the Access Agreement. An Annual Progress Report must be completed to access and use Research Data and/or Material beyond a one-year period.</p><p class='help-block'>The title of the Approved Research Project, name(s) of the Approved User and Research Team involved, their status and credentials, name(s) of the Approved Institution(s), and a lay summary of the scientific abstract submitted by the Applicant will be added to the public CanPath Access Registry.</p>",
+        "intro-description": "<p class='help-block'>This Access Application Form is to be used by all researchers seeking access to Research Data and/or Biosamples, referred to as Material in the Data and Material Sharing Agreement. Please refer to the CanPath Access Policy for the meaning of all capitalized terms used in this form, which is available on the CanPath portal.</p><p class='help-block'>Applicants should review the <b>Access Policy</b> , <b>Publications Policy</b>  and <b>Intellectual Property Policy</b> in the <a href=\"/mica/data_access/home\" target=\"_blank\">CanPath Policies & Guidelines Section (Access Process Page)</a> before completing this Access Application Form.</p><p class='help-block'>Applicants must complete all mandatory sections and provide supporting documentation before the access request will be considered. Access Applications will not be reviewed until funding has been secured and all required ethics documents have been submitted. Further information on CanPath\u2019s review and approval process can be found in the Access Policy and on the Portal.</p><p class='help-block'>Upon approval of an access request by the Access Committee, access to Research Data and/or Biosamples will be granted for the timeframe set out in the approved Access Application Form and the Access Agreement. An Annual Progress Report must be completed to access and use Research Data and/or Biosamples beyond a one-year period.</p><p class='help-block'>The title of the Approved Research Project, name(s) of the Approved User and Research Team involved, their status and credentials, name(s) of the Approved Institution(s), and a lay summary of the scientific abstract submitted by the Applicant will be added to the public CanPath website.</p>",
         "intro-info": "CanPath Data and Biosamples Access Application Form",
         "intro-paragraph": "This Access Application Form is to be used by all researchers seeking access to Research Data and/or Biosamples, referred to as Material in the Data and Material Sharing Agreement. Please refer to the CanPath Access Policy for the meaning of all capitalized terms used in this form, which is available on the CanPath portal.",
         "intro-title": "SCHEDULE A",
-        "lifestyle": "Lifestyle and health behaviours",
+        "lifestyle": "",
         "matching-criteria": "Matching criteria",
         "men-health": "Men's health (fatherhood)",
-        "multiStudy": "Multicentre study or international study",
-        "nb-biomarker-measurements": "Number of biomarkers measurements",
-        "nb-participants": "Number of participants",
-        "no-biological-sample-needed": "No biological sample is needed",
-        "no-physical-measure": "No physical measures data needed",
+        "multiStudy": "",
+        "nb-biomarker-measurements": "Number of Biomarkers",
+        "nb-participants": "Number of Participants",
+        "no-biological-sample-needed": "Not applicable - access to Biosamples is not requested.",
+        "no-physical-measure": "",
         "nutrition": "Nutrition",
         "other-institution": {
           "investigator": {
@@ -382,16 +414,16 @@
           "representative": {
             "title": "<h4>Authorized Institutional Legal Representative</h4>"
           },
-          "title": "Please provide details for the co-applicants from other institutions and details for their authorized institutional representatives."
+          "title": ""
         },
         "otherResearch": "Other (specify):",
         "passive-smoke": "Passive smoke exposure",
         "perception-health": "Perception of general health",
         "physical-activity": "Physical activity",
         "principal-institution": "Primary Institution",
-        "prospectiveStudy": "Prospective study",
+        "prospectiveStudy": "",
         "provider-name": "Service Provider or Commercial Laboratory Name",
-        "pst-plasma": "PST: plasma (µL)",
+        "pst-plasma": "PST: plasma (\u00b5L)",
         "research-project-role": "Role in the Research Project",
         "research-staff-other": "This Co-Applicant has members of the Research Team from their primary institution to carry out this research project.",
         "response": {
@@ -401,35 +433,35 @@
         "riskScore": "Risk score or index development",
         "self-reported-anthropometric": "Self-reported anthropometric measurements (height, weight, waist and hip circumferences)",
         "sleep": "Sleep",
-        "socio-characteristics": "Socio-demographic and economic characteristics (marital status, family and household structure, education, language, ethnicity, residence, working status, income)",
-        "sst-serum": "SST: serum (µL)",
-        "start-date": "Start Date",
+        "socio-characteristics": "",
+        "sst-serum": "SST: serum (\u00b5L)",
+        "start-date": "Funding Start Date",
         "status-request": "Status of the request",
         "stratification": "Stratification or grouping",
         "summary": {
           "word-limit-error": "The 250 words limit has been exceeded."
         },
-        "surveillanceStudy": "Surveillance study (e.g. estimation of the prevalence or incidence)",
+        "surveillanceStudy": "Surveillance study",
         "title": "Title",
         "tobacco": "Tobacco",
-        "total-nb-assays-planned": "Total number of assays planned",
-        "total-nb-participants": "Total number of Research Participants requested, not requiring recontact",
-        "total-required-assay-volume": "Total required assay volume/amount",
-        "total-required-dead-volume": "Total required dead volume/amount",
-        "total-volume-requested": "Total volume/amount requested",
-        "urine": "Urine (µL)",
+        "total-nb-assays-planned": "Total Number of Tests Planned per Participant Sample",
+        "total-nb-participants": "Total number of Research Participants requested",
+        "total-required-assay-volume": "Total Required Assay Volume/Amount",
+        "total-required-dead-volume": "Total Required Dead Volume/Amount",
+        "total-volume-requested": "Total Volume/Amount Requested",
+        "urine": "Urine (\u00b5L)",
         "uv-exposure": "UVexposure",
         "website": "Website Address (if available)",
         "women-health": "Women's health (fertility, contraception, menstruation, menopause, oophorectomy, hysterectomy)",
-        "personal-family-diseases": "Personal and family history of diseases",
-        "reproductive-health-history": "Reproductive health history",
-        "use-prescription-medications": "Use of presciption medications",
-        "non-pharmacological-interventions-diseases": "Non-pharmacological interventions related to diseases",
-        "self-reported-physical-measures": "Self reported physical measures",
-        "physical-environment-exposures": "Physical environment exposures",
-        "variables-base-open-ended-responses": "Variables based on open-ended responses",
+        "personal-family-diseases": "",
+        "reproductive-health-history": "",
+        "use-prescription-medications": "",
+        "non-pharmacological-interventions-diseases": "",
+        "self-reported-physical-measures": "",
+        "physical-environment-exposures": "",
+        "variables-base-open-ended-responses": "",
         "green-blue-space": "Green/Blue space",
-        "green-blue-space-annual-mean-ndvi": "Normalized Difference Vegetation Index (NDVI; i.e. “greenness” metrics)",
+        "green-blue-space-annual-mean-ndvi": "Normalized Difference Vegetation Index (NDVI; i.e. \u201cgreenness\u201d metrics)",
         "neighbourhood-factor-datasets": "Neighbourhood Factor Datasets",
         "neighbourhood-factor-datasets-night-time-light": "Satellite based nighttime light",
         "neighbourhood-factor-datasets-deprivation-indices": "Material and Social Deprivation Index",
@@ -441,8 +473,13 @@
         "air-quality-data-sulfur-dioxide": "Annual average sulfur dioxide (SO2) exposure",
         "weather-and-climate-datasets": "Weather and Climate Datasets",
         "weather-and-climate-indicators": "Weather and Climate metrics",
-        "mental-health-cognition-personality-psychological-measures": "Cognition, personality and other psychological measures",
-        "minimum-one-checked-error": "At least 1 selection(s) expected."
+        "mental-health-cognition-personality-psychological-measures": "",
+        "minimum-one-checked-error": "At least 1 selection(s) expected.",
+        "geneByEnvStudy": "Gene-by-Environment",
+        "dataLinkage": "Data linkage",
+        "additionalParams": "Any additional parameters required",
+        "aggreement-F": "I must also either store my analysis code or send a copy of it to CanPath in case of potential needs to reproduce my variables or findings at a later date.",
+        "preferred-delivery-year": "Preferred Delivery Year"
       },
       "cutom": {
         "return": "All biosample analysis data is to be accompanied by the corresponding methodology source, in the form of a statement defining what quality control steps were taken and whether they were met or not."
@@ -460,62 +497,84 @@
             "project_completed": "Project Completed"
           }
         }
-      }
-    },
-    "data-access-feasibility": {
-      "form-title": "LETTER OF SUPPORT AND COST ESTIMATE",
-      "form-subtitle": "CanPath Request for Letter of Support and Cost Estimate Form",
-      "intro": "<p class='mt-3'>Please note:</p><ul><li>Provision of a draft Letter of Support is strongly recommended</li><li>10 business days are required to provide a Letter of Support</li></ul>",
-      "grant-submission": {
-        "title": "A. Grant Submission Details"
       },
-      "granting-agency": "Name of granting agency",
-      "grant-competition": "Name of grant competition",
-      "grant-date": "Grant submission due date",
-      "grant-title": "Title of grant being submitted",
-      "applicant-info": {
-        "title": "B. Principal Applicant Information"
+      "staff": {
+        "access-individual-level": "Access to Individual Level Data",
+        "access-biosamples": "Access to Biosamples",
+        "request-thesis-post-doc": "Is this request for a student thesis/project or a project led by a post-doctoral fellow?"
       },
-      "pi": "Name",
-      "career": {
-        "title": "Career",
-        "inv-early": "Independent investigator - Early Career (for 0 to 5 years)",
-        "inv-mid": "Independent investigator - Mid Career (for 5 to 15 years)",
-        "inv-senior": "Independent investigator - Senior (for more than 15 years)",
-        "student": "Graduate student",
-        "postdoc": "Postdoc fellow",
-        "other": "Other",
-        "other-career": "Other career"
+      "service-provider": {
+        "info": "Please provide the details of all service providers and commercial laboratories that will have access to the requested Research Data and/or Biosamples in order to work on the research project. All service providers and commercial laboratories will need to meet the terms and conditions of the <em>Access Agreement.</em>"
       },
-      "current-position": "Current position",
-      "pi-email": "Contact email",
-      "pi-phone": "Contact phone number",
-      "pi-address": "Mailing address",
-      "pi-address-help": "Note: The Letter of Support will be addressed to the Principal Applicant at the address noted above.",
-      "project-info": {
-        "title": "C. Research Project Overview"
+      "research-project-design": {
+        "design-methodology": "Please describe the design and methodology of the proposed project, including the primary outcome measures and the methods that will be used to analyze the study data. This section should include justification for the sample size requested."
       },
-      "project-objectives": "Project background and objectives (max. 250 words)",
-      "data": {
-        "title": "D. CanPath Data Sought"
+      "funding": {
+        "no-cost-extension": "If your project end date is beyond the project funding date, is there a possibility of a no-cost extension?",
+        "notice": "<p class=\"help-block\">* <em>Please note that Access Application will not be reviewed until funding has been secured</em>.</p>"
       },
-      "datasets":  "Specify dataset(s) and type of data",
-      "datasets-help": "See <a href='https://portal.canpath.ca/search#lists?type=datasets' target='_blank'>the list of datasets</a> for data availability.",
-      "selection-criteria": "Selection criteria for CanPath participants on whom data is sought",
-      "study-design": "Proposed methods for analyzing CanPath data",
+      "ethics-approval": {
+        "documents-notice": "",
+        "not-approved-reason": "Please specify arrangements for obtaining the appropriate approvals."
+      },
       "biosamples": {
-        "title": "E. CanPath Biosamples Sought"
+        "dna-notice": "",
+        "freeze-thaw-affect": "Does freeze/thaw affect the planned analysis?",
+        "freeze-thaw-affect-no": "No",
+        "freeze-thaw-affect-unkown": "",
+        "freeze-thaw-affect-yes": "Yes",
+        "freeze-thaw-affect-unknown": "Unknown",
+        "nb-freeze-thaw-events": "Number of acceptable freeze/thaw events:",
+        "nb-freeze-thaw-events-notice": "<p class=\"help-block\"><strong>Provide supporting evidence below for this pre-analytical restriction</em></strong>.</p>",
+        "nb-sample-requested": "Total number of samples requested from other source"
       },
-      "biosamples-type": "Specify type, number, and volume",
-      "biosamples-type-help": "See <a href='https://portal.canpath.ca/page/samples' target='_blank'>Biological Samples</a> for details.",
-      "biosamples-selection-criteria": "Selection criteria for CanPath participants on whom biosamples are sought",
-      "biosamples-pre-analytical-characteristics": "Biosamples pre-analytical characteristics required, if applicable",
-      "biosamples-analyze-methods": "Proposed methods for analyzing CanPath biosamples",
-      "linkage": {
-        "title": "F. Linkage of CanPath Participants with Other Datasets (if applicable)"
+      "lab-analysis": {
+        "title": "Laboratory Analyses",
+        "no-biological-sample-needed": "Not applicable - access to Biosamples is not requested",
+        "evidence-info": "<p class=\"help-block\">Provide evidence of the laboratory\u2019s assay usage record, preliminary data and/or publications:</p>"
       },
-      "data-linkage": "Data to be linked to CanPath",
-      "data-linkage-help": "Specify dataset(s), type of data, and their source"
+      "variables-list": {
+        "datasets": {
+          "blHealthRiskFactorQuestionnaire": "",
+          "blMentalHealth": "",
+          "blPhysicalMeasures": "",
+          "fuHealthRiskFactorQustionnaire": "",
+          "fuCovid19Questionnaire": "",
+          "genotypeData": "",
+          "environmentalExposureData": "",
+          "regionalDatasets": ""
+        },
+        "dsBlHealthRiskFactorQuestionnaire": "Baseline Health and Risk Factor Questionnaire",
+        "dsBlMentalHealth": "Baseline Mental Health",
+        "dsBlPhysicalMeasures": "Baseline Physical Measures",
+        "dsFuHealthRiskFactorQustionnaire": "Follow-Up 1 Health and Risk Factor Questionnaire",
+        "dsFuCovid19Questionnaire": "Follow-up COVID-19 Questionnaire",
+        "dsGenotypeData": "Genotype Data",
+        "dsEnvironmentalExposureData": "Environmental Exposure Data",
+        "dsRegionalDatasets": "Regional Datasets (e.g. Residential History questionnaire)",
+        "variables-file": "Individual Variables"
+      },
+      "data-linkage": {
+        "title": "Data Linkage",
+        "info": "<p class=\"help-block\">Will data from other sources be utilized to complete the proposed project? Please list all data linkages required to complete the proposed project, and where these data are held.</p>",
+        "na": "Not applicable - Data and/or Biosamples will not be linked with data from other sources."
+      },
+      "bio-security-assessment": {
+        "na": "Not applicable - access to Biosamples is not requested."
+      },
+      "signature": {
+        "principal-applicant": "",
+        "pa": "Principal Applicant",
+        "ailr": "Authorized Institutional Legal Representative of the host institution",
+        "know-canpath-from": "How did you hear about CanPath?"
+      },
+      "members-ailr": {
+        "title": "Authorized Institutional Legal Representative"
+      },
+      "members": {
+        "info": "<p class=\"help-block\">Please include a full postal address and a valid institutional e-mail address for each Authorized Institutional Legal Representative.</p>",
+        "has-member": "I have Research Team Members from an institution other than that of the Principal Applicant"
+      }
     },
     "network-config": {
       "schema-form": {
@@ -604,7 +663,8 @@
       "status": {
         "approved": "Approved",
         "declined": "Declined",
-        "pending": "Pending"
+        "pending": "Pending",
+        "future-request": "Future Request"
       }
     },
     "dataset-config": {
@@ -699,52 +759,106 @@
         "reasons-related-request-description": "Please describe the reasons for your request related to CanPath data and/or biosamples",
         "info-dar-modification": "Change the DAR main information"
       }
+    },
+    "data": "",
+    "data-access-feasibility": {
+      "form-title": "LETTER OF SUPPORT AND COST ESTIMATE",
+      "grant-submission": {
+        "title": "A. Grant Submission Details"
+      },
+      "granting-agency": "Name of granting agency",
+      "grant-competition": "Name of grant competition",
+      "grant-date": "Grant submission due date",
+      "grant-title": "Title of grant being submitted",
+      "applicant-info": {
+        "title": "B. Principal Applicant Information"
+      },
+      "pi": "Name",
+      "career": {
+        "title": "Career",
+        "inv-early": "Independent investigator - Early Career (for 0 to 5 years)",
+        "inv-mid": "Independent investigator - Mid Career (for 5 to 15 years)",
+        "inv-senior": "Independent investigator - Senior (for more than 15 years)",
+        "student": "Graduate student",
+        "postdoc": "Postdoc fellow",
+        "other": "Other",
+        "other-career": "Other career"
+      },
+      "current-position": "Current position",
+      "pi-email": "Contact email",
+      "pi-phone": "Contact phone number",
+      "pi-address": "Mailing address",
+      "pi-address-help": "Note: The Letter of Support will be addressed to the Principal Applicant at the address noted above.",
+      "project-info": {
+        "title": "C. Research Project Overview"
+      },
+      "project-objectives": "Project background and objectives (max. 250 words)",
+      "data": {
+        "title": "D. CanPath Data Sought"
+      },
+      "datasets": "Specify dataset(s) and type of data",
+      "datasets-help": "See <a href='https://portal.canpath.ca/search#lists?type=datasets' target='_blank'>the list of datasets</a> for data availability.",
+      "selection-criteria": "Selection criteria for CanPath participants on whom data is sought",
+      "study-design": "Proposed methods for analyzing CanPath data",
+      "biosamples": {
+        "title": "E. CanPath Biosamples Sought"
+      },
+      "biosamples-type": "Specify type, number, and volume",
+      "biosamples-type-help": "See <a href='https://portal.canpath.ca/page/samples' target='_blank'>Biological Samples</a> for details.",
+      "biosamples-selection-criteria": "Selection criteria for CanPath participants on whom biosamples are sought",
+      "biosamples-pre-analytical-characteristics": "Biosamples pre-analytical characteristics required, if applicable",
+      "biosamples-analyze-methods": "Proposed methods for analyzing CanPath biosamples",
+      "linkage": {
+        "title": "F. Linkage of CanPath Participants with Other Datasets (if applicable)"
+      },
+      "data-linkage": "Data to be linked to CanPath",
+      "data-linkage-help": "Specify dataset(s), type of data, and their source",
+      "form-subtitle": "CanPath Request for Letter of Support and Cost Estimate Form",
+      "intro": "<p class='mt-3'>Please note:</p><ul><li>Provision of a draft Letter of Support is strongly recommended</li><li>10 business days are required to provide a Letter of Support</li></ul>"
     }
   },
   "fr": {
     "global": {
-      "close-panel": "Afficher les résultats",
-      "individual-studies": "Études individuelles",
-      "harmonization-study": "Données",
-      "included-individual-studies": "Études individuelles incluses",
-      "included-individual-study": "Étude individuelle incluse"
+      "close-panel": "Afficher les r\u00e9sultats",
+      "individual-studies": "\u00c9tudes individuelles",
+      "harmonization-study": "Donn\u00e9es",
+      "weight": ""
     },
     "config": {
-      "sets": "Listes",
-      "set-time-to-live": "Durée de vie de la liste",
-      "set-time-to-live-help": "Durée de vie de la liste en jours.",
-      "max-number-sets": "Nombre maximum de listes",
-      "max-number-sets-help": "Le nombre maximum de listes qu'un utilisateur peut créer.",
-      "max-items-per-set-help": "Le nombre maximum de documents qu'une liste ou le panier peut contenir.",
-      "single-study-enabled-help": "Une seule étude est présente dans Mica.",
-      "roles-help": "Une personne peut être membre d'une étude ou d'un réseau avec l'un des rôles énumérés.",
-      "harmonization-dataset-enabled": "Section ensemble de données d'harmonisation activée",
-      "harmonization-dataset-enabled-help": "Des ensembles de données d'harmonisation sont présents dans Mica.",
+      "sets": "Listes enregistr\u00e9es",
+      "set-time-to-live": "Dur\u00e9e de vie de la liste enregistr\u00e9e",
+      "set-time-to-live-help": "Dur\u00e9e de vie de la liste enregistr\u00e9e en jours.",
+      "max-number-sets": "Nombre maximum de listes enregistr\u00e9es",
+      "max-number-sets-help": "Le nombre maximum de listes enregistr\u00e9es qu'un utilisateur peut cr\u00e9er.",
+      "max-items-per-set-help": "Le nombre maximum de documents qu'une liste enregistr\u00e9e ou le panier peut contenir.",
+      "single-study-enabled-help": "Une seule \u00e9tude est pr\u00e9sente dans Mica.",
+      "roles-help": "Une personne peut \u00eatre membre d'une \u00e9tude ou d'un r\u00e9seau avec l'un des r\u00f4les \u00e9num\u00e9r\u00e9s.",
+      "harmonization-dataset-enabled": "Section ensemble de donn\u00e9es d'harmonisation activ\u00e9e",
+      "harmonization-dataset-enabled-help": "Des ensembles de donn\u00e9es d'harmonisation sont pr\u00e9sents dans Mica.",
       "notifications": {
-        "harmonization-dataset": "Notification sur changement de statut d'un ensemble de données d'harmonisation",
-        "harmonization-dataset-help": "Envoyer un courriel de notification quand le statut d'un ensemble de données d'harmonisation change pour Supprimé, En révision ou Brouillon.",
-        "harmonization-dataset-info": "Les destinataires des notifications pour les mises à jour d'ensemble de données d'harmonisation ont au moins la permission <code>Editeur</code> (quand le statut est <i>Brouillon</i>) ou la permission <code>Réviseur</code> (quand le statut est <i>Supprimé</i> ou <i>En révision</i>).",
+        "harmonization-dataset": "Notification sur changement de statut d'un ensemble de donn\u00e9es d'harmonisation",
+        "harmonization-dataset-help": "Envoyer un courriel de notification quand le statut d'un ensemble de donn\u00e9es d'harmonisation change pour Supprim\u00e9, En r\u00e9vision ou Brouillon.",
+        "harmonization-dataset-info": "Les destinataires des notifications pour les mises \u00e0 jour d'ensemble de donn\u00e9es d'harmonisation ont au moins la permission <code>Editeur</code> (quand le statut est <i>Brouillon</i>) ou la permission <code>R\u00e9viseur</code> (quand le statut est <i>Supprim\u00e9</i> ou <i>En r\u00e9vision</i>).",
         "harmonization-dataset-subject": "Sujet de la notification",
-        "harmonization-dataset-subject-help-long": "Le sujet du courriel peut contenir les termes réservés suivants: ${organization}, ${documentType}, ${documentId}, ${status}.",
-        "harmonization-dataset-title": "Mise à jour d'ensemble de données d'harmonisation",
-        "study-dataset": "Notification sur changement de statut d'un ensemble de données d'étude",
-        "study-dataset-help": "Envoyer un courriel de notification quand le statut d'un ensemble de données d'étude change pour Supprimé, En révision ou Brouillon.",
-        "study-dataset-info": "Les destinataires des notifications pour les mises à jour d'ensemble de données d'étude ont au moins la permission <code>Editeur</code> (quand le statut est <i>Brouillon</i>) ou la permission <code>Réviseur</code> (quand le statut est <i>Supprimé</i> ou <i>En révision</i>).",
+        "harmonization-dataset-subject-help-long": "Le sujet du courriel peut contenir les termes r\u00e9serv\u00e9s suivants: ${organization}, ${documentType}, ${documentId}, ${status}.",
+        "harmonization-dataset-title": "Mise \u00e0 jour d'ensemble de donn\u00e9es d'harmonisation",
+        "study-dataset": "Notification sur changement de statut d'un ensemble de donn\u00e9es d'\u00e9tude",
+        "study-dataset-help": "Envoyer un courriel de notification quand le statut d'un ensemble de donn\u00e9es d'\u00e9tude change pour Supprim\u00e9, En r\u00e9vision ou Brouillon.",
+        "study-dataset-info": "Les destinataires des notifications pour les mises \u00e0 jour d'ensemble de donn\u00e9es d'\u00e9tude ont au moins la permission <code>Editeur</code> (quand le statut est <i>Brouillon</i>) ou la permission <code>R\u00e9viseur</code> (quand le statut est <i>Supprim\u00e9</i> ou <i>En r\u00e9vision</i>).",
         "study-dataset-subject": "Sujet de la notification",
-        "study-dataset-subject-help-long": "Le sujet du courriel peut contenir les termes réservés suivants: ${organization}, ${documentType}, ${documentId}, ${status}.",
-        "study-dataset-title": "Mise à jour d'ensemble de données d'étude"
+        "study-dataset-subject-help-long": "Le sujet du courriel peut contenir les termes r\u00e9serv\u00e9s suivants: ${organization}, ${documentType}, ${documentId}, ${status}.",
+        "study-dataset-title": "Mise \u00e0 jour d'ensemble de donn\u00e9es d'\u00e9tude"
       },
-      "study-dataset-enabled": "Section ensemble de données d'étude activée",
-      "study-dataset-enabled-help": "Des ensembles de données d'étude sont présents dans Mica."
+      "study-dataset-enabled": "Section ensemble de donn\u00e9es d'\u00e9tude activ\u00e9e",
+      "study-dataset-enabled-help": "Des ensembles de donn\u00e9es d'\u00e9tude sont pr\u00e9sents dans Mica."
     },
     "numberOfParticipants": {
       "participants": "Nombre cible de participants",
-      "sample": "Nombre cible de participants avec échantillons biologiques",
-      "suppl-info": "Informations supplémentaires sur le nombre cible de participants"
+      "sample": "Nombre cible de participants avec \u00e9chantillons biologiques",
+      "suppl-info": "Informations suppl\u00e9mentaires sur le nombre cible de participants"
     },
     "study": {
-      "design": "Devis d'étude",
-      "marker-paper": "Article de reference",
+      "design": "Devis d'\u00e9tude",
       "maelstromAuthorization": "Maelstrom authorization",
       "specificAuthorization": "Specific authorization",
       "authorization": {
@@ -752,11 +866,15 @@
         "specific": "Authorization from contributors to the [specific network] catalogues",
         "authorizer": "Authorizer"
       },
-      "opal-help": "URL du serveur Opal pour cette étude",
+      "opal-help": "URL du serveur Opal pour cette \u00e9tude",
       "add-member": "Ajouter un {{type}}",
       "member-list": "Liste de {{type}}",
       "revision": {
-        "update-comment": "Ajouter un commentaire pour décrire les changements."
+        "update-comment": "Ajouter un commentaire pour d\u00e9crire les changements."
+      },
+      "access": {
+        "biosamples": "\u00c9chantillons biologiques",
+        "for": "L\u2019acc\u00e8s \u00e0 des chercheurs externes ou \u00e0 des tiers fourni ou pr\u00e9vu"
       }
     },
     "contact": {
@@ -769,94 +887,99 @@
       "label-plurial": {
         "investigator": "Chercheurs"
       },
-      "dataAccessCommitteeMember": "Membre du comité d'accès",
+      "dataAccessCommitteeMember": "Membre du comit\u00e9 d'acc\u00e8s",
       "label": "Contact"
     },
     "dataset": {
-      "general-info": "Informations générales",
+      "general-info": "Informations g\u00e9n\u00e9rales",
       "study-tables": {
-        "info": "Les tables d'étude définissent les implémentations des variables du schéma de données. Les sommaires de données seront extraites des tables Opal correspondantes."
+        "info": "Les tables d'\u00e9tude d\u00e9finissent les impl\u00e9mentations des variables du sch\u00e9ma de donn\u00e9es. Les sommaires de donn\u00e9es seront extraites des tables Opal correspondantes."
       },
       "data-schema": {
-        "title": "Schéma de données",
-        "Info": "Les variables du schéma de données sont les variables de référence de l'ensemble de données harmonisé. Ceci est un dictionnaire de données simple: aucune donnée sommaire ne sera extraite de la table Opal."
+        "title": "Sch\u00e9ma de donn\u00e9es",
+        "Info": "Les variables du sch\u00e9ma de donn\u00e9es sont les variables de r\u00e9f\u00e9rence de l'ensemble de donn\u00e9es harmonis\u00e9. Ceci est un dictionnaire de donn\u00e9es simple: aucune donn\u00e9e sommaire ne sera extraite de la table Opal."
       },
-      "no_var": "Hide Variables information of current Dataset"
+      "no_var": "Hide Variables information of current Dataset",
+      "harmonization-study-table": {
+        "title": {
+          "weight": "Ordre"
+        }
+      }
     },
     "population": {
       "ageMin": "Age minimum",
       "ageMax": "Age maximum"
     },
     "network": {
-      "general-info": "Information générale",
+      "general-info": "Information g\u00e9n\u00e9rale",
       "add-member": "Ajouter {{type}}",
       "member-list": "Liste de {{type}}"
     },
-    "review": "Réviser",
-    "changed-by": "Changé par",
-    "changed-on": "Changé le",
-    "REJECTED": "Rejectée",
+    "review": "R\u00e9viser",
+    "changed-by": "Chang\u00e9 par",
+    "changed-on": "Chang\u00e9 le",
+    "REJECTED": "Reject\u00e9e",
     "sets": {
-      "empty": "Aucune liste",
-      "maximum-number-attained": "Votre limite de {{arg0}} <a href='{{arg1}}' target='_self'><strong><u>listes</u></strong></a> a été atteinte.",
+      "empty": "Aucune liste enregistr\u00e9e",
+      "maximum-number-attained": "Votre limite de {{arg0}} <a href='{{arg1}}' target='_self'><strong><u>listes enregistr\u00e9es</u></strong></a> a \u00e9t\u00e9 atteinte.",
       "set": {
-        "title": "Listes",
-        "help": "Gestion des listes de variables sauvegardées. Chaque liste peut ensuite être analysée ou vu dans la page de recherche.",
-        "no-variable-added": "Aucune variable n'a été ajoutée à la liste {{arg0}}.",
-        "variables-added": "<a href='{{arg0}}?id={{arg1}}' target='_self'><u>{{arg2}} variable(s) ont été ajoutées à la liste {{arg3}}.</u></a>"
+        "title": "Listes enregistr\u00e9es",
+        "help": "",
+        "no-variable-added": "Aucune variable n'a \u00e9t\u00e9 ajout\u00e9e \u00e0 la liste enregistr\u00e9es {{arg0}}.",
+        "variables-added": "<a href='{{arg0}}?id={{arg1}}' target='_self'><u>{{arg2}} variable(s) ont \u00e9t\u00e9 ajout\u00e9es \u00e0 la liste enregistr\u00e9e {{arg3}}.</u></a>"
       },
       "add": {
         "button": {
-          "set-label": "Ajouter à une liste"
+          "set-label": "Ajouter \u00e0 une liste enregistr\u00e9e"
         },
         "modal": {
-          "create-new": "Créer une nouvelle liste",
-          "to-existing": "Ajouter à une liste existante"
+          "create-new": "Cr\u00e9er une nouvelle liste enregistr\u00e9e",
+          "to-existing": "Ajouter \u00e0 une liste enregistr\u00e9e existante"
         }
       },
       "delete-dialog": {
-        "title": "Supprimer les listes sélectionnées",
-        "message": "Êtes-vous sûr de vouloir supprimer les listes sélectionnées?"
+        "title": "Supprimer les listes enregistr\u00e9es s\u00e9lectionn\u00e9es",
+        "message": "\u00cates-vous s\u00fbr de vouloir supprimer les listes enregistr\u00e9es s\u00e9lectionn\u00e9es?"
       }
     },
     "search": {
       "coverage-buckets": {
-        "study": "Données",
-        "dce": "Événement de collecte de données (ECD)",
-        "dataschema": "Ensemble de données Harmonisé",
-        "dataset": "Ensemble de données d'étude"
+        "study": "Donn\u00e9es",
+        "dce": "\u00c9v\u00e9nement de collecte de donn\u00e9es (ECD)",
+        "dataschema": "Ensemble de donn\u00e9es Harmonis\u00e9",
+        "dataset": "Ensemble de donn\u00e9es d'\u00e9tude"
       },
       "study": {
-        "label": "Données"
+        "label": "Donn\u00e9es"
       },
       "variable": {
-        "dataschema": "Schéma de données",
-        "study": "Étude",
-        "studyNetwork": "Étude/Réseau"
+        "dataschema": "Sch\u00e9ma de donn\u00e9es",
+        "study": "\u00c9tude",
+        "studyNetwork": "\u00c9tude/R\u00e9seau"
       },
-      "study-where": "Studies où...",
-      "dataset-where": "Datasets où..."
+      "study-where": "Studies o\u00f9...",
+      "dataset-where": "Datasets o\u00f9..."
     },
     "variable-classifications": "Classifications de variables",
-    "select-all": "Sélectionner tout",
-    "select-items": "Tout sélectionner",
+    "select-all": "S\u00e9lectionner tout",
+    "select-items": "Tout s\u00e9lectionner",
     "form": "De",
-    "new-data-access-request": "Nouvelle demande d'accès",
+    "new-data-access-request": "Nouvelle demande d'acc\u00e8s",
     "admin-page": {
       "help": {
         "network-config": "Configure network form.",
-        "data-access-config": "Configurer le formulaire de demande d'accès.",
-        "sets": "Listes de variables.",
+        "data-access-config": "Configurer le formulaire de demande d'acc\u00e8s.",
+        "sets": "Listes enregistr\u00e9es de variables.",
         "dataset-config": "Configure dataset form.",
         "study-config": "Configure study form."
       }
     },
     "server": {
       "error": {
-        "403": "Le serveur a rejeté votre demande, veuillez vous assurer que vous êtes connecté et essayez de nouveau.",
+        "403": "Le serveur a rejet\u00e9 votre demande, veuillez vous assurer que vous \u00eates connect\u00e9 et essayez de nouveau.",
         "409": {
           "network": {
-            "delete-conflict-message": "Conflits lors de suppression de réseau. Supprimez toutes les références vers les réseaux suivants: {{arg0}}"
+            "delete-conflict-message": "Conflits lors de suppression de r\u00e9seau. Supprimez toutes les r\u00e9f\u00e9rences vers les r\u00e9seaux suivants: {{arg0}}"
           }
         }
       }
@@ -865,406 +988,456 @@
       "default": {
         "I": {
           "A": {
-            "info": "Veuillez vous assurer qu'une adresse postale complète et un courriel institutionnel valide sont incluses. Dans le cas de plus d'une affiliation, les candidats doivent fournir leurs coordonnées se rapportant uniquement à l'institution à laquelle ils sont affiliés dans le cadre de ce projet de recherche."
+            "info": "Veuillez vous assurer qu'une adresse postale compl\u00e8te et un courriel institutionnel valide sont incluses. Dans le cas de plus d'une affiliation, les candidats doivent fournir leurs coordonn\u00e9es se rapportant uniquement \u00e0 l'institution \u00e0 laquelle ils sont affili\u00e9s dans le cadre de ce projet de recherche."
           },
           "B": {
-            "info": "Veuillez inclure une adresse postale complète et un courriel institutionnel valide."
+            "info": "Veuillez inclure une adresse postale compl\u00e8te et un courriel institutionnel valide."
           },
           "D": {
-            "info": "Veuillez fournir les noms de tous les chercheurs, collaborateurs, gestionnaires de données et le personnel de recherche qui auront accès aux données de recherche afin de travailler sur le projet. Un courriel institutionnel valide pour chaque nom avec leur titre d'emploi et fonction sont également requis."
+            "info": "Veuillez fournir les noms de tous les chercheurs, collaborateurs, gestionnaires de donn\u00e9es et le personnel de recherche qui auront acc\u00e8s aux donn\u00e9es de recherche afin de travailler sur le projet. Un courriel institutionnel valide pour chaque nom avec leur titre d'emploi et fonction sont \u00e9galement requis."
           }
         }
       },
       "custom": {
         "form-title": "Formulaire d'amendement de CanPath",
-        "dao-project-id": "Numéro Projet DAO",
+        "dao-project-id": "Num\u00e9ro Projet DAO",
         "submission-date-amendment": "Date de submission du formulaire d'amendement CPTP",
         "title-research-project": "Titre du projet de recherche",
         "name-principal-applicant": "Nom du demandeur principal",
         "position": "Position",
         "primary-institution": "institution principale",
         "institutional-email-address": "Courriel institutionnel",
-        "telephone-number": "Numéro de téléphone ",
+        "telephone-number": "Num\u00e9ro de t\u00e9l\u00e9phone ",
         "institutional-mailing-address": "Adresse postale institutionnelle",
-        "research-project-time-table": "Durée du projet de recherche",
-        "start-research-project-time-table": "Date de début",
+        "research-project-time-table": "Dur\u00e9e du projet de recherche",
+        "start-research-project-time-table": "Date de d\u00e9but",
         "end-research-project-time-table": "Date de fin",
-        "unanticipated-event-change-request-addendum": "Èvénement imprévu / requête de changement/ Addenda",
-        "current-state-project-description": "Décrire l'état de votre projet  ainsi que les progrès fait à ce jour en rapport avec les données et/ou échantillons biologiques CanPath",
-        "requested-changes-approved-protocol-description": "Décrire toutes les demandes de changements au protocole approuvé en rapport avec les données et/ou échantillons biologiques CanPath",
-        "reasons-related-request-description": "Veuillez décrire les raisons de votre demande en rapport avec les données et/ou échantillons biologiques CanPath",
-        "info-dar-modification": "Changer les principals informations  du formulaire de demande d'accés"
+        "unanticipated-event-change-request-addendum": "\u00c8v\u00e9nement impr\u00e9vu / requ\u00eate de changement/ Addenda",
+        "current-state-project-description": "D\u00e9crire l'\u00e9tat de votre projet  ainsi que les progr\u00e8s fait \u00e0 ce jour en rapport avec les donn\u00e9es et/ou \u00e9chantillons biologiques CanPath",
+        "requested-changes-approved-protocol-description": "D\u00e9crire toutes les demandes de changements au protocole approuv\u00e9 en rapport avec les donn\u00e9es et/ou \u00e9chantillons biologiques CanPath",
+        "reasons-related-request-description": "Veuillez d\u00e9crire les raisons de votre demande en rapport avec les donn\u00e9es et/ou \u00e9chantillons biologiques CanPath",
+        "info-dar-modification": "Changer les principals informations  du formulaire de demande d'acc\u00e9s"
       }
     },
-    "data-access-requests": "Demandes d'accès",
+    "data-access-requests": "Demandes d'acc\u00e8s",
     "data-access-request": {
       "title": "Titre",
-      "none": "Aucune demande d'accès.",
-      "add": "Ajouter une demande d'accès",
-      "edit": "Éditer une demande d'accès",
-      "documents-help": "Sélectionner un ou plusieurs documents à joindre à la demande d'accès.",
+      "none": "Aucune demande d'acc\u00e8s.",
+      "add": "Ajouter une demande d'acc\u00e8s",
+      "edit": "\u00c9diter une demande d'acc\u00e8s",
+      "documents-help": "S\u00e9lectionner un ou plusieurs documents \u00e0 joindre \u00e0 la demande d'acc\u00e8s.",
       "histories": {
-        "approved": "Approuvée"
+        "approved": "Approuv\u00e9e"
       },
       "delete-dialog": {
-        "title": "Supprimer la demande d'accès"
+        "title": "Supprimer la demande d'acc\u00e8s"
       },
       "validation": {
-        "success": "Votre formulaire est complet et prêt à être soumis.",
+        "success": "Votre formulaire est complet et pr\u00eat \u00e0 \u00eatre soumis.",
         "error": "Votre formulaire de demande est incomplet, veuillez corriger les erreurs."
       },
       "default": {
         "title": "Qualifications (PhD, MD, etc.)",
-        "position": "Poste (rang, faculté, département)",
+        "position": "Poste (rang, facult\u00e9, d\u00e9partement)",
         "email": "Courriel institutionnel",
         "email-alt": "Courriel alternative",
         "address": "Adresse postale institutionnelle",
         "I": {
           "title": "Contact et information sur le Projet de recherche",
           "A": {
-            "title": "Nom, institution et coordonnées du Demandeur (Principal Demandeur)",
-            "info": "Veuillez inclure une adresse postale complète et une adresse courriel institutionnel valide. Si vous avez plus d’une affiliation, veuillez fournir seulement les coordonnées en lien avec l’institution pour laquelle vous êtes affilié dans l’objectif de ce projet de recherche."
+            "title": "Nom, institution et coordonn\u00e9es du Demandeur (Principal Demandeur)",
+            "info": "Veuillez inclure une adresse postale compl\u00e8te et une adresse courriel institutionnel valide. Si vous avez plus d\u2019une affiliation, veuillez fournir seulement les coordonn\u00e9es en lien avec l\u2019institution pour laquelle vous \u00eates affili\u00e9 dans l\u2019objectif de ce projet de recherche.",
+            "early-career-researcher": "The Canadian Institutes of Health Research defines an <a href=\"https://cihr-irsc.gc.ca/e/34190.html#r14\" target=\"_blank\">early career researcher</a> as \u201cA researcher who, at the time of application, has held a full time, independent research appointment, for a period of 0 to 5 years (60 months).\u201d Is this request for a project being led by an early career researcher?"
           },
           "B": {
-            "title": "Nom, institution et coordonnées du représentant autorisé légal de l'institution",
-            "info": "Veuillez inclure une adresse postale complète ainsi qu’une courriel institutionnel valide."
+            "title": "Nom, institution et coordonn\u00e9es du repr\u00e9sentant autoris\u00e9 l\u00e9gal de l'institution",
+            "info": "Veuillez inclure une adresse postale compl\u00e8te ainsi qu\u2019une courriel institutionnel valide."
           },
           "C": {
             "title": "Titre du Projet de recherche",
-            "website": "Site web du projet de recherche (le cas échéant)"
+            "website": "Site web du projet de recherche (le cas \u00e9ch\u00e9ant)"
           },
           "E": {
-            "title": "Noms et coordonnées des Fournisseurs de services et des Laboratoires commerciaux",
-            "info": "Veuillez fournir les coordonnées de tous les fournisseurs de services et laboratoires commerciaux qui auront accès aux données et/ou aux échantillons biologiques demandés aux fins du projet de recherche. Tous les fournisseurs de services et laboratoires commerciaux devront respecter les termes et conditions de l’Entente d’accès."
+            "title": "Noms et coordonn\u00e9es des Fournisseurs de services et des Laboratoires commerciaux",
+            "info": "Veuillez fournir les coordonn\u00e9es de tous les fournisseurs de services et laboratoires commerciaux qui auront acc\u00e8s aux donn\u00e9es et/ou aux \u00e9chantillons biologiques demand\u00e9s aux fins du projet de recherche. Tous les fournisseurs de services et laboratoires commerciaux devront respecter les termes et conditions de l\u2019Entente d\u2019acc\u00e8s."
           },
           "F": {
-            "title": "Catégorie/Type de recherche",
-            "info": "Sélectionnez les items décrivant le mieux le type de projet de recherche qui serait réalisé avec les données et/ou les échantillons biologiques (plusieurs choix peuvent s'appliquer)."
+            "title": "Cat\u00e9gorie/Type de recherche",
+            "info": "S\u00e9lectionnez les items d\u00e9crivant le mieux le type de projet de recherche qui serait r\u00e9alis\u00e9 avec les donn\u00e9es et/ou les \u00e9chantillons biologiques (plusieurs choix peuvent s'appliquer)."
           },
           "G": {
-            "title": "Mots clés",
-            "info": "Veuillez fournir 5-10 mots clés qui décrivent le mieux votre projet de recherche."
+            "title": "Mots cl\u00e9s",
+            "info": "Veuillez fournir 5-10 mots cl\u00e9s qui d\u00e9crivent le mieux votre projet de recherche."
           }
         },
         "documents": {
-          "reb-research-protocol": "Protocole de recherche approuvé par le comité d’éthique de la recherche (CER)",
-          "reb-decision-letter": "Lettre de décision d’un comité d’éthique de la recherche (CER) (en anglais ou en français) (accompagnée du numéro d’approbation de l’institution, le cas échéant)",
+          "reb-research-protocol": "Protocole de recherche approuv\u00e9 par le comit\u00e9 d\u2019\u00e9thique de la recherche (CER)",
+          "reb-decision-letter": "Lettre de d\u00e9cision d\u2019un comit\u00e9 d\u2019\u00e9thique de la recherche (CER) (en anglais ou en fran\u00e7ais) (accompagn\u00e9e du num\u00e9ro d\u2019approbation de l\u2019institution, le cas \u00e9ch\u00e9ant)",
           "cv": "CV de deux pages du Demandeur principal",
-          "peer-review": "Preuve d’examen scientifique par les pairs, le cas échéant"
+          "peer-review": "Preuve d\u2019examen scientifique par les pairs, le cas \u00e9ch\u00e9ant",
+          "funding-proof": "Evidence of funding"
         },
         "signature": {
-          "check": "J’ai complété tous les champs obligatoires, inclus tous les documents nécessaires et, par la présente, soumet cette application."
+          "check": "J\u2019ai compl\u00e9t\u00e9 tous les champs obligatoires, inclus tous les documents n\u00e9cessaires et, par la pr\u00e9sente, soumet cette application."
         },
-        "email-validation-message": "L'Courriel n'est pas valide"
+        "email-validation-message": "L'Courriel n'est pas valide",
+        "II": {
+          "title": "SECTION 2: Research Project",
+          "F": {
+            "access-data-only": "This proposal is a request for access to data only"
+          }
+        },
+        "III": {
+          "title": "SECTION 3: Funding and Scientific Review"
+        },
+        "IV": {
+          "title": "SECTION 4: Data and Biosamples"
+        },
+        "V": {
+          "title": "Return of Data"
+        },
+        "VI": {
+          "title": "SECTION 6: Security"
+        },
+        "member-name": "Name of Research Team Member"
       },
       "custom": {
-        "100-word-limit-error": "La limite de 100 mots a été dépassée.",
-        "200-word-limit-error": "La limite de 200 mots a été dépassée.",
-        "500-word-limit-error": "La limite de 500 mots a été dépassée.",
+        "100-word-limit-error": "La limite de 100 mots a \u00e9t\u00e9 d\u00e9pass\u00e9e.",
+        "200-word-limit-error": "La limite de 200 mots a \u00e9t\u00e9 d\u00e9pass\u00e9e.",
+        "500-word-limit-error": "La limite de 500 mots a \u00e9t\u00e9 d\u00e9pass\u00e9e.",
         "I": {
           "C": {
-            "project-time-table-help": "Échéancier du projet de recherche"
+            "project-time-table-help": "\u00c9ch\u00e9ancier du projet de recherche"
           },
           "D": {
             "1": {
-              "info": "Veuillez fournir les détails de tous les membres de l’Équipe de recherche travaillant avec le Principal Demandeur qui auront accès aux Données de Recherche et/ou Échantillons biologiques demandés pour travailler sur le projet de recherche (p. ex. co-investigateurs, collaborateurs, assistants de recherche, coordonnateurs d’étude, techniciens de laboratoire et étudiants). Pour les membres de l’Équipe de recherche affiliés à d’autres institutions, veuillez-vous référer à D2 et D3.",
-              "title": "Noms, institutions et coordonnées des membres de l’Équipe de recherche travaillant avec le Demandeur"
+              "info": "Veuillez fournir les d\u00e9tails de tous les membres de l\u2019\u00c9quipe de recherche travaillant avec le Principal Demandeur qui auront acc\u00e8s aux Donn\u00e9es de Recherche et/ou \u00c9chantillons biologiques demand\u00e9s pour travailler sur le projet de recherche (p. ex. co-investigateurs, collaborateurs, assistants de recherche, coordonnateurs d\u2019\u00e9tude, techniciens de laboratoire et \u00e9tudiants). Pour les membres de l\u2019\u00c9quipe de recherche affili\u00e9s \u00e0 d\u2019autres institutions, veuillez-vous r\u00e9f\u00e9rer \u00e0 D2 et D3.",
+              "title": "Noms, institutions et coordonn\u00e9es des membres de l\u2019\u00c9quipe de recherche travaillant avec le Demandeur"
             },
             "2": {
-              "details": "Veuillez fournir les coordonnées du représentant autorisé legal de l’institution pour chacune des institutions principales des co-demandeurs mentionnés ci-haut.",
-              "title": "Noms, institutions et coordonnées des co-demandeurs affiliés à d’autres institutions"
+              "details": "Veuillez fournir les coordonn\u00e9es du repr\u00e9sentant autoris\u00e9 legal de l\u2019institution pour chacune des institutions principales des co-demandeurs mentionn\u00e9s ci-haut.",
+              "title": "Noms, institutions et coordonn\u00e9es des co-demandeurs affili\u00e9s \u00e0 d\u2019autres institutions"
             },
             "3": {
-              "title": "Noms, institutions et coordonnées des membres de l’Équipe de recherche travaillant avec les co-demandeurs affiliés à d’autres institutions"
+              "title": "Noms, institutions et coordonn\u00e9es des membres de l\u2019\u00c9quipe de recherche travaillant avec les co-demandeurs affili\u00e9s \u00e0 d\u2019autres institutions"
             }
           },
           "H": {
-            "info": "Veuillez rédiger en moins de 500 mots une description scientifique claire du projet de recherche, de ses objectifs, de sa méthodologie et de ses livrables et préciser la façon dont il répond aux objectifs de CanPath. Veuillez aussi expliquer clairement de quelle façon les données ou les échantillons biologiques de CanPath seraient utilisés dans le cadre du projet de recherche.",
-            "title": "Projet de recherche (résumé scientifique)"
+            "info": "Veuillez r\u00e9diger en moins de 500 mots une description scientifique claire du projet de recherche, de ses objectifs, de sa m\u00e9thodologie et de ses livrables et pr\u00e9ciser la fa\u00e7on dont il r\u00e9pond aux objectifs de CanPath. Veuillez aussi expliquer clairement de quelle fa\u00e7on les donn\u00e9es ou les \u00e9chantillons biologiques de CanPath seraient utilis\u00e9s dans le cadre du projet de recherche.",
+            "title": "Projet de recherche (r\u00e9sum\u00e9 scientifique)"
           },
           "I": {
-            "info": "Veuillez fournir l’information suivante à propos de la population demandée.",
+            "info": "Veuillez fournir l\u2019information suivante \u00e0 propos de la population demand\u00e9e.",
             "title": "Conception du projet de recherche"
           },
           "J": {
-            "info": "Veuillez rédiger en moins de 250 mots une courte description du projet de recherche qui sera accessible au grand public. L’emploi de jargon scientifique devra être évité ou réduit au minimum. Cette description sera disponible dans le Registre d’accès public de CanPath et peut être utilisée dans divers types de communications de CanPath (p. ex. bulletins d’information, brochures, rapports destinés aux intervenants, communiqués de presse, blogues, etc.).",
-            "title": "Résumé vulgarisé du projet de recherche"
+            "info": "Veuillez r\u00e9diger en moins de 250 mots une courte description du projet de recherche qui sera accessible au grand public. L\u2019emploi de jargon scientifique devra \u00eatre \u00e9vit\u00e9 ou r\u00e9duit au minimum. Cette description sera disponible dans le Registre d\u2019acc\u00e8s public de CanPath et peut \u00eatre utilis\u00e9e dans divers types de communications de CanPath (p. ex. bulletins d\u2019information, brochures, rapports destin\u00e9s aux intervenants, communiqu\u00e9s de presse, blogues, etc.).",
+            "title": "R\u00e9sum\u00e9 vulgaris\u00e9 du projet de recherche"
           },
           "K": {
-            "documents-info": "Veuillez fournir les pièces justificatives suivantes directement liées à la présente demande d’accès",
-            "evaluated-by-who": "Veuillez préciser lequel?",
-            "funding-approximate-date": "Veuillez indiquer la date approximative à laquelle les fonds seront disponibles.",
+            "documents-info": "Veuillez fournir les pi\u00e8ces justificatives suivantes directement li\u00e9es \u00e0 la pr\u00e9sente demande d\u2019acc\u00e8s",
+            "evaluated-by-who": "Veuillez pr\u00e9ciser lequel?",
+            "funding-approximate-date": "Veuillez indiquer la date approximative \u00e0 laquelle les fonds seront disponibles.",
             "funding-body-query": "De quel organisme de financement provient-elle?",
-            "funding-check": "Du financement vous a-t-il été accordée?",
+            "funding-check": "Du financement vous a-t-il \u00e9t\u00e9 accord\u00e9e?",
             "funding-date": "Veuillez fournir les dates du financement",
-            "funding-details": "Veuillez fournir des détails sur la façon dont le projet de recherche sera financé.",
-            "info": "Veuillez répondre aux questions suivantes portant sur le financement et l’examen scientifique de votre projet de recherche",
-            "peer-review-expected-date": "Quelle est la date prévue de l’examen par les pairs?",
-            "peer-review-plan": "Un processus d’examen par les pairs est-il prévu?",
-            "project-evaluated-query": "Le projet de recherche a-t-il été évalué dans le cadre d’un processus d’examen par les pairs reconnu?",
+            "funding-details": "Veuillez fournir des d\u00e9tails sur la fa\u00e7on dont le projet de recherche sera financ\u00e9.",
+            "info": "Veuillez r\u00e9pondre aux questions suivantes portant sur le financement et l\u2019examen scientifique de votre projet de recherche",
+            "peer-review-expected-date": "Quelle est la date pr\u00e9vue de l\u2019examen par les pairs?",
+            "peer-review-plan": "Un processus d\u2019examen par les pairs est-il pr\u00e9vu?",
+            "project-evaluated-query": "Le projet de recherche a-t-il \u00e9t\u00e9 \u00e9valu\u00e9 dans le cadre d\u2019un processus d\u2019examen par les pairs reconnu?",
             "title": "Financement et examen scientifique"
           },
           "L": {
-            "title": "Approbation du comité d’éthique",
-            "title-documents-additional": "Veuillez également fournir les pièces justificatives suivantes directement liées à la présente demande d’accès",
-            "title-documents-caution": "Remarque : Aucune demande ne sera examinée avant la réception de tous les documents éthiques requis.",
-            "title-documents-note": "Le Bureau d’accès se réserve le droit, s’il y a lieu, de demander d’autres documents relatifs à l’examen du projet de recherche du Demandeur par le comité d’éthique de la recherche. Il est de la responsabilité du Demandeur de veiller à satisfaire toutes les exigences éthiques locales/nationales avant l’envoi de la demande."
+            "title": "Approbation du comit\u00e9 d\u2019\u00e9thique",
+            "title-documents-additional": "Veuillez \u00e9galement fournir les pi\u00e8ces justificatives suivantes directement li\u00e9es \u00e0 la pr\u00e9sente demande d\u2019acc\u00e8s",
+            "title-documents-caution": "Remarque : Aucune demande ne sera examin\u00e9e avant la r\u00e9ception de tous les documents \u00e9thiques requis.",
+            "title-documents-note": "Le Bureau d\u2019acc\u00e8s se r\u00e9serve le droit, s\u2019il y a lieu, de demander d\u2019autres documents relatifs \u00e0 l\u2019examen du projet de recherche du Demandeur par le comit\u00e9 d\u2019\u00e9thique de la recherche. Il est de la responsabilit\u00e9 du Demandeur de veiller \u00e0 satisfaire toutes les exigences \u00e9thiques locales/nationales avant l\u2019envoi de la demande."
           },
           "M": {
-            "applicant-only": "Pour le laboratoire du demandeur et/ou d’un co-demandeur seulement, veuillez fournir des détails sur au moins un des champs d’information de laboratoire qualificative ci-dessous",
+            "applicant-only": "Pour le laboratoire du demandeur et/ou d\u2019un co-demandeur seulement, veuillez fournir des d\u00e9tails sur au moins un des champs d\u2019information de laboratoire qualificative ci-dessous",
             "biomarker-info": "Information sur les biomarqueurs (requis pour chaque biomarqueur)",
-            "biomarker-info-help": "Décrivez le biomarqueur/catégorie de biomarqueurs proposé(e) pour l’analyse incluant l’intervalle usuel mesuré dans une population adulte pour le type d’échantillon biologique demandé et les résultats que vous anticipez de l’analyse de ces échantillons. Veuillez fournir la preuve que le biomarqueur/ catégorie de biomarqueurs pour la mesure du type d’échantillon biologique proposé est stable et qu’une analyse à un point unique suffira pour obtenir une représentation fiable de la question posée. Si cette information est disponible dans le protocole de recherche soumis, vous pouvez faire référence à la /aux page(s) où cette information peut être trouvée.",
-            "biosamples-other-source": "Pour cette proposition de recherche, avez-vous appliqué pour des échantillons biologiques provenant d’une autre source?",
-            "evidence-lab": "Veuillez fournir l’évidence sur l’utilisation et la précision de l’essai dans ce laboratoire",
-            "info": "<p>Veuillez décrire le type et la quantité d’échantillons biologiques requis pour supporter votre projet de recherche. Des détails supplémentaires sur les échantillons biologiques demandés peuvent être ajoutés au champ pour les renseignements additionnels.</p><p>Veuillez-vous référer au portail de données de CanPath pour plus d’information sur les <a href=\"https://portal.CanPath.ca/page/samples\" target=\"_blank\">échantillons biologiques</a>  disponibles ou pour contacter le Bureau d'accès. Toutes les demandes d’échantillons biologiques approuvées incluront l’envoi de l’ensemble de données associées aux échantillons biologiques.</p>",
-            "mastery": "Veuillez-vous référer au portail de données de CanPath pour plus d’information et pour consulter le catalogue des échantillons biologiques disponibles ou pour contacter le Bureau d'accès. Toutes les demandes d’échantillons biologiques approuvées incluront l’envoi de l’ensemble de données associées aux échantillons biologiques.",
-            "methodology-lab": "Information sur la méthodologie et le laboratoire (requis pour chaque essai)",
-            "methodology-lab-info": "Décrivez la méthodologie proposée pour l’analyse d’échantillon qui sera effectuée sur chaque échantillon biologique demandé. Cette description devrait inclure les méthodologies disponibles ainsi que la justification pour l’utilisation de l’essai proposé, incluant la source de réactif. Veuillez fournir la preuve du rendement de l’essai ainsi qu’une liste de deux à cinq publications attestant de la qualité de l’essai issues vos publications personnelles ou de celles de vos collaborateurs. Si cette information est disponible dans le protocole de recherche soumis, vous pouvez faire référence à la /aux page(s) où cette information peut être trouvée.",
-            "title": "Échantillons biologiques"
+            "biomarker-info-help": "D\u00e9crivez le biomarqueur/cat\u00e9gorie de biomarqueurs propos\u00e9(e) pour l\u2019analyse incluant l\u2019intervalle usuel mesur\u00e9 dans une population adulte pour le type d\u2019\u00e9chantillon biologique demand\u00e9 et les r\u00e9sultats que vous anticipez de l\u2019analyse de ces \u00e9chantillons. Veuillez fournir la preuve que le biomarqueur/ cat\u00e9gorie de biomarqueurs pour la mesure du type d\u2019\u00e9chantillon biologique propos\u00e9 est stable et qu\u2019une analyse \u00e0 un point unique suffira pour obtenir une repr\u00e9sentation fiable de la question pos\u00e9e. Si cette information est disponible dans le protocole de recherche soumis, vous pouvez faire r\u00e9f\u00e9rence \u00e0 la /aux page(s) o\u00f9 cette information peut \u00eatre trouv\u00e9e.",
+            "biosamples-other-source": "Pour cette proposition de recherche, avez-vous appliqu\u00e9 pour des \u00e9chantillons biologiques provenant d\u2019une autre source?",
+            "evidence-lab": "Veuillez fournir l\u2019\u00e9vidence sur l\u2019utilisation et la pr\u00e9cision de l\u2019essai dans ce laboratoire",
+            "info": "<p>Veuillez d\u00e9crire le type et la quantit\u00e9 d\u2019\u00e9chantillons biologiques requis pour supporter votre projet de recherche. Des d\u00e9tails suppl\u00e9mentaires sur les \u00e9chantillons biologiques demand\u00e9s peuvent \u00eatre ajout\u00e9s au champ pour les renseignements additionnels.</p><p>Veuillez-vous r\u00e9f\u00e9rer au portail de donn\u00e9es de CanPath pour plus d\u2019information sur les <a href=\"https://portal.CanPath.ca/page/samples\" target=\"_blank\">\u00e9chantillons biologiques</a>  disponibles ou pour contacter le Bureau d'acc\u00e8s. Toutes les demandes d\u2019\u00e9chantillons biologiques approuv\u00e9es incluront l\u2019envoi de l\u2019ensemble de donn\u00e9es associ\u00e9es aux \u00e9chantillons biologiques.</p>",
+            "mastery": "Veuillez-vous r\u00e9f\u00e9rer au portail de donn\u00e9es de CanPath pour plus d\u2019information et pour consulter le catalogue des \u00e9chantillons biologiques disponibles ou pour contacter le Bureau d'acc\u00e8s. Toutes les demandes d\u2019\u00e9chantillons biologiques approuv\u00e9es incluront l\u2019envoi de l\u2019ensemble de donn\u00e9es associ\u00e9es aux \u00e9chantillons biologiques.",
+            "methodology-lab": "Information sur la m\u00e9thodologie et le laboratoire (requis pour chaque essai)",
+            "methodology-lab-info": "D\u00e9crivez la m\u00e9thodologie propos\u00e9e pour l\u2019analyse d\u2019\u00e9chantillon qui sera effectu\u00e9e sur chaque \u00e9chantillon biologique demand\u00e9. Cette description devrait inclure les m\u00e9thodologies disponibles ainsi que la justification pour l\u2019utilisation de l\u2019essai propos\u00e9, incluant la source de r\u00e9actif. Veuillez fournir la preuve du rendement de l\u2019essai ainsi qu\u2019une liste de deux \u00e0 cinq publications attestant de la qualit\u00e9 de l\u2019essai issues vos publications personnelles ou de celles de vos collaborateurs. Si cette information est disponible dans le protocole de recherche soumis, vous pouvez faire r\u00e9f\u00e9rence \u00e0 la /aux page(s) o\u00f9 cette information peut \u00eatre trouv\u00e9e.",
+            "title": "\u00c9chantillons biologiques",
+            "methodology-info": "Methodology information (required for each assay)",
+            "methodology-info-help": "Describe the proposed methodology for biosamples analysis that will be performed for each requested biosamples. This should include what methodologies are available and the rationale for using the proposed assay. Include the reagent source. Provide evidence of the assay\u2019s performance and list 2 to 5 publications where this quality has been demonstrated. If the methodology information is available within your submitted research proposal you may reference the page(s) where the information can be found."
           },
           "N": {
-            "always-included": "Âge, sexe, pays de naissance, provinces – toujours inclus",
-            "biosample-data": "De l’information standard est fournie lorsque des échantillons biologiques sont demandés.",
-            "biosample-data-title": "Données sur les échantillons biologiques",
-            "info": "Sélectionnez l’ensemble de variables supportant spécifiquement le projet de recherche que vous avez identifié dans la section H. L’ensemble de variables ci-dessous est identifié comme ‘’noyau’’ étant donné qu’il fait partie du protocole central de CanPath (i.e. collecté sur la plupart des participants). Au besoin, vous pouvez demander des variables qui ne sont pas énumérées en complétant les champs appropriés. Veuillez-vous référer au portail de données de CanPath pour plus d’information.",
+            "always-included": "\u00c2ge, sexe, pays de naissance, provinces \u2013 toujours inclus",
+            "biosample-data": "De l\u2019information standard est fournie lorsque des \u00e9chantillons biologiques sont demand\u00e9s.",
+            "biosample-data-title": "Donn\u00e9es sur les \u00e9chantillons biologiques",
+            "info": "S\u00e9lectionnez l\u2019ensemble de variables supportant sp\u00e9cifiquement le projet de recherche que vous avez identifi\u00e9 dans la section H. L\u2019ensemble de variables ci-dessous est identifi\u00e9 comme \u2018\u2019noyau\u2019\u2019 \u00e9tant donn\u00e9 qu\u2019il fait partie du protocole central de CanPath (i.e. collect\u00e9 sur la plupart des participants). Au besoin, vous pouvez demander des variables qui ne sont pas \u00e9num\u00e9r\u00e9es en compl\u00e9tant les champs appropri\u00e9s. Veuillez-vous r\u00e9f\u00e9rer au portail de donn\u00e9es de CanPath pour plus d\u2019information.",
             "physical-measures": "Mesures Physiques",
-            "questionnaire": "Questionnaire de santé & facteurs de risque",
-            "supplementary-info": "Veuillez spécifier toute autre information demandée",
-            "supplementary-title": "Information supplémentaire",
+            "questionnaire": "Questionnaire de sant\u00e9 & facteurs de risque",
+            "supplementary-info": "Veuillez sp\u00e9cifier toute autre information demand\u00e9e",
+            "supplementary-title": "Information suppl\u00e9mentaire",
             "title": "Variables",
-            "mental-health": "Santé mentale",
-            "canue-heading": "Consortium de recherche en santé environnementale urbain (CANUE)",
-            "canue-text-accompany": "Remarque: toute demande relative à l'ensemble de données CANUE nécessite la finalisation et l'exécution d'un <a target=\"_blank\" href =\"https://canue.ca/wp-content/uploads/2018/11/CANUE-Data-Use-and-Sharing-via-Third-Party-Agreement.pdf\">partage de données et son utilisation via un contrat tiers approuvé.</a>",
+            "mental-health": "Sant\u00e9 mentale",
+            "canue-heading": "Consortium de recherche en sant\u00e9 environnementale urbain (CANUE)",
+            "canue-text-accompany": "Remarque: toute demande relative \u00e0 l'ensemble de donn\u00e9es CANUE n\u00e9cessite la finalisation et l'ex\u00e9cution d'un <a target=\"_blank\" href =\"https://canue.ca/wp-content/uploads/2018/11/CANUE-Data-Use-and-Sharing-via-Third-Party-Agreement.pdf\">partage de donn\u00e9es et son utilisation via un contrat tiers approuv\u00e9.</a>",
             "questionnaire-followup": "Questionnaire de suivi",
-            "mental-health-cognition-personality-psychological-measures": "Cognition, personnalité et autres mesures psychologiques"
+            "mental-health-cognition-personality-psychological-measures": "Cognition, personnalit\u00e9 et autres mesures psychologiques"
           },
           "O": {
-            "info": "<p class='help-block'>Veuillez décrire brièvement (100 mots) les données dérivées qui seront retournées au CanPath et qui seront générées dans le cadre de votre projet de recherche par l’analyse des Données de recherche ou des Échantillons biologiques. Les données à retourner incluent: les nouvelles variables découlant des résultats des essais effectués (le cas échéant) et les variables dérivées générées à partir des variables existantes utilisant une expression, y compris toutes les variables intermédiaires de ces variables dérivées. Par exemple, une variable dérivée peut être un indice combinant plusieurs variables (p. ex., scores de risque) ou une variable numérique créée en additionnant les valeurs stockées dans deux ou plusieurs variables numériques.</p><p class='help-block'>Vous devrez retourner les données dérivées dans le format analytique utilisé pour créer votre base de données de travail finale tel que SAS (.sas), SPSS (.sps), .CSV ou un équivalent, en plus du dictionnaire de données ou de la liste de codage. Les données dérivées doivent comprendre les ID anonymisés d’origine fournis par le CanPath.</p><p class='help-block'>Toutes les données d’analyse d’un échantillon biologique doivent mentionner la source de la méthodologie utilisée dans une déclaration définissant les mesures de contrôle de la qualité qui ont été prises et en précisant si elles ont été satisfaites ou non.</p>",
-            "title": "Retour des données"
+            "info": "<p class='help-block'>Veuillez d\u00e9crire bri\u00e8vement (100 mots) les donn\u00e9es d\u00e9riv\u00e9es qui seront retourn\u00e9es au CanPath et qui seront g\u00e9n\u00e9r\u00e9es dans le cadre de votre projet de recherche par l\u2019analyse des Donn\u00e9es de recherche ou des \u00c9chantillons biologiques. Les donn\u00e9es \u00e0 retourner incluent: les nouvelles variables d\u00e9coulant des r\u00e9sultats des essais effectu\u00e9s (le cas \u00e9ch\u00e9ant) et les variables d\u00e9riv\u00e9es g\u00e9n\u00e9r\u00e9es \u00e0 partir des variables existantes utilisant une expression, y compris toutes les variables interm\u00e9diaires de ces variables d\u00e9riv\u00e9es. Par exemple, une variable d\u00e9riv\u00e9e peut \u00eatre un indice combinant plusieurs variables (p. ex., scores de risque) ou une variable num\u00e9rique cr\u00e9\u00e9e en additionnant les valeurs stock\u00e9es dans deux ou plusieurs variables num\u00e9riques.</p><p class='help-block'>Vous devrez retourner les donn\u00e9es d\u00e9riv\u00e9es dans le format analytique utilis\u00e9 pour cr\u00e9er votre base de donn\u00e9es de travail finale tel que SAS (.sas), SPSS (.sps), .CSV ou un \u00e9quivalent, en plus du dictionnaire de donn\u00e9es ou de la liste de codage. Les donn\u00e9es d\u00e9riv\u00e9es doivent comprendre les ID anonymis\u00e9s d\u2019origine fournis par le CanPath.</p><p class='help-block'>Toutes les donn\u00e9es d\u2019analyse d\u2019un \u00e9chantillon biologique doivent mentionner la source de la m\u00e9thodologie utilis\u00e9e dans une d\u00e9claration d\u00e9finissant les mesures de contr\u00f4le de la qualit\u00e9 qui ont \u00e9t\u00e9 prises et en pr\u00e9cisant si elles ont \u00e9t\u00e9 satisfaites ou non.</p>",
+            "title": "Retour des donn\u00e9es"
           }
         },
         "II": {
-          "info": "Pour éviter toute atteinte à la vie privée, vous devez suivre des pratiques et des procédures raisonnables en matière de sécurité des TI. Vous ne devez pas divulguer les données de recherche à des tiers qui n’ont pas accepté les exigences de confidentialité de CanPath. Vous devez vous assurer que cela est également le cas pour le personnel de recherche et les collaborateurs externes mentionnés à la section D. Pour obtenir l’accès au CanPath, vous devez cocher l’ensemble des cases A à E.",
-          "title": "Évaluation de la sécurité des technologies de l'information (TI)"
+          "info": "Pour \u00e9viter toute atteinte \u00e0 la vie priv\u00e9e, vous devez suivre des pratiques et des proc\u00e9dures raisonnables en mati\u00e8re de s\u00e9curit\u00e9 des TI. Vous ne devez pas divulguer les donn\u00e9es de recherche \u00e0 des tiers qui n\u2019ont pas accept\u00e9 les exigences de confidentialit\u00e9 de CanPath. Vous devez vous assurer que cela est \u00e9galement le cas pour le personnel de recherche et les collaborateurs externes mentionn\u00e9s \u00e0 la section D. Pour obtenir l\u2019acc\u00e8s au CanPath, vous devez cocher l\u2019ensemble des cases A \u00e0 E.",
+          "title": "\u00c9valuation de la s\u00e9curit\u00e9 des technologies de l'information (TI)"
         },
         "III": {
-          "info": "Pour éviter toute atteinte à la vie privée, vous devez suivre des pratiques et des procédures raisonnables en matière de sécurité des échantillons biologiques. Vous devez vous assurer que cela est également le cas pour le personnel de recherche et tous les fournisseurs de services et laboratoires commerciaux externes mentionnés aux sections D et E. Pour obtenir l’accès au CanPath, vous devez cocher l’ensemble des cases A à E.",
-          "title": "Évaluation de la sécurité des échantillons biologiques"
+          "info": "Pour \u00e9viter toute atteinte \u00e0 la vie priv\u00e9e, vous devez suivre des pratiques et des proc\u00e9dures raisonnables en mati\u00e8re de s\u00e9curit\u00e9 des \u00e9chantillons biologiques. Vous devez vous assurer que cela est \u00e9galement le cas pour le personnel de recherche et tous les fournisseurs de services et laboratoires commerciaux externes mentionn\u00e9s aux sections D et E. Pour obtenir l\u2019acc\u00e8s au CanPath, vous devez cocher l\u2019ensemble des cases A \u00e0 E.",
+          "title": "\u00c9valuation de la s\u00e9curit\u00e9 des \u00e9chantillons biologiques"
         },
-        "acd": "ACD: sang complet dans DMSO (µL)",
-        "aggreement-A": "Mon établissement possède une politique de sécurité des TI.",
-        "aggreement-B": "Je stockerai les données de recherche dans des systèmes informatiques physiques sécurisés. Si les données de recherche sont stockées sur des ordinateurs portables (que ce soit des ordinateurs portatifs ou d’autres appareils mobiles), elles doivent être codées pour éviter toute divulgation non autorisée en cas de perte ou de vol du système portable.",
-        "aggreement-C": "Je mettrai en œuvre des mesures appropriées en matière de sécurité d’accès afin de garantir que seules les personnes autorisées mentionnées à la Section I du présent formulaire de demande d’accès puissent accéder aux données de recherche. Par exemple, si les données de recherche sont stockées sur un système informatique partagé ou sur un serveur de fichiers, elles devront être protégées par un mot de passe ou cryptées. Si les données de recherche sont stockées sur un ordinateur fonctionnant sur un réseau accessible, des mesures devront être mises en place pour les protéger du piratage informatique ou de la contamination par des virus et des logiciels espions. En outre, si des sauvegardes du ou des ordinateur(s) où sont stockées les données de recherche ont été créées, les supports de sauvegarde doivent également être cryptés et stockés en lieu sûr.",
-        "aggreement-D": "Je comprends que toute personne (mentionnée à la Section I du présent formulaire de demande d’accès) utilisant les données de recherche doit être formée à l’utilisation responsable de renseignements visant des participants à la recherche et se familiariser avec les conditions de la Politique d’accès, le présent Formulaire de demande d’accès et l’Entente d’accès. Je suis responsable de veiller à ce que le personnel de recherche se conforme auxdites conditions.",
-        "aggreement-E": "Je comprends qu’à la fin de mon projet de recherche, je dois détruire toutes les copies locales, y compris les sauvegardes, des données de recherche. Cependant, si cela s’avère nécessaire, je peux toujours conserver les données de recherche à des fins d’archivage en conformité avec les exigences nationales en matière d’audits, de publication ou de réglementation. Je dois aussi stocker mon code d’analyse ou en envoyer une copie au CanPath dans le cas où la reproduction des variables ou des conclusions de mes recherches à une date ultérieure soit nécessaire.",
+        "acd": "ACD: sang complet dans DMSO (\u00b5L)",
+        "aggreement-A": "Mon \u00e9tablissement poss\u00e8de une politique de s\u00e9curit\u00e9 des TI.",
+        "aggreement-B": "Je stockerai les donn\u00e9es de recherche dans des syst\u00e8mes informatiques physiques s\u00e9curis\u00e9s. Si les donn\u00e9es de recherche sont stock\u00e9es sur des ordinateurs portables (que ce soit des ordinateurs portatifs ou d\u2019autres appareils mobiles), elles doivent \u00eatre cod\u00e9es pour \u00e9viter toute divulgation non autoris\u00e9e en cas de perte ou de vol du syst\u00e8me portable.",
+        "aggreement-C": "Je mettrai en \u0153uvre des mesures appropri\u00e9es en mati\u00e8re de s\u00e9curit\u00e9 d\u2019acc\u00e8s afin de garantir que seules les personnes autoris\u00e9es mentionn\u00e9es \u00e0 la Section I du pr\u00e9sent formulaire de demande d\u2019acc\u00e8s puissent acc\u00e9der aux donn\u00e9es de recherche. Par exemple, si les donn\u00e9es de recherche sont stock\u00e9es sur un syst\u00e8me informatique partag\u00e9 ou sur un serveur de fichiers, elles devront \u00eatre prot\u00e9g\u00e9es par un mot de passe ou crypt\u00e9es. Si les donn\u00e9es de recherche sont stock\u00e9es sur un ordinateur fonctionnant sur un r\u00e9seau accessible, des mesures devront \u00eatre mises en place pour les prot\u00e9ger du piratage informatique ou de la contamination par des virus et des logiciels espions. En outre, si des sauvegardes du ou des ordinateur(s) o\u00f9 sont stock\u00e9es les donn\u00e9es de recherche ont \u00e9t\u00e9 cr\u00e9\u00e9es, les supports de sauvegarde doivent \u00e9galement \u00eatre crypt\u00e9s et stock\u00e9s en lieu s\u00fbr.",
+        "aggreement-D": "Je comprends que toute personne (mentionn\u00e9e \u00e0 la Section I du pr\u00e9sent formulaire de demande d\u2019acc\u00e8s) utilisant les donn\u00e9es de recherche doit \u00eatre form\u00e9e \u00e0 l\u2019utilisation responsable de renseignements visant des participants \u00e0 la recherche et se familiariser avec les conditions de la Politique d\u2019acc\u00e8s, le pr\u00e9sent Formulaire de demande d\u2019acc\u00e8s et l\u2019Entente d\u2019acc\u00e8s. Je suis responsable de veiller \u00e0 ce que le personnel de recherche se conforme auxdites conditions.",
+        "aggreement-E": "Je comprends qu\u2019\u00e0 la fin de mon projet de recherche, je dois d\u00e9truire toutes les copies locales, y compris les sauvegardes, des donn\u00e9es de recherche. Cependant, si cela s\u2019av\u00e8re n\u00e9cessaire, je peux toujours conserver les donn\u00e9es de recherche \u00e0 des fins d\u2019archivage en conformit\u00e9 avec les exigences nationales en mati\u00e8re d\u2019audits, de publication ou de r\u00e9glementation. Je dois aussi stocker mon code d\u2019analyse ou en envoyer une copie au CanPath dans le cas o\u00f9 la reproduction des variables ou des conclusions de mes recherches \u00e0 une date ult\u00e9rieure soit n\u00e9cessaire.",
         "alcohol": "Alcool",
         "array-add": "Ajouter",
-        "assay-avg-nb-test-per-year": "Nombre de tests conduits en moyenne par année par le laboratoire",
-        "assay-inter-cv": "% CV de l’inter-essai du laboratoire issu d’une publication ou analyse récente",
-        "assay-intra-cv": "% CV de l’intra-essai du laboratoire issu d’une publication ou analyse récente",
+        "assay-avg-nb-test-per-year": "Nombre de tests conduits en moyenne par ann\u00e9e par le laboratoire",
+        "assay-inter-cv": "% CV de l\u2019inter-essai du laboratoire issu d\u2019une publication ou analyse r\u00e9cente",
+        "assay-intra-cv": "% CV de l\u2019intra-essai du laboratoire issu d\u2019une publication ou analyse r\u00e9cente",
         "assay-lab-name": "Nom du laboratoire (nom de l'investigateur ou du fournisseur de services)",
-        "assay-lab-qualifyers": "Autre information de laboratoire qualificative, tel qu’applicable pour cet essai",
+        "assay-lab-qualifyers": "Autre information de laboratoire qualificative, tel qu\u2019applicable pour cet essai",
         "assay-lab-shipping-address": "Adresse d'envoi du laboratoire",
-        "assay-methodology-info": "Information sur la méthodologie",
+        "assay-methodology-info": "Information sur la m\u00e9thodologie",
         "assay-name": "Essai",
-        "assay-nb-years-performed": "Nombre d’années depuis que le laboratoire performe cet essai",
-        "bio-agreement-A": "Mon établissement possède une politique de sécurité des échantillons biologiques.",
-        "bio-agreement-B": "Chaque fournisseur de services ou laboratoire commercial, le cas échéant, possède une politique officielle en matière de sécurité des échantillons biologiques.",
-        "bio-agreement-C": "Je mettrai en œuvre des mesures appropriées en matière de sécurité d’accès pour garantir que seules les personnes autorisées mentionnées à Section I du présent formulaire de demande d’accès puissent accéder au matériel. Par exemple, ces mesures exigent que le matériel soit stocké dans un endroit dont l’accès est restreint, ou à défaut, dans un congélateur ou un réfrigérateur verrouillé.",
-        "bio-agreement-D": "Je comprends que toute personne (mentionnée à la Section I du présent formulaire de demande d’accès) utilisant le matériel doit être formée à l’utilisation responsable de renseignements visant des participants à la recherche et se familiariser avec les conditions de la Politique d’accès, le présent Formulaire de demande d’accès et l’Entente d’accès. Je suis responsable de veiller à ce que le personnel de recherche se conforme auxdites conditions.",
-        "bio-agreement-E": "Je comprends qu'à la fin de mon project de recherche, je pourrais être appelé à détruire ou à retourner le matériel, conformément à la demande de CanPath.",
-        "bioimpedences": "Bio-impédance",
-        "biomarker": "Validation ou découverte de biomarqueur",
-        "biosample-pre-analytical-restriction": "Restriction(s) pré-analytique(s) sur les échantillons biologiques requise(s)",
-        "biosample-pre-analytical-restriction-reason": "Veuillez décrire et justifier le besoin pour des restrictions pré-analytiques sur les échantillons biologiques",
+        "assay-nb-years-performed": "Nombre d\u2019ann\u00e9es depuis que le laboratoire performe cet essai",
+        "bio-agreement-A": "Mon \u00e9tablissement poss\u00e8de une politique de s\u00e9curit\u00e9 des \u00e9chantillons biologiques.",
+        "bio-agreement-B": "Chaque fournisseur de services ou laboratoire commercial, le cas \u00e9ch\u00e9ant, poss\u00e8de une politique officielle en mati\u00e8re de s\u00e9curit\u00e9 des \u00e9chantillons biologiques.",
+        "bio-agreement-C": "Je mettrai en \u0153uvre des mesures appropri\u00e9es en mati\u00e8re de s\u00e9curit\u00e9 d\u2019acc\u00e8s pour garantir que seules les personnes autoris\u00e9es mentionn\u00e9es \u00e0 Section I du pr\u00e9sent formulaire de demande d\u2019acc\u00e8s puissent acc\u00e9der au mat\u00e9riel. Par exemple, ces mesures exigent que le mat\u00e9riel soit stock\u00e9 dans un endroit dont l\u2019acc\u00e8s est restreint, ou \u00e0 d\u00e9faut, dans un cong\u00e9lateur ou un r\u00e9frig\u00e9rateur verrouill\u00e9.",
+        "bio-agreement-D": "Je comprends que toute personne (mentionn\u00e9e \u00e0 la Section I du pr\u00e9sent formulaire de demande d\u2019acc\u00e8s) utilisant le mat\u00e9riel doit \u00eatre form\u00e9e \u00e0 l\u2019utilisation responsable de renseignements visant des participants \u00e0 la recherche et se familiariser avec les conditions de la Politique d\u2019acc\u00e8s, le pr\u00e9sent Formulaire de demande d\u2019acc\u00e8s et l\u2019Entente d\u2019acc\u00e8s. Je suis responsable de veiller \u00e0 ce que le personnel de recherche se conforme auxdites conditions.",
+        "bio-agreement-E": "Je comprends qu'\u00e0 la fin de mon project de recherche, je pourrais \u00eatre appel\u00e9 \u00e0 d\u00e9truire ou \u00e0 retourner le mat\u00e9riel, conform\u00e9ment \u00e0 la demande de CanPath.",
+        "bioimpedences": "Bio-imp\u00e9dance",
+        "biomarker": "Validation ou d\u00e9couverte de biomarqueur",
+        "biosample-pre-analytical-restriction": "Restriction(s) pr\u00e9-analytique(s) sur les \u00e9chantillons biologiques requise(s)",
+        "biosample-pre-analytical-restriction-reason": "Veuillez d\u00e9crire et justifier le besoin pour des restrictions pr\u00e9-analytiques sur les \u00e9chantillons biologiques",
         "biosamples-other-source-where": "Laquelle?",
-        "biosamples-requested": "Échantillons biologiques demandés",
+        "biosamples-requested": "\u00c9chantillons biologiques demand\u00e9s",
         "blood-pressure": "Pression sanguine et rythme cardiaque",
-        "bone-density": "Densité osseuse",
-        "case-control-ratio": "Ratio cas-témoins",
-        "caseControlStudy": "Étude cas-témoin",
-        "co-investigator-other": "Cette application est en collaboration avec des co-demandeurs affiliés à une institution autre que celle du demandeur principal pour réaliser ce projet de recherche.",
+        "bone-density": "Densit\u00e9 osseuse",
+        "case-control-ratio": "Ratio cas-t\u00e9moins",
+        "caseControlStudy": "\u00c9tude cas-t\u00e9moin",
+        "co-investigator-other": "Cette application est en collaboration avec des co-demandeurs affili\u00e9s \u00e0 une institution autre que celle du demandeur principal pour r\u00e9aliser ce projet de recherche.",
         "contact-name": "Nom du contact",
-        "dataPoolingStudy": "Étude utilisant les données de plusieurs cohortes (e.g. projet de centralisation de données)",
-        "descriptiveStudy": "Étude descriptive (e.g. utilisation des services de santé)",
-        "dna": "ADN (µg) (pouvant être extrait du sang ou de la salive)",
-        "edta-plasma": "EDTA: plasma (µL)",
-        "edta-rbc": "EDTA: RBC (µL)",
+        "dataPoolingStudy": "\u00c9tude utilisant les donn\u00e9es de plusieurs cohortes (e.g. projet de centralisation de donn\u00e9es)",
+        "descriptiveStudy": "\u00c9tude descriptive (e.g. utilisation des services de sant\u00e9)",
+        "dna": "ADN (\u00b5g) (pouvant \u00eatre extrait du sang ou de la salive)",
+        "edta-plasma": "EDTA: plasma (\u00b5L)",
+        "edta-rbc": "EDTA: RBC (\u00b5L)",
         "end-date": "Date de fin",
-        "enthropometric-measures": "Mesures anthropométriques",
-        "envAssStudy": "Étude d’association environnementale",
-        "ethics-approval": "Ce projet a été approuvé par un comité d’examen institutionnel ou un comité décisionnel qui a été officiellement désigné pour approuver et/ou superviser la recherche portant sur des sujets humains dans le but de protéger les droits et le bien-être des participants à la recherche.",
-        "exclusion-criteria": "Critères d’exclusion",
+        "enthropometric-measures": "Mesures anthropom\u00e9triques",
+        "envAssStudy": "\u00c9tude d\u2019association environnementale",
+        "ethics-approval": "Ce projet a \u00e9t\u00e9 approuv\u00e9 par un comit\u00e9 d\u2019examen institutionnel ou un comit\u00e9 d\u00e9cisionnel qui a \u00e9t\u00e9 officiellement d\u00e9sign\u00e9 pour approuver et/ou superviser la recherche portant sur des sujets humains dans le but de prot\u00e9ger les droits et le bien-\u00eatre des participants \u00e0 la recherche.",
+        "exclusion-criteria": "Crit\u00e8res d\u2019exclusion",
         "family-diseases": "Histoire familiale de maladies",
-        "for-case-control-studies": "Pour les études cas-témoins",
-        "fundamentalStudy": "Étude en recherche fondamentale (e.g. in vitro)",
-        "geneInteractionStudy": "Étude d’intéraction gène-gène ou gène-environnement",
-        "genealogicalStudy": "Étude généalogique",
-        "geneticAssStudy": "Étude d’association génétique",
-        "genomeWideAssStudy": "Étude d’association pangénomique",
-        "genotypeCompStudy": "Étude comparative sur la base du génotype",
-        "gisStudy": "Étude cartographique ou basée sur un SIG",
-        "grip-strength": "Force de préhension",
-        "has-service-provider": "Cette demande implique un fournisseur de services ou un laboratoire commercial qui nécessitera l’accès aux données et/ou aux échantillons biologiques demandés.",
-        "health-service-use": "Utilisation des services de santé (examens médicaux de routine, tests de dépistage du cancer)",
-        "inclusion-criteria": "Critères d’inclusion",
+        "for-case-control-studies": "Pour les \u00e9tudes cas-t\u00e9moins",
+        "fundamentalStudy": "\u00c9tude en recherche fondamentale (e.g. in vitro)",
+        "geneInteractionStudy": "\u00c9tude d\u2019int\u00e9raction g\u00e8ne-g\u00e8ne ou g\u00e8ne-environnement",
+        "genealogicalStudy": "\u00c9tude g\u00e9n\u00e9alogique",
+        "geneticAssStudy": "\u00c9tude d\u2019association g\u00e9n\u00e9tique",
+        "genomeWideAssStudy": "\u00c9tude d\u2019association pang\u00e9nomique",
+        "genotypeCompStudy": "\u00c9tude comparative sur la base du g\u00e9notype",
+        "gisStudy": "\u00c9tude cartographique ou bas\u00e9e sur un SIG",
+        "grip-strength": "Force de pr\u00e9hension",
+        "has-service-provider": "Cette demande implique un fournisseur de services ou un laboratoire commercial qui n\u00e9cessitera l\u2019acc\u00e8s aux donn\u00e9es et/ou aux \u00e9chantillons biologiques demand\u00e9s.",
+        "health-service-use": "Utilisation des services de sant\u00e9 (examens m\u00e9dicaux de routine, tests de d\u00e9pistage du cancer)",
+        "inclusion-criteria": "Crit\u00e8res d\u2019inclusion",
         "individual-diseases": "Histoire individuelle de maladies",
-        "individual-diseases-spec": "Veuillez spécifier les conditions à inclure",
-        "inform-biosamples-staggered": "Je reconnais que les échantillons biologiques peuvent être envoyés dans une livraison échelonnée et conditionnelle à l’approbation.",
-        "intro-description": "<p class='help-block'>Ce formulaire de demande d’accès doit être utilisé par tous les chercheurs qui souhaitent accéder aux Données de recherche et aux Échantillons biologiques, désignés « Matériel » dans l’Entente de partage de données et de matériel. Veuillez-vous référer à la Politique d’accès de CanPath, disponible sur le portail de CanPath, pour connaître la signification de tous les termes clés utilisés dans le présent formulaire.</p><p class='help-block'>Les demandeurs doivent examiner la <b>Politique d’accès</b>, la <b>Politique des publications</b> et la <b>Politique de propriété intellectuelle</b> dans la section <a href=\"/fr/mica/data_access/home\" target=\"_blank\">Politiques & lignes directrices de CanPath (page Processus d'accès)</a> avant de remplir le Formulaire de demande d’accès.</p><p class='help-block'>Les demandeurs doivent remplir toutes les sections obligatoires et fournir les pièces justificatives avant que la demande d’accès soit considérée.. La Politique d’accès contient des renseignements complémentaires sur le processus d’examen et d’approbation de CanPath.</p><p class='help-block'>À la suite de l’approbation d’une demande d’accès par le Comité d’accès, l’accès aux Données de recherche et/ou Échantillons biologiques est accordé pour le délai prévu dans le Formulaire de demande d’accès approuvé et l’Entente d’accès. Un rapport d’étape annuel doit être complété pour accéder et utiliser les Données de recherche et/ou Échantillons biologiques au-delà d’une période d’un an.</p><p class='help-block'>Le titre du Projet de recherche approuvé, le ou les nom(s) des Utilisateur(s) approuvé(s) et de(s) Membre(s) de l'Équipe de recherche concerné(s), leur statut et leurs titres de compétences, le ou les nom(s) des Institutions(s) approuvée(s), ainsi qu’un résumé vulgarisé de la description scientifique du projet présenté par le demandeur sera ajouté au Registre d’accès public de CanPath.</p>",
-        "intro-info": "Formulaire de demande d'accès aux données et aux échantillons biologiques de CanPath",
-        "intro-paragraph": "Ce formulaire de demande d’accès doit être utilisé par tous les chercheurs qui souhaitent accéder aux Données de recherche et aux Échantillons biologiques, désignés « Matériel » dans l’Entente de partage de données et de matériel. Veuillez-vous référer à la Politique d’accès de CanPath, disponible sur le portail de CanPath, pour connaître la signification de tous les termes clés utilisés dans le présent formulaire.",
+        "individual-diseases-spec": "Veuillez sp\u00e9cifier les conditions \u00e0 inclure",
+        "inform-biosamples-staggered": "Je reconnais que les \u00e9chantillons biologiques peuvent \u00eatre envoy\u00e9s dans une livraison \u00e9chelonn\u00e9e et conditionnelle \u00e0 l\u2019approbation.",
+        "intro-description": "<p class='help-block'>Ce formulaire de demande d\u2019acc\u00e8s doit \u00eatre utilis\u00e9 par tous les chercheurs qui souhaitent acc\u00e9der aux Donn\u00e9es de recherche et aux \u00c9chantillons biologiques, d\u00e9sign\u00e9s \u00ab Mat\u00e9riel \u00bb dans l\u2019Entente de partage de donn\u00e9es et de mat\u00e9riel. Veuillez-vous r\u00e9f\u00e9rer \u00e0 la Politique d\u2019acc\u00e8s de CanPath, disponible sur le portail de CanPath, pour conna\u00eetre la signification de tous les termes cl\u00e9s utilis\u00e9s dans le pr\u00e9sent formulaire.</p><p class='help-block'>Les demandeurs doivent examiner la <b>Politique d\u2019acc\u00e8s</b>, la <b>Politique des publications</b> et la <b>Politique de propri\u00e9t\u00e9 intellectuelle</b> dans la section <a href=\"/fr/mica/data_access/home\" target=\"_blank\">Politiques & lignes directrices de CanPath (page Processus d'acc\u00e8s)</a> avant de remplir le Formulaire de demande d\u2019acc\u00e8s.</p><p class='help-block'>Les demandeurs doivent remplir toutes les sections obligatoires et fournir les pi\u00e8ces justificatives avant que la demande d\u2019acc\u00e8s soit consid\u00e9r\u00e9e.. La Politique d\u2019acc\u00e8s contient des renseignements compl\u00e9mentaires sur le processus d\u2019examen et d\u2019approbation de CanPath.</p><p class='help-block'>\u00c0 la suite de l\u2019approbation d\u2019une demande d\u2019acc\u00e8s par le Comit\u00e9 d\u2019acc\u00e8s, l\u2019acc\u00e8s aux Donn\u00e9es de recherche et/ou \u00c9chantillons biologiques est accord\u00e9 pour le d\u00e9lai pr\u00e9vu dans le Formulaire de demande d\u2019acc\u00e8s approuv\u00e9 et l\u2019Entente d\u2019acc\u00e8s. Un rapport d\u2019\u00e9tape annuel doit \u00eatre compl\u00e9t\u00e9 pour acc\u00e9der et utiliser les Donn\u00e9es de recherche et/ou \u00c9chantillons biologiques au-del\u00e0 d\u2019une p\u00e9riode d\u2019un an.</p><p class='help-block'>Le titre du Projet de recherche approuv\u00e9, le ou les nom(s) des Utilisateur(s) approuv\u00e9(s) et de(s) Membre(s) de l'\u00c9quipe de recherche concern\u00e9(s), leur statut et leurs titres de comp\u00e9tences, le ou les nom(s) des Institutions(s) approuv\u00e9e(s), ainsi qu\u2019un r\u00e9sum\u00e9 vulgaris\u00e9 de la description scientifique du projet pr\u00e9sent\u00e9 par le demandeur sera ajout\u00e9 au Registre d\u2019acc\u00e8s public de CanPath.</p>",
+        "intro-info": "Formulaire de demande d'acc\u00e8s aux donn\u00e9es et aux \u00e9chantillons biologiques de CanPath",
+        "intro-paragraph": "Ce formulaire de demande d\u2019acc\u00e8s doit \u00eatre utilis\u00e9 par tous les chercheurs qui souhaitent acc\u00e9der aux Donn\u00e9es de recherche et aux \u00c9chantillons biologiques, d\u00e9sign\u00e9s \u00ab Mat\u00e9riel \u00bb dans l\u2019Entente de partage de donn\u00e9es et de mat\u00e9riel. Veuillez-vous r\u00e9f\u00e9rer \u00e0 la Politique d\u2019acc\u00e8s de CanPath, disponible sur le portail de CanPath, pour conna\u00eetre la signification de tous les termes cl\u00e9s utilis\u00e9s dans le pr\u00e9sent formulaire.",
         "intro-title": "SCHEDULE A",
-        "lifestyle": "Habitudes de vie et comportements de santé",
-        "matching-criteria": "Critères d’appariement",
-        "men-health": "Santé des hommes (paternité)",
-        "multiStudy": "Étude multicentrique ou étude internationale",
+        "lifestyle": "Habitudes de vie et comportements de sant\u00e9",
+        "matching-criteria": "Crit\u00e8res d\u2019appariement",
+        "men-health": "Sant\u00e9 des hommes (paternit\u00e9)",
+        "multiStudy": "\u00c9tude multicentrique ou \u00e9tude internationale",
         "nb-biomarker-measurements": "Nombre de mesures de biomarqueurs",
         "nb-participants": "Nombre de participants",
-        "no-biological-sample-needed": "Aucun échantillon biologique n’est requis",
-        "no-physical-measure": "Aucune donnée de mesures physiques n'est requise",
+        "no-biological-sample-needed": "Aucun \u00e9chantillon biologique n\u2019est requis",
+        "no-physical-measure": "Aucune donn\u00e9e de mesures physiques n'est requise",
         "nutrition": "Nutrition",
         "other-institution": {
           "investigator": {
             "title": "<h4>Co-candidat d'autre institution</h4>"
           },
           "representative": {
-            "title": "<h4>Représentant institutionnel légal autorisé</h4>"
+            "title": "<h4>Repr\u00e9sentant institutionnel l\u00e9gal autoris\u00e9</h4>"
           },
-          "title": "S'il vous plaît fournir des détails pour les co-candidats provenant d'autres institutions et les détails de leurs représentants institutionnels autorisés."
+          "title": "S'il vous pla\u00eet fournir des d\u00e9tails pour les co-candidats provenant d'autres institutions et les d\u00e9tails de leurs repr\u00e9sentants institutionnels autoris\u00e9s."
         },
-        "otherResearch": "Autre (spécifiez):",
-        "passive-smoke": "Exposition à la fumée secondaire",
-        "perception-health": "Perception de la santé générale",
-        "physical-activity": "Activité physique",
+        "otherResearch": "Autre (sp\u00e9cifiez):",
+        "passive-smoke": "Exposition \u00e0 la fum\u00e9e secondaire",
+        "perception-health": "Perception de la sant\u00e9 g\u00e9n\u00e9rale",
+        "physical-activity": "Activit\u00e9 physique",
         "principal-institution": "Institution principale",
-        "prospectiveStudy": "Étude prospective",
+        "prospectiveStudy": "\u00c9tude prospective",
         "provider-name": "Nom du Fournisseur de services ou Laboratoire commercial",
-        "pst-plasma": "PST: plasma (µL)",
-        "research-project-role": "Rôle dans le projet de recherche",
-        "research-staff-other": "Ce co-demandeur a des membres de l’Équipe de recherche de son institution principale pour réaliser ce projet de recherche.",
+        "pst-plasma": "PST: plasma (\u00b5L)",
+        "research-project-role": "R\u00f4le dans le projet de recherche",
+        "research-staff-other": "Ce co-demandeur a des membres de l\u2019\u00c9quipe de recherche de son institution principale pour r\u00e9aliser ce projet de recherche.",
         "response": {
           "affirmative": "Oui",
           "negative": "Non"
         },
-        "riskScore": "Développement de score de risque ou d’index",
-        "self-reported-anthropometric": "Mesures anthropométriques auto-rapportées (taille, poids, circonférences taille et hanches)",
+        "riskScore": "D\u00e9veloppement de score de risque ou d\u2019index",
+        "self-reported-anthropometric": "Mesures anthropom\u00e9triques auto-rapport\u00e9es (taille, poids, circonf\u00e9rences taille et hanches)",
         "sleep": "Sommeil",
-        "socio-characteristics": "Caractéristiques sociodémographiques et économiques (état civil, structure familiale & du ménage, éducation, langue, ethnicité, résidence, statut d’emploi, revenu)",
-        "sst-serum": "SST: sérum (µL)",
-        "start-date": "Date de début",
-        "status-request": "Statut de la requête",
+        "socio-characteristics": "Caract\u00e9ristiques sociod\u00e9mographiques et \u00e9conomiques (\u00e9tat civil, structure familiale & du m\u00e9nage, \u00e9ducation, langue, ethnicit\u00e9, r\u00e9sidence, statut d\u2019emploi, revenu)",
+        "sst-serum": "SST: s\u00e9rum (\u00b5L)",
+        "start-date": "Date de d\u00e9but",
+        "status-request": "Statut de la requ\u00eate",
         "stratification": "Stratification ou regroupement",
         "summary": {
-          "word-limit-error": "La limite de 250 mots a été dépassé. "
+          "word-limit-error": "La limite de 250 mots a \u00e9t\u00e9 d\u00e9pass\u00e9. "
         },
-        "surveillanceStudy": "Étude de surveillance (e.g. estimation de la prévalence ou de l’incidence)",
+        "surveillanceStudy": "\u00c9tude de surveillance (e.g. estimation de la pr\u00e9valence ou de l\u2019incidence)",
         "title": "Titre",
         "tobacco": "Tabac",
-        "total-nb-assays-planned": "Nombre d'essais planifiés",
-        "total-nb-participants": "Nombre total de Participants de recherche demandé, ne requérant pas de recontact",
-        "total-required-assay-volume": "Volume/quantité total(e) requis(e) pour l'essai",
-        "total-required-dead-volume": "Volume/quantité mort(e) total(e)",
-        "total-volume-requested": "Volume/quantité total(e) requis(e)",
-        "urine": "Urine (µL)",
+        "total-nb-assays-planned": "Nombre d'essais planifi\u00e9s",
+        "total-nb-participants": "Nombre total de Participants de recherche demand\u00e9, ne requ\u00e9rant pas de recontact",
+        "total-required-assay-volume": "Volume/quantit\u00e9 total(e) requis(e) pour l'essai",
+        "total-required-dead-volume": "Volume/quantit\u00e9 mort(e) total(e)",
+        "total-volume-requested": "Volume/quantit\u00e9 total(e) requis(e)",
+        "urine": "Urine (\u00b5L)",
         "uv-exposure": "Exposition aux UV",
-        "website": "Adresse du site Web (le cas échéant)",
-        "women-health": "Santé des femmes (fertilité, contraception, menstruation, ménopause, oophorectomie, hystérectomie)",
-        "personal-family-diseases": "Antécédents personnels et familiaux de maladies",
-        "reproductive-health-history": "Antécédents de santé reproductive",
-        "use-prescription-medications": "Utilisation de médicaments sur ordonnance",
+        "website": "Adresse du site Web (le cas \u00e9ch\u00e9ant)",
+        "women-health": "Sant\u00e9 des femmes (fertilit\u00e9, contraception, menstruation, m\u00e9nopause, oophorectomie, hyst\u00e9rectomie)",
+        "personal-family-diseases": "Ant\u00e9c\u00e9dents personnels et familiaux de maladies",
+        "reproductive-health-history": "Ant\u00e9c\u00e9dents de sant\u00e9 reproductive",
+        "use-prescription-medications": "Utilisation de m\u00e9dicaments sur ordonnance",
         "non-pharmacological-interventions-diseases": "Interventions non-pharmacologiques",
-        "self-reported-physical-measures": "Mesures physiques auto-rapportées",
+        "self-reported-physical-measures": "Mesures physiques auto-rapport\u00e9es",
         "physical-environment-exposures": "Expositions dans l'environnement physique",
-        "variables-base-open-ended-responses": "Variables basées sur des réponses ouvertes",
+        "variables-base-open-ended-responses": "Variables bas\u00e9es sur des r\u00e9ponses ouvertes",
         "green-blue-space": "Espace vert / bleu",
-        "green-blue-space-annual-mean-ndvi": "Indice differentiel de végétation normalisé (NDVI; i.e. indice de verdure)",
-        "neighbourhood-factor-datasets": "Ensemble de données des caractéristiques des quartiers",
-        "neighbourhood-factor-datasets-night-time-light": "Lumière nocturne dérivé d'images sattelitaires",
-        "neighbourhood-factor-datasets-deprivation-indices": "Indice de défavorisation matérielle et sociale (IDMS)",
-        "neighbourhood-factor-datasets-active-living-environment": "Base de données sur les environnements de vie canadiens (Can-ALE)",
-        "air-quality-data": "Données sur la qualité de l'air",
+        "green-blue-space-annual-mean-ndvi": "Indice differentiel de v\u00e9g\u00e9tation normalis\u00e9 (NDVI; i.e. indice de verdure)",
+        "neighbourhood-factor-datasets": "Ensemble de donn\u00e9es des caract\u00e9ristiques des quartiers",
+        "neighbourhood-factor-datasets-night-time-light": "Lumi\u00e8re nocturne d\u00e9riv\u00e9 d'images sattelitaires",
+        "neighbourhood-factor-datasets-deprivation-indices": "Indice de d\u00e9favorisation mat\u00e9rielle et sociale (IDMS)",
+        "neighbourhood-factor-datasets-active-living-environment": "Base de donn\u00e9es sur les environnements de vie canadiens (Can-ALE)",
+        "air-quality-data": "Donn\u00e9es sur la qualit\u00e9 de l'air",
         "air-quality-data-LUR-nitrogen-dioxide": "Exposition moyenne annuelle au dioxyde d'azote (NO2)",
-        "air-quality-data-modelled-ozone": "Exposition moyenne annuelle à l'ozone (O3)",
+        "air-quality-data-modelled-ozone": "Exposition moyenne annuelle \u00e0 l'ozone (O3)",
         "air-quality-data-fine-particulates": "Exposition moyenne annuelle aux particules fines (PM2,5)",
         "air-quality-data-sulfur-dioxide": "Exposition moyenne annuelle au dioxyde de soufre (SO2)",
-        "weather-and-climate-datasets": "Ensemble de données météorologiques et climatiques",
-        "weather-and-climate-indicators": "Mesures météorologiques et climatiques",
-        "mental-health-cognition-personality-psychological-measures": "Cognition, personnalité et autres mesures psychologiques",
-        "minimum-one-checked-error": "Au moins 1 sélection est nécessaire."
+        "weather-and-climate-datasets": "Ensemble de donn\u00e9es m\u00e9t\u00e9orologiques et climatiques",
+        "weather-and-climate-indicators": "Mesures m\u00e9t\u00e9orologiques et climatiques",
+        "mental-health-cognition-personality-psychological-measures": "Cognition, personnalit\u00e9 et autres mesures psychologiques",
+        "minimum-one-checked-error": "Au moins 1 s\u00e9lection est n\u00e9cessaire.",
+        "geneByEnvStudy": "Gene-by-Environment",
+        "dataLinkage": "Data linkage",
+        "additionalParams": "Any additional parameters required",
+        "aggreement-F": "F. I must also either store my analysis code or send a copy of it to CanPath in case of potential needs to reproduce my variables or findings at a later date.",
+        "preferred-delivery-year": "Preferred Delivery Year"
       },
       "cutom": {
-        "return": "Toutes les données d’analyse d’un échantillon biologique doivent mentionner la source de la méthodologie utilisée dans une déclaration définissant les mesures de contrôle de la qualité qui ont été prises et en précisant si elles ont été satisfaites ou non."
+        "return": "Toutes les donn\u00e9es d\u2019analyse d\u2019un \u00e9chantillon biologique doivent mentionner la source de la m\u00e9thodologie utilis\u00e9e dans une d\u00e9claration d\u00e9finissant les mesures de contr\u00f4le de la qualit\u00e9 qui ont \u00e9t\u00e9 prises et en pr\u00e9cisant si elles ont \u00e9t\u00e9 satisfaites ou non."
       },
       "action-log": {
         "config": {
           "label": {
-            "undergoing_administrative_completeness_assessment": "En cours d'évaluation administrative",
-            "undergoing_scientific_feasibility_assessment": "En cours d’évaluation de la faisabilité scientifique",
-            "undergoing_access_committee_review": "En cours d’examen par le Comité d'accès",
+            "undergoing_administrative_completeness_assessment": "En cours d'\u00e9valuation administrative",
+            "undergoing_scientific_feasibility_assessment": "En cours d\u2019\u00e9valuation de la faisabilit\u00e9 scientifique",
+            "undergoing_access_committee_review": "En cours d\u2019examen par le Comit\u00e9 d'acc\u00e8s",
             "incomplete": "Incomplet",
-            "execution_of_the_access_agreement": "Exécution de l’Entente d'accès",
-            "transfer_cptp_research_data_biosamples": "Transfert de données de recherche et/ou d’échantillons biologiques de CanPath",
+            "execution_of_the_access_agreement": "Ex\u00e9cution de l\u2019Entente d'acc\u00e8s",
+            "transfer_cptp_research_data_biosamples": "Transfert de donn\u00e9es de recherche et/ou d\u2019\u00e9chantillons biologiques de CanPath",
             "project_in_progress": "Projet en cours",
-            "project_completed": "Projet complété"
+            "project_completed": "Projet compl\u00e9t\u00e9"
           }
         }
-      }
-    },
-    "data-access-feasibility": {
-      "form-title": "LETTRE DE SUPPORT ET ESTIMATION DE COÛT",
-      "form-subtitle": "Formulaire CanPath de demande de lettre de support et d'estimation de coût",
-      "intro": "<p class='mt-3'>Veuillez noter:</p><ul><li>La fourniture d'une ébauche de lettre de soutien est fortement recommandée</li><li>10 jours ouvrables sont nécessaires pour fournir une lettre de soutien</li></ul>",
-      "grant-submission": {
-        "title": "A. Détails de la demande de financement"
       },
-      "granting-agency": "Nom de l'agence de financement",
-      "grant-competition": "Nom de l'appel à projets",
-      "grant-date": "Date limite de soumission de la demande de financement",
-      "grant-title": "Titre de la demande de financement soumise",
-      "applicant-info": {
-        "title": "B. Information sur le demandeur"
+      "staff": {
+        "access-individual-level": "Access to Individual Level Data",
+        "access-biosamples": "Access to Biosamples",
+        "request-thesis-post-doc": "s this request for a student thesis/project or a project led by a post-doctoral fellow?"
       },
-      "pi": "Nom",
-      "career": {
-        "title": "Carrière",
-        "inv-early": "Chercheur indépendant - Débutant (de 0 à 5 ans)",
-        "inv-mid": "Chercheur indépendant - Intermédiaire (de 5 à 15 ans)",
-        "inv-senior": "Chercheur indépendant - Senior (plus de 15 ans)",
-        "student": "Etudiant diplomé",
-        "postdoc": "Postdoc",
-        "other": "Autre",
-        "other-career": "Autre carrière"
+      "service-provider": {
+        "info": "Please provide the details of all service providers and commercial laboratories that will have access to the requested Research Data and/or Biosamples in order to work on the research project. All service providers and commercial laboratories will need to meet the terms and conditions of the <em>Access Agreement.</em>"
       },
-      "current-position": "Poste actuel",
-      "pi-email": "Courriel du contact",
-      "pi-phone": "Numéro de téléphone du contact",
-      "pi-address": "Adresse postale",
-      "pi-address-help": "Note: la Lettre de support sera envoyée au demandeur à l'adresse indiquée ci-dessus.",
-      "project-info": {
-        "title": "C. Présentation du projet de recherche"
+      "research-project-design": {
+        "design-methodology": "Please describe the design and methodology of the proposed project, including the primary outcome measures and the methods that will be used to analyze the study data. This section should include justification for the sample size requested"
       },
-      "project-objectives": "Contexte et objectifs du projet (max. 250 mots)",
-      "data": {
-        "title": "D. Données de CanPath demandées"
+      "funding": {
+        "no-cost-extension": "If your project end date is beyond the project funding date, is there a possibility of a no-cost extension?",
+        "notice": "<p class=\"help-block\">* <em>Please note that Access Application will not be reviewed until funding has been secured</em></p>"
       },
-      "datasets":  "Préciser les ensembles de données et le type de données",
-      "datasets-help": "Voir <a href='https://portal.canpath.ca/search#lists?type=datasets' target='_blank'>la liste des ensembles de données</a> pour la disponibilité des données.",
-      "selection-criteria": "Critère de sélection des participants de CanPath pour lesquels des données sont demandées",
-      "study-design": "Conception de l'étude proposée et méthodes d'analyse statistique envisagées",
+      "ethics-approval": {
+        "documents-notice": "please provide the following supporting documents specifically related to this access application:",
+        "not-approved-reason": "Please specify arrangements for obtaining the appropriate approvals."
+      },
       "biosamples": {
-        "title": "E. Échantillons biologiques de CanPath demandés"
+        "dna-notice": "",
+        "freeze-thaw-affect": "Does freeze/thaw affect the planned analysis?",
+        "freeze-thaw-affect-no": "No",
+        "freeze-thaw-affect-unkown": "Unknown",
+        "freeze-thaw-affect-yes": "Yes",
+        "freeze-thaw-affect-unknown": "Unknown",
+        "nb-freeze-thaw-events": "If yes, number of acceptable freeze/thaw events (provide supporting evidence below for this pre-analytical restriction):",
+        "nb-freeze-thaw-events-notice": "Provide supporting evidence below for this pre-analytical restriction",
+        "nb-sample-requested": "Total number of samples requested from other source"
       },
-      "biosamples-type": "Préciser le type, le nombre et le volume",
-      "biosamples-type-help": "Voir <a href='https://portal.canpath.ca/page/samples' target='_blank'>Échantillons biologiques</a> pour plus de détails.",
-      "biosamples-selection-criteria": "Critères de sélection des participants de CanPath pour lesquels des échantillons biologiques sont demandés",
-      "biosamples-pre-analytical-characteristics": "Caractéristiques pré-analyse des échantillons biologiques, si applicable",
-      "biosamples-analyze-methods": "Méthodes d'analyse envisagées pour les échantillons biologiques de CanPath",
-      "linkage": {
-        "title": "F. Liens des participants de CanPath avec d'autres ensembles de données (si applicable)"
+      "lab-analysis": {
+        "title": "Laboratory Analyses",
+        "no-biological-sample-needed": "Not applicable \u2013 access to Biosamples is not requested",
+        "evidence-info": "<p class=\"help-block\">Provide evidence of the laboratory\u2019s assay usage record, preliminary data and/or publications:</p>"
       },
-      "data-linkage": "Données qui seront liées aux données de CanPath demandées",
-      "data-linkage-help": "Préciser quel(s) ensembles de données, le type de données et leur origine"
+      "variables-list": {
+        "datasets": {
+          "blHealthRiskFactorQuestionnaire": "Baseline Health and Risk Factor Questionnaire",
+          "blMentalHealth": "Baseline Mental Health",
+          "blPhysicalMeasures": "Baseline Physical Measures",
+          "fuHealthRiskFactorQustionnaire": "Follow-Up 1 Health and Risk Factor Questionnaire",
+          "fuCovid19Questionnaire": "Follow-up COVID-19 Questionnaire",
+          "genotypeData": "Genotype Data",
+          "environmentalExposureData": "Environmental Exposure Data",
+          "regionalDatasets": "Regional Datasets (e.g. Residential History questionnaire)"
+        },
+        "dsBlHealthRiskFactorQuestionnaire": "Baseline Health and Risk Factor Questionnaire",
+        "dsBlMentalHealth": "Baseline Mental Health",
+        "dsBlPhysicalMeasures": "Baseline Physical Measures",
+        "dsFuHealthRiskFactorQustionnaire": "Follow-Up 1 Health and Risk Factor Questionnaire",
+        "dsFuCovid19Questionnaire": "Follow-up COVID-19 Questionnaire",
+        "dsGenotypeData": "Genotype Data",
+        "dsEnvironmentalExposureData": "Environmental Exposure Data",
+        "dsRegionalDatasets": "Regional Datasets (e.g. Residential History questionnaire)",
+        "variables-file": "Individual Variables"
+      },
+      "data-linkage": {
+        "title": "Data Linkage",
+        "info": "Will data from other sources be utilized to complete the proposed project? Please list all data linkages required to complete the proposed project, and where these data are held.",
+        "na": "Not applicable \u2013Data and/or Biosamples will not be linked with data from other sources."
+      },
+      "bio-security-assessment": {
+        "na": "Not applicable \u2013 access to Biosamples is not requested."
+      },
+      "signature": {
+        "principal-applicant": "Principal Applicant",
+        "pa": "Principal Applicant",
+        "ailr": "Authorized Institutional Legal Representative of the host institution",
+        "know-canpath-from": "How did you hear about  CanPath:"
+      },
+      "members-ailr": {
+        "title": "Authorized Institutional Legal Representative"
+      },
+      "members": {
+        "info": "<p class=\"help-block\">Please include a full postal address and a valid institutional e-mail address for each Authorized Institutional Legal Representative.</p>",
+        "has-member": "I have Research Team Members from an institution other than that of the Principal Applicant"
+      }
     },
     "network-config": {
       "title": "Network Configuration",
@@ -1302,66 +1475,66 @@
       "terms": {
         "info": "The terms describe the possible values of the criterion. In the case of a numerical type (integer or decimal), the terms represent some ranges of values."
       },
-      "all-criteria": "Tous les critères"
+      "all-criteria": "Tous les crit\u00e8res"
     },
     "data-access-config": {
       "properties": {
-        "info": "Certaines propriétés de la demande seront extraites du modèle de formulaire d'accès en fonction de leur chemin d'accès du champs JSON spécifié."
+        "info": "Certaines propri\u00e9t\u00e9s de la demande seront extraites du mod\u00e8le de formulaire d'acc\u00e8s en fonction de leur chemin d'acc\u00e8s du champs JSON sp\u00e9cifi\u00e9."
       },
       "title-field": "Champ titre",
-      "summary-field": "Champ résumé",
-      "saved": "Formulaire d'accès a été mis à jour avec succès.",
+      "summary-field": "Champ r\u00e9sum\u00e9",
+      "saved": "Formulaire d'acc\u00e8s a \u00e9t\u00e9 mis \u00e0 jour avec succ\u00e8s.",
       "pdf-download": {
-        "info": "Les données collectées dans le formulaire d'application web peuvent être représentées dans un fichier PDF. Choisissez l'une des options suivantes:"
+        "info": "Les donn\u00e9es collect\u00e9es dans le formulaire d'application web peuvent \u00eatre repr\u00e9sent\u00e9es dans un fichier PDF. Choisissez l'une des options suivantes:"
       },
       "pdf-embedded": {
-        "title": "Generator embarqué de PDF",
-        "info": "Un module interne de Mica est utilisé pour générer un fichier PDF."
+        "title": "Generator embarqu\u00e9 de PDF",
+        "info": "Un module interne de Mica est utilis\u00e9 pour g\u00e9n\u00e9rer un fichier PDF."
       },
       "schema-form": {
-        "info": "Le formulaire d'application web peut être spécifié à la fois en termes de structure de données (schéma) et d'affichage des données et validation (définition). Voir <a href='https://github.com/Textalk/angular-schema-form/blob/master/docs/index.md' target='_blank'>documentation du Schema Form</a> pour plus de détails."
+        "info": "Le formulaire d'application web peut \u00eatre sp\u00e9cifi\u00e9 \u00e0 la fois en termes de structure de donn\u00e9es (sch\u00e9ma) et d'affichage des donn\u00e9es et validation (d\u00e9finition). Voir <a href='https://github.com/Textalk/angular-schema-form/blob/master/docs/index.md' target='_blank'>documentation du Schema Form</a> pour plus de d\u00e9tails."
       },
       "id-generation": {
-        "info": "L'ID des demandes d'accès peut être généré suivant un modèle.",
-        "prefix-help": "Les ID générés vont commencer avec le texte spécifié."
+        "info": "L'ID des demandes d'acc\u00e8s peut \u00eatre g\u00e9n\u00e9r\u00e9 suivant un mod\u00e8le.",
+        "prefix-help": "Les ID g\u00e9n\u00e9r\u00e9s vont commencer avec le texte sp\u00e9cifi\u00e9."
       },
       "notifications": {
-        "info": "Les courriels peuvent être envoyés au demandeur et aux agents d'accès lorsqu'un événement se produit sur la demande d'accès aux données. Les événements peuvent être: changement de statut ou un commentaire. Les objets de notifications par courriel peuvent contenir les information suivantes : ${organisation}, ${title} et ${id} pour l'ID de la demande.",
-        "submitted-help": "Le courriel est envoyé aux agents d'accès et au demandeur sur la soumission de la demande d'accès.",
-        "reviewed-help": "Le courriel est envoyé au demandeur lorsque sa demande d'accès est en révision.",
-        "approved-help": "Le courriel est envoyé au demandeur lorsque sa demande d'accès est approuvée.",
-        "rejected-help": "Le courriel est envoyé au demandeur lorsque sa demande d'accès est rejetée.",
-        "reopened-help": "Le courriel est envoyé au demandeur lorsque sa demande d'accès est rouvert.",
-        "commented-help": "Le courriel est envoyé au demandeur lorsque sa demande d'accès est commentée.",
-        "attachment-help": "Le courriel est envoyé au demandeur et les agents d'accès lorsque la liste des documents de la demande d'accès est mise à jour.",
-        "conditionallyApproved-help": "Le courriel est envoyé au demandeur lorsque sa demande d'accès est approuvée conditionnellement."
+        "info": "Les courriels peuvent \u00eatre envoy\u00e9s au demandeur et aux agents d'acc\u00e8s lorsqu'un \u00e9v\u00e9nement se produit sur la demande d'acc\u00e8s aux donn\u00e9es. Les \u00e9v\u00e9nements peuvent \u00eatre: changement de statut ou un commentaire. Les objets de notifications par courriel peuvent contenir les information suivantes : ${organisation}, ${title} et ${id} pour l'ID de la demande.",
+        "submitted-help": "Le courriel est envoy\u00e9 aux agents d'acc\u00e8s et au demandeur sur la soumission de la demande d'acc\u00e8s.",
+        "reviewed-help": "Le courriel est envoy\u00e9 au demandeur lorsque sa demande d'acc\u00e8s est en r\u00e9vision.",
+        "approved-help": "Le courriel est envoy\u00e9 au demandeur lorsque sa demande d'acc\u00e8s est approuv\u00e9e.",
+        "rejected-help": "Le courriel est envoy\u00e9 au demandeur lorsque sa demande d'acc\u00e8s est rejet\u00e9e.",
+        "reopened-help": "Le courriel est envoy\u00e9 au demandeur lorsque sa demande d'acc\u00e8s est rouvert.",
+        "commented-help": "Le courriel est envoy\u00e9 au demandeur lorsque sa demande d'acc\u00e8s est comment\u00e9e.",
+        "attachment-help": "Le courriel est envoy\u00e9 au demandeur et les agents d'acc\u00e8s lorsque la liste des documents de la demande d'acc\u00e8s est mise \u00e0 jour.",
+        "conditionallyApproved-help": "Le courriel est envoy\u00e9 au demandeur lorsque sa demande d'acc\u00e8s est approuv\u00e9e conditionnellement."
       },
       "workflow": {
-        "info": "La demande d'accès passe par plusieurs étapes. Certains paramètres minimaux peuvent être appliqués pour contrôler ce flux de travail.",
-        "with-review-help": "Entre la soumission et l'approbation/rejet de la demande d'accès, un état intermédiaire peut être utilisé pour informer le requérant que sa demande est en cours de traitement.",
-        "with-conditional-approval-help": "Entre la soumission et l'approbation/rejet de la demande d'accès, un état intermédiaire peut être utilisé pour permettre au requérant d'éditer sa demande."
+        "info": "La demande d'acc\u00e8s passe par plusieurs \u00e9tapes. Certains param\u00e8tres minimaux peuvent \u00eatre appliqu\u00e9s pour contr\u00f4ler ce flux de travail.",
+        "with-review-help": "Entre la soumission et l'approbation/rejet de la demande d'acc\u00e8s, un \u00e9tat interm\u00e9diaire peut \u00eatre utilis\u00e9 pour informer le requ\u00e9rant que sa demande est en cours de traitement.",
+        "with-conditional-approval-help": "Entre la soumission et l'approbation/rejet de la demande d'acc\u00e8s, un \u00e9tat interm\u00e9diaire peut \u00eatre utilis\u00e9 pour permettre au requ\u00e9rant d'\u00e9diter sa demande."
       },
       "permissions": {
-        "info": "Accorder l'autorisation de <code> Lire </code> toutes les demandes d'accès."
+        "info": "Accorder l'autorisation de <code> Lire </code> toutes les demandes d'acc\u00e8s."
       },
       "amendment": {
         "title-field": "Champ titre",
-        "summary-field": "Champ résumé"
+        "summary-field": "Champ r\u00e9sum\u00e9"
       }
     },
     "entity-sf-config": {
       "schema-form": {
-        "info": "Le formulaire de projet de recherche peut être spécifié à la fois en termes de structure de données (schéma) et d'affichage des données et validation (définition). Voir <a href='https://github.com/Textalk/angular-schema-form/blob/master/docs/index.md' target='_blank'>documentation du schema form</a> pour plus de détails."
+        "info": "Le formulaire de projet de recherche peut \u00eatre sp\u00e9cifi\u00e9 \u00e0 la fois en termes de structure de donn\u00e9es (sch\u00e9ma) et d'affichage des donn\u00e9es et validation (d\u00e9finition). Voir <a href='https://github.com/Textalk/angular-schema-form/blob/master/docs/index.md' target='_blank'>documentation du schema form</a> pour plus de d\u00e9tails."
       }
     },
     "research-project": {
-      "data-access-request": "Demande d'accès"
+      "data-access-request": "Demande d'acc\u00e8s"
     },
     "client": {
       "label": {
-        "dataschema-variables": "Variables harmonisées",
+        "dataschema-variables": "Variables harmonis\u00e9es",
         "variable": {
-          "cummulative-summary": "Distribution de fréquenes pour l'ensemble des études"
+          "cummulative-summary": "Distribution de fr\u00e9quenes pour l'ensemble des \u00e9tudes"
         }
       }
     },
@@ -1370,14 +1543,15 @@
     "Title": "Titre",
     "data-access-request-custom": {
       "status": {
-        "approved": "Approuvée",
-        "declined": "Refusée",
-        "pending": "En cours"
+        "approved": "Approuv\u00e9e",
+        "declined": "Refus\u00e9e",
+        "pending": "En cours",
+        "future-request": "Future Request"
       }
     },
     "data-collection-event": {
-      "delete-dialog-message": "Êtes-vous sûr de vouloir supprimer l'événement de collecte?",
-      "delete-dialog-title": "Supprimer un événement de collecte de données"
+      "delete-dialog-message": "\u00cates-vous s\u00fbr de vouloir supprimer l'\u00e9v\u00e9nement de collecte?",
+      "delete-dialog-title": "Supprimer un \u00e9v\u00e9nement de collecte de donn\u00e9es"
     },
     "dataset-config": {
       "definition": {
@@ -1409,29 +1583,29 @@
       },
       "title": "Dataset Configuration"
     },
-    "harmonization-dataset": "Ensemble de données harmonisé",
-    "harmonization-datasets": "Ensembles de données harmonisé",
+    "harmonization-dataset": "Ensemble de donn\u00e9es harmonis\u00e9",
+    "harmonization-datasets": "Ensembles de donn\u00e9es harmonis\u00e9",
     "indexing": {
-      "harmonization-datasets": "Ensemble de données d'harmonisation",
-      "harmonization-datasets-help": "Index permettant de chercher des ensembles de données d'harmonisation ainsi que les variables associées.",
-      "study-datasets": "Ensemble de données d'étude",
-      "study-datasets-help": "Index permettant de chercher des ensembles de données d'étude ainsi que les variables associées."
+      "harmonization-datasets": "Ensemble de donn\u00e9es d'harmonisation",
+      "harmonization-datasets-help": "Index permettant de chercher des ensembles de donn\u00e9es d'harmonisation ainsi que les variables associ\u00e9es.",
+      "study-datasets": "Ensemble de donn\u00e9es d'\u00e9tude",
+      "study-datasets-help": "Index permettant de chercher des ensembles de donn\u00e9es d'\u00e9tude ainsi que les variables associ\u00e9es."
     },
     "join": "Se joindre",
     "locale": "Langue",
     "main": {
       "logged": {
-        "message": "Vous êtes connecté en tant que \"{{username}}\"."
+        "message": "Vous \u00eates connect\u00e9 en tant que \"{{username}}\"."
       }
     },
-    "new-harmonization-dataset": "Nouvel ensemble de données harmonisé",
-    "new-study-dataset": "Nouvel ensemble de données d'étude",
+    "new-harmonization-dataset": "Nouvel ensemble de donn\u00e9es harmonis\u00e9",
+    "new-study-dataset": "Nouvel ensemble de donn\u00e9es d'\u00e9tude",
     "project-config": {
       "accesses": {
         "info": "Accorder l'autorisation de <code>Lire</code> toutes les publications de projects de recherche."
       },
       "permissions": {
-        "info": "Accorder l'autorisation de <code>Lire</code>, <code>Éditer</code> ou <code>Réviser</code> tous les brouillons de projets de recherche.",
+        "info": "Accorder l'autorisation de <code>Lire</code>, <code>\u00c9diter</code> ou <code>R\u00e9viser</code> tous les brouillons de projets de recherche.",
         "title": "Permissions"
       }
     },
@@ -1449,10 +1623,66 @@
       "study-form-title": "Study",
       "title": "Study Configuration"
     },
-    "study-dataset": "Ensemble de données d'étude",
-    "study-datasets": "Ensembles de données d'étude",
+    "study-dataset": "Ensemble de donn\u00e9es d'\u00e9tude",
+    "study-datasets": "Ensembles de donn\u00e9es d'\u00e9tude",
     "userProfile": {
       "locale": "Language"
+    },
+    "data": "",
+    "data-access-feasibility": {
+      "form-title": "LETTRE DE SUPPORT ET ESTIMATION DE CO\u00dbT",
+      "grant-submission": {
+        "title": "A. D\u00e9tails de la demande de financement"
+      },
+      "granting-agency": "Nom de l'agence de financement",
+      "grant-competition": "Nom de l'appel \u00e0 projets",
+      "grant-date": "Date limite de soumission de la demande de financement",
+      "grant-title": "Titre de la demande de financement soumise",
+      "applicant-info": {
+        "title": "B. Information sur le demandeur"
+      },
+      "pi": "Nom",
+      "career": {
+        "title": "Carri\u00e8re",
+        "inv-early": "Chercheur ind\u00e9pendant - D\u00e9butant (de 0 \u00e0 5 ans)",
+        "inv-mid": "Chercheur ind\u00e9pendant - Interm\u00e9diaire (de 5 \u00e0 15 ans)",
+        "inv-senior": "Chercheur ind\u00e9pendant - Senior (plus de 15 ans)",
+        "student": "Etudiant diplom\u00e9",
+        "postdoc": "Postdoc",
+        "other": "Autre",
+        "other-career": "Autre carri\u00e8re"
+      },
+      "current-position": "Poste actuel",
+      "pi-email": "Courriel du contact",
+      "pi-phone": "Num\u00e9ro de t\u00e9l\u00e9phone du contact",
+      "pi-address": "Adresse postale",
+      "pi-address-help": "Note: la Lettre de support sera envoy\u00e9e au demandeur \u00e0 l'adresse indiqu\u00e9e ci-dessus.",
+      "project-info": {
+        "title": "C. Pr\u00e9sentation du projet de recherche"
+      },
+      "project-objectives": "Contexte et objectifs du projet (max. 250 mots)",
+      "data": {
+        "title": "D. Donn\u00e9es de CanPath demand\u00e9es"
+      },
+      "datasets": "Pr\u00e9ciser les ensembles de donn\u00e9es et le type de donn\u00e9es",
+      "datasets-help": "Voir <a href='https://portal.canpath.ca/search#lists?type=datasets' target='_blank'>la liste des ensembles de donn\u00e9es</a> pour la disponibilit\u00e9 des donn\u00e9es.",
+      "selection-criteria": "Crit\u00e8re de s\u00e9lection des participants de CanPath pour lesquels des donn\u00e9es sont demand\u00e9es",
+      "study-design": "Conception de l'\u00e9tude propos\u00e9e et m\u00e9thodes d'analyse statistique envisag\u00e9es",
+      "biosamples": {
+        "title": "E. \u00c9chantillons biologiques de CanPath demand\u00e9s"
+      },
+      "biosamples-type": "Pr\u00e9ciser le type, le nombre et le volume",
+      "biosamples-type-help": "Voir <a href='https://portal.canpath.ca/page/samples' target='_blank'>\u00c9chantillons biologiques</a> pour plus de d\u00e9tails.",
+      "biosamples-selection-criteria": "Crit\u00e8res de s\u00e9lection des participants de CanPath pour lesquels des \u00e9chantillons biologiques sont demand\u00e9s",
+      "biosamples-pre-analytical-characteristics": "Caract\u00e9ristiques pr\u00e9-analyse des \u00e9chantillons biologiques, si applicable",
+      "biosamples-analyze-methods": "M\u00e9thodes d'analyse envisag\u00e9es pour les \u00e9chantillons biologiques de CanPath",
+      "linkage": {
+        "title": "F. Liens des participants de CanPath avec d'autres ensembles de donn\u00e9es (si applicable)"
+      },
+      "data-linkage": "Donn\u00e9es qui seront li\u00e9es aux donn\u00e9es de CanPath demand\u00e9es",
+      "data-linkage-help": "Pr\u00e9ciser quel(s) ensembles de donn\u00e9es, le type de donn\u00e9es et leur origine",
+      "form-subtitle": "Formulaire CanPath de demande de lettre de support et d'estimation de co\u00fbt",
+      "intro": "<p class='mt-3'>Veuillez noter:</p><ul><li>La fourniture d'une \u00e9bauche de lettre de soutien est fortement recommand\u00e9e</li><li>10 jours ouvrables sont n\u00e9cessaires pour fournir une lettre de soutien</li></ul>"
     }
   }
 }
