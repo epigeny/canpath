@@ -228,7 +228,6 @@
 
   let datasetsSortKey = 'weight';
   <#if type != "Harmonization">
-    datasetsSortKey = null;
     mlstrStudyService.createNetworksTable("${study.id}", "${.lang}");
     mlstrStudyService.ensurePopulationDceSelection();
   </#if>
