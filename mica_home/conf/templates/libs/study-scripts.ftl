@@ -384,7 +384,7 @@
         }
 
         if (member.institution.address && (member.institution.address.street || member.institution.address.city)) {
-          let address = [StringLocalizer.localize(member.institution.address.street || ''), StringLocalizer.localize(member.institution.address.city || ''), (member.institution.address.countryIso || '')];
+          let address = [StringLocalizer.localize(member.institution.address.street || ''), StringLocalizer.localize(member.institution.address.city || ''), (member.institution.address.zip || ''), (member.institution.address.countryIso || '')].filter(e => e.length > 0);
 
           createModalRowItems(row, '<@message "address.label"/>', address.join(' '));
         }

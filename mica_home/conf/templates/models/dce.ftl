@@ -53,7 +53,7 @@
                       ${localize(dce.name)}
                   </a>
                 </td>
-                <td class="marked"><template>${localize(dce.description)?trim?truncate(90, "...")}</template></td>
+                <td class="marked"><template>${localize(dce.description)?trim?truncate(150, "...")}</template></td>
                 <td><#if dce.start?? && dce.start.yearMonth??>${dateAsYearMonthName(dce.start.yearMonth)}</#if></td>
                 <td><#if dce.end?? && dce.end.yearMonth??>${dateAsYearMonthName(dce.end.yearMonth)}</#if></td>
               </tr>

@@ -50,11 +50,9 @@
     <div class="container">
       <div class="row pt-3">
         <div class="col-sm-6">
-          <h4 class="mt-5"><@message "host-info"/></h4>
+          <h5 class="mt-5"><@message "host-info"/></h5>
         </div>
-        <div class="col-sm-6"><img alt="" src="/assets/images/dlsph-logo.svg"
-                       style="width: 100%; height: 120px;">
-        </div>
+        <div class="col-sm-6"><img alt="" src="/assets/images/dlsph-logo.svg" style="width: 100%; height: 90px;"></div>
       </div>
       <div class="row">
         <div class="col-12">

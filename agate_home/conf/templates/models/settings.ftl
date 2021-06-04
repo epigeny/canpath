@@ -2,7 +2,7 @@
 <#assign faviconPath = "/assets/favicon.ico"/>
 
 <!-- Branding -->
-<#assign brandImageSrc = "/assets/images/logo.png"/>
+<#assign brandImageSrc = "/assets/images/CanPath_logo_neg.png"/>
 <#assign brandImageClass = ""/>
 <#assign brandTextClass = ""/>
 <#assign brandTextEnabled = false/>
