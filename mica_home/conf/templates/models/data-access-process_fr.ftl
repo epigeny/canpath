@@ -145,20 +145,12 @@
         </thead>
         <tbody>
         <tr>
-          <td>23 octobre 2020</td>
-          <td>Décembre 2020</td>
-        </tr>
-        <tr>
-          <td>22 janvier 2021</td>
-          <td>Mars 2021</td>
-        </tr>
-        <tr>
-          <td>23 avril 2021</td>
-          <td>Juin 2021</td>
-        </tr>
-        <tr>
           <td>30 juillet 2021</td>
-          <td>Septembre 2021</td>
+          <td>September 2021</td>
+        </tr>
+        <tr>
+          <td>29 octobre 2021</td>
+          <td>Décembre 2021</td>
         </tr>
         </tbody>
       </table>
