@@ -1165,7 +1165,7 @@
         "items": [
           {
             "type": "section",
-            "htmlClass": "col-xs-12",
+            "htmlClass": "col-xs-12 mt-2",
             "items": [
               "hasBiosampleRestrictions",
               {
@@ -1369,6 +1369,7 @@
       },
       {
         "type": "fieldset",
+        "htmlClass": "mt-2",
         "items": [
           {
             "key": "variablesList"
@@ -1582,8 +1583,25 @@
             "helpvalue": "<h4>t(data-access-request.signature.know-canpath-from)</h4>"
           },
           {
-            "key": "knowCanPathFrom",
-            "notitle": true
+            "type": "section",
+            "htmlClass": "col-xs-6",
+            "items": [
+              "hearAboutDataBiosamples",
+              "hearAboutEmployed",
+              "hearAboutWebsite",
+              "hearAboutNewsletter",
+              "hearAboutWebinar",
+              "hearAboutTwitterLinkedIn",
+              "hearAboutRegional",
+              "hearAboutWordMouth",
+              "hearAboutOther",
+              {
+                "key": "hearAboutOtherSpecify",
+                "type": "textarea",
+                "notitle": true,
+                "condition": "model.hearAboutOther"
+              }
+            ]
           }
         ]
       }

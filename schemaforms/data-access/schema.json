@@ -437,7 +437,61 @@
       "title": "t(data-access-request.default.signature.check)",
       "type": "boolean"
     },
-    "knowCanPathFrom": {
+    "hearAboutDataBiosamples": {
+      "title": "t(data-access-request.signature.hearAboutDataBiosamples)",
+      "type": "boolean",
+      "default": false,
+      "name": "hearAboutDataBiosamples"
+    },
+    "hearAboutEmployed": {
+      "title": "t(data-access-request.signature.hearAboutEmployed)",
+      "type": "boolean",
+      "default": false,
+      "name": "hearAboutEmployed"
+    },
+    "hearAboutWebsite": {
+      "title": "t(data-access-request.signature.hearAboutWebsite)",
+      "type": "boolean",
+      "default": false,
+      "name": "hearAboutWebsite"
+    },
+    "hearAboutNewsletter": {
+      "title": "t(data-access-request.signature.hearAboutNewsletter)",
+      "type": "boolean",
+      "default": false,
+      "name": "hearAboutNewsletter"
+    },
+    "hearAboutWebinar": {
+      "title": "t(data-access-request.signature.hearAboutWebinar)",
+      "type": "boolean",
+      "default": false,
+      "name": "hearAboutWebinar"
+    },
+    "hearAboutTwitterLinkedIn": {
+      "title": "t(data-access-request.signature.hearAboutTwitterLinkedIn)",
+      "type": "boolean",
+      "default": false,
+      "name": "hearAboutTwitterLinkedIn"
+    },
+    "hearAboutRegional": {
+      "title": "t(data-access-request.signature.hearAboutRegional)",
+      "type": "boolean",
+      "default": false,
+      "name": "hearAboutRegional"
+    },
+    "hearAboutWordMouth": {
+      "title": "t(data-access-request.signature.hearAboutWordMouth)",
+      "type": "boolean",
+      "default": false,
+      "name": "hearAboutWordMouth"
+    },
+    "hearAboutOther": {
+      "title": "t(data-access-request.signature.hearAboutOther)",
+      "type": "boolean",
+      "default": false,
+      "name": "hearAboutOther"
+    },
+    "hearAboutOtherSpecify": {
       "type": "string"
     },
     "sst": {
