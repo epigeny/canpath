@@ -1,7 +1,7 @@
 <#macro samplesModel>
     <h5 class="mt-5 mb-3">La collecte d'échantillons biologiques de CanPath</h5>
     <p>
-      <table class="table table-striped" style="width:600px;">
+      <table class="table table-striped col-xs-12 col-lg-6">
         <thead>
           <tr>
             <th scope="col">Nombre de participants qui ont fourni des échantillons biologiques</th>

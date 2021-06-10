@@ -1,7 +1,7 @@
 <#macro samplesModel>
   <h5 class="mt-5 mb-3">The CanPath Biosamples Collection</h5>
   <p>
-    <table class="table table-striped" style="width:600px;">
+    <table class="table table-striped col-xs-12 col-lg-6">
       <thead>
         <tr>
           <th scope="col">Number of participants who provided biosample</th>

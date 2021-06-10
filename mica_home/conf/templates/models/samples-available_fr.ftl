@@ -3,7 +3,7 @@
     Le CanPath augmente la valeur de l'étude de cohorte en y ajoutant sa grande collection d'échantillons biologiques. La disponibilité de ces échantillons biologiques permettra d'effectuer des enquêtes plus grandes et plus approfondies pour découvrir les causes du cancer et des maladies chroniques, et pourra aider à découvrir de nouveaux moyens de détection et de nouveaux traitements.
   </p>
   <h5 class="mt-5 mb-3">La collecte d'échantillons biologiques de CanPath</h5>
-  <table class="table table-striped" style="width:600px;">
+  <table class="table table-striped col-xs-12 col-lg-6">
     <thead>
     <tr>
       <th scope="col">Nombre de participants qui ont fourni des échantillons biologiques</th>
