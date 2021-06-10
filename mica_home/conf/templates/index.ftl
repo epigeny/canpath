@@ -48,6 +48,16 @@
     <div class="content">
       <div class="container">
 
+        <!-- Temporary Alert -->
+        <div class="row">
+          <div class="col text-center h6">
+            <div class="alert alert-warning mb-4 mt-2" role="alert">
+              The CanPath Portal system is currently undergoing updates. We apologize for any technical difficulties you may experience. Please email <a class="text-dark" href="mailto:it@maelstrom-research.org.ca" target="_blank">it@maelstrom-research.org.ca</a> if you require assistance.
+            </div>
+          </div>
+        </div>
+
+
         <div class="row">
           <div class="col-lg-3 col-sm-12">
             <div class="title-center">
