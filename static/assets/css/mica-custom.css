@@ -180,16 +180,11 @@ dl.striped > dt, dl.striped > dd {
 
   white-space: nowrap;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .datepicker {
   max-width: 33% !important;
-}
-
-.datepicker table tr td,
-.datepicker table tr th {
-  text-align: center !important;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
