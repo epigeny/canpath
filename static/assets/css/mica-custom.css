@@ -172,3 +172,24 @@ dl.striped > dt, dl.striped > dd {
   display: none;
 }
 
+.datepicker table tr td span {
+  display: block;
+  width: 67%;
+  
+  cursor: pointer;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.datepicker {
+  max-width: 33% !important;
+}
+
+.datepicker table tr td,
+.datepicker table tr th {
+  text-align: center !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
