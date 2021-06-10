@@ -61,10 +61,10 @@
                   <dl class="row striped mt-0 mb-1">
                   <#local prevTaxo = currTaxo/>
                 </#if>
-                  <dt class="col-sm-4" title="<#if annotation.vocabularyDescription??>${localize(annotation.vocabularyDescription)}</#if>">
+                  <dt class="col-4 col-sm-12" title="<#if annotation.vocabularyDescription??>${localize(annotation.vocabularyDescription)}</#if>">
                       ${localize(annotation.vocabularyTitle)}
                   </dt>
-                  <dd class="col-sm-8" title="<#if annotation.termDescription??>${localize(annotation.termDescription)}</#if>">
+                  <dd class="col-8 col-sm-12" title="<#if annotation.termDescription??>${localize(annotation.termDescription)}</#if>">
                     <span class="marked"><template>${localize(annotation.termTitle)}</template></span>
                   </dd>
             </#list>
@@ -115,14 +115,14 @@
                       <h3 class="mb-4">${variable.name}</h3>
                       <dl class="row mb-0">
                         <#if variable.attributes?? && variable.attributes.label??>
-                          <dt class="col-1"><@message "label"/></dt>
-                          <dd class="col-11 marked"><template>${localize(variable.attributes.label)}</template></dd>
+                          <dt class="col-md-1 col-12"><@message "label"/></dt>
+                          <dd class="col-md-11 col-12 marked"><template>${localize(variable.attributes.label)}</template></dd>
                         <#else>
                           <p class="text-muted"><@message "no-label"/></p>
                         </#if>
                         <#if variable.attributes?? && variable.attributes.description??>
-                          <dt class="col-1"><@message "description"/></dt>
-                          <dd class="col-11 marked"><template>${localize(variable.attributes.description)}</template></dd>
+                          <dt class="col-md-1 col-12"><@message "description"/></dt>
+                          <dd class="col-md-11 col-12 marked"><template>${localize(variable.attributes.description)}</template></dd>
                         </#if>
                       </dl>
                     </div>
