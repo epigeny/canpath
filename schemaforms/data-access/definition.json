@@ -327,7 +327,7 @@
         "items": [
           {
             "type": "section",
-            "htmlClass": "col-xs-6",
+            "htmlClass": "col-xs-12",
             "items": [
               {
                 "key": "projectStartDate"
@@ -336,7 +336,7 @@
           },
           {
             "type": "section",
-            "htmlClass": "col-xs-6",
+            "htmlClass": "col-xs-12",
             "items": [
               {
                 "key": "projectEndDate",
@@ -609,7 +609,7 @@
                 "items": [
                   {
                     "type": "section",
-                    "htmlClass": "col-xs-6",
+                    "htmlClass": "col-xs-12",
                     "items": [
                       {
                         "key": "fundingStartDate"
@@ -618,7 +618,7 @@
                   },
                   {
                     "type": "section",
-                    "htmlClass": "col-xs-6",
+                    "htmlClass": "col-xs-12",
                     "items": [
                       {
                         "key": "fundingEndDate",
@@ -642,7 +642,7 @@
         "items": [
           {
             "type": "section",
-            "htmlClass": "col-xs-6",
+            "htmlClass": "col-xs-12",
             "items": [
               {
                 "type": "help",

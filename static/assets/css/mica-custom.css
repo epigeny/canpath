@@ -184,7 +184,14 @@ dl.striped > dt, dl.striped > dd {
   margin-right: auto;
 }
 
-.datepicker {
-  max-width: 33% !important;
+@media (max-width: 1024px) {
+  .datepicker {
+    max-width: 100% !important;
+  }
 }
 
+@media (min-width: 1025px) {
+  .datepicker {
+    max-width: 50% !important;
+  }
+}
