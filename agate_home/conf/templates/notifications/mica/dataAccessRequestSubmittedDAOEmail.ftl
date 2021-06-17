@@ -35,7 +35,7 @@
         </p>
         <div style="margin: 30px 0 0;">
           <hr width="55%" size="1" align="left" style="padding: 0; margin-top: 0;"/>
-          <p style="font-family:monospace;font-size: 10px">
+          <p>
               ${msg("access-office")}
           </p>
         </div>
