@@ -21,6 +21,8 @@
 
 <#assign showPaginationInListingPages = false />
 
+<#assign maxItemsPerSet = config.maxItemsPerSet/>
+
 <!-- Repository list pages -->
 <#assign listDisplays = ["lines"]/>
 <#assign listDefaultDisplay = "lines"/>
