@@ -15,7 +15,7 @@
 <!-- Cart feature is only visible to any authenticated users -->
 <#assign cartEnabled = cartEnabled && user??/>
 <!-- To download the list of variable IDs (and the Opal views, if enabled) -->
-<#assign showCartDownload = (isAdministrator || isReviewer || isEditor || isDAO)/>
+<#assign showCartDownload = cartEnabled/>
 <!-- To reinstate the cart as views in Opal -->
 <#assign showCartViewDownload = (isAdministrator || isReviewer || isEditor || isDAO)/>
 
