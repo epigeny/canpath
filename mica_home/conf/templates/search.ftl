@@ -247,17 +247,18 @@
                           <div class="mb-3">
                             <div class="mt-4 mb-2 clearfix">
                               <ul class="nav nav-pills float-left" role="tablist">
+                                <!-- For now CanPath has only one study, no need for Study filter -->
+<#--                                <li class="nav-item">-->
+<#--                                  <a class="nav-link active"-->
+<#--                                    data-toggle="pill"-->
+<#--                                    id="bucket-study-tab"-->
+<#--                                    href role="tab"-->
+<#--                                    @click="onSelectBucket('study')"-->
+<#--                                    aria-controls="study"-->
+<#--                                    aria-selected="true">{{ bucketTitles.study }}</a>-->
+<#--                                </li>-->
                                 <li class="nav-item">
                                   <a class="nav-link active"
-                                    data-toggle="pill"
-                                    id="bucket-study-tab"
-                                    href role="tab"
-                                    @click="onSelectBucket('study')"
-                                    aria-controls="study"
-                                    aria-selected="true">{{ bucketTitles.study }}</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link"
                                     data-toggle="pill"
                                     id="bucket-dataset-tab"
                                     href role="tab"
@@ -268,16 +269,17 @@
                               </ul>
 
                               <ul class="nav nav-pills float-right" role="tablist">
-                                <li v-if="selectedBucket !==' dataset'" class="mt-auto mb-auto">
-                                  <div class="custom-control custom-switch">
-                                    <input type="checkbox"
-                                          id="bucket-dce"
-                                          v-model="dceChecked"
-                                          @change="onSelectBucket(dceChecked ? 'dce' : 'study')"
-                                          class="custom-control-input">
-                                    <label for="bucket-dce" class="custom-control-label">{{ bucketTitles.dce }}</label>
-                                  </div>
-                                </li>
+                                  <!-- For now CanPath has only one study, no need for DCE filter -->
+<#--                                <li v-if="selectedBucket !==' dataset'" class="mt-auto mb-auto">-->
+<#--                                  <div class="custom-control custom-switch">-->
+<#--                                    <input type="checkbox"-->
+<#--                                          id="bucket-dce"-->
+<#--                                          v-model="dceChecked"-->
+<#--                                          @change="onSelectBucket(dceChecked ? 'dce' : 'study')"-->
+<#--                                          class="custom-control-input">-->
+<#--                                    <label for="bucket-dce" class="custom-control-label">{{ bucketTitles.dce }}</label>-->
+<#--                                  </div>-->
+<#--                                </li>-->
                                 <li class="ml-3">
                                   <div class="dropleft">
                                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><@message "search.filter"/></button>
