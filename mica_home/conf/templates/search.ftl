@@ -250,15 +250,6 @@
                                 <li class="nav-item">
                                   <a class="nav-link active"
                                     data-toggle="pill"
-                                    id="bucket-study-tab"
-                                    href role="tab"
-                                    @click="onSelectBucket('study')"
-                                    aria-controls="study"
-                                    aria-selected="true">{{ bucketTitles.study }}</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link"
-                                    data-toggle="pill"
                                     id="bucket-dataset-tab"
                                     href role="tab"
                                     @click="onSelectBucket('dataset')"
@@ -267,17 +258,7 @@
                                 </li>
                               </ul>
 
-                              <ul class="nav nav-pills float-right" role="tablist">
-                                <li v-if="selectedBucket !==' dataset'" class="mt-auto mb-auto">
-                                  <div class="custom-control custom-switch">
-                                    <input type="checkbox"
-                                          id="bucket-dce"
-                                          v-model="dceChecked"
-                                          @change="onSelectBucket(dceChecked ? 'dce' : 'study')"
-                                          class="custom-control-input">
-                                    <label for="bucket-dce" class="custom-control-label">{{ bucketTitles.dce }}</label>
-                                  </div>
-                                </li>
+                              <ul class="nav nav-pills float-right" role="tablist">                                 
                                 <li class="ml-3">
                                   <div class="dropleft">
                                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><@message "search.filter"/></button>

@@ -640,7 +640,7 @@ Vue.component('study-filter-shortcut', {
         hasListResult: false,
         hasCoverageResult: false,
         hasGraphicsResult: false,
-        selectedBucket: BUCKETS.study,
+        selectedBucket: BUCKETS.dataset,
         dceChecked: false,
         bucketTitles: {
           study: Mica.tr.study,
@@ -1194,10 +1194,6 @@ Vue.component('study-filter-shortcut', {
       if (this.coverageFixedHeaderHandler) {
         this.coverageFixedHeaderHandler();
         this.coverageFixedHeaderHandler = null;
-      }
-  
-      if (coverageResultTableElement) {
-        this.coverageFixedHeaderHandler = TableFixedHeaderUtility.applyTo(coverageResultTableElement, $("#menubar").outerHeight() + $("#loginbar").outerHeight());
       }
     },
     beforeDestory() {

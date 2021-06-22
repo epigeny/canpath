@@ -651,7 +651,7 @@ class MicaQueryExecutor {
    */
   __ensureValidBucketType(urlSearchParams, bucket, display) {
     if (DISPLAYS.COVERAGE === display) {
-      return BUCKETS[bucket] || (urlSearchParams.hasOwnProperty(BUCKET) ? BUCKETS[urlSearchParams[BUCKET]]: BUCKETS.study);
+      return BUCKETS[bucket] || (urlSearchParams.hasOwnProperty(BUCKET) ? BUCKETS[urlSearchParams[BUCKET]]: BUCKETS.dataset);
     }
 
     return null;
