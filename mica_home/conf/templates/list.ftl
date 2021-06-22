@@ -156,7 +156,7 @@
                       <i class="fas fa-download"></i> <@message "download"/>
                     </button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" id="download-variables" href="javascript:void(0)" download><@message "download-cart-ids"/></a>
+                      <a class="dropdown-item" id="download-variables" href="javascript:void(0)" download><@message "variables"/></a>
                       <a class="dropdown-item" href="${contextPath}/ws/variables/set/${set.id}/documents/_opal" download><@message "download-cart-views"/></a>
                     </div>
                   </div>

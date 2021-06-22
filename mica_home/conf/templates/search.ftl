@@ -245,36 +245,54 @@
                       <div v-show="hasVariableQuery">
                         <div id="coverage">
                           <div class="mb-3">
-                            <div class="row mt-4 mb-2">
-                              <div class="col">
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"><@message "search.filter"/></button>
+                            <div class="mt-4 mb-2 clearfix">
+                              <ul class="nav nav-pills float-left" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active"
+                                    data-toggle="pill"
+                                    id="bucket-study-tab"
+                                    href role="tab"
+                                    @click="onSelectBucket('study')"
+                                    aria-controls="study"
+                                    aria-selected="true">{{ bucketTitles.study }}</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link"
+                                    data-toggle="pill"
+                                    id="bucket-dataset-tab"
+                                    href role="tab"
+                                    @click="onSelectBucket('dataset')"
+                                    aria-controls="dataset"
+                                    aria-selected="true">{{ bucketTitles.dataset }}</a>
+                                </li>
+                              </ul>
 
-                                  <div class="dropdown-menu">
-                                    <button type="button" @click="onFullCoverage()" class="dropdown-item" v-bind:class="{ disabled: !canDoFullCoverage }">
-                                      <@message "search.coverage-select.full"/>
-                                    </button>
-                                    <button type="button" @click="onZeroColumnsToggle()" class="dropdown-item" v-bind:class="{ disabled: !hasCoverageTermsWithZeroHits }">
-                                      <@message "search.coverage-without-zeros"/>
-                                    </button>
+                              <ul class="nav nav-pills float-right" role="tablist">
+                                <li v-if="selectedBucket !==' dataset'" class="mt-auto mb-auto">
+                                  <div class="custom-control custom-switch">
+                                    <input type="checkbox"
+                                          id="bucket-dce"
+                                          v-model="dceChecked"
+                                          @change="onSelectBucket(dceChecked ? 'dce' : 'study')"
+                                          class="custom-control-input">
+                                    <label for="bucket-dce" class="custom-control-label">{{ bucketTitles.dce }}</label>
                                   </div>
-                                </div>
-                              </div>
+                                </li>
+                                <li class="ml-3">
+                                  <div class="dropleft">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><@message "search.filter"/></button>
 
-                              <div class="col">
-                                <ul class="nav nav-pills float-right" role="tablist">
-                                  <li v-if="selectedBucket !==' dataset'" class="mt-auto mb-auto">
-                                    <div class="custom-control custom-switch">
-                                      <input type="checkbox"
-                                              id="bucket-dce"
-                                              v-model="dceChecked"
-                                              @change="onSelectBucket(dceChecked ? 'dce' : 'study')"
-                                              class="custom-control-input">
-                                      <label for="bucket-dce" class="custom-control-label">{{ bucketTitles.dce }}</label>
+                                    <div class="dropdown-menu">
+                                      <button type="button" @click="onFullCoverage()" class="dropdown-item" v-bind:class="{ disabled: !canDoFullCoverage }">
+                                        <@message "search.coverage-select.full"/>
+                                      </button>
+                                      <button type="button" @click="onZeroColumnsToggle()" class="dropdown-item" v-bind:class="{ disabled: !hasCoverageTermsWithZeroHits }">
+                                        <@message "search.coverage-without-zeros"/>
+                                      </button>
                                     </div>
-                                  </li>
-                                </ul>
-                              </div>
+                                  </div>
+                                </li>
+                              </ul>
                             </div>
 
                             <div class="row">
