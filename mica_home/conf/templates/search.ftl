@@ -258,7 +258,7 @@
                                 </li>
                               </ul>
 
-                              <ul class="nav nav-pills float-right" role="tablist">                                 
+                              <ul class="nav nav-pills float-right" role="tablist">
                                 <li class="ml-3">
                                   <div class="dropleft">
                                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><@message "search.filter"/></button>
