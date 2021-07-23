@@ -231,7 +231,6 @@ const makeHarmonizedVariablesTable = function() {
           '<td>' + studyAnchor(baseStudyTable.studySummary) + '</td>' +
           '<td>' + dceName + '</td>' +
           '<td><i class=" ' + VariableService.getHarmoStatusClass(status) + '"></i></td>' +
-          '<td>' + localizedString(statusDetail) + '</td>' +
           '<td>' + localizedString(comment) + '</td>' +
           '</tr>')
       }

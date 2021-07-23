@@ -293,7 +293,6 @@
                           <th><@message "study"/></th>
                           <th><@message "data-collection-event"/></th>
                           <th><@message "status"/></th>
-                          <th><@message "status-detail"/></th>
                           <th><@message "comment"/></th>
                         </tr>
                       </thead>
