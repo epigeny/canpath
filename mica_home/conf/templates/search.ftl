@@ -26,7 +26,7 @@
       </div>
 
       <@searchInfo/>
-          
+
     </section>
 
     <!-- Main content -->
@@ -147,7 +147,7 @@
                   </div>
                 </div>
               </div><!-- /.card-header -->
-              
+
               <div class="card-body pt-0">
                 <div class="tab-content">
 
@@ -184,12 +184,7 @@
                         </#if>
                       </ul>
                     </div>
-                    <div id="study-filter-shortcut-container">
-                      <div id="study-filter-shortcut" class="row">
-                        <div class="col"><study-filter-shortcut></study-filter-shortcut></div>
-                      </div>
-                    </div>
-
+                    
                     <div class="mt-3">
                       <div class="tab-content" id="results-tabContent">
 
@@ -276,9 +271,6 @@
                               </ul>
                             </div>
 
-                            <div class="row">
-                              <div class="col"><study-filter-shortcut></study-filter-shortcut></div>
-                            </div>
                           </div>
 
                           <div v-show="loading" class="spinner-border spinner-border-sm mt-3" role="status"></div>

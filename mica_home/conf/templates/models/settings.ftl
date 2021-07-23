@@ -33,9 +33,9 @@
 
 <!-- Search -->
 <#assign defaultSearchState = "#lists?type=variables"/>
-<#assign searchVariableColumns = ["label+description", "valueType", "annotations", "type", "study", "population", "dataset"]/>
+<#assign searchVariableColumns = ["label+description", "valueType", "annotations", "study", "dataset"]/>
 <#assign searchDatasetColumns = ["name", "type", "variables"]/>
-<#assign searchStudyListDisplay = true/>
+<#assign searchStudyListDisplay = false/>
 <#assign searchNetworkListDisplay = false/>
 <#assign searchGraphicsDisplay = false/>
 <#assign searchCriteriaMenus = ["variable"]/>
