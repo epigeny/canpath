@@ -75,7 +75,7 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
         maintainAspectRatio: false,
         responsive: true,
         legend: {
-          display: true
+          display: false
         },
       },
     };
@@ -101,7 +101,7 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
       $('#frequencyTotal').html(numberFormatter.format(data.total));
 
       // frequencies table
-      let frequencyRows = `<tr><th colspan="2">${Mica.tr['valid-values']}</td></tr>`;
+      let frequencyRows = '';
       let missingRows = '';
       data.frequencies.forEach(frequency => {
         // % over not empty values
@@ -168,7 +168,8 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
 
 
       });
-      frequencyRows = (Mica.nature === 'CATEGORICAL' ? frequencyRows : '') +
+      frequencyRows = `<tr><th colspan="2" style="padding: 0.25rem 0.75rem;">${Mica.tr['valid-values']}</td></tr>` +
+        (Mica.nature === 'CATEGORICAL' ? frequencyRows : '') +
         `<tr>
           <td><em>${Mica.tr['subtotal']}</em></td>
           <td>
@@ -179,8 +180,8 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
       $('#validValues').html(frequencyRows);
 
       if (data.n !== data.total) {
-        missingRows = `<tr><th colspan="2">${Mica.tr['other-values']}</td></tr>` +
-        (Mica.nature === 'CATEGORICAL' ? missingRows : '') +
+        missingRows = `<tr><th colspan="2" style="padding: 0.25rem 0.75rem;">${Mica.tr['other-values']}</td></tr>` +
+          (Mica.nature === 'CATEGORICAL' ? missingRows : '') +
           `<tr>
             <td><em>${Mica.tr['subtotal']}</em></td>
             <td>

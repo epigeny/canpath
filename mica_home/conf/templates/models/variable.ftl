@@ -15,7 +15,7 @@
   <div>
     <div class="row">
       <div id="categoricalSummary" style="display: none" class="col-xs-12 col-lg-6">
-        <div class="table-responsive" style="max-height: 40em;">
+        <div class="table-responsive" style="max-height: 48em;">
           <table class="table table-striped border">
             <thead>
               <tr>
@@ -46,7 +46,7 @@
               <th><@message "max"/></th>
               <th><@message "mean"/></th>
               <th><@message "stdDev"/></th>
-              <th><@message "n"/></th>
+              <th><@message "n-with-values"/></th>
               <th><@message "total"/></th>
             </tr>
             </thead>
