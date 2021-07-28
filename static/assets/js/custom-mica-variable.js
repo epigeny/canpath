@@ -52,13 +52,42 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
     }
   };
 
+  const customMakeVariableFrequenciesChartSettings = function(frequencies, backgroundColors, tr) {
+    const labels = [];
+    const dataset = {
+      data: [],
+      backgroundColor: backgroundColors,
+    };
+    frequencies.forEach(frequency => {
+      if (frequency.count>0) {
+        labels.push(tr[frequency.label] ? tr[frequency.label] : frequency.label);
+        dataset.data.push(frequency.count);
+      }
+    });
+
+    return {
+      type: 'pie',
+      data: {
+        labels: labels,
+        datasets: [dataset]
+      },
+      options: {
+        maintainAspectRatio: false,
+        responsive: true,
+        legend: {
+          display: false
+        },
+      },
+    };
+  };
+
   const renderFrequencies = function(data) {
     const frequencyChartElem = $('#frequencyChart');
     if (data.frequencies) {
       // frequencies chart
       const chartCanvas = frequencyChartElem.get(0).getContext('2d');
       const padStringWithZeros = (s) => !isNaN(s) ? '0'.repeat(10 - s.length) + s : s;
-      new Chart(chartCanvas, makeVariableFrequenciesChartSettings(data.frequencies, Mica.backgroundColors, {
+      new Chart(chartCanvas, customMakeVariableFrequenciesChartSettings(data.frequencies, Mica.backgroundColors, {
         'NOT_NULL': Mica.tr['not-empty-values'],
         'N/A': Mica.tr['empty-values']
       }));

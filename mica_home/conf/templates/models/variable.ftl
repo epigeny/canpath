@@ -14,8 +14,8 @@
 
   <div>
     <div class="row">
-      <div id="categoricalSummary" style="display: none"   class="col-xs-12 col-lg-6">
-        <div class="table-responsive">
+      <div id="categoricalSummary" style="display: none" class="col-xs-12 col-lg-6">
+        <div class="table-responsive" style="max-height: 40em;">
           <table class="table table-striped border">
             <thead>
               <tr>
@@ -36,6 +36,7 @@
       </div>
       <div class="col-xs-12 col-lg-6">
         <canvas id="frequencyChart"></canvas>
+
         <div id="continuousSummary" class="table-responsive">
           <span><@message "continuous-summary-title"/></span>
           <table class="table border">
