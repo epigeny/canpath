@@ -75,7 +75,7 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
         maintainAspectRatio: false,
         responsive: true,
         legend: {
-          display: false
+          display: true
         },
       },
     };
@@ -84,14 +84,19 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
   const renderFrequencies = function(data) {
     const frequencyChartElem = $('#frequencyChart');
     if (data.frequencies) {
-      // frequencies chart
-      const chartCanvas = frequencyChartElem.get(0).getContext('2d');
+
       const padStringWithZeros = (s) => !isNaN(s) ? '0'.repeat(10 - s.length) + s : s;
-      new Chart(chartCanvas, customMakeVariableFrequenciesChartSettings(data.frequencies, Mica.backgroundColors, {
-        'NOT_NULL': Mica.tr['not-empty-values'],
-        'N/A': Mica.tr['empty-values']
-      }));
-      frequencyChartElem.show();
+
+      if (Mica.nature === 'CATEGORICAL') {
+        // frequencies chart
+        const chartCanvas = frequencyChartElem.get(0).getContext('2d');
+
+        new Chart(chartCanvas, customMakeVariableFrequenciesChartSettings(data.frequencies, Mica.backgroundColors, {
+          'NOT_NULL': Mica.tr['not-empty-values'],
+          'N/A': Mica.tr['empty-values']
+        }));
+        frequencyChartElem.show();
+      }
 
       $('#frequencyTotal').html(numberFormatter.format(data.total));
 
@@ -163,7 +168,7 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
 
 
       });
-      frequencyRows = frequencyRows +
+      frequencyRows = (Mica.nature === 'CATEGORICAL' ? frequencyRows : '') +
         `<tr>
           <td><em>${Mica.tr['subtotal']}</em></td>
           <td>
@@ -175,7 +180,7 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
 
       if (data.n !== data.total) {
         missingRows = `<tr><th colspan="2">${Mica.tr['other-values']}</td></tr>` +
-          missingRows +
+        (Mica.nature === 'CATEGORICAL' ? missingRows : '') +
           `<tr>
             <td><em>${Mica.tr['subtotal']}</em></td>
             <td>
