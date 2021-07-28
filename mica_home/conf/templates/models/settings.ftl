@@ -60,6 +60,3 @@
 <#assign dataAccessInstructionsEnabled = false/>
 
 <#assign studyDesignColors = ["#4c722a","#73a432","#ffe637","#fcb814","#d9461d","#940c12"]/>
-
-<!-- used https://coolors.co/002554-59cbe8-4698cb-da291c-91d6ac-f68d2e-c5e86c-ffcd00 -->
-<#assign colors = ["#002554","#59cbe8","#4698cb","#da291c","#91d6ac","#f68d2e","#c5e86c","#ffcd00","#0048a7","#7ad6ed","#6dadd6","#e74e43","#a6debb","#f8a557","#d1ed8b","#ffd633"]/>
