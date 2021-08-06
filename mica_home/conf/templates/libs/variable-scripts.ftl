@@ -20,6 +20,7 @@
     currentLanguage: '${.lang}',
     variableId: '${variable.id}',
     nature: '${variable.nature}',
+    valueType: '${variable.valueType}',
     categories: {},
     backgroundColors: ['${colors?join("', '")}'],
     barChartBorderColor: '${barChartBorderColor}',

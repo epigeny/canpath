@@ -87,7 +87,7 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
 
       const padStringWithZeros = (s) => !isNaN(s) ? '0'.repeat(10 - s.length) + s : s;
 
-      if (Mica.nature === 'CATEGORICAL') {
+      if (Mica.nature === 'CATEGORICAL' && Mica.valueType !== 'text') {
         // frequencies chart
         const chartCanvas = frequencyChartElem.get(0).getContext('2d');
 
@@ -169,11 +169,11 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
 
       });
       frequencyRows = `<tr><th colspan="2" style="padding: 0.25rem 0.75rem;">${Mica.tr['valid-values']}</td></tr>` +
-        (Mica.nature === 'CATEGORICAL' ? frequencyRows : '') +
+        (Mica.nature === 'CATEGORICAL' && Mica.valueType !== 'text' ? frequencyRows : '') +
         `<tr>
           <td><em>${Mica.tr['subtotal']}</em></td>
           <td>
-            ${data.n}
+            ${numberFormatter.format(data.n)}
             <p class="text-muted mb-0">${numberFormatter.format((100 * data.n / data.total).toFixed(2))}%</p>
           </td>
         </tr>`;
@@ -185,7 +185,7 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
           `<tr>
             <td><em>${Mica.tr['subtotal']}</em></td>
             <td>
-              ${data.total - data.n}
+              ${numberFormatter.format(data.total - data.n)}
               <p class="text-muted mb-0">${numberFormatter.format((100 * (data.total - data.n) / data.total).toFixed(2))}%</p>
             </td>
           </tr>`;
@@ -206,12 +206,12 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
 
       $('#continuousSummary tbody').html(`
         <tr>
-          <td>${summary.n === 0 ? '-' : summary.min.toFixed(2)}</td>
-          <td>${summary.n === 0 ? '-' : summary.max.toFixed(2)}</td>
-          <td>${summary.n === 0 ? '-' : summary.mean.toFixed(2)}</td>
-          <td>${summary.n === 0 ? '-' : summary.stdDeviation.toFixed(2)}</td>
-          <td>${data.n === 0 ? '-' : data.n.toLocaleString()}<p class="text-muted">(${numberFormatter.format((100 * data.n / data.total).toFixed(2))}%)</p></td>
-          <td>${data.total === 0 ? '-' : data.total.toLocaleString()}</td>
+          <td>${summary.n === 0 ? '-' : numberFormatter.format(summary.min.toFixed(2))}</td>
+          <td>${summary.n === 0 ? '-' : numberFormatter.format(summary.max.toFixed(2))}</td>
+          <td>${summary.n === 0 ? '-' : numberFormatter.format(summary.mean.toFixed(2))}</td>
+          <td>${summary.n === 0 ? '-' : numberFormatter.format(summary.stdDeviation.toFixed(2))}</td>
+          <td>${data.n === 0 ? '-' : numberFormatter.format(data.n)}<p class="text-muted">(${numberFormatter.format((100 * data.n / data.total).toFixed(2))}%)</p></td>
+          <td>${data.total === 0 ? '-' : numberFormatter.format(data.total)}</td>
         </tr>
       `);
 

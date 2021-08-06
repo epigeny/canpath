@@ -39,6 +39,8 @@
 <#assign searchNetworkListDisplay = false/>
 <#assign searchGraphicsDisplay = false/>
 <#assign searchCriteriaMenus = ["variable"]/>
+<#assign searchVariableSortFields = ["-studyId","populationWeight","index","name"]/>
+<#assign searchDatasetSortFields = ["-harmonizationTable.studyId","harmonizationTable.populationWeight","acronym"]/>
 
 <!-- Variable -->
 <#assign showHarmonizedVariableSummarySelector = false/>
