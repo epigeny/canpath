@@ -15,7 +15,7 @@
   <div>
     <div class="row">
       <div id="categoricalSummary" style="display: none" class="col-xs-12 col-lg-6">
-        <div class="table-responsive" style="max-height: 48em;">
+        <div class="table-responsive" style="min-height: 40em; max-height: 40em;">
           <table class="table table-striped border">
             <thead>
               <tr>
