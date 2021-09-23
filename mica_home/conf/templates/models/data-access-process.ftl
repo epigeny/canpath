@@ -104,7 +104,7 @@
           <td><strong>Request Type</strong></td>
           <td>Harmonized (Core) Datasets Only</td>
           <td>Requests for:
-            <ul>
+            <ul class="mb-0">
               <li>Non-Harmonized datasets</li>
               <li>Biosamples</li>
               <li>Linked administrative data</li>

@@ -106,7 +106,7 @@
           <td><strong>Type de demande</strong></td>
           <td>Ensembles de données harmonisées (de base) seulement</td>
           <td>Demandes pour :
-            <ul>
+            <ul class="mb-0">
               <li>Ensembles de données non harmonisées</li>
               <li>Échantillons biologiques</li>
               <li>Données administratives couplées</li>
