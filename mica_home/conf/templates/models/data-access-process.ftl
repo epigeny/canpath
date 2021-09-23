@@ -78,30 +78,19 @@
     <a id="submission_process" name="submission_process"></a> Submit an Access Request
   </h5>
   <p style="text-align:center;"><img alt="" src="/assets/images/submission_process.png" style="width: 750px; height: 498px;"></p>
-  <p>
-    Requests for access to CanPath Data and Biosamples are accepted throughout the year. Applications
-    meeting the criteria for an Expedited Review are reviewed on an ongoing basis, while
-    applications requiring a Full Access Committee Review are reviewed quarterly. The requirements
-    for each review process are outlined below.
-  </p>
-  <p>
-    Access Applications meeting the criteria for an Expedited Review will be completed within
-    approximately 3 weeks (this timeline is contingent on the applicant’s responsiveness throughout
-    the process.)
-  </p>
 
   <h6><a id="review_process" name="review_process">CanPath Review Processes</a></h6>
 
-  <p class="mt-3"><strong>Expedited COVID-19 Data Access</strong></p>
-
   <p>
-    National harmonized data from the CanPath COVID-19 Questionnaire are now available to researchers. Given the immediate
-    need for pandemic research, requests for access to the national COVID-19 Questionnaire dataset will be <strong>reviewed
-      in as little as 9 business days</strong>. Please refer to the Expedited Review Criteria below for eligibility.
+    Requests for access to CanPath Data and Biosamples are accepted throughout the year. The requirements for the Expedited and Full Access Committee review processes are outlined below.
+  </p>
+  <p>
+    Please note that timelines are contingent on the completeness of the application and the applicant’s responsiveness throughout
+    the process.
   </p>
 
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-12">
       <table class="table table-striped table-bordered">
         <thead>
         <tr>
@@ -124,38 +113,31 @@
         </tr>
         <tr>
           <td><strong>Review Timeline</strong></td>
-          <td>Accepted on a rolling basis. Reviewed within approx. 3 weeks</td>
-          <td>Quarterly Access Committee Meeting</td>
+          <td>Accepted on a rolling basis. Review take a minimum of 3 weeks.</td>
+          <td>Accepted on a rolling basis. Review take a minimum of 6 weeks.</td>
         </tr>
         </tbody>
       </table>
-      <p>More information can be found in the <a href="#access_policies">CanPath Access Policy</a> section.</p>
 
     </div>
-    <div class="col-sm-6">
-      <table class="table table-striped table-bordered">
-        <thead>
-        <tr>
-          <th>Full Access Committee&nbsp;Review Submission&nbsp;Deadline</th>
-          <th>Anticipated Notification of Decision*</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>July 30, 2021</td>
-          <td>September 2021</td>
-        </tr>
-        <tr>
-          <td>October 29, 2021</td>
-          <td>December 2021</td>
-        </tr>
-        </tbody>
-      </table>
-      <p>*Please note that the Anticipated Notification of Decision refers to the approximate time you
+
+    <div class="col-12">
+
+      <p>* Please note that the review timeline refers to the approximate time you
         will be notified about the approval status of your project, and not to the time you will
         have access to the data.</p>
+
+      <p>More information can be found in the <a href="#access_policies">CanPath Access Policy</a> section.</p>
     </div>
   </div>
+
+  <p class="mt-3"><strong>Expedited COVID-19 Data Access</strong></p>
+
+  <p>
+    National harmonized data from the CanPath COVID-19 Questionnaire are now available to researchers. Given the immediate
+    need for pandemic research, requests for access to the national COVID-19 Questionnaire dataset will be <strong>reviewed
+      in as little as 9 business days</strong>. Please refer to the Expedited Review Criteria above for eligibility.
+  </p>
 
   <h6><a id="access_criteria_requ" name="access_criteria_requ">Access Criteria &amp; Requirements</a></h6>
   <p>
@@ -178,13 +160,12 @@
       genomics.
     </p>
     <p>
-      The Access Committee meets formally 4 times per year to review projects requiring Full Access
-      Committee Review. Please see <a href="#review_process">CanPath Review Processes</a>
-      for submission deadlines.
+      The Access Committee meets formally 64 times per year to review projects requiring Full Access
+      Committee Review.
     </p>
 
   <h5 class="mt-5 mb-3">Need Support?</h5>
-  <p>All CanPath access questions can be directed to Asha Mohamed, Access Officer. Email: <a
+  <p>All CanPath access questions can be directed to the Access Office. Email: <a
         href="mailto:access@canpath.ca">access@canpath.ca</a></p>
 
   <h5 class="mt-5 mb-3"><a id="access_policies" name="access_policies"></a>CanPath Policies &amp; Guidelines</h5>
@@ -205,6 +186,9 @@
     <li>
       <a href="/assets/files/CanPath%20Biosample%20Feasiblity%20Review_June2020.pdf"
          target="_blank">Biosample Feasibility Review</a></li>
+    <li>
+      <a href="/assets/files/CanPath%20Industry%20Research%20Policy_v1.0_2021-07-28.pdf"
+         target="_blank">Industry Research Policy</a></li>
   </ul>
 
 </#macro>

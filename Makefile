@@ -9,8 +9,14 @@ agate_home=${PROJECT_HOME}/agate_home
 docker_compose_file=docker-compose.yml
 network=canpath_default
 
+MICA_SERVE=~/projects/mica2/mica-webapp/target/classes
+
 help:
 	@echo "make up"
+
+template:
+	cp -r mica_home/conf/* ${MICA_SERVE} && \
+	cp -r static ${MICA_SERVE}	
 
 install: install-mica install-agate
 

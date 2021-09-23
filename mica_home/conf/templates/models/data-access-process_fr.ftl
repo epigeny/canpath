@@ -81,30 +81,18 @@
     <a id="submission_process" name="submission_process"></a> Soumettez une de demande d'accès
   </h5>
   <p style="text-align:center;"><img alt="" src="/assets/images/submission_process_fr.png" style="width: 750px; height: 498px;"></p>
-  <p>
-    Les demandes d’accès aux données et aux échantillons biologiques de CanPath sont acceptées tout au long de l’année.
-    Les demandes répondant aux critères d’examen accéléré sont examinées de façon continue, tandis que les demandes nécessitant
-    un examen détaillé par le comité d’accès sont examinées tous les trimestres. Les exigences de chaque processus d’examen
-    sont décrites ci-dessous.
-  </p>
-  <p>
-    Les demandes d’accès répondant aux critères d’examen accéléré sont acceptées sur une base continue et leur examen sera
-    complété dans un délai d’environ 3 semaines (ce délai dépend de la rapidité de réponse du candidat tout au long du processus).
-  </p>
 
   <h6><a id="review_process" name="review_process">Processus d'examen CanPath</a></h6>
 
-  <p class="mt-3"><strong>Accès aux données COVID-19 accéléré</strong></p>
-
   <p>
-    Les données nationales harmonisées du Questionnaire sur la COVID-19 de CanPath sont maintenant disponsibles aux chercheurs.
-    Étant donné le besoin immédiat de faire des recherches sur la pandémie, les demandes d’accès à l’ensemble de données
-    nationales du Questionnaire sur la COVID-19 seront <strong>examinées en aussi peu que neuf jours ouvrables</strong>.
-    Veuillez vous référer aux critères de examen accélérée ci-dessous pour l'éligibilité.
+    Les demandes d’accès aux données et aux échantillons biologiques de CanPath sont acceptées et examinées tout au long de l’année. Les exigences d’examen accéléré et examen détaillé par le comité d’accès sont décrites ci-dessous.
+  </p>
+  <p>
+    Le délai dépend de la rapidité de réponse du demandeur tout au long du processus.
   </p>
 
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-12">
       <table class="table table-striped table-bordered">
         <thead>
         <tr>
@@ -128,38 +116,30 @@
         <tr>
           <td><strong>Chronologie de l’examen</strong></td>
           <td>Acceptées sur une base continue. Examen dans un délai d’environ trois semaines</td>
-          <td>Réunion trimestrielle du Comité d’accès</td>
+          <td>Acceptées sur une base continue. Examen dans un délai d’environ six semaines</td>
         </tr>
         </tbody>
       </table>
-      <p>Plus d'informations peuvent être trouvées dans la section <a href="#access_policies">Politique d'accès de CanPath</a>.</p>
 
     </div>
-    <div class="col-sm-6">
-      <table class="table table-striped table-bordered">
-        <thead>
-        <tr>
-          <th>Date limite pour le dépôt d’une demande nécessitant un examen détaillé par le Comité d’accès</th>
-          <th>Date prévue de l’avis de décision*</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>30 juillet 2021</td>
-          <td>September 2021</td>
-        </tr>
-        <tr>
-          <td>29 octobre 2021</td>
-          <td>Décembre 2021</td>
-        </tr>
-        </tbody>
-      </table>
+    <div class="col-12">
       <p>
-        * Veuillez noter que la date prévue de l’avis de décision anticipée signifie la date approximative à laquelle vous
+        * Veuillez noter que le délai d'examen signifie la date approximative à laquelle vous
         serez informé/e de l’état d’approbation de votre projet, et non la date à laquelle vous aurez accès aux données.
       </p>
+
+      <p>Plus d'informations peuvent être trouvées dans la section <a href="#access_policies">Politique d'accès de CanPath</a>.</p>
     </div>
   </div>
+
+  <p class="mt-3"><strong>Accès aux données COVID-19 accéléré</strong></p>
+
+  <p>
+    Les données nationales harmonisées du Questionnaire sur la COVID-19 de CanPath sont maintenant disponsibles aux chercheurs.
+    Étant donné le besoin immédiat de faire des recherches sur la pandémie, les demandes d’accès à l’ensemble de données
+    nationales du Questionnaire sur la COVID-19 seront <strong>examinées en aussi peu que neuf jours ouvrables</strong>.
+    Veuillez vous référer aux critères de examen accélérée ci-dessous pour l'éligibilité.
+  </p>
 
   <h6><a id="access_criteria_requ" name="access_criteria_requ">Critères et exigences d’accès</a></h6>
   <p>
@@ -180,11 +160,11 @@
       Le comité d’accès examine et prend les décisions relatives à l’approbation des demandes des projets de recherche visant
       à obtenir l’accès à des données et / ou à des échantillons biologiques de CanPath. Le comité est composé de membres
       indépendants au Canada possédant une expertise dans des domaines pertinents comme la biostatistique, l’épidémiologie
-      et la génomique. Le comité d’accès se réunit formellement 4 fois par an.
+      et la génomique. Le comité d’accès se réunit formellement 64 fois par an.
     </p>
 
   <h5 class="mt-5 mb-3">Besoin d’aide?</h5>
-  <p>Toute question sur l’accès à CanPath peut être adressée à Asha Mohamed, responsable de l’accès. Courriel : <a
+  <p>Toute question sur l’accès à CanPath peut être adressée au bureau d'accès. Courriel : <a
         href="mailto:access@canpath.ca">access@canpath.ca</a></p>
 
   <h5 class="mt-5 mb-3"><a id="access_policies" name="access_policies"></a>Politiques &amp; lignes directrices de CanPath</h5>
@@ -205,6 +185,9 @@
     <li>
       <a href="/assets/files/CanPath%20Biosample%20Feasiblity%20Review_June2020.pdf"
          target="_blank">Revue de la faisabilité pour les échantillons biologiques</a></li>
+    <li>
+      <a href="/assets/files/CanPath%20Industry%20Research%20Policy_v1.0_2021-07-28-Fr.pdf"
+         target="_blank">Politique de recherche industrielle</a></li>
   </ul>
 
 </#macro>
