@@ -160,7 +160,7 @@
       genomics.
     </p>
     <p>
-      The Access Committee meets formally 64 times per year to review projects requiring Full Access
+      The Access Committee meets formally 6 times per year to review projects requiring Full Access
       Committee Review.
     </p>
 

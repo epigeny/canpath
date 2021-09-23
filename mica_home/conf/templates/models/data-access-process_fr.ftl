@@ -160,7 +160,7 @@
       Le comité d’accès examine et prend les décisions relatives à l’approbation des demandes des projets de recherche visant
       à obtenir l’accès à des données et / ou à des échantillons biologiques de CanPath. Le comité est composé de membres
       indépendants au Canada possédant une expertise dans des domaines pertinents comme la biostatistique, l’épidémiologie
-      et la génomique. Le comité d’accès se réunit formellement 64 fois par an.
+      et la génomique. Le comité d’accès se réunit formellement 6 fois par an.
     </p>
 
   <h5 class="mt-5 mb-3">Besoin d’aide?</h5>
