@@ -164,8 +164,8 @@
     </p>
 
   <h5 class="mt-5 mb-3">Besoin d’aide?</h5>
-  <p>Toute question sur l’accès à CanPath peut être adressée au bureau d'accès. Courriel : <a
-        href="mailto:access@canpath.ca">access@canpath.ca</a></p>
+  <div>Toute question sur l’accès à CanPath peut être adressée au bureau d'accès.</div>
+  <p>Courriel : <a href="mailto:access@canpath.ca">access@canpath.ca</a></p>
 
   <h5 class="mt-5 mb-3"><a id="access_policies" name="access_policies"></a>Politiques &amp; lignes directrices de CanPath</h5>
   <p>Avant de soumettre un formulaire de demande d'accès, nous vous recommandons fortement de consulter les documents suivants (disponibles en anglais seulement) :</p>

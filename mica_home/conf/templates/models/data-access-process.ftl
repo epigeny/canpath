@@ -113,8 +113,8 @@
         </tr>
         <tr>
           <td><strong>Review Timeline</strong></td>
-          <td>Accepted on a rolling basis. Review take a minimum of 3 weeks.</td>
-          <td>Accepted on a rolling basis. Review take a minimum of 6 weeks.</td>
+          <td>Accepted on a rolling basis. Reviews take a minimum of 3 weeks.</td>
+          <td>Accepted on a rolling basis. Reviews take a minimum of 6 weeks.</td>
         </tr>
         </tbody>
       </table>
@@ -165,8 +165,8 @@
     </p>
 
   <h5 class="mt-5 mb-3">Need Support?</h5>
-  <p>All CanPath access questions can be directed to the Access Office. Email: <a
-        href="mailto:access@canpath.ca">access@canpath.ca</a></p>
+  <div>All CanPath access questions can be directed to the Access Office.</div>
+  <p>Email: <a href="mailto:access@canpath.ca">access@canpath.ca</a></p>
 
   <h5 class="mt-5 mb-3"><a id="access_policies" name="access_policies"></a>CanPath Policies &amp; Guidelines</h5>
   <p>We strongly recommend that you consult these prior to submitting an&nbsp;Access Application Form:</p>
