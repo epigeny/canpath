@@ -6,7 +6,7 @@
     Requests for access and information on the CanPath datasets are received by the <strong>CanPath Access Office</strong>. Access
     requests limited to <a href="/harmonization-studies">Harmonized (Core) Data</a>, including COVID-19 Questionnaire data, are eligible for an Expedited Access Review. All
     other requests, including, but not limited to, applications for <a href="/page/samples">Biosamples</a> and administrative health
-    linkages, require a Full Access Committee Review. Submission deadlines for Full Access Committee Reviews are <a href="#review_process">listed here</a>.
+    linkages, require a Full Access Committee Review.
   </p>
 
   <div class="card card-info card-outline mt-5 mb-5">

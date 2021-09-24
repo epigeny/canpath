@@ -6,7 +6,7 @@
     Les demandes d'accès et d’informations sur les ensembles de données de CanPath sont reçues par le <strong>bureau d'accès de CanPath</strong>.
     Les demandes limitées aux <a href="/harmonization-studies">données harmonisées (de base)</a>, incluant les données du questionnaire COVID-19,  sont admissibles à un examen d’accès accéléré. Toutes
     autres demandes, incluant, mais sans s’y limiter, aux <a href="/page/samples">échantillons biologiques</a> et au couplage avec des données
-    administratives de santé nécessite un examen détaillé par le comité d’accès. Les <a href="#review_process">dates limites de soumission sont indiquées ici</a>.
+    administratives de santé nécessite un examen détaillé par le comité d’accès.
   </p>
 
   <div class="card card-info card-outline mt-5 mb-5">
