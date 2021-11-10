@@ -28,11 +28,13 @@
         <div class="col-md-4">
           <h5><span class="subheading">ÉTAPE 2. <br/></span>Compléter et soumettre votre formulaire de demande d'accès</h5>
           <p>
-            Les chercheurs sont encouragés à <strong>communiquer avec le bureau d'accès</strong> pour comprendre les exigences
+            Les chercheurs sont encouragés à <strong>consulter la fiche-conseil de la demande et communiquer avec le bureau d'accès</strong> pour comprendre les exigences
             impliquées avant d'envoyer une demande.
           </p>
           <p>
             <a href="${contextPath}/contact" class="btn btn-outline-primary"><@message "contact-menu"/> <i class="fas fa-info-circle"></i></a>
+
+            <a href="/assets/files/CanPath_Data_and_Biosamples_Access_Application_Tip_Sheet_FINAL-FR.pdf" target="_blank" class="btn btn-outline-primary"><@message "application-tips-button"/></a>
           </p>
           <p>
             Lorsque les chercheurs sont prêts à remplir et à envoyer une demande d'accès, ils doivent remplir et soumettre un

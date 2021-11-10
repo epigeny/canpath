@@ -25,11 +25,13 @@
         <div class="col-md-4">
           <h5><span class="subheading">Step 2. <br/></span>Complete and submit your access request form</h5>
           <p>
-            Researchers are encouraged to <strong>contact the Access Office</strong> to understand the requirements involved
+            Researchers are encouraged to <strong>review the Application Tip Sheet and contact the Access Office</strong> to understand the requirements involved
             before submitting an application.
           </p>
           <p>
             <a href="${contextPath}/contact" class="btn btn-outline-primary"><@message "contact-menu"/> <i class="fas fa-info-circle"></i></a>
+
+            <a href="/assets/files/CanPath_Data_and_Biosamples_Access_Application_Tip Sheet_FINAL_2021-10-29.pdf" target="_blank" class="btn btn-outline-primary"><@message "application-tips-button"/></a>
           </p>
           <p>
             When researchers are ready to submit an access request, they must complete and submit an
