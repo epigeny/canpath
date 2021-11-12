@@ -235,12 +235,12 @@
         const decimalB = rgb[2] / 255;
 
         // Step Two: Convert a gamma encoded RGB to a linear value and apply the standard coefficients
-        const luminance = 
-          (0.2126 * decimalColorValueToLinearized(decimalR)) + 
-          (0.7152 * decimalColorValueToLinearized(decimalG)) + 
+        const luminance =
+          (0.2126 * decimalColorValueToLinearized(decimalR)) +
+          (0.7152 * decimalColorValueToLinearized(decimalG)) +
           (0.0722 * decimalColorValueToLinearized(decimalB));
 
-        // Percieved lightness 
+        // Percieved lightness
         if (luminance <= (216 / 24389)) {
           return luminance * (24389 / 27);
         } else {
@@ -298,3 +298,16 @@
 <!-- Default model macros -->
 
 <script src="/assets/js/custom.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161452725-2"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+  gtag('config', 'UA-161452725-2');
+</script>
