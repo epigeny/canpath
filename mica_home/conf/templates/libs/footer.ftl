@@ -8,7 +8,7 @@
           <li><a href="http://www.bcgenerationsproject.ca/" target="_blank" class="text-muted text-decoration-none">BC Generations
               Project</a></li>
           <li><a href="http://myatp.ca" target="_blank" class="text-muted text-decoration-none">Alberta's Tomorrow Project</a></li>
-          <li><a href="https://www.cancercare.mb.ca/Research/manitoba-tomorrow-project" target="_blank" class="text-muted text-decoration-none">Manitoba Tomorrow Project</a></li>
+          <li><a href="https://www.cancercare.mb.ca/Research/research-institute-at-cancercare-manitoba/research-programs/manitoba-tomorrow-project" target="_blank" class="text-muted text-decoration-none">Manitoba Tomorrow Project</a></li>
           <li><a href="https://www.ontariohealthstudy.ca/" target="_blank" class="text-muted text-decoration-none">Ontario Health
               Study</a></li>
           <li><a href="http://www.cartagene.qc.ca/${.lang}" target="_blank" class="text-muted text-decoration-none">CARTaGENE</a></li>
