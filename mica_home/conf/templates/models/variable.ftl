@@ -15,12 +15,12 @@
   <div>
     <div class="row">
       <div id="categoricalSummary" style="display: none" class="col-xs-12 col-lg-6">
-        <div class="table-responsive" style="min-height: 40em; max-height: 40em;">
+        <div class="table-responsive">
           <table class="table table-striped border">
             <thead>
               <tr>
-                <th><@message "value"/></th>
-                <th><@message "frequency"/></th>
+                <th><@message "values"/></th>
+                <th><@message "frequencies"/></th>
               </tr>
             </thead>
             <tbody id="validValues"></tbody>

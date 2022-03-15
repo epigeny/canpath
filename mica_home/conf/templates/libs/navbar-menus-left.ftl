@@ -18,7 +18,7 @@
         <a href="${contextPath}/data-access-process" class="dropdown-item <#if rc.requestUri?ends_with("/data-access-process")>active</#if>"><@message "data-access-process"/></a>
       </li>
       <li id="projectMenu">
-        <a href="${contextPath}/projects" class="dropdown-item <#if rc.requestUri?ends_with("/projects")>active</#if>"><@message "approved-projects"/></a>
+        <a href="<#if .lang?starts_with("fr")>https://canpath.ca/fr/projets-etudes-approuves/<#else>https://canpath.ca/approved-projects-studies/</#if>" target="_blank" class="dropdown-item"><@message "approved-projects"/></a>
       </li>
     </ul>
   </li>

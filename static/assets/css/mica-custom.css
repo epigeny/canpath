@@ -175,7 +175,7 @@ dl.striped > dt, dl.striped > dd {
 .datepicker table tr td span {
   display: block;
   width: 67%;
-  
+
   cursor: pointer;
 
   white-space: nowrap;
@@ -194,4 +194,8 @@ dl.striped > dt, dl.striped > dd {
   .datepicker {
     max-width: 50% !important;
   }
+}
+
+#categoricalSummary .table td {
+  padding: 0.5rem;
 }

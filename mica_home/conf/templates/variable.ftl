@@ -194,6 +194,7 @@
           </#if>
         </div>
 
+        <#if harmoAnnotations.statusValue != 'impossible'>
         <div class="row">
           <div class="col-12">
             <div class="card card-info card-outline">
@@ -222,6 +223,8 @@
             </div>
           </div>
         </div>
+        </#if>
+
         <div class="row">
           <div class="col-12">
               <#if type == "Harmonized">
@@ -288,8 +291,8 @@
                       <thead>
                         <tr>
                           <th><@message "variable"/></th>
+                          <th><@message "dataset"/></th>
                           <th><@message "study"/></th>
-                          <th><@message "data-collection-event"/></th>
                           <th><@message "status"/></th>
                           <th><@message "comment"/></th>
                         </tr>

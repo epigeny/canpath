@@ -260,16 +260,23 @@ const makeHarmonizedVariablesTable = function() {
         const studyAnchor = (summary) => summary.published
           ? '<a href="' + Mica.contextPath + '/study/' + baseStudyTable.studyId + '">' + localizedString(baseStudyTable.studySummary.acronym) + '</a></td>'
           : localizedString(baseStudyTable.studySummary.acronym);
+
         let dceName = population ? localizedString(population.name) : "";
+
         if (dce) {
           dceName = dceName + ' -- ' + localizedString(dce.name);
         }
+
+        let tableName = localizedString(baseStudyTable.name);
+
         harmonizedVariablesTableBody.append('<tr>' +
-          '<td title=""><a href="' + Mica.contextPath + '/variable/' + harmonizedVariable.resolver.id + '">' + harmonizedVariable.resolver.name + '</a> ' + localizedString(baseStudyTable.name) + '' +
+          '<td title=""><a href="' + Mica.contextPath + '/variable/' + harmonizedVariable.resolver.id + '">' + harmonizedVariable.resolver.name + '</a> ' +
+          '</td>' +
+          '<td>' + localizedString(baseStudyTable.studySummary.acronym) +
+          (tableName ? (' (' + localizedString(baseStudyTable.name) + ') ') : '') +
           '<div class="text-muted">' + localizedString(baseStudyTable.description) + '</div>' +
           '</td>' +
           '<td>' + studyAnchor(baseStudyTable.studySummary) + '</td>' +
-          '<td>' + dceName + '</td>' +
           '<td><i class=" ' + VariableService.getHarmoStatusClass(status) + '"></i></td>' +
           '<td>' + localizedString(comment) + '</td>' +
           '</tr>')
