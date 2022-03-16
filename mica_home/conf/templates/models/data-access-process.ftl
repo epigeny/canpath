@@ -31,7 +31,7 @@
           <p>
             <a href="${contextPath}/contact" class="btn btn-outline-primary"><@message "contact-menu"/> <i class="fas fa-info-circle"></i></a>
 
-            <a href="/assets/files/CanPath_Data_and_Biosamples_Access_Application_Tip Sheet_FINAL_2021-10-29.pdf" target="_blank" class="btn btn-outline-primary"><@message "application-tips-button"/></a>
+            <a href="${contextPath}/assets/files/CanPath_Data_and_Biosamples_Access_Application_Tip_Sheet_Revised_DRAFT_2022-01-30.pdf" target="_blank" class="btn btn-outline-primary"><@message "application-tips-button"/></a>
           </p>
           <p>
             When researchers are ready to submit an access request, they must complete and submit an

@@ -34,7 +34,7 @@
           <p>
             <a href="${contextPath}/contact" class="btn btn-outline-primary"><@message "contact-menu"/> <i class="fas fa-info-circle"></i></a>
 
-            <a href="/assets/files/CanPath_Data_and_Biosamples_Access_Application_Tip_Sheet_FINAL-FR.pdf" target="_blank" class="btn btn-outline-primary"><@message "application-tips-button"/></a>
+            <a href="${contextPath}/assets/files/CanPath_Data_and_Biosamples_Access_Application_Tip_Sheet_FINAL_2021-10-29-FR.pdf" target="_blank" class="btn btn-outline-primary"><@message "application-tips-button"/></a>
           </p>
           <p>
             Lorsque les chercheurs sont prêts à remplir et à envoyer une demande d'accès, ils doivent remplir et soumettre un
