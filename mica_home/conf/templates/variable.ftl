@@ -194,7 +194,7 @@
           </#if>
         </div>
 
-        <#if harmoAnnotations.statusValue != 'impossible'>
+        <#if !harmoAnnotations.hasStatus() || harmoAnnotations.statusValue != 'impossible'>
         <div class="row">
           <div class="col-12">
             <div class="card card-info card-outline">
