@@ -143,7 +143,7 @@
 
   <h6><a id="access_criteria_requ" name="access_criteria_requ">Access Criteria &amp; Requirements</a></h6>
   <p>
-    All access criteria and requirements are outlined in the <a href="/assets/files/Access_Policy_Approved_July_29_2020_final.pdf"
+    All access criteria and requirements are outlined in the <a href="/assets/files/Access_Policy_v2.0_Approved_16Mar2022.pdf"
     target="_blank">CanPath Access Policy</a> document.
   </p>
   <h6><a id="access_cost" name="access_cost">Access Cost</a>
@@ -174,7 +174,7 @@
   <p>We strongly recommend that you consult these prior to submitting an&nbsp;Access Application Form:</p>
   <ul>
     <li>
-      <a href="/assets/files/Access_Policy_Approved_July_29_2020_final.pdf"
+      <a href="/assets/files/Access_Policy_v2.0_Approved_16Mar2022.pdf"
          target="_blank">CanPath Access Policy</a></li>
     <li>
       <a href="/assets/files/CanPath%20Publications%20Policy_Approved%202020-Sep-23.pdf"

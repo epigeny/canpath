@@ -146,7 +146,7 @@
   <h6><a id="access_criteria_requ" name="access_criteria_requ">Critères et exigences d’accès</a></h6>
   <p>
     Tous les critères et exigences d'accès sont décrits dans le document sur
-     <a href="/assets/files/Access_Policy_Approved_July_29_2020_final.pdf" target="_blank">la Politique d'accès de CanPath</a>.
+     <a href="/assets/files/Access_Policy_v2.0_Approved_16Mar2022.pdf" target="_blank">la Politique d'accès de CanPath</a>.
   </p>
   <h6><a id="access_cost" name="access_cost">Coût d’accès</a>
   </h6>
@@ -173,7 +173,7 @@
   <p>Avant de soumettre un formulaire de demande d'accès, nous vous recommandons fortement de consulter les documents suivants (disponibles en anglais seulement) :</p>
   <ul>
     <li>
-      <a href="/assets/files/Access_Policy_Approved_July_29_2020_final.pdf"
+      <a href="/assets/files/Access_Policy_v2.0_Approved_16Mar2022.pdf"
          target="_blank">Politique d'accès de CanPath</a></li>
     <li>
       <a href="/assets/files/CanPath%20Publications%20Policy_Approved%202020-Sep-23.pdf"
