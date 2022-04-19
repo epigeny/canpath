@@ -8,24 +8,28 @@
     },
     "titleResearchProject": {
       "title": "t(data-access-amendment.custom.title-research-project)",
+      "required": true,
       "type": "string"
     },
     "namePrincipalApplicant": {
       "title": "t(data-access-amendment.custom.name-principal-applicant)",
+      "required": true,
       "type": "string"
     },
     "position": {
       "title": "t(data-access-amendment.custom.position)",
+      "required": true,
       "type": "string"
     },
     "primaryInstitution": {
       "title": "t(data-access-amendment.custom.primary-institution)",
+      "required": true,
       "type": "string"
     },
     "institutionalEmailAddress": {
       "title": "t(data-access-amendment.custom.institutional-email-address)",
       "type": "string",
-      "pattern": "^\\\\S+@\\\\S+$",
+      "pattern": "^\\S+@\\S+$",
       "required": true,
       "validationMessage": {
         "202": "t(data-access-request.default.email-validation-message)"
@@ -33,10 +37,12 @@
     },
     "telephoneNumber": {
       "title": "t(data-access-amendment.custom.telephone-number)",
+      "required": true,
       "type": "string"
     },
     "institutionalMailingAddress": {
       "title": "t(data-access-amendment.custom.institutional-mailing-address)",
+      "required": true,
       "type": "string"
     },
     "startResearchProjectTimeTable": {
@@ -65,5 +71,12 @@
       "title": "t(data-access-amendment.custom.reasons-related-request-description)",
       "type": "string"
     }
-  }
+  },
+  "required": [
+    "startResearchProjectTimeTable",
+    "unanticipatedEventChangeRequestAddendum",
+    "currentStateProjectDescription",
+    "requestedChangesApprovedProtocolDescription",
+    "reasonsRelatedRequestDescription"
+  ]
 }
