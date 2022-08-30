@@ -520,7 +520,7 @@
               {
                 "type": "help",
                 "htmlClass": "help-block",
-                "helpvalue": "<h6>t(data-access-request.custom.for-case-control-studies)</h6>"
+                "helpvalue": "<h6>t(data-access-request.custom.for-case-control-studies)</h6><span>t(data-access-request.custom.more-for-case-control-studies)</span>"
               },
               "matchingCriteria",
               "caseControlRatio"
@@ -692,6 +692,11 @@
                     "name": "t(data-access-request.custom.response.negative)"
                   }
                 ]
+              },
+              {
+                "key": "noCostExtensionExplaination",
+                "type": "textarea",
+                "condition": "model.noCostExtension==true"
               }
             ]
           }
@@ -825,6 +830,10 @@
                     "name": "t(data-access-request.custom.response.negative)"
                   }
                 ]
+              },
+              {
+                "type": "help",
+                "helpvalue": "<strong>t(data-access-request.custom.ethics-approval-reb)</strong>"
               }
             ]
           }
@@ -880,6 +889,9 @@
               {
                 "type": "help",
                 "helpvalue": "<p class='help-block'>t(data-access-request.custom.I.L.title-documents-note)</p>"
+              },
+              {
+                "key": "rebExpiryDate"
               }
             ]
           }

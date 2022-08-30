@@ -374,6 +374,15 @@
     "noCostExtension": {
       "type": "boolean"
     },
+    "noCostExtensionExplaination": {
+      "title": "t(data-access-request.funding.no-cost-extension-explaination)",
+      "type": "string"
+    },
+    "rebExpiryDate": {
+      "title": "t(data-access-request.funding.reb-expiry-date)",
+      "type": "string",
+      "format": "datepicker"
+    },
     "peerReviewProcess": {
       "type": "string"
     },
