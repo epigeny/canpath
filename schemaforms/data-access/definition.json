@@ -1399,12 +1399,18 @@
                 "htmlClass": "col-xs-6",
                 "items": [
                   "dsBlHealthRiskFactorQuestionnaire",
+                  "dsBlHealthRiskFactorQuestionnaireAdditionalDiseases",
                   "dsBlMentalHealth",
                   "dsBlPhysicalMeasures",
+                  "dsBlBiologicalSampleCollectionProcessing",
+                  "dsBlBiologicalSampleInterpretation",
                   "dsFuHealthRiskFactorQustionnaire",
-                  "dsFuCovid19Questionnaire",
+                  "dsCovid192020Questionnaire",
+                  "dsCovid19AntibodyBlQuestionnaire",
+                  "dsCovid19AntibodyTestBlQuestionnaireCollectionProcessing",
+                  "dsCovid19AntibodyTestBlQuestionnaireSerologyResults",
                   "dsGenotypeData",
-                  "dsEnvironmentalExposureData",
+                  "dsCANUEData",
                   "dsRegionalDatasets"
                 ]
               }
@@ -1419,18 +1425,29 @@
                 "htmlClass": "d-none",
                 "items": [
                   "dsBlHealthRiskFactorQuestionnaire",
+                  "dsBlHealthRiskFactorQuestionnaireAdditionalDiseases",
                   "dsBlMentalHealth",
                   "dsBlPhysicalMeasures",
+                  "dsBlBiologicalSampleCollectionProcessing",
+                  "dsBlBiologicalSampleInterpretation",
                   "dsFuHealthRiskFactorQustionnaire",
-                  "dsFuCovid19Questionnaire",
+                  "dsCovid192020Questionnaire",
+                  "dsCovid19AntibodyBlQuestionnaire",
+                  "dsCovid19AntibodyTestBlQuestionnaireCollectionProcessing",
+                  "dsCovid19AntibodyTestBlQuestionnaireSerologyResults",
                   "dsGenotypeData",
-                  "dsEnvironmentalExposureData",
+                  "dsCANUEData",
                   "dsRegionalDatasets"
                 ]
               }
             ]
           }
         ]
+      },
+      {
+        "type": "help",
+        "htmlClass": "help-block",
+        "helpvalue": "t(data-access-request.custom.I.N.always-included-info)"
       },
       {
         "type": "help",

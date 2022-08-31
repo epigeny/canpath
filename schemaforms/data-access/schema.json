@@ -772,6 +772,54 @@
       "default": false,
       "name": "dsBlMentalHealth"
     },
+    "dsBlHealthRiskFactorQuestionnaireAdditionalDiseases": {
+      "title": "t(data-access-request.variables-list.dsBlHealthRiskFactorQuestionnaireAdditionalDiseases)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsBlHealthRiskFactorQuestionnaireAdditionalDiseases"
+    },
+    "dsBlBiologicalSampleCollectionProcessing": {
+      "title": "t(data-access-request.variables-list.dsBlBiologicalSampleCollectionProcessing)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsBlBiologicalSampleCollectionProcessing"
+    },
+    "dsBlBiologicalSampleInterpretation": {
+      "title": "t(data-access-request.variables-list.dsBlBiologicalSampleInterpretation)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsBlBiologicalSampleInterpretation"
+    },
+    "dsCovid192020Questionnaire": {
+      "title": "t(data-access-request.variables-list.dsCovid192020Questionnaire)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsCovid192020Questionnaire"
+    },
+    "dsCovid19AntibodyBlQuestionnaire": {
+      "title": "t(data-access-request.variables-list.dsCovid19AntibodyBlQuestionnaire)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsCovid19AntibodyBlQuestionnaire"
+    },
+    "dsCovid19AntibodyTestBlQuestionnaireCollectionProcessing": {
+      "title": "t(data-access-request.variables-list.dsCovid19AntibodyTestBlQuestionnaireCollectionProcessing)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsCovid19AntibodyTestBlQuestionnaireCollectionProcessing"
+    },
+    "dsCovid19AntibodyTestBlQuestionnaireSerologyResults": {
+      "title": "t(data-access-request.variables-list.dsCovid19AntibodyTestBlQuestionnaireSerologyResults)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsCovid19AntibodyTestBlQuestionnaireSerologyResults"
+    },
+    "dsCANUEData": {
+      "title": "t(data-access-request.variables-list.dsCANUEData)",
+      "type": "boolean",
+      "default": false,
+      "name": "dsCANUEData"
+    },
     "dsBlPhysicalMeasures": {
       "title": "t(data-access-request.variables-list.dsBlPhysicalMeasures)",
       "type": "boolean",

@@ -313,7 +313,7 @@
             "always-included": "Age, sex, country of birth, provinces - always included",
             "biosample-data": "Standard information  is provided when biological samples are requested.",
             "biosample-data-title": "",
-            "info": "<p class='help-block'>Select only the dataset(s) that specifically support the research project that you have identified above. A list of requested variables can be generated using the CanPath Portal. Visit <a href=\"https://portal.canpath.ca/search#lists?type=variables\" target=\"_blank\">portal.canpath.ca/search</a>. Filters are listed on the left-hand side. Select all the appropriate variables, then use the download button to generate an Excel file. Providing this file with your application ensures the Accecss Office will have a clear understanding of which datasets and variables are being requested. Number of participants will vary per dataset. Ensure that data requested in the protocol is listed in the application form.</p>",
+            "info": "<p class='help-block'>Select only the dataset(s) that specifically support the research project that you have identified above. A list of requested variables can be generated using the CanPath Portal. Visit <a href=\"https://portal.canpath.ca/search#lists?type=variables\" target=\"_blank\">portal.canpath.ca/search</a>. Filters are listed on the left-hand side. Select all the appropriate variables, then use the download button to generate an Excel file. Providing this file with your application ensures the Access Office will have a clear understanding of which datasets and variables are being requested. Number of participants will vary per dataset. Ensure that data requested in the protocol is listed in the application form.</p>",
             "physical-measures": "",
             "questionnaire": "",
             "supplementary-info": "Please specify any other information requested",
@@ -323,7 +323,8 @@
             "canue-heading": "Canadian Urban Environmental Health Research Consortium (CANUE)",
             "canue-text-accompany": "Note - any request for the CANUE dataset requires the completion and execution of a <a target=\"_blank\" href =\"https://canue.ca/wp-content/uploads/2018/11/CANUE-Data-Use-and-Sharing-via-Third-Party-Agreement.pdf\">Data Sharing and Use via Approved Third Party Agreement</a>",
             "questionnaire-followup": "Follow-up Questionnaire",
-            "mental-health-cognition-personality-psychological-measures": ""
+            "mental-health-cognition-personality-psychological-measures": "",
+            "always-included-info": "OPlease note that BMI data, Baseline Health and Risck Factors Questionnaire and Baseline Physical Measures data may be self reported."
           },
           "O": {
             "info": "<p class=\"help-block\">Please provide a brief description (100 words) of the derived data that will be returned to CanPath generated during the analyses undertaken for your research project using Research Data and/or Biosamples. Data that must be returned include new variables issued from assay results (if applicable) and derived variables generated from existing variables using an expression including all intermediates of these derived variables. For example, a derived variable can be an index combining several variables (e.g. risk scores) or a numeric variable created by doing the sum of values stored in two or more numeric variables.</p> <p class=\"help-block\">The Derived Data must be returned in the analytical format used to create your final working dataset such as SAS (.sas), SPSS (.sps), .CSV or the equivalent, along with the data dictionary or codebook. The Derived Data must include the original anonymized IDs supplied by CanPath.</p> <p class=\"help-block\">All biosample analysis data is to be returned in both raw (initial data generated from laboratory instrument) and analyzed (analysis extracted from raw data) formats and is to be accompanied by a completed CanPath Derived Data Report. Raw and analyzed data for the assay's standards and controls are also to be provided.</p>",
@@ -553,18 +554,26 @@
           "regionalDatasets": ""
         },
         "dsBlHealthRiskFactorQuestionnaire": "Baseline Health and Risk Factor Questionnaire",
+        "dsBlHealthRiskFactorQuestionnaireAdditionalDiseases": "Baseline Health and Risk Factor Questionnaire &mdash; Additional Diseases",
         "dsBlMentalHealth": "Baseline Mental Health",
         "dsBlPhysicalMeasures": "Baseline Physical Measures",
+        "dsBlBiologicalSampleCollectionProcessing": "Baseline Biological Sample &mdash; Collection and Processing",
+        "dsBlBiologicalSampleInterpretation": "Baseline Biological Sample &mdash; Interpretation",
         "dsFuHealthRiskFactorQustionnaire": "Follow-Up 1 Health and Risk Factor Questionnaire",
         "dsFuCovid19Questionnaire": "Follow-up COVID-19 Questionnaire",
+        "dsCovid192020Questionnaire": "COVID-19 2020 Questionnaire",
+        "dsCovid19AntibodyBlQuestionnaire": "COVID-19 Antibody Baseline Questionnaire",
+        "dsCovid19AntibodyTestBlQuestionnaireCollectionProcessing": "COVID-19 Antibody Test Baseline &mdash; Collection and Processing",
+        "dsCovid19AntibodyTestBlQuestionnaireSerologyResults": "COVID-19 Antibody Test Baseline &mdash; Serology results",
         "dsGenotypeData": "Genotype Data",
         "dsEnvironmentalExposureData": "Environmental Exposure Data",
+        "dsCANUEData": "Canadian Urban Environment Health Research Consortium (CANUE) Data",
         "dsRegionalDatasets": "Regional Datasets (e.g. Residential History questionnaire)",
         "variables-file": "Individual Variables"
       },
       "data-linkage": {
         "title": "Data Linkage",
-        "info": "<p class=\"help-block\">Will data from other sources be utilized to complete the proposed project? Please list all data linkages required to complete the proposed project, and where these data are held.</p>",
+        "info": "<p class=\"help-block\">To help prepare applications that require linked administrative health data, it is recommended that applicants connect with the Data Access Support Hub of the Health Data Research Network Canada prior to submitting a CanPath access application.</p><p class=\"help-block\">Please provide sufficient information abourt how the data will be linked: which data sets will be linked? How will the data be linked? How will it be analyzed? Please list all data linkages required to complete the proposed project, and where these data are held.</p>",
         "na": "Not applicable - Data and/or Biosamples will not be linked with data from other sources."
       },
       "bio-security-assessment": {
@@ -1071,7 +1080,7 @@
           },
           "B": {
             "title": "Nom, institution et coordonnées du représentant autorisé légal de l'institution",
-            "info": "Veuillez inclure une adresse postale complète ainsi qu'une courriel institutionnel valide."
+            "info": "Veuillez inclure une adresse postale complète et une adresse e-mail institutionnelle valide pour votre représentant légal institutionnel autorisé. Il s'agit généralement d'une personne qui travaille comme représentant des contrats, peut examiner les documents juridiques et peut obtenir des signatures dans votre établissement. Cette personne doit être en mesure d'engager juridiquement l'institution."
           },
           "C": {
             "title": "Titre du Projet de recherche",
@@ -1083,7 +1092,7 @@
           },
           "F": {
             "title": "Catégorie/Type de recherche",
-            "info": "Sélectionnez les items décrivant le mieux le type de projet de recherche qui sera réalisé avec les données et/ou les échantillons biologiques (plusieurs choix peuvent s'appliquer)."
+            "info": "Cochez les éléments qui décrivent le mieux le type de projet de recherche qui serait mené à l'aide des données et/ou des échantillons biologiques (plus d'un peut s'appliquer <u>mais veuillez choisir ceux qui s'appliquent</u>)."
           },
           "G": {
             "title": "Mots clés",
@@ -1131,7 +1140,7 @@
           },
           "D": {
             "1": {
-              "info": "Veuillez fournir les détails de tous les membres de l'Équipe de recherche travaillant avec le Principal Demandeur qui auront accès aux Données de Recherche et/ou Échantillons biologiques demandés pour travailler sur le projet de recherche (p. ex. co-investigateurs, collaborateurs, assistants de recherche, coordonnateurs d'étude, techniciens de laboratoire et étudiants). Pour les membres de l'Équipe de recherche affiliés à d'autres institutions, veuillez-vous référer à D2 et D3.",
+              "info": "<p class='help-block'>Veuillez fournir des détails sur tous les membres de l'équipe de recherche travaillant avec le candidat principal qui auraient accès aux données de recherche et/ou aux échantillons biologiques demandés afin de travailler sur le projet de recherche (par exemple, co- chercheurs, collaborateurs, assistants de recherche, coordonnateurs d'études, techniciens de laboratoire et étudiants).</p><p class='help-block'><strong>Assurez-vous qu'il n'y a pas de divergences entre les informations contenues dans cette section et la demande du REB. Assurez-vous que le nom et le titre du chercheur correspondent à la demande du REB</strong>. Bien qu'un seul <em>formulaire de demande d'accès aux données et aux échantillons biologiques</em> soit requis, tout membre du personnel autorisé ayant accès aux données de recherche et/ou aux échantillons biologiques affilié à une institution autre que celle du candidat principal est tenu de fournir des informations sur leur(s) représentant(s) légal(s) institutionnel(s) autorisé(s) et leur faire signer, ainsi qu'à leur institution, un accord d'accès distinct.</p>",
               "title": "Noms, institutions et coordonnées des membres de l'Équipe de recherche travaillant avec le Demandeur"
             },
             "2": {
@@ -1143,15 +1152,15 @@
             }
           },
           "H": {
-            "info": "Veuillez rédiger en moins de 500 mots une description scientifique claire du projet de recherche, de ses objectifs, de sa méthodologie et de ses livrables et préciser la façon dont il répond aux objectifs de CanPath. Veuillez aussi expliquer clairement de quelle façon les données ou les échantillons biologiques de CanPath seront utilisés dans le cadre du projet de recherche.",
+            "info": "Veuillez fournir une description scientifique claire du projet de recherche, de ses hypothèses spécifiques, de sa méthodologie et de ses produits livrables. Assurez-vous que la description du projet, les objectifs et les méthodes sont cohérents et s'inscrivent dans la portée et les variables demandées. Assurez-vous d'expliquer comment les données de recherche et/ou les échantillons biologiques seraient utilisés. Éviter d'utiliser des formulations tirées directement du protocole d'étude. <strong> Soulignez explicitement le rôle et l'importance des participants de CanPath dans votre étude et la manière dont le projet répond aux objectifs de CanPath</strong>. La limite de mots est de 500.",
             "title": "Projet de recherche (résumé scientifique)"
           },
           "I": {
-            "info": "Veuillez fournir les informations suivantes à propos de la population demandée.",
+            "info": "Veuillez fournir des détails sur la population dont vous avez besoin. s'assurer que les critères d'inclusion/exclusion sont conformes à ceux énumérés dans la demande du CER. Si plusieurs questionnaires sont demandés, précisez lesquels font partie des critères d'inclusion et lesquels sont facultatifs. Veuillez indiquer comment vous définissez les cas: autodéclaration des participants ou données du registre. Cela a des implications sur les ensembles de données qui seront utiles.",
             "title": "Conception du projet de recherche"
           },
           "J": {
-            "info": "Veuillez rédiger en moins de 250 mots une courte description du projet de recherche qui sera accessible au grand public. L'emploi de jargon scientifique devra être évité ou réduit au minimum. Cette description sera disponible dans le Registre d'accès public de CanPath et peut être utilisée dans divers types de communications de CanPath (p. ex. bulletins d'information, brochures, rapports destinés aux intervenants, communiqués de presse, blogues, etc.).",
+            "info": "Veuillez fournir une brève description du projet pour le grand public. Le jargon scientifique et les acronymes doivent être évités autant que possible. Le résumé vulgarisé doit être différent du résumé scientifique. Ce résumé sera publié sur le site Web de CanPath et sur les médias sociaux pour informer les participants de la façon dont leurs données et leurs échantillons sont utilisés. Il doit transmettre l'objectif et les conclusions simplement à un public profane. <strong>Il doit inclure une référence au rôle de CanPath dans votre étude</strong>. La limite de mots est de 500.",
             "title": "Résumé vulgarisé du projet de recherche"
           },
           "K": {
@@ -1162,7 +1171,7 @@
             "funding-check": "Un financement vous a-t-il été accordée?",
             "funding-date": "Veuillez fournir les dates du financement",
             "funding-details": "Veuillez fournir des détails sur la façon dont le projet de recherche sera financé.",
-            "info": "Veuillez répondre aux questions suivantes portant sur le financement et l'examen scientifique de votre projet de recherche",
+            "info": "<p>Si la date de fin du projet est postérieure à la date de financement du projet, veuillez fournir des détails sur la manière dont le projet sera financé après cette date. Si aucune extension de co-coût n'est disponible, veuillez télécharger la documentation.</p>Veuillez répondre aux questions suivantes concernant le financement et l'examen scientifique de votre projet de recherche.",
             "peer-review-expected-date": "Quelle est la date prévue de l'examen par les pairs?",
             "peer-review-plan": "Un processus d'examen par les pairs est-il prévu?",
             "project-evaluated-query": "Le projet de recherche a-t-il été évalué dans le cadre d'un processus d'examen par les pairs reconnu?",
@@ -1180,7 +1189,7 @@
             "biomarker-info-help": "Décrivez le biomarqueur/catégorie de biomarqueurs proposé(e) pour l'analyse incluant l'intervalle usuel mesuré dans une population adulte pour le type d'échantillon biologique demandé et les résultats que vous anticipez de l'analyse de ces échantillons. Veuillez fournir la preuve que le biomarqueur/ catégorie de biomarqueurs pour la mesure du type d'échantillon biologique proposé est stable et qu'une analyse à un point unique suffira pour obtenir une représentation fiable de la question posée. Si cette information est disponible dans le protocole de recherche soumis, vous pouvez faire référence à la /aux page(s) où cette information peut être trouvée.",
             "biosamples-other-source": "Pour cette proposition de recherche, avez-vous appliqué pour des échantillons biologiques provenant d'une autre source?",
             "evidence-lab": "Veuillez fournir l'évidence sur l'utilisation et la précision de l'essai dans ce laboratoire",
-            "info": "<p>Veuillez décrire le type et la quantité d'échantillons biologiques requis pour supporter votre projet de recherche. Des détails supplémentaires sur les échantillons biologiques demandés peuvent être ajoutés au champ pour les renseignements additionnels.</p><p>Veuillez-vous référer au portail de données de CanPath pour plus d'information sur les <a href=\"https://portal.CanPath.ca/page/samples\" target=\"_blank\">échantillons biologiques</a>  disponibles ou pour contacter le Bureau d'accès. Toutes les demandes d'échantillons biologiques approuvées incluront l'envoi de l'ensemble de données associées aux échantillons biologiques.</p>",
+            "info": "<p class='help-block'>Veuillez décrire le type et la quantité d'échantillons biologiques requis pour soutenir ce projet de recherche. Des informations standard sont fournies lorsque des échantillons biologiques sont demandés. Détaillez clairement les unités de mesure pour le sérum (volume)/ADN (masse). Notez que seul un aliquot maximum de 1,8 mL est disponible. Assurez-vous que l'échantillon biologique demandé est le même dans le protocole et le formulaire de demande. Pour plus d'informations, veuillez consulter les <a href=\"/assets/files/CanPath%20Guidelines%20For%20Biosample%20Access_June2020.pdf\">Lignes directrices de CanPath pour l'accès aux échantillons biologiques</a></p>",
             "mastery": "Veuillez-vous référer au portail de données de CanPath pour plus d'information et pour consulter le catalogue des échantillons biologiques disponibles ou pour contacter le Bureau d'accès. Toutes les demandes d'échantillons biologiques approuvées incluront l'envoi de l'ensemble de données associées aux échantillons biologiques.",
             "methodology-lab": "Information sur la méthodologie et le laboratoire (requis pour chaque essai)",
             "methodology-lab-info": "Décrivez la méthodologie proposée pour l'analyse d'échantillon qui sera effectuée sur chaque échantillon biologique demandé. Cette description devrait inclure les méthodologies disponibles ainsi que la justification pour l'utilisation de l'essai proposé, incluant la source de réactif. Veuillez fournir la preuve du rendement de l'essai ainsi qu'une liste de deux à cinq publications attestant de la qualité de l'essai issues vos publications personnelles ou de celles de vos collaborateurs. Si cette information est disponible dans le protocole de recherche soumis, vous pouvez faire référence à la /aux page(s) où cette information peut être trouvée.",
@@ -1192,7 +1201,7 @@
             "always-included": "Âge, sexe, pays de naissance, provinces – toujours inclus",
             "biosample-data": "De l'information standard est fournie lorsque des échantillons biologiques sont demandés.",
             "biosample-data-title": "Données sur les échantillons biologiques",
-            "info": "<p class='help-block'>Sélectionnez le ou les ensembles de données qui permettent de soutenir spécifiquement le projet de recherche que vous avez identifié ci-dessus. Le nombre de participants variera selon l'ensemble de données. Visitez <a href=\"https://portal.canpath.ca/search#lists?type=variables\" target=\"_blank\">portal.canpath.ca/search</a> pour plus d'information et pour créer un \" shopping cart \" de variables individuelles à joindre à votre demande d'accès.</p>",
+            "info": "<p class='help-block'>Sélectionnez uniquement le ou les ensembles de données qui soutiennent spécifiquement le projet de recherche que vous avez identifié ci-dessus. Une liste des variables demandées peut être générée à l'aide du portail CanPath. Visitez <a href=\"https://portal.canpath.ca/search#lists?type=variables\" target=\"_blank\">portal.canpath.ca/search</a>. Les filtres sont répertoriés sur le côté gauche. Sélectionnez toutes les variables appropriées, puis utilisez le bouton de téléchargement pour générer un fichier Excel. Fournir ce fichier avec votre demande garantit que le bureau d'accès aura une compréhension claire des ensembles de données et des variables demandés. Le nombre de participants variera selon l'ensemble de données. Assurez-vous que les données demandées dans le protocole sont répertoriées dans le formulaire de candidature.</p>",
             "physical-measures": "Mesures Physiques",
             "questionnaire": "Questionnaire de santé & facteurs de risque",
             "supplementary-info": "Veuillez spécifier toute autre information demandée",
@@ -1202,7 +1211,8 @@
             "canue-heading": "Consortium de recherche en santé environnementale urbain (CANUE)",
             "canue-text-accompany": "Remarque: toute demande relative à l'ensemble de données CANUE nécessite la finalisation et l'exécution d'un <a target=\"_blank\" href =\"https://canue.ca/wp-content/uploads/2018/11/CANUE-Data-Use-and-Sharing-via-Third-Party-Agreement.pdf\">partage de données et son utilisation via un contrat tiers approuvé.</a>",
             "questionnaire-followup": "Questionnaire de suivi",
-            "mental-health-cognition-personality-psychological-measures": "Cognition, personnalité et autres mesures psychologiques"
+            "mental-health-cognition-personality-psychological-measures": "Cognition, personnalité et autres mesures psychologiques",
+            "always-included-info": "OPlease note that BMI data, Baseline Health and Risck Factors Questionnaire and Baseline Physical Measures data may be self reported."
           },
           "O": {
             "info": "<p class='help-block'>Veuillez décrire brièvement (100 mots) les données dérivées qui seront retournées à CanPath et qui seront générées dans le cadre de votre projet de recherche par l'analyse des Données de recherche ou des Échantillons biologiques. Les données à retourner incluent: les nouvelles variables découlant des résultats des essais effectués (le cas échéant) et les variables dérivées générées à partir des variables existantes utilisant une expression, y compris toutes les variables intermédiaires de ces variables dérivées. Par exemple, une variable dérivée peut être un indice combinant plusieurs variables (p. ex., scores de risque) ou une variable numérique créée en additionnant les valeurs stockées dans deux ou plusieurs variables numériques.</p><p class='help-block'>Vous devrez retourner les données dérivées dans le format analytique utilisé pour créer votre base de données de travail finale tel que SAS (.sas), SPSS (.sps), .CSV ou un équivalent, en plus du dictionnaire de données ou de la liste de codage. Les données dérivées doivent comprendre les ID anonymisés d'origine fournis par CanPath.</p><p class='help-block'>Toutes les données d'analyse d'un échantillon biologique doivent mentionner la source de la méthodologie utilisée dans une déclaration définissant les mesures de contrôle de la qualité qui ont été prises et en précisant si elles ont été satisfaites ou non.</p>",
@@ -1279,7 +1289,7 @@
         "individual-diseases": "Histoire individuelle de maladies",
         "individual-diseases-spec": "Veuillez spécifier les conditions à inclure",
         "inform-biosamples-staggered": "Je reconnais que les échantillons biologiques peuvent être envoyés dans une livraison échelonnée et conditionnelle à l'approbation.",
-        "intro-description": "<p class='help-block'>Ce formulaire de demande d'accès doit être utilisé par tous les chercheurs qui souhaitent accéder aux Données de recherche et aux Échantillons biologiques, désignés « Matériel » dans l'Entente de partage de données et de matériel. Veuillez-vous référer à la Politique d'accès de CanPath, disponible sur le portail de CanPath, pour connaître la signification de tous les termes clés utilisés dans le présent formulaire.</p><p class='help-block'>Les demandeurs doivent examiner la <b>Politique d'accès</b>, la <b>Politique des publications</b> et la <b>Politique de propriété intellectuelle</b> dans la section <a href=\"/fr/mica/data_access/home\" target=\"_blank\">Politiques & lignes directrices de CanPath (page Processus d'accès)</a> avant de remplir le Formulaire de demande d'accès.</p><p class='help-block'>Les demandeurs doivent remplir toutes les sections obligatoires et fournir les pièces justificatives avant que la demande d'accès soit considérée. La Politique d'accès contient des renseignements complémentaires sur le processus d'examen et d'approbation de CanPath.</p><p class='help-block'>À la suite de l'approbation d'une demande d'accès par le Comité d'accès, l'accès aux Données de recherche et/ou Échantillons biologiques est accordé pour le délai prévu dans le Formulaire de demande d'accès approuvé et l'Entente d'accès. Un rapport d'étape annuel doit être complété pour accéder et utiliser les Données de recherche et/ou Échantillons biologiques au-delà d'une période d'un an.</p><p class='help-block'>Le titre du Projet de recherche approuvé, le ou les nom(s) des Utilisateur(s) approuvé(s) et de(s) Membre(s) de l'Équipe de recherche concerné(s), leur statut et leurs titres de compétences, le ou les nom(s) des Institutions(s) approuvée(s), ainsi qu'un résumé vulgarisé de la description scientifique du projet présenté par le demandeur sera ajouté au Registre d'accès public de CanPath.</p>",
+        "intro-description": "<p class='help-block'>Ce formulaire de demande d'accès doit être utilisé par tous les chercheurs souhaitant accéder aux données de recherche et/ou aux échantillons biologiques, appelés matériel dans l'accord de partage de données et de matériel. Veuillez vous référer à la politique d'accès CanPath pour la signification de tous les termes en majuscules utilisés dans ce formulaire, qui est disponible sur le portail CanPath.</p><p class='help-block'>Les candidats doivent consulter la <b>politique d'accès </b> , <b>Politique de publication</b> et <b>Politique de propriété intellectuelle</b> dans <a href=\"/mica/data_access/home\" target=\"_blank\">CanPath Section des politiques et des lignes directrices (page du processus d'accès)</a> avant de remplir ce formulaire de demande d'accès.</p><p class='help-block'>Les candidats doivent remplir toutes les sections obligatoires et fournir des pièces justificatives avant que la demande d'accès ne soit considéré. Les documents suivants sont requis: <ol><li>Formulaire de demande d'accès aux données et aux échantillons biologiques CanPath rempli</li><li>Protocole de recherche détaillé ayant reçu l'approbation éthique</li><li>Preuve d'examen scientifique ou d'examen par les pairs de Protocole de recherche</li><li>Preuve de financement (le cas échéant)</li><li>CV de 2 pages du candidat principal</li></ol> Les demandes d'accès ne seront pas examinées tant que le financement n'aura pas été obtenu et tous les documents d'éthique requis ont été soumis. De plus amples informations sur le processus d'examen et d'approbation de CanPath sont disponibles dans la politique d'accès et sur le portail.</p><p class='help-block'>Lors de l'approbation d'une demande d'accès par le comité d'accès, l'accès aux données de recherche et /ou des échantillons biologiques seront accordés pour la période indiquée dans le formulaire de demande d'accès approuvé et l'accord d'accès. Un rapport d'étape annuel doit être rempli pour accéder et utiliser les données de recherche et/ou les échantillons biologiques au-delà d'une période d'un an.</p><p class='help-block'>Le titre du projet de recherche approuvé, le(s) nom(s) de l'utilisateur approuvé et de l'équipe de recherche impliquée, leur statut et leurs titres de compétences, le(s) nom(s) de l'établissement ou des établissements approuvé(s) et un résumé vulgarisé du résumé scientifique soumis par le candidat seront ajoutés au site Web public de CanPath.</p >",
         "intro-info": "Formulaire de demande d'accès aux données et aux échantillons biologiques de CanPath",
         "intro-paragraph": "Ce formulaire de demande d'accès doit être utilisé par tous les chercheurs qui souhaitent accéder aux Données de recherche et aux Échantillons biologiques, désignés « Matériel » dans l'Entente de partage de données et de matériel. Veuillez-vous référer à la Politique d'accès de CanPath, disponible sur le portail de CanPath, pour connaître la signification de tous les termes clés utilisés dans le présent formulaire.",
         "intro-title": "SCHEDULE A",
@@ -1330,7 +1340,7 @@
         "title": "Titre",
         "tobacco": "Tabac",
         "total-nb-assays-planned": "Nombre d'essais planifiés",
-        "total-nb-participants": "Nombre total de Participants de recherche demandé, ne requérant pas de recontact",
+        "total-nb-participants": "Nombre total de participants à la recherche demandés. Évitez « tous » ou « autant que possible » dans la plupart des cas, cela dépasse le cadre de la recherche.",
         "total-required-assay-volume": "Volume/quantité total(e) requis(e) pour l'essai",
         "total-required-dead-volume": "Volume/quantité mort(e) total(e)",
         "total-volume-requested": "Volume/quantité total(e) requis(e)",
@@ -1392,13 +1402,13 @@
         "info": "Please provide the details of all service providers and commercial laboratories that will have access to the requested Research Data and/or Biosamples in order to work on the research project. All service providers and commercial laboratories will need to meet the terms and conditions of the <em>Access Agreement.</em>"
       },
       "research-project-design": {
-        "design-methodology": "Veuillez décrire la conception et la méthodologie du projet proposé, y compris les mesures de résultats primaires et les méthodes qui seront utilisées pour analyser les données de l'étude. Cette section doit inclure une justification concernant la taille de l'échantillon demandé."
+        "design-methodology": "Veuillez décrire la conception et la méthodologie du projet proposé, y compris les principales mesures des résultats et les méthodes qui seront utilisées pour analyser les données de l'étude. Cette section doit inclure une justification de la taille de l'échantillon demandé et des calculs de puissance."
       },
       "funding": {
         "no-cost-extension": "Si la date de fin de votre projet dépasse la date de financement du projet, y a-t-il une possibilité de prolongation sans frais?",
         "no-cost-extension-explaination": "Veuillez expliquer les futurs plans de financement",
         "notice": "<p class=\"help-block\">* <em>Veuillez noter que la demande d'accès ne sera pas examinée tant que le financement n'aura pas été obtenu</em>.</p>",
-        "reb-expiry-date": "Date d'expiration du CER:"
+        "reb-expiry-date": "Date d'expiration du REB:"
       },
       "ethics-approval": {
         "documents-notice": "please provide the following supporting documents specifically related to this access application:",
@@ -1432,18 +1442,26 @@
           "regionalDatasets": "Ensembles de données régionales (p. ex. questionnaire sur les antécédents résidentiels)"
         },
         "dsBlHealthRiskFactorQuestionnaire": "Collecte initiale questionnaire sur la santé et les facteurs de risque",
+        "dsBlHealthRiskFactorQuestionnaireAdditionalDiseases": "Questionnaire de base sur la santé et les facteurs de risque &mdash; Maladies supplémentaires",
         "dsBlMentalHealth": "Collecte initiale santé mentale",
         "dsBlPhysicalMeasures": "Collecte initiale mesures physiques",
+        "dsBlBiologicalSampleCollectionProcessing": "Échantillon biologique de référence &mdash; Collecte et traitement",
+        "dsBlBiologicalSampleInterpretation": "Échantillon biologique de référence &mdash; Interprétation",
         "dsFuHealthRiskFactorQustionnaire": "Collecte de suivi 1 questionnaire sur la santé et les facteurs de risque",
         "dsFuCovid19Questionnaire": "Collecte de suivi questionnaire Covid-19",
+        "dsCovid192020Questionnaire": "Questionnaire Covid-19 2020",
+        "dsCovid19AntibodyBlQuestionnaire": "Questionnaire de base sur les anticorps Covid-19",
+        "dsCovid19AntibodyTestBlQuestionnaireCollectionProcessing": "Base de référence du test d'anticorps Covid-19 &mdash; Collecte et traitement",
+        "dsCovid19AntibodyTestBlQuestionnaireSerologyResults": "Base de référence du test d'anticorps Covid-19 &mdash; Résultats sérologiques",
         "dsGenotypeData": "Données de génotypage",
         "dsEnvironmentalExposureData": "Données d'exposition environnementale",
+        "dsCANUEData": "Données du Consortium canadien de recherche sur la santé en milieu urbain (CANUE)",
         "dsRegionalDatasets": "Ensembles de données régionales (p. ex. questionnaire sur les antécédents résidentiels)",
         "variables-file": "Variables individuelles"
       },
       "data-linkage": {
         "title": "Jumelage de données",
-        "info": "Des données provenant d'autres sources seront-elles utilisées pour mener à bien le projet proposé ? Veuillez énumérer tous les liens entre les données nécessaires à la réalisation du projet proposé, et indiquer où ces données sont conservées.",
+        "info": "<p class=\"help-block\">Pour aider à préparer les demandes qui nécessitent des données administratives liées sur la santé, il est recommandé aux candidats de se connecter au Centre de soutien à l'accès aux données du Réseau de recherche sur les données de santé Canada avant de soumettre une demande d'accès CanPath. </p><p class=\"help-block\">Veuillez fournir suffisamment d'informations sur la manière dont les données seront liées: quels ensembles de données seront liés? Comment les données seront-elles liées ? Comment sera-t-il analysé ? Veuillez énumérer toutes les liaisons de données nécessaires pour mener à bien le projet proposé, et où ces données sont conservées.</p>",
         "na": "Non applicable - Les données et/ou les échantillons biologiques ne seront pas liés à des données provenant d'autres sources."
       },
       "bio-security-assessment": {
