@@ -1,4 +1,14 @@
 @font-face {
+  font-family: 'FontAwesomeFree';
+  src: url('/assets/fonts/fa-solid-900.woff2') format('woff2'),
+    url('/assets/fonts/fa-solid-900.woff') format('woff'),
+    url('/assets/fonts/fa-solid-900.ttf') format('ttf');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Gothic A1';
   src: url('/assets/fonts/GothicA1-ExtraBold.woff2') format('woff2'),
   url('/assets/fonts/GothicA1-ExtraBold.woff') format('woff'),
@@ -131,6 +141,10 @@ p a {
 
 .text-dark a {
   color: #000 !important;
+}
+
+.text-navy {
+  color: #002554;
 }
 
 .text-height-1 {

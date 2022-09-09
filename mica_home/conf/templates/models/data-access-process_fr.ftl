@@ -84,153 +84,155 @@
   </h5>
   <p style="text-align:center;"><img alt="" src="/assets/images/CanPathPortalReviewInfographic.webp" style="width: 75%;"></p>
 
-  <div class="accordion" id="accessProcessAccordion">
-    <div class="card mb-0">
-      <div class="card-header">
-        <button type="button" class="btn btn-link btn-block text-left" data-toggle="collapse" data-target="#collapseOne">Critères &amp; exigences d'accès</button>
-      </div>
-      <div id="collapseOne" class="collapse" data-parent="#accessProcessAccordion">
-        <div class="card-body">
-          <p>
-            ous les formulaires de demande d'accès remplis et soumis et la documentation connexe sont examinés par le comité d'accès indépendant selon les critères suivants :
-          </p>
+  <div class="card card-info card-outline mt-5 mb-5 p-0">
+    <div class="accordion" id="accessProcessAccordion">
+      <div class="card mb-0">
+        <div class="card-header">
+          <button type="button" class="btn btn-link btn-block text-navy text-left" data-toggle="collapse" data-target="#collapseOne">Critères &amp; exigences d'accès</button>
+        </div>
+        <div id="collapseOne" class="collapse" data-parent="#accessProcessAccordion">
+          <div class="card-body">
+            <p>
+              ous les formulaires de demande d'accès remplis et soumis et la documentation connexe sont examinés par le comité d'accès indépendant selon les critères suivants :
+            </p>
 
-          <ul>
-            <li>Le demandeur est un chercheur de bonne foi (c.-à-d. la preuve qu'il possède une expérience et des qualifications pertinentes);</li>
-            <li>Le projet de recherche est conforme aux principes directeurs de CanPath et aux consentements éclairés signés par les participants à la recherche (voir les sections 2 et 4a de la <a href="#access_policies">Politique d'accès de CanPath</a>);</li>
-            <li>Le Bureau d'accès a fourni la preuve de l'exhaustivité administrative et de la disponibilité des données CanPath et/ou des échantillons biologiques</li>
-          </ul>
+            <ul>
+              <li>Le demandeur est un chercheur de bonne foi (c.-à-d. la preuve qu'il possède une expérience et des qualifications pertinentes);</li>
+              <li>Le projet de recherche est conforme aux principes directeurs de CanPath et aux consentements éclairés signés par les participants à la recherche (voir les sections 2 et 4a de la <a href="#access_policies">Politique d'accès de CanPath</a>);</li>
+              <li>Le Bureau d'accès a fourni la preuve de l'exhaustivité administrative et de la disponibilité des données CanPath et/ou des échantillons biologiques</li>
+            </ul>
 
-          <p>L'évaluation d'Access Office a établi que la demande répond aux exigences suivantes :</p>
+            <p>L'évaluation d'Access Office a établi que la demande répond aux exigences suivantes :</p>
 
-          <ul>
-            <li>L'étude de recherche a été jugée scientifiquement solide;</li>
-            <li>L'existence de ressources adéquates pour mener à bien le projet de recherche a été établie (p. ex.le financement, les collaborateurs et le personnel);</li>
-            <li>Une justification suffisante de la nécessité des données CanPath et/ou des échantillons biologiques demandés a été fournie;</li>
-            <li>
-              <span>
-                La fourniture des échantillons biologiques demandés est justifiée en fonction de l'évaluation de la valeur des données renvoyées, de la contribution scientifique du projet de recherche, de l'impact potentiel de la fourniture des échantillons sur les besoins futurs en échantillons biologiques et du risque d'épuisement des échantillons.
-              </span>
-              <span class="d-inline-block mt-3">
-                Tous les participants à CanPath ont rempli un questionnaire détaillé au moment du recrutement (baseline) et continuent de fournir des informations actualisées sur la santé et le mode de vie par le biais de questionnaires de suivi.
-              </span>
-            </li>
-          </ul>
+            <ul>
+              <li>L'étude de recherche a été jugée scientifiquement solide;</li>
+              <li>L'existence de ressources adéquates pour mener à bien le projet de recherche a été établie (p. ex.le financement, les collaborateurs et le personnel);</li>
+              <li>Une justification suffisante de la nécessité des données CanPath et/ou des échantillons biologiques demandés a été fournie;</li>
+              <li>
+                <span>
+                  La fourniture des échantillons biologiques demandés est justifiée en fonction de l'évaluation de la valeur des données renvoyées, de la contribution scientifique du projet de recherche, de l'impact potentiel de la fourniture des échantillons sur les besoins futurs en échantillons biologiques et du risque d'épuisement des échantillons.
+                </span>
+                <span class="d-inline-block mt-3">
+                  Tous les participants à CanPath ont rempli un questionnaire détaillé au moment du recrutement (baseline) et continuent de fournir des informations actualisées sur la santé et le mode de vie par le biais de questionnaires de suivi.
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card mb-0">
-      <div class="card-header">
-        <button type="button" class="btn btn-link btn-block text-left" data-toggle="collapse" data-target="#collapseTwo">Ensembles de données harmonisés</button>
-      </div>
-      <div id="collapseTwo" class="collapse" data-parent="#accessProcessAccordion">
-        <div class="card-body">
-          <p>
-            Les ensembles de données harmonisés à l'échelle nationale comprennent les données recueillies par les cinq cohortes matures : BC Generations Project, Alberta's Tomorrow Project, Ontario Health Study, CARTaGENE et Atlantic PATH. Les données du Manitoba Tomorrow Project seront disponibles une fois le recrutement des participants terminé.
-          </p>
+      <div class="card mb-0">
+        <div class="card-header">
+          <button type="button" class="btn btn-link btn-block  text-navy text-left" data-toggle="collapse" data-target="#collapseTwo">Ensembles de données harmonisés</button>
+        </div>
+        <div id="collapseTwo" class="collapse" data-parent="#accessProcessAccordion">
+          <div class="card-body">
+            <p>
+              Les ensembles de données harmonisés à l'échelle nationale comprennent les données recueillies par les cinq cohortes matures : BC Generations Project, Alberta's Tomorrow Project, Ontario Health Study, CARTaGENE et Atlantic PATH. Les données du Manitoba Tomorrow Project seront disponibles une fois le recrutement des participants terminé.
+            </p>
 
-          <p>
-            Les ensembles de données harmonisés disponibles incluent :
-          </p>
+            <p>
+              Les ensembles de données harmonisés disponibles incluent :
+            </p>
 
-          <ul>
-            <li>Questionnaire de base sur la santé et les facteurs de risque</li>
-            <li>Questionnaire de base sur la santé et les facteurs de risque avec des maladies supplémentaires</li>
-            <li>Questionnaire de base sur la santé mentale</li>
-            <li>Mesures physiques de base</li>
-            <li>Questionnaire de suivi sur la santé et les facteurs de risque</li>
-            <li>Données pré-analytiques liées aux échantillons biologiques</li>
-            <li>Données de génotypage</li>
-            <li>Données CANUE sur l'exposition environnementale</li>
-            <li>Questionnaire COVID-19 &mdash; Maintenant disponible</li>
-          </ul>
+            <ul>
+              <li>Questionnaire de base sur la santé et les facteurs de risque</li>
+              <li>Questionnaire de base sur la santé et les facteurs de risque avec des maladies supplémentaires</li>
+              <li>Questionnaire de base sur la santé mentale</li>
+              <li>Mesures physiques de base</li>
+              <li>Questionnaire de suivi sur la santé et les facteurs de risque</li>
+              <li>Données pré-analytiques liées aux échantillons biologiques</li>
+              <li>Données de génotypage</li>
+              <li>Données CANUE sur l'exposition environnementale</li>
+              <li>Questionnaire COVID-19 &mdash; Maintenant disponible</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card mb-0">
-      <div class="card-header">
-        <button type="button" class="btn btn-link btn-block text-left" data-toggle="collapse" data-target="#collapseThree">Le comité d'accès</button>
-      </div>
-      <div id="collapseThree" class="collapse" data-parent="#accessProcessAccordion">
-        <div class="card-body">
-          <p>
-            Le comité d'accès examine et prend des décisions d'approbation sur les demandes de recherche soumises pour les données CanPath et/ou les échantillons biologiques. Le comité est composé de membres indépendants de partout au Canada qui possèdent une expertise dans des domaines pertinents comme la biostatistique, l'épidémiologie et la génomique. Le comité d'accès se réunit tous les deux mois pour examiner les projets nécessitant un examen complet du comité d'accès.
-          </p>
+      <div class="card mb-0">
+        <div class="card-header">
+          <button type="button" class="btn btn-link btn-block  text-navy text-left" data-toggle="collapse" data-target="#collapseThree">Le comité d'accès</button>
+        </div>
+        <div id="collapseThree" class="collapse" data-parent="#accessProcessAccordion">
+          <div class="card-body">
+            <p>
+              Le comité d'accès examine et prend des décisions d'approbation sur les demandes de recherche soumises pour les données CanPath et/ou les échantillons biologiques. Le comité est composé de membres indépendants de partout au Canada qui possèdent une expertise dans des domaines pertinents comme la biostatistique, l'épidémiologie et la génomique. Le comité d'accès se réunit tous les deux mois pour examiner les projets nécessitant un examen complet du comité d'accès.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card mb-0">
-      <div class="card-header">
-        <button type="button" class="btn btn-link btn-block text-left" data-toggle="collapse" data-target="#collapseFour">Critères d'examen accéléré</button>
-      </div>
-      <div id="collapseFour" class="collapse" data-parent="#accessProcessAccordion">
-        <div class="card-body">
-          <p>
-            Les demandes d'accès répondant aux critères d'un examen accéléré sont acceptées sur une base continue et seront traitées dans un délai d'environ 3 semaines. (Ce délai dépend de la réactivité du demandeur tout au long du processus).            
-          </p>
+      <div class="card mb-0">
+        <div class="card-header">
+          <button type="button" class="btn btn-link btn-block text-navy text-left" data-toggle="collapse" data-target="#collapseFour">Critères d'examen accéléré</button>
+        </div>
+        <div id="collapseFour" class="collapse" data-parent="#accessProcessAccordion">
+          <div class="card-body">
+            <p>
+              Les demandes d'accès répondant aux critères d'un examen accéléré sont acceptées sur une base continue et seront traitées dans un délai d'environ 3 semaines. (Ce délai dépend de la réactivité du demandeur tout au long du processus).            
+            </p>
 
-          <p>
-            Comme indiqué dans la <a href="#access_policies">Politique d'accès CanPath</a>, les critères suivants sont utilisés pour déterminer si les candidatures sont éligibles à un examen accéléré :
-          </p>
+            <p>
+              Comme indiqué dans la <a href="#access_policies">Politique d'accès CanPath</a>, les critères suivants sont utilisés pour déterminer si les candidatures sont éligibles à un examen accéléré :
+            </p>
 
-          <ul>
-            <li>Demander des ensembles de données harmonisés :</li>
-            <li>Faible risque de réputation en fonction de la question de recherche abordée et de son mérite scientifique;</li>
-            <li>Le projet a été évalué dans le cadre d'un examen scientifique reconnu ou d'un processus d'examen par les pairs;</li>
-            <li>Il existe des preuves d'un soutien financier pour le projet; et</li>
-            <li>L'équipe de recherche compte suffisamment de membres et d'expertise pour effectuer les analyses.</li>
-          </ul>
+            <ul>
+              <li>Demander des ensembles de données harmonisés :</li>
+              <li>Faible risque de réputation en fonction de la question de recherche abordée et de son mérite scientifique;</li>
+              <li>Le projet a été évalué dans le cadre d'un examen scientifique reconnu ou d'un processus d'examen par les pairs;</li>
+              <li>Il existe des preuves d'un soutien financier pour le projet; et</li>
+              <li>L'équipe de recherche compte suffisamment de membres et d'expertise pour effectuer les analyses.</li>
+            </ul>
 
-          <p>
-            <strong>Remarque : </strong>À l'exception des deux premiers points, les candidatures n'ont pas besoin de répondre à tous ces critères pour être prises en compte pour l'examen accéléré.
-          </p>
+            <p>
+              <strong>Remarque : </strong>À l'exception des deux premiers points, les candidatures n'ont pas besoin de répondre à tous ces critères pour être prises en compte pour l'examen accéléré.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card mb-0">
-      <div class="card-header">
-        <button type="button" class="btn btn-link btn-block text-left" data-toggle="collapse" data-target="#collapseFive">Critères d'évaluation de l'accès complet</button>
-      </div>
-      <div id="collapseFive" class="collapse" data-parent="#accessProcessAccordion">
-        <div class="card-body">
-          <p>
-            Comme indiqué dans la <a href="#access_policies">politique d'accès de CanPath</a>, les demandes d'accès répondant à <strong>l'un des critères suivants</strong> nécessiteront un examen complet du comité d'accès :
-          </p>
+      <div class="card mb-0">
+        <div class="card-header">
+          <button type="button" class="btn btn-link btn-block text-navy text-left" data-toggle="collapse" data-target="#collapseFive">Critères d'évaluation de l'accès complet</button>
+        </div>
+        <div id="collapseFive" class="collapse" data-parent="#accessProcessAccordion">
+          <div class="card-body">
+            <p>
+              Comme indiqué dans la <a href="#access_policies">politique d'accès de CanPath</a>, les demandes d'accès répondant à <strong>l'un des critères suivants</strong> nécessiteront un examen complet du comité d'accès :
+            </p>
 
-          <ul>
-            <li>Les demandes de données <strong>autres</strong> que les ensembles de données répertoriés comme "<a href="/harmonization-studies">Données harmonisées</a>";</li>
-            <li>L'accès aux échantillons biologiques est demandé;</li>
-            <li>La question de recherche aborde une question de recherche potentiellement controversée (par exemple, compare les résultats par origine ethnique ou communauté, impact potentiellement négatif sur des sous-ensembles de participants) ou avec un risque élevé de réidentification; ou</li>
-            <li>La demande comprend un lien avec les données administratives sur la santé.</li>
-          </ul>
+            <ul>
+              <li>Les demandes de données <strong>autres</strong> que les ensembles de données répertoriés comme "<a href="/harmonization-studies">Données harmonisées</a>";</li>
+              <li>L'accès aux échantillons biologiques est demandé;</li>
+              <li>La question de recherche aborde une question de recherche potentiellement controversée (par exemple, compare les résultats par origine ethnique ou communauté, impact potentiellement négatif sur des sous-ensembles de participants) ou avec un risque élevé de réidentification; ou</li>
+              <li>La demande comprend un lien avec les données administratives sur la santé.</li>
+            </ul>
 
-          <p>
-            Les demandes d'accès nécessitant un examen complet du comité d'accès sont acceptées sur une base continue et peuvent être complétées en aussi peu que 6 semaines. (Ce délai dépend de la réactivité du demandeur tout au long du processus.)
-          </p>
+            <p>
+              Les demandes d'accès nécessitant un examen complet du comité d'accès sont acceptées sur une base continue et peuvent être complétées en aussi peu que 6 semaines. (Ce délai dépend de la réactivité du demandeur tout au long du processus.)
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card mb-0">
-      <div class="card-header">
-        <button type="button" class="btn btn-link btn-block text-left" data-toggle="collapse" data-target="#collapseSix">Accès accéléré aux données COVID-19</button>
-      </div>
-      <div id="collapseSix" class="collapse" data-parent="#accessProcessAccordion">
-        <div class="card-body">
-          <p>
-            Les données nationales harmonisées du questionnaire CanPath sur la COVID-19 sont maintenant à la disposition des chercheurs. Compte tenu du besoin immédiat de recherche sur la pandémie, CanPath a révisé son processus d'examen accéléré pour fournir aux chercheurs un accès rapide aux données sur la COVID-19. Les demandes d'accès à l'ensemble de données du questionnaire national sur la COVID-19 seront <strong>examinées sous 9 jours ouvrés seulement</strong>. Veuillez vous référer aux critères d'examen accéléré pour l'éligibilité.
-          </p>
+      <div class="card mb-0">
+        <div class="card-header">
+          <button type="button" class="btn btn-link btn-block text-navy text-left" data-toggle="collapse" data-target="#collapseSix">Accès accéléré aux données COVID-19</button>
+        </div>
+        <div id="collapseSix" class="collapse" data-parent="#accessProcessAccordion">
+          <div class="card-body">
+            <p>
+              Les données nationales harmonisées du questionnaire CanPath sur la COVID-19 sont maintenant à la disposition des chercheurs. Compte tenu du besoin immédiat de recherche sur la pandémie, CanPath a révisé son processus d'examen accéléré pour fournir aux chercheurs un accès rapide aux données sur la COVID-19. Les demandes d'accès à l'ensemble de données du questionnaire national sur la COVID-19 seront <strong>examinées sous 9 jours ouvrés seulement</strong>. Veuillez vous référer aux critères d'examen accéléré pour l'éligibilité.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card mb-0">
-      <div class="card-header">
-        <button type="button" class="btn btn-link btn-block text-left" data-toggle="collapse" data-target="#collapseSeven">Coût d'accès</button>
-      </div>
-      <div id="collapseSeven" class="collapse" data-parent="#accessProcessAccordion">
-        <div class="card-body">
-          <p>
-            CanPath a un modèle de tarification à plusieurs niveaux adapté aux différents budgets des stagiaires, des chercheurs en début de carrière et des chercheurs établis. Les candidats sont invités à remplir un <a href="/assets/files/CanPath%20Request%20for%20LoS%20Form.docx">formulaire d'estimation des coûts</a> et à le soumettre par e-mail à <a href="mailto:access@canpath.ca">access@canpath.ca</a>.
-          </p>
+      <div class="card mb-0">
+        <div class="card-header">
+          <button type="button" class="btn btn-link btn-block text-navy text-left" data-toggle="collapse" data-target="#collapseSeven">Coût d'accès</button>
+        </div>
+        <div id="collapseSeven" class="collapse" data-parent="#accessProcessAccordion">
+          <div class="card-body">
+            <p>
+              CanPath a un modèle de tarification à plusieurs niveaux adapté aux différents budgets des stagiaires, des chercheurs en début de carrière et des chercheurs établis. Les candidats sont invités à remplir un <a href="/assets/files/CanPath%20Request%20for%20LoS%20Form.docx">formulaire d'estimation des coûts</a> et à le soumettre par e-mail à <a href="mailto:access@canpath.ca">access@canpath.ca</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>

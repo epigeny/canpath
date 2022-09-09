@@ -203,3 +203,17 @@ dl.striped > dt, dl.striped > dd {
 #categoricalSummary .table th {
   padding: 0.2rem 0.5rem;
 }
+
+.accordion .card-header > button:after {
+  font-family: 'FontAwesomeFree';
+  content: "\f067";
+  float: right;
+}
+
+.accordion .card-header:hover {
+  background-color: rgba(0,0,0,.05);
+}
+
+.accordion .card-header > button[aria-expanded="true"]:after {
+  content: "\f068";
+}
