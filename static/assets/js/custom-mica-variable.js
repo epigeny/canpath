@@ -65,20 +65,17 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
       }
     });
 
-    return {
-      type: 'pie',
-      data: {
-        labels: labels,
-        datasets: [dataset]
+    return [{
+      type: "pie",
+      sort: false,
+      hole: 0,
+      marker: {
+        colors: dataset.backgroundColors
       },
-      options: {
-        maintainAspectRatio: false,
-        responsive: true,
-        legend: {
-          display: false
-        },
-      },
-    };
+      hoverinfo: "label+value",
+      values: dataset.data,
+      labels
+    }];
   };
 
   const renderFrequencies = function(data) {
@@ -89,13 +86,15 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
 
       if (Mica.nature === 'CATEGORICAL' && Mica.valueType !== 'text') {
         // frequencies chart
-        const chartCanvas = frequencyChartElem.get(0).getContext('2d');
-
-        new Chart(chartCanvas, customMakeVariableFrequenciesChartSettings(data.frequencies, Mica.backgroundColors, {
+        const chartData = customMakeVariableFrequenciesChartSettings(data.frequencies, Mica.backgroundColors, {
           'NOT_NULL': Mica.tr['not-empty-values'],
           'N/A': Mica.tr['empty-values']
-        }));
-        frequencyChartElem.show();
+        });
+
+        if (frequencyChartElem.length) {
+          Plotly.newPlot("frequencyChart", chartData, null, {responsive: true, displaylogo: false, modeBarButtonsToRemove: ['select2d', 'lasso2d', 'pan', 'zoom', 'autoscale', 'zoomin', 'zoomout', 'resetscale']});
+          frequencyChartElem.show();
+        }
       }
 
       $('#frequencyTotal').html(numberFormatter.format(data.total));

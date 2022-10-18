@@ -35,7 +35,7 @@
         </div>
       </div>
       <div class="col-xs-12 col-lg-6">
-        <canvas id="frequencyChart"></canvas>
+        <div id="frequencyChart"></div>
 
         <div id="continuousSummary" class="table-responsive">
           <span><@message "continuous-summary-title"/></span>
