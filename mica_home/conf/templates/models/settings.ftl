@@ -32,7 +32,7 @@
 <#assign datasetListDefaultDisplay = "cards"/>
 
 <!-- Search -->
-<#assign defaultSearchState = "#lists?type=variables"/>
+<#assign defaultSearchState = "#lists?type=variables&query=study(in(Mica_study.className,HarmonizationStudy))"/>
 <#assign searchVariableColumns = ["label+description", "valueType", "annotations", "study", "dataset"]/>
 <#assign searchDatasetColumns = ["name", "type", "variables"]/>
 <#assign searchStudyListDisplay = false/>

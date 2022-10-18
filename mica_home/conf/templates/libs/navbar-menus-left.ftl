@@ -25,8 +25,8 @@
   <li id="dataAccessMenu" class="nav-item">
     <a href="${contextPath}/data-accesses" class="btn btn-warning"><@message "data-access"/> <i class="fas fa-arrow-circle-right"></i></a>
   </li>
-  <li id="searchMenu" class="nav-item <#if rc.requestUri?ends_with("/search")>active</#if>">
-    <a href="${contextPath}/search${defaultSearchState}" class="nav-link"><@message "search"/></a>
+  <li id="searchMenu" class="nav-item <#if rc.requestUri?ends_with("/harmonization-search")>active</#if>">
+    <a href="${contextPath}/harmonization-search${defaultSearchState}" class="nav-link"><@message "search"/></a>
   </li>
   <li class="nav-item <#if rc.requestUri?ends_with("/contact")>active</#if>">
     <a href="${contextPath}/contact" class="nav-link"><@message "contact-menu"/></a>
