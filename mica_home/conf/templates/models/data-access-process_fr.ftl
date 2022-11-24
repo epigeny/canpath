@@ -93,13 +93,13 @@
         <div id="collapseOne" class="collapse" data-parent="#accessProcessAccordion">
           <div class="card-body">
             <p>
-              ous les formulaires de demande d'accès remplis et soumis et la documentation connexe sont examinés par le comité d'accès indépendant selon les critères suivants :
+              Tous les formulaires de demande d'accès remplis et soumis et la documentation connexe sont examinés par le comité d'accès indépendant selon les critères suivants :
             </p>
 
             <ul>
               <li>Le demandeur est un chercheur de bonne foi (c.-à-d. la preuve qu'il possède une expérience et des qualifications pertinentes);</li>
               <li>Le projet de recherche est conforme aux principes directeurs de CanPath et aux consentements éclairés signés par les participants à la recherche (voir les sections 2 et 4a de la <a href="#access_policies">Politique d'accès de CanPath</a>);</li>
-              <li>Le Bureau d'accès a fourni la preuve de l'exhaustivité administrative et de la disponibilité des données CanPath et/ou des échantillons biologiques</li>
+              <li>La demande a passé avec succès les phases d'examen administratif de l'exhaustivité et d'évaluation de la faisabilité.</li>
             </ul>
 
             <p>L'évaluation d'Access Office a établi que la demande répond aux exigences suivantes :</p>
@@ -167,7 +167,7 @@
         <div id="collapseFour" class="collapse" data-parent="#accessProcessAccordion">
           <div class="card-body">
             <p>
-              Les demandes d'accès répondant aux critères d'un examen accéléré sont acceptées sur une base continue et seront traitées dans un délai d'environ 3 semaines. (Ce délai dépend de la réactivité du demandeur tout au long du processus).            
+              Les demandes d'accès répondant aux critères d'un examen accéléré sont acceptées sur une base continue.
             </p>
 
             <p>
@@ -206,19 +206,19 @@
             </ul>
 
             <p>
-              Les demandes d'accès nécessitant un examen complet du comité d'accès sont acceptées sur une base continue et peuvent être complétées en aussi peu que 6 semaines. (Ce délai dépend de la réactivité du demandeur tout au long du processus.)
+              Les demandes d'accès nécessitant un examen complet du comité d'accès sont acceptées sur une base continue.
             </p>
           </div>
         </div>
       </div>
       <div class="card mb-0">
         <div class="card-header">
-          <button type="button" class="btn btn-link btn-block text-navy text-left" data-toggle="collapse" data-target="#collapseSix">Accès accéléré aux données COVID-19</button>
+          <button type="button" class="btn btn-link btn-block text-navy text-left" data-toggle="collapse" data-target="#collapseSix">Accès aux données COVID-19</button>
         </div>
         <div id="collapseSix" class="collapse" data-parent="#accessProcessAccordion">
           <div class="card-body">
             <p>
-              Les données nationales harmonisées du questionnaire CanPath sur la COVID-19 sont maintenant à la disposition des chercheurs. Compte tenu du besoin immédiat de recherche sur la pandémie, CanPath a révisé son processus d'examen accéléré pour fournir aux chercheurs un accès rapide aux données sur la COVID-19. Les demandes d'accès à l'ensemble de données du questionnaire national sur la COVID-19 seront <strong>examinées sous 9 jours ouvrés seulement</strong>. Veuillez vous référer aux critères d'examen accéléré pour l'éligibilité.
+              Les données nationales harmonisées du questionnaire CanPath sur la COVID-19 sont maintenant à la disposition des chercheurs. Compte tenu du besoin immédiat de recherche sur la pandémie, CanPath a révisé son processus d'examen accéléré pour fournir aux chercheurs un accès rapide aux données sur la COVID-19. Veuillez vous référer aux critères d'examen accéléré pour l'éligibilité.
             </p>
           </div>
         </div>

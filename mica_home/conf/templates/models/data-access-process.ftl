@@ -96,7 +96,7 @@
             <ul>
               <li>The Applicant is a bona fide researcher (i.e. evidence that the researcher has relevant experience and qualifications);</li>
               <li>The research project is in conformity with both the Guiding Principles of CanPath and the informed consents signed by the Research Participants (see Sections 2 and 4a of the <a href="#access_policies">CanPath Access Policy</a>);</li>
-              <li>The Access Office has provided proof of administrative completeness and availability of CanPath Data and/or Biosamples</li>
+              <li>The application has passed administrative completeness review and feasibility assesment phases.</li>
             </ul>
 
             <p>The Access Office assessment has established that the application meets the following requirements:</p>
@@ -164,7 +164,7 @@
         <div id="collapseFour" class="collapse" data-parent="#accessProcessAccordion">
           <div class="card-body">
             <p>
-              Access Applications meeting the criteria for an Expedited Review are accepted on an ongoing basis and will be completed within approximately 3 weeks. (This timeline is contingent on the applicant's responsiveness throughout the process).            
+              Access Applications meeting the criteria for an Expedited Review are accepted on an ongoing basis.
             </p>
 
             <p>
@@ -203,19 +203,19 @@
             </ul>
 
             <p>
-              Access Applications requiring a Full Access Committee Review are accepted on an ongoing basis and can be completed in as little as 6 weeks. (This timeline is contingent on the applicant's responsiveness throughout the process.)
+              Access Applications requiring a Full Access Committee Review are accepted on an ongoing basis.
             </p>
           </div>
         </div>
       </div>
       <div class="card mb-0">
         <div class="card-header">
-          <button type="button" class="btn btn-link btn-block text-navy text-left" data-toggle="collapse" data-target="#collapseSix">Expedited COVID-19 Data Access</button>
+          <button type="button" class="btn btn-link btn-block text-navy text-left" data-toggle="collapse" data-target="#collapseSix">COVID-19 Data Access</button>
         </div>
         <div id="collapseSix" class="collapse" data-parent="#accessProcessAccordion">
           <div class="card-body">
             <p>
-              National harmonized data from the CanPath COVID-19 Questionnaire is now available to researchers. Given the immediate need for pandemic research, CanPath has revised its expedited review process to provide researchers timely access to the COVID-19 data. Requests for access to the national COVID-19 Questionnaire dataset will be <strong>reviewed in as little as 9 business days</strong>. Please refer to the Expedited Review Criteria for eligibility.
+              National harmonized data from the CanPath COVID-19 Questionnaire is now available to researchers. Given the immediate need for pandemic research, CanPath has revised its expedited review process to provide researchers timely access to the COVID-19 data. Please refer to the Expedited Review Criteria for eligibility.
             </p>
           </div>
         </div>
@@ -233,7 +233,7 @@
         </div>
       </div>
     </div>
-  </div>  
+  </div>
 
   <h5 class="mt-5 mb-3">Need Support?</h5>
   <div>All CanPath access questions can be directed to the Access Office.</div>
