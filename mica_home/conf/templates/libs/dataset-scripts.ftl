@@ -176,10 +176,21 @@
 
       $('#harmonizedTable').show();
       const dataTableOpts = {
+        drawCallback: function() {
+          const pagination = $(this).closest('.dataTables_wrapper').find('.pagination-bar');
+          if (pagination) {
+            if (this.api().page.info().pages > 1) {
+              pagination.removeClass('d-none');
+            } else {
+              pagination.addClass('d-none');
+            }
+          }
+        },
         "paging": true,
         "pageLength": 25,
         "lengthChange": true,
-        "searching": false,
+        "lengthMenu": [25, 50, 75, 100],
+        "searching": true,
         "ordering": false,
         "info": false,
         "language": {
@@ -188,7 +199,8 @@
         "processing": true,
         "serverSide": true,
         "ajax": function(data, callback, settings) {
-          DatasetService.getHarmonizedVariables('${dataset.id}', data.start, data.length, function(response) {
+          const search = 'search' in data && data.search.value ? data.search.value : null;
+          DatasetService.getHarmonizedVariables('${dataset.id}', search, data.start, data.length, function(response) {
             $('#loadingSummary').hide();
             if (response.variableHarmonizations) {
               let rows = [];
@@ -225,7 +237,7 @@
         dom: "<'row'<'col-sm-5'i><'col-sm-7'f>><'row'<'table-responsive'tr>><'row'<'col-sm-3'l><'col-sm-9'p>>"
       };
 
-      DatasetService.getHarmonizedVariables('${dataset.id}', 0, 1, function(response) {
+      DatasetService.getHarmonizedVariables('${dataset.id}', null, 0, 1, function(response) {
         const columns = getStudySummaries(response);
         dataTableOpts.columns = columns;
         $("#harmonizedTable").DataTable(dataTableOpts);
