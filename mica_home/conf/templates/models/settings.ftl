@@ -12,8 +12,6 @@
 
 <!-- Cart -->
 <#assign cartEnabled = (config?? && config.cartEnabled && (config.studyDatasetEnabled || config.harmonizationDatasetEnabled))/>
-<!-- Cart feature is only visible to any authenticated users -->
-<#assign cartEnabled = cartEnabled && user??/>
 <!-- To download the list of variable IDs (and the Opal views, if enabled) -->
 <#assign showCartDownload = cartEnabled/>
 <!-- To reinstate the cart as views in Opal -->

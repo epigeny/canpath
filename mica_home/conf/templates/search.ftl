@@ -110,6 +110,53 @@
                   <div v-if="display !== 'graphics'" class="col my-auto">
                     <div class="float-right pr-2">
                       <#if cartEnabled>
+                          <#if user?? || cartAnonymousEnabled>
+                              <#if variablesCartEnabled>
+                                  <#if listsEnabled>
+                                    <div class="btn-group" v-if="isVariablesToolsVisible">
+                                      <button id="cart-add-variables" type="button" class="btn btn-sm btn-success" @click="onAddToCart" title="<@message "sets.cart.add-variables-to-cart"/>">
+                                        <i class="fas fa-cart-plus"></i> <@message "sets.cart.add-to-cart"/></button>
+                                      <button type="button" class="btn btn-sm btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+                                      <div ref="listsDropdownMenu" class="dropdown-menu dropdown-menu-right" style="min-width: 24em;">
+                                        <form class="px-3 py-3" v-if="numberOfSetsRemaining > 0">
+                                          <div class="form-group mb-0">
+                                            <div class="input-group">
+                                              <input type="text" class="form-control" placeholder="<@message "sets.add.modal.create-new"/>" v-model="newVariableSetName" @keyup.enter.prevent.stop="onAddToSet()">
+                                              <div class="input-group-append">
+                                                <button v-bind:class="{ disabled: !newVariableSetName }" class="btn btn-success" type="button" @click="onAddToSet()">
+                                                  <i class="fa fa-plus"></i> <@message "global.add"/>
+                                                </button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </form>
+                                        <div class="dropdown-divider" v-if="variableSets.length > 0 && numberOfSetsRemaining > 0"></div>
+                                        <button type="button" class="dropdown-item" v-for="set in variableSets" v-bind:key="set.id" @click="onAddToSet(set.id)">
+                                          {{ normalizeSetName(set) }}
+                                          <span class="badge badge-light float-right">{{ set.count }}</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  <#else>
+                                    <button id="cart-add-variables" type="button" class="btn btn-sm btn-success" v-if="isVariablesToolsVisible" @click="onAddToCart" title="<@message "sets.cart.add-variables-to-cart"/>">
+                                      <i class="fas fa-cart-plus"></i> <@message "sets.cart.add-to-cart"/></button>
+                                  </#if>
+                              </#if>
+                              <#if studiesCartEnabled>
+                                <button id="cart-add-studies" type="button" class="btn btn-sm btn-success ml-2" v-if="isStudiesToolsVisible" @click="onAddToCart" title="<@message "sets.cart.add-studies-to-cart"/>">
+                                  <i class="fas fa-cart-plus"></i> <@message "sets.cart.add-to-cart"/></button>
+                              </#if>
+                              <#if networksCartEnabled>
+                                <button id="cart-add-networks" type="button" class="btn btn-sm btn-success ml-2" v-if="isNetworksToolsVisible" @click="onAddToCart" title="<@message "sets.cart.add-networks-to-cart"/>">
+                                  <i class="fas fa-cart-plus"></i> <@message "sets.cart.add-to-cart"/></button>
+                              </#if>
+                          <#else>
+                            <a href="${contextPath}/signin?redirect=${contextPath}/search" class="btn btn-sm btn-success" title="<@message "sets.cart.signin-to-add-to-cart"/>">
+                              <i class="fas fa-cart-plus"></i> <@message "sets.cart.add-to-cart"/></a>
+                          </#if>
+                      </#if>
+
+                      <#--  <#if cartEnabled>
                         <#if listsEnabled>
                           <div class="btn-group ml-2">
                             <button id="cart-add-variables" type="button" class="btn btn-sm btn-info dropdown-toggle" data-toggle="dropdown" title="<@message "sets.add.button.set-label"/>"><i class="fas fa-cart-plus"></i></button>
@@ -139,7 +186,7 @@
                         <#else>
                           <a href="${contextPath}/signin?redirect=${contextPath}/search" class="btn btn-info ml-2" title="<@message "sets.add.button.set-label"/>"><i class="fas fa-cart-plus"></i></a>
                         </#if>
-                      </#if>
+                      </#if>  -->
                       <#if downloadQueryEnabled>
                         <a id="download-query" href="javascript:void(0)" class="btn btn-default " @click="onDownloadQueryResult" title="<@message "download"/>"><i class="fas fa-download"></i> <@message "download"/></a>
                       </#if>
