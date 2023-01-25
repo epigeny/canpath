@@ -321,6 +321,7 @@ const makeHarmonizedVariablesTable = function() {
           const studyTableName =  baseStudyTable.name ? ' (' + localizedString(baseStudyTable.name) + ')' : '';
 
           harmonizedVariablesTableBody.append('<tr>' +
+            '<td title=""><a href="' + Mica.contextPath + '/variable/' + harmonizedVariable.resolver.id + '">' + harmonizedVariable.resolver.name + '</a></td>' +
             '<td>' + studyAnchor(baseStudyTable.studySummary) + '</td>' +
             '<td>' + MlstrStudyTablePopoverFactory.create(baseStudyTable, studyTableName) +
             '<td title="' + Mica.tr[localizedString(status)] + '"><i class=" ' + iconClass + '"></i></td>' +

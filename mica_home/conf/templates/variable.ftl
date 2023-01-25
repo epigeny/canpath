@@ -290,6 +290,7 @@
                     <table id="harmonizedVariables" class="table table-striped" style="display: none">
                       <thead>
                         <tr>
+                          <th><@message "variable"/></th>
                           <th><@message "study"/></th>
                           <th><@message "dataset.harmonized-table"/></th>
                           <th><@message "status"/></th>
