@@ -1,5 +1,12 @@
 <#include "navbar-menus.ftl">
 <nav class="main-header">
+  <#if showMaintenance>
+  <div class="navbar navbar-expand-md navbar-yellow text-dark">
+    <div class="py-3 bg-danger w-100 text-center">
+      <strong>IMPORTANT: </strong><@message "maintenance-message"/>
+    </div>
+  </div> 
+  </#if>
   <div class="navbar navbar-expand-md navbar-yellow text-dark">
     <div class="collapse navbar-collapse order-2" id="navbarCollapse">
       <!-- Right navbar links -->
