@@ -1502,7 +1502,7 @@
               {
                 "key": "return",
                 "type": "textarea",
-                "wordLimit": 100,
+                "wordLimit": "0:100",
                 "rows": 10,
                 "notitle": true,
                 "validationMessage": {
