@@ -1,4 +1,3 @@
-
 .jumbotron {
   background-image: url('/assets/images/labo-overlay.jpg');
   background-size: 100% auto;
@@ -60,12 +59,16 @@
   text-align: center !important;
 }
 
-#studies-card, #individual-studies-card, #harmonization-studies-card, #projects-card {
+#studies-card,
+#individual-studies-card,
+#harmonization-studies-card,
+#projects-card {
   box-shadow: none;
   margin-top: 2em;
 }
 
-#studies-app a, #studies-app a:hover {
+#studies-app a,
+#studies-app a:hover {
   text-decoration: none;
 }
 
@@ -94,14 +97,20 @@
   border-bottom: 0;
 }
 
-#individual-study-page .content-header h1 .text-white-50, #individual-study-page .content-header small,
-#harmonization-study-page .content-header h1 .text-white-50, #harmonization-study-page .content-header small,
-#harmonized-dataset-page .content-header h1 .text-white-50, #harmonized-dataset-page .content-header small,
+#individual-study-page .content-header h1 .text-white-50,
+#individual-study-page .content-header small,
+#harmonization-study-page .content-header h1 .text-white-50,
+#harmonization-study-page .content-header small,
+#harmonized-dataset-page .content-header h1 .text-white-50,
+#harmonized-dataset-page .content-header small,
 #dataset-crosstab-page .content-header h1 .text-white-50,
 #list-page .content-header h1 .text-white-50,
-#project-page .content-header h1 .text-white-50, #project-page .content-header small,
-#dataschema-variable-page .content-header h1 .text-white-50, #variable-page .content-header small,
-#harmonized-variable-page .content-header h1 .text-white-50, #variable-page .content-header small {
+#project-page .content-header h1 .text-white-50,
+#project-page .content-header small,
+#dataschema-variable-page .content-header h1 .text-white-50,
+#variable-page .content-header small,
+#harmonized-variable-page .content-header h1 .text-white-50,
+#variable-page .content-header small {
   display: none;
 }
 
@@ -113,7 +122,8 @@
   margin-top: 0.2em !important;
 }
 
-#sum, #sum-of-squares {
+#sum,
+#sum-of-squares {
   display: none;
 }
 
@@ -156,15 +166,17 @@
 }
 
 
-dl.striped > dt:nth-of-type(odd), dl.striped > dd:nth-of-type(odd) {
-  background-color: rgba(0,0,0,.05) ;
+dl.striped>dt:nth-of-type(odd),
+dl.striped>dd:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, .05);
 }
 
-dl.striped > dd {
+dl.striped>dd {
   margin-bottom: 0 !important;
 }
 
-dl.striped > dt, dl.striped > dd {
+dl.striped>dt,
+dl.striped>dd {
   padding-top: 0.3em !important;
   padding-bottom: 0.3em !important;
 }
@@ -184,7 +196,8 @@ dl.striped > dt, dl.striped > dd {
   }
 }
 
-#taxonomy-modal .panel-vocabulary-description, #taxonomy-modal .panel-taxonomy-description {
+#taxonomy-modal .panel-vocabulary-description,
+#taxonomy-modal .panel-taxonomy-description {
   display: none;
 }
 
@@ -220,17 +233,17 @@ dl.striped > dt, dl.striped > dd {
   padding: 0.2rem 0.5rem;
 }
 
-.accordion .card-header > button:after {
+.accordion .card-header>button:after {
   font-family: 'FontAwesomeFree';
   content: "\f067";
   float: right;
 }
 
 .accordion .card-header:hover {
-  background-color: rgba(0,0,0,.05);
+  background-color: rgba(0, 0, 0, .05);
 }
 
-.accordion .card-header > button[aria-expanded="true"]:after {
+.accordion .card-header>button[aria-expanded="true"]:after {
   content: "\f068";
 }
 
@@ -239,6 +252,70 @@ dl.striped > dt, dl.striped > dd {
   text-align: left;
 }
 
-#taxonomy-modal .btn.datasets, #taxonomy-modal .btn.variables {
+#taxonomy-modal .btn.datasets,
+#taxonomy-modal .btn.variables {
   display: none;
+}
+
+/*
+  HACK Until we create SCSS files
+
+  The BS has this code overridden by `bootstrap-3-4` giving 15px paddings:
+
+  padding-right: $gutter / 2;
+  padding-left: $gutter / 2;
+
+*/
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
 }

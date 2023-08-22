@@ -133,7 +133,7 @@
                             <a v-if="study.model && study.model.numberOfParticipants && study.model.numberOfParticipants.sample && study.model.numberOfParticipants.sample.number" href="javascript:void(0)" style="cursor: initial;" class="btn btn-sm col text-left">
                               <span class="h6 pb-0 mb-0 d-block text-muted">{{study.model.numberOfParticipants.sample.number | localize-number}}</span>
                               <span class="text-muted"><small><@message "numberOfParticipants-sample-label"/></small></span>
-                            </a>                            
+                            </a>
                             <#--  <dataset-stat-item
                                     v-bind:type="study.studyResourcePath"
                                     v-bind:stats="study['obiba.mica.CountStatsDto.studyCountStats']">
