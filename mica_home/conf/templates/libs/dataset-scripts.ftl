@@ -264,6 +264,12 @@
 
               $('#harmonizedTable tr [data-type="description"]').popover({html: true, delay: { show: 250, hide: 1000 }});
               $('#harmonizedTable tr [data-toggle="popover"]').popover({html: true});
+            } else {
+              callback({
+                data: [],
+                recordsTotal: 0,
+                recordsFiltered: 0
+              });
             }
           });
         },
