@@ -146,18 +146,29 @@
                 const name = variableHarmonization.dataschemaVariableRef.name;
                 row.push('<a href="${contextPath}/variable/${dataset.id}:' + name + ':Dataschema">' + name + '</a>');
 
+                var statusDetails = {complete: [], partial: [], impossible: []};
+
                 var completeCount = variableHarmonization.harmonizedVariables.reduce((acc, curr) => {
-                  if (curr.status === 'complete') acc = acc + 1;
+                  if (curr.status === 'complete') {
+                    acc = acc + 1;
+                    statusDetails.complete.push(curr.statusDetail);
+                  }
                   return acc;
                 }, 0);
 
                 var partialCount = variableHarmonization.harmonizedVariables.reduce((acc, curr) => {
-                  if (curr.status === 'partial') acc = acc + 1;
+                  if (curr.status === 'partial') {
+                    acc = acc + 1;
+                    statusDetails.partial.push(curr.statusDetail);
+                  }
                   return acc;
                 }, 0);
 
                 var impossibleCount = variableHarmonization.harmonizedVariables.reduce((acc, curr) => {
-                  if (curr.status === 'impossible') acc = acc + 1;
+                  if (curr.status === 'impossible') {
+                    acc = acc + 1;
+                    statusDetails.impossible.push(curr.statusDetail);
+                  }
                   return acc;
                 }, 0);
 
@@ -166,14 +177,9 @@
                   return acc;
                 }, 0);
 
-                const explaination =
-                '<span class=\'row\'>' +
-                  '<span class=\'col-4\'><i class=\'fas fa-check fa-fw text-success\'></i><span>' + completeCount + '</span></span>' +
-                  '<span class=\'col-4\'><i class=\'fas fa-adjust fa-fw text-partial\'></i><span>' + partialCount + '</span></span>' +
-                  '<span class=\'col-4\'><i class=\'fas fa-times fa-fw text-danger\'></i><span>' + impossibleCount + '</span></span>' +
-                '</span>';
+                const explaination = MlstrHarmonizationTablePopoverFactory.create(completeCount, partialCount, impossibleCount, statusDetails);
 
-                row.push('<button type="button" class="btn btn-xs btn-link text-muted" data-toggle="popover" data-trigger="hover" title="<@message "status-distribution"/>" data-content="' + explaination + '">' + Math.round(completeCount * 100 / Math.max(1, denominator)) + '%</button>');
+                row.push('<button type="button" class="btn btn-xs btn-link text-muted" data-toggle="popover" data-container="#harmo-status-popover" data-trigger="hover" title="Status Distribution" data-content="' + explaination + '">' + Math.round(completeCount * 100 / Math.max(1, denominator)) + '%</button>');
 
                 variableHarmonization.harmonizedVariables
                   .forEach((harmonizedVariable, index) => harmonizedVariable.weight = originalWeights[index]);

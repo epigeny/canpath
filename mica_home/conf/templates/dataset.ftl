@@ -253,7 +253,7 @@
           <@harmonizationStudyList dataset.id/>
 
           <#if !(dataset.model.hide_var)?? || !dataset.model.hide_var>
-            <div class="card card-info card-outline">
+          <div class="card card-info card-outline">
             <div class="card-header">
               <h3 class="card-title"><@message "harmonization"/></h3>
               <div class="float-right">
@@ -275,6 +275,8 @@
                 </table>
               </div>
             </div>
+            <!-- to control the width without affecting other popovers -->
+            <div id="harmo-status-popover"></div>
           </div>
           </#if>
 

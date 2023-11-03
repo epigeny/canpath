@@ -258,6 +258,213 @@ class MlstrStudyTablePopoverFactory {
   }
 }
 
+class RoundPercentages {
+  static round(numArr, arrDimension) {
+    // Normalize array
+    if ((numArr || []).length < 1) return Array(arrDimension).fill(0);
+    else if (numArr.length < arrDimension) numArr.push(...Array(numArr.length).fill(0));
+
+    const getLargestNumInArrayIndex = (array) => array.indexOf(Math.max.apply(Math, array))
+
+    // Total of all numbers passed.
+    const total = numArr[0] + numArr[1] + numArr[2];
+
+    if (total < 1) return numArr;
+
+    // Percentage representations of each number (out of 100).
+    const num1Percent = Math.round((numArr[0] / total) * 100);
+    const num2Percent = Math.round((numArr[1] / total) * 100);
+    const num3Percent = Math.round((numArr[2] / total) * 100);
+
+    // Total percent of the 3 numbers combined (doesnt always equal 100%).
+    const totalPercentage = num1Percent + num2Percent + num3Percent;
+
+    // If not 100%, then we need to work around it by subtracting from the largest number (not as accurate but works out).
+    if (totalPercentage != 100) {
+      // Get the index of the largest number in the array.
+      const index = getLargestNumInArrayIndex(numArr);
+
+      // Take the difference away from the largest number.
+      numArr[index] = numArr[index] - (totalPercentage - 100);
+
+      // Re-run this method recursively, until we get a total percentage of 100%.
+      return RoundPercentages.round(numArr);
+    }
+
+    // Return the percentage version of the array passed in.
+    return [num1Percent, num2Percent, num3Percent];
+  }
+
+}
+
+class MlstrHarmonizationTablePopoverFactory {
+
+  static create(completeCount, partialCount, impossibleCount, statusDetails) {
+
+    const completePercentages = RoundPercentages.round(
+      [statusDetails.complete.filter(sd => sd === 'identical').length,
+      statusDetails.complete.filter(sd => sd === 'compatible').length,
+      statusDetails.complete.filter(sd => sd === 'unknown').length],
+      3
+    )
+
+    const partialPercentages = RoundPercentages.round(
+      [statusDetails.partial.filter(sd => sd === 'proximate').length,
+      statusDetails.partial.filter(sd => sd === 'tentative').length,
+      statusDetails.partial.filter(sd => sd === 'unknown').length],
+      3
+    )
+
+    const impossiblePercentages = RoundPercentages.round(
+      [statusDetails.impossible.filter(sd => sd === 'unavailable').length,
+      statusDetails.impossible.filter(sd => sd === 'incompatible').length,
+      statusDetails.impossible.filter(sd => sd === 'unknown').length],
+      3
+    )
+
+    const template =
+      `
+<span class='row'>
+  <span class='col-4'>
+    <i class='fas fa-check fa-fw text-success'></i>
+      <span class='pl-1'>
+        ${Mica.tr['complete']}
+        <span class='float-right'>${completeCount}
+      </span>
+    </span>
+  </span>
+  <span class='col-4'>
+    <i class='fas fa-adjust fa-fw text-partial'></i>
+    <span class='pl-1'>
+      ${Mica.tr['partial']}
+      <span class='float-right'>${partialCount}</span>
+    </span>
+  </span>
+  <span class='col-4'>
+    <i class='fas fa-times fa-fw text-danger'></i>
+    <span class='pl-1'>
+      ${Mica.tr['impossible']}
+      <span class='float-right'>${impossibleCount}</span>
+    </span>
+  </span>
+</span>
+<hr />
+
+<span class='row'>
+  <span class='col-4'>
+    <span class='row'>
+      <span class='col-12'>
+        <i class='fas fa-check fa-fw text-success'></i>
+        <span class='pl-2'>
+          ${Mica.tr['sd-identical']}
+          <span class='float-right'>
+            ${completePercentages[0]}%
+          </span>
+        </span>
+      </span>
+    </span>
+    <span class='row'>
+      <span class='col-12'>
+        <i class='fas fa-check fa-fw text-success'></i>
+        <span class='pl-2'>
+          ${Mica.tr['sd-compatible']}
+          <span class='float-right'>
+            ${completePercentages[1]}%
+          </span>
+        </span>
+      </span>
+    </span>
+    <span class='row'>
+      <span class='col-12'>
+        <i class='fas fa-check fa-fw text-success'></i>
+        <span class='pl-2'>
+          ${Mica.tr['sd-unknown']}
+          <span class='float-right'>
+            ${completePercentages[2]}%
+          </span>
+        </span>
+      </span>
+    </span>
+  </span>
+
+  <span class='col-4'>
+    <span class='row'>
+      <span class='col-12'>
+        <i class='fas fa-adjust fa-fw text-partial'></i>
+        <span class='pl-2'>
+          ${Mica.tr['sd-proximate']}
+          <span class='float-right'>
+            ${partialPercentages[0]}%
+          </span>
+        </span>
+      </span>
+    </span>
+    <span class='row'>
+      <span class='col-12'>
+        <i class='fas fa-adjust fa-fw text-partial'></i>
+        <span class='pl-2'>
+          ${Mica.tr['sd-tentative']}
+          <span class='float-right'>
+            ${partialPercentages[1]}%
+          </span>
+        </span>
+      </span>
+    </span>
+    <span class='row'>
+      <span class='col-12'>
+        <i class='fas fa-adjust fa-fw text-partial'></i>
+        <span class='pl-2'>
+          ${Mica.tr['sd-unknown']}
+          <span class='float-right'>
+            ${partialPercentages[2]}%
+          </span>
+        </span>
+      </span>
+    </span>
+  </span>
+
+  <span class='col-4'>
+     <span class='row'>
+      <span class='col-12'>
+        <i class='fas fa-times fa-fw text-danger'></i>
+        <span class='pl-2'>
+          ${Mica.tr['sd-unavailable']}
+          <span class='float-right'>
+            ${impossiblePercentages[0]}%
+          </span>
+        </span>
+      </span>
+    </span>
+    <span class='row'>
+      <span class='col-12'>
+        <i class='fas fa-times fa-fw text-danger'></i>
+        <span class='pl-2'>
+          ${Mica.tr['sd-incompatible']}
+          <span class='float-right'>
+            ${impossiblePercentages[1]}%
+          </span>
+        </span>
+      </span>
+    </span>
+    <span class='row'>
+      <span class='col-12'>
+        <i class='fas fa-times fa-fw text-danger'></i>
+        <span class='pl-2'>
+          ${Mica.tr['sd-unknown']}
+          <span class='float-right'>
+            ${impossiblePercentages[2]}%
+          </span>
+        </span>
+      </span>
+    </span>
+  </span>
+</span>
+      `
+
+    return template.replace(/(\r\n|\n|\r)/gm, "").replace(/>\s+</gm, "><").replace(/\s{3,}/gm, "");
+  }
+}
+
 
 // Register all filters
 
