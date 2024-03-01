@@ -113,11 +113,11 @@ class MlstrStudyService extends MlstrEntityService {
     };
 
     const addHarmonizationProtocolColumns = (dataset, row, model) => {
-      let quantitative = model.qualitativeQuantitative ? Mica.tr['harmonization-protocol.qualitative-quantitative.enum.' + model.qualitativeQuantitative] : '-';
-      let prospective = model.qualitativeQuantitative ? Mica.tr['harmonization-protocol.prospective-retrospective.enum.' + model.prospectiveRetrospective] : '-';
+      // let quantitative = model.qualitativeQuantitative ? Mica.tr['harmonization-protocol.qualitative-quantitative.enum.' + model.qualitativeQuantitative] : '-';
+      // let prospective = model.qualitativeQuantitative ? Mica.tr['harmonization-protocol.prospective-retrospective.enum.' + model.prospectiveRetrospective] : '-';
       let participants = model.participants ? model.participants.toLocaleString() : '-';
-      row.push(quantitative)
-      row.push(prospective)
+      // row.push(quantitative)
+      // row.push(prospective)
       if ('obiba.mica.HarmonizedDatasetDto.type' in dataset) {
         row.push((!('hide_var' in model) || false === model['hide_var']) ? countProtocolStudies(dataset['obiba.mica.HarmonizedDatasetDto.type']) : '-');
       }

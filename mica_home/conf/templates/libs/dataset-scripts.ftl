@@ -135,7 +135,7 @@
         "pageLength": 25,
         "lengthChange": true,
         "lengthMenu": [25, 50, 75, 100],
-        "searching": true,
+        "searching": false,
         "ordering": false,
         "info": false,
         "language": {

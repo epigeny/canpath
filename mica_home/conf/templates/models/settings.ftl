@@ -45,7 +45,8 @@
 <#assign searchCriteriaMenus = ["variable"]/>
 
 <#assign searchVariableSortFields = ["-studyId","datasetId","index","name"]/>
-<#assign searchDatasetSortFields = ["-harmonizationTable.studyId","harmonizationTable.populationWeight","acronym"]/>
+<#--  <#assign searchDatasetSortFields = ["-harmonizationTable.studyId","harmonizationTable.populationWeight","acronym"]/>  -->
+<#assign searchDatasetSortFields = ["weight"]/>
 
 
 <!-- Variable -->

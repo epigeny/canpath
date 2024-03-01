@@ -247,13 +247,13 @@
                       <#if harmoAnnotations.hasStatus()>
                       <div class="row">
                         <div class="col-lg-6 col-xs-12">
-                          <h5 class="d-inline"><@message "status"/>: </h5>
+                          <span class="d-inline font-weight-bold"><@message "status"/>: </span>
                           <span>${localize(harmoAnnotations.statusValueTitle, harmoAnnotations.statusValue!"-")}</span>
                         </div>
 
                         <#if harmoAnnotations.hasStatusDetail()>
                           <div class="col-lg-6 col-xs 12">
-                            <h5 class="d-inline">${localize(harmoAnnotations.statusDetailTitle, "Status detail")}: </h5>
+                            <span class="d-inline font-weight-bold">${localize(harmoAnnotations.statusDetailTitle, "Status detail")}: </span>
                             <span>${localize(harmoAnnotations.statusDetailValueTitle, harmoAnnotations.statusDetailValue!"-")}</span>
                           </div>
                         </#if>

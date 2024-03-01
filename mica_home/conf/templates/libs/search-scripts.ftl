@@ -188,6 +188,18 @@
             name: '${mapName}',
             topo: data
           });
+
+
+  $(document).ready(function(){
+    let timeoutHandler = null;
+    timeoutHandler = setTimeout(() => {
+      $('[data-toggle="tooltip"]').tooltip();
+      clearTimeout(timeoutHandler);
+    }, 1000)
+
+  });
+
+
 </script>
 
 <!-- ChartJS -->
