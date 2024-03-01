@@ -260,7 +260,7 @@
                 <a href="${contextPath}/ws/harmonized-dataset/${dataset.id}/variables/harmonizations/_export" class="btn btn-sm btn-info">
                     <i class="fas fa-download"></i> <@message "download"/>
                 </a>
-                <a class="btn btn-sm btn-info" href="${contextPath}/${searchPageUrl}#lists?type=variables&query=dataset(in(Mica_dataset.id,${dataset.id}))"><@message "search-variables"/></a>
+                <a class="btn btn-sm btn-info" href="${contextPath}/${searchPageUrl}#lists?type=variables&query=study(in(Mica_study.className,HarmonizationStudy)),dataset(in(Mica_dataset.id,${dataset.id}))"><@message "search-variables"/></a>
               </div>
             </div>
             <div class="card-body">

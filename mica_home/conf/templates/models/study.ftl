@@ -109,8 +109,8 @@
                   <th><@message "type"/></th>
                   <th><@message "data-collection-events"/></th>
                 <#else>
-                  <th><@message "harmonization-protocol.qualitative-quantitative.title"/> <i class="fas fa-info-circle text-muted-60" title="<@message "harmonization-protocol.qualitative-quantitative.alt-help"/>"></i></th>
-                  <th><@message "harmonization-protocol.prospective-retrospective.title"/> <i class="fas fa-info-circle text-muted-60" title="<@message "harmonization-protocol.prospective-retrospective.alt-help"/> "></i></th>
+                  <#--  <th><@message "harmonization-protocol.qualitative-quantitative.title"/> <i class="fas fa-info-circle text-muted-60" title="<@message "harmonization-protocol.qualitative-quantitative.alt-help"/>"></i></th>  -->
+                  <#--  <th><@message "harmonization-protocol.prospective-retrospective.title"/> <i class="fas fa-info-circle text-muted-60" title="<@message "harmonization-protocol.prospective-retrospective.alt-help"/> "></i></th>  -->
                   <th><@message "studies"/></th>
                   <th><@message "participants"/></th>
                 </#if>
