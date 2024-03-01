@@ -164,7 +164,7 @@ class MlstrStudyService extends MlstrEntityService {
     const tableOptions = {
       ordering: false,
       serverSide: true,
-      search: false,
+      searching: false,
       ajax: getDatasetsCallback
     };
     $(`#${studyId}-datasets`).DataTable({ ...mlstrDataTablesDefaultOpts, ...tableOptions });
