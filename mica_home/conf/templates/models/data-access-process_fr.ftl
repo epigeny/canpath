@@ -230,12 +230,13 @@
         <div id="collapseSeven" class="collapse" data-parent="#accessProcessAccordion">
           <div class="card-body">
             <p>
-              CanPath a un modèle de tarification à plusieurs niveaux adapté aux différents budgets des stagiaires, des chercheurs en début de carrière et des chercheurs établis. Les candidats sont invités à remplir un <a href="/assets/files/CanPath%20Request%20for%20LoS%20Form.docx">formulaire d'estimation des coûts</a> et à le soumettre par e-mail à <a href="mailto:access@canpath.ca">access@canpath.ca</a>.
+              CanPath a <a href="https://canpath.ca/fr/frais-de-recouvrement-des-couts-dacces-fr/" target="_blank">un modèle de recouvrement des coûts</a> adapté aux différents budgets des stagiaires, des chercheurs en début de carrière et des chercheurs établis. 
+              Les candidats sont invités à remplir le <a href="https://canpath.ca/wp-content/uploads/2020/08/CanPath-Request-for-LoS-Form-1.docx" target="_blank">formulaire d’estimation des coûts</a> et à le soumettre via <a href="mailto:access@canpath.ca">access@canpath.ca</a>.
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </div>  
   </div>
 
   <h5 class="mt-5 mb-3">Besoin d'aide?</h5>
