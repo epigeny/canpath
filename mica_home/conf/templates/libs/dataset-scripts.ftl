@@ -33,8 +33,8 @@
     chartsElem.children().remove();
     if (Mica.variablesCoverage) {
       Mica.variablesCoverage.forEach(chartData => {
-        chartsElem.append('<h5 class="text-center">' + chartData.title + '</h5>');
-        chartsElem.append('<p class="text-center">' + chartData.subtitle + '</p>');
+        chartsElem.append('<h5 class="text-center">' + "<@message 'variables-classifications-chart-title'/>" + '</h5>');
+        // chartsElem.append('<p class="text-center">' + chartData.subtitle + '</p>');
         chartsElem.append('<div id="bar-graph-' + chartData.taxonomy + '" class="mb-4"></div>');
 
         const chartConfig = makeVariablesClassificationsChartSettings(chartData, {
