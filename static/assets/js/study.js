@@ -25,7 +25,7 @@ class MlstrStudyService extends MlstrEntityService {
 
   __getDatasets(studyId, start, length, lang, sortKey, onsuccess, onfailure) {
     const sort = sortKey ? sortKey : 'studyTable.studyId,studyTable.populationWeight,studyTable.dataCollectionEventWeight,acronym';
-    let url = `/ws/datasets/_rql?query=dataset(limit(${start},${length}),exists(Mica_dataset.id),sort(${sort}),fields((name.*,studyTables.*,harmonizationTables.*,studyTable.studyId,studyTable.populationId,studyTable.dataCollectionEventId,studyTable.project,studyTable.table,model.*))),locale(${lang}),study(in(Mica_study.id,(${studyId})))`;
+    let url = `/ws/datasets/_rql?query=dataset(limit(${start},${length}),exists(Mica_dataset.id),sort(${sort}),fields((name.*,studyTables.*,harmonizationTables.*,harmonizationTable.studyId,studyTable.studyId,studyTable.populationId,studyTable.dataCollectionEventId,studyTable.project,studyTable.table,model.*))),locale(${lang}),study(in(Mica_study.id,(${studyId})))`;
     this.__getResource(url, onsuccess, onfailure);
   }
 
