@@ -145,7 +145,7 @@ class MlstrStudyService extends MlstrEntityService {
               const url = MicaService.normalizeUrl(`/dataset/${dataset.id}`);
               const studyQuery = this.__ensureStudyClassNameQuery(studyClassName);
               const searchUrl = MicaService.normalizeUrl(`/${this.__getSearchPageUrl(studyClassName)}#lists?type=variables&query=study(${studyQuery}),dataset(in(Mica_dataset.id,${dataset.id}))`);
-              const variables = dataset['countStats.datasetCountStats'] ? dataset['countStats.datasetCountStats'].variables : '';
+              const variables = dataset['countStats'] ? dataset['countStats'].variables : '';
 
               row.push(`<a href="${url}">${LocalizedValues.forLang(dataset.name, lang)}</a>`);
               addDatasetSpecificColumns(dataset, row, model);
