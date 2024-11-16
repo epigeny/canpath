@@ -56,16 +56,16 @@ class MlstrStudyService extends MlstrEntityService {
       $('#loading-networks-summary').removeClass('d-none');
       this.__getNetworks(studyId, data.start, data.length, lang, (response) => {
         $('#loading-networks-summary').addClass('d-none');
-        if (response.networkResultDto && response.networkResultDto['obiba.mica.NetworkResultDto.result']) {
+        if (response.networkResultDto && response.networkResultDto['networkResult']) {
           const total = response.networkResultDto.totalHits;
-          const networks = response.networkResultDto['obiba.mica.NetworkResultDto.result'].networks || [];
+          const networks = response.networkResultDto['networkResult'].networks || [];
           if (networks.length > 0) {
             $(`#${studyId}-networks-card`).removeClass('d-none');
             let rows = [];
             networks.forEach(network => {
               let row = [];
               const url = MicaService.normalizeUrl(`/network/${network.id}`);
-              const studies = network['obiba.mica.CountStatsDto.networkCountStats'] ? network['obiba.mica.CountStatsDto.networkCountStats'].studies : '';
+              const studies = network['countStats.networkCountStats'] ? network['countStats.networkCountStats'].studies : '';
               const searchUrl = MicaService.normalizeUrl(`/search#lists?type=studies&query=network(in(Mica_network.id,${network.id}))`);
 
               row.push(`<a href="${url}">${LocalizedValues.forLang(network.acronym, lang)}</a>`);
@@ -130,9 +130,9 @@ class MlstrStudyService extends MlstrEntityService {
       $('#loading-datasets-summary').removeClass('d-none');
       this.__getDatasets(studyId, data.start, data.length, lang, sortKey, (response) => {
         $('#loading-datasets-summary').addClass('d-none');
-        if (response.datasetResultDto && response.datasetResultDto['obiba.mica.DatasetResultDto.result']) {
+        if (response.datasetResultDto && response.datasetResultDto['datasetResult']) {
           const total = response.datasetResultDto.totalHits;
-          const datasets = response.datasetResultDto['obiba.mica.DatasetResultDto.result'].datasets || [];
+          const datasets = response.datasetResultDto['datasetResult'].datasets || [];
           if (datasets.length > 0) {
             $(`#${studyId}-datasets-card`).removeClass('d-none');
             let rows = [];
@@ -145,7 +145,7 @@ class MlstrStudyService extends MlstrEntityService {
               const url = MicaService.normalizeUrl(`/dataset/${dataset.id}`);
               const studyQuery = this.__ensureStudyClassNameQuery(studyClassName);
               const searchUrl = MicaService.normalizeUrl(`/${this.__getSearchPageUrl(studyClassName)}#lists?type=variables&query=study(${studyQuery}),dataset(in(Mica_dataset.id,${dataset.id}))`);
-              const variables = dataset['obiba.mica.CountStatsDto.datasetCountStats'] ? dataset['obiba.mica.CountStatsDto.datasetCountStats'].variables : '';
+              const variables = dataset['countStats.datasetCountStats'] ? dataset['countStats.datasetCountStats'].variables : '';
 
               row.push(`<a href="${url}">${LocalizedValues.forLang(dataset.name, lang)}</a>`);
               addDatasetSpecificColumns(dataset, row, model);

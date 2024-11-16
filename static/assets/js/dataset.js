@@ -15,9 +15,9 @@ class MlstrDatasetService extends MlstrEntityService {
 
   updateVariablesCount(datasetId, lang, elementId) {
     this.__searchDataset(datasetId, lang, (response) => {
-      if (response.datasetResultDto && 'obiba.mica.DatasetResultDto.result' in response.datasetResultDto) {
-        const dataset = response.datasetResultDto['obiba.mica.DatasetResultDto.result'].datasets.pop();
-        const counts = dataset ? dataset['obiba.mica.CountStatsDto.datasetCountStats'].variables : 0;
+      if (response.datasetResultDto && 'datasetResult' in response.datasetResultDto) {
+        const dataset = response.datasetResultDto['datasetResult'].datasets.pop();
+        const counts = dataset ? dataset['countStats'].variables : 0;
         const element = document.querySelector(`#${elementId}`);
         if (element) {
           const searchUrl = `/search#lists?type=variables&query=dataset(in(Mica_dataset.id,${datasetId}))`;
