@@ -118,8 +118,8 @@ class MlstrStudyService extends MlstrEntityService {
       let participants = model.participants ? model.participants.toLocaleString() : '-';
       // row.push(quantitative)
       // row.push(prospective)
-      if ('obiba.mica.HarmonizedDatasetDto.type' in dataset) {
-        row.push((!('hide_var' in model) || false === model['hide_var']) ? countProtocolStudies(dataset['obiba.mica.HarmonizedDatasetDto.type']) : '-');
+      if ('protocol' in dataset) {
+        row.push((!('hide_var' in model) || false === model['hide_var']) ? countProtocolStudies(dataset['protocol']) : '-');
       }
       row.push(participants);
     }

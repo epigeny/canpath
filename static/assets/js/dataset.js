@@ -42,8 +42,8 @@ class MlstrDatasetService extends MlstrEntityService {
       taxonomyTitleFinder.initialize(response);
 
       this.__getDataset(datasetId, lang, (response) => {
-        if ('obiba.mica.HarmonizedDatasetDto.type' in response) {
-          const tables = response['obiba.mica.HarmonizedDatasetDto.type'];
+        if ('protocol' in response) {
+          const tables = response['protocol'];
           const studyTables = tables.studyTables || [];
           const harmonizationTables = tables.harmonizationTables || [];
           this.__createIndividualStudiesTable(datasetId, studyTables, lang, taxonomyTitleFinder, showVariables);
