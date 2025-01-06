@@ -230,40 +230,16 @@
         <div id="collapseSeven" class="collapse" data-parent="#accessProcessAccordion">
           <div class="card-body">
             <p>
-              CanPath a <a href="https://canpath.ca/fr/frais-de-recouvrement-des-couts-dacces-fr/" target="_blank">un modèle de recouvrement des coûts</a> adapté aux différents budgets des stagiaires, des chercheurs en début de carrière et des chercheurs établis. 
+              CanPath a <a href="https://canpath.ca/fr/frais-de-recouvrement-des-couts-dacces-fr/" target="_blank">un modèle de recouvrement des coûts</a> adapté aux différents budgets des stagiaires, des chercheurs en début de carrière et des chercheurs établis.
               Les candidats sont invités à remplir le <a href="https://canpath.ca/wp-content/uploads/2020/08/CanPath-Request-for-LoS-Form-1.docx" target="_blank">formulaire d’estimation des coûts</a> et à le soumettre via <a href="mailto:access@canpath.ca">access@canpath.ca</a>.
             </p>
           </div>
         </div>
       </div>
-    </div>  
+    </div>
   </div>
 
   <h5 class="mt-5 mb-3">Besoin d'aide?</h5>
   <div>Toute question sur l'accès à CanPath peut être adressée au bureau d'accès.</div>
   <p>Courriel : <a href="mailto:access@canpath.ca">access@canpath.ca</a></p>
-
-  <h5 class="mt-5 mb-3"><a id="access_policies" name="access_policies"></a>Politiques &amp; lignes directrices de CanPath</h5>
-  <p>Avant de soumettre un formulaire de demande d'accès, nous vous recommandons fortement de consulter les documents suivants (disponibles en anglais seulement) :</p>
-  <ul>
-    <li>
-      <a href="/assets/files/Access_Policy_v2.0_Approved_16Mar2022.pdf"
-         target="_blank">Politique d'accès de CanPath</a></li>
-    <li>
-      <a href="/assets/files/CanPath%20Publications%20Policy_Approved%202020-Sep-23.pdf"
-         target="_blank">Politique des publications</a></li>
-    <li>
-      <a href="/assets/files/CanPath%20Intellectual%20Property%20Policy_v1.1_2020-07-22.pdf"
-         target="_blank">Politique de propriété intellectuelle</a></li>
-    <li>
-      <a href="/assets/files/CanPath%20Guidelines%20For%20Biosample%20Access_June2020.pdf"
-         target="_blank">Lignes directrices pour l'accès aux échantillons biologiques</a></li>
-    <li>
-      <a href="/assets/files/CanPath%20Biosample%20Feasiblity%20Review_June2020.pdf"
-         target="_blank">Revue de la faisabilité pour les échantillons biologiques</a></li>
-    <li>
-      <a href="/assets/files/CanPath%20Industry%20Research%20Policy_v1.0_2021-07-28-Fr.pdf"
-         target="_blank">Politique de recherche industrielle</a></li>
-  </ul>
-
-</#macro>
+  </#macro>
