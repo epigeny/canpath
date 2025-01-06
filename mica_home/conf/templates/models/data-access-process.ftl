@@ -239,28 +239,4 @@
   <h5 class="mt-5 mb-3">Need Support?</h5>
   <div>All CanPath access questions can be directed to the Access Office.</div>
   <p>Email: <a href="mailto:access@canpath.ca">access@canpath.ca</a></p>
-
-  <h5 class="mt-5 mb-3"><a id="access_policies" name="access_policies"></a>CanPath Policies &amp; Guidelines</h5>
-  <p>We strongly recommend that you consult these prior to submitting an&nbsp;Access Application Form:</p>
-  <ul>
-    <li>
-      <a href="/assets/files/Access_Policy_v2.0_Approved_16Mar2022.pdf"
-         target="_blank">CanPath Access Policy</a></li>
-    <li>
-      <a href="/assets/files/CanPath%20Publications%20Policy_Approved%202020-Sep-23.pdf"
-         target="_blank">Publications Policy</a></li>
-    <li>
-      <a href="/assets/files/CanPath%20Intellectual%20Property%20Policy_v1.1_2020-07-22.pdf"
-         target="_blank">Intellectual Property Policy</a></li>
-    <li>
-      <a href="/assets/files/CanPath%20Guidelines%20For%20Biosample%20Access_June2020.pdf"
-         target="_blank">Guidelines for Biosample Access</a></li>
-    <li>
-      <a href="/assets/files/CanPath%20Biosample%20Feasiblity%20Review_June2020.pdf"
-         target="_blank">Biosample Feasibility Review</a></li>
-    <li>
-      <a href="/assets/files/CanPath%20Industry%20Research%20Policy_v1.0_2021-07-28.pdf"
-         target="_blank">Industry Research Policy</a></li>
-  </ul>
-
 </#macro>
