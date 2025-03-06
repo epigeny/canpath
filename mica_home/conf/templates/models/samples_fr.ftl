@@ -5,29 +5,29 @@
         <thead>
           <tr>
             <th scope="col">Type d'échantillon</th>
-            <th scope="col">Nombre de participants qui ont fourni des échantillons biologiques</th>
+            <th class="text-right" scope="col">Nombre de participants qui ont fourni des échantillons biologiques</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>SST: sérum</td>
-            <td>146,603</td>
+            <td class="text-right">146 603</td>
           </tr>
           <tr>
             <td>EDTA: plasma</td>
-            <td>146,078</td>
+            <td class="text-right">146 078</td>
           </tr>
           <tr>
             <td>EDTA: globules rouges</td>
-            <td>135,854</td>
+            <td class="text-right">135 854</td>
           </tr>
           <tr>
             <td>Urine</td>
-            <td>100,593</td>
+            <td class="text-right">100 593</td>
           </tr>
           <tr>
             <td>Matériel source d'ADN (*)</td>
-            <td>162,627</td>
+            <td class="text-right">162 627</td>
           </tr>
         </tbody>
       </table>
