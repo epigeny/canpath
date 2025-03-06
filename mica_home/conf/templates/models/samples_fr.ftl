@@ -5,7 +5,7 @@
         <thead>
           <tr>
             <th scope="col">Type d'échantillon</th>
-            <th class="text-right" style="width: 50%;" scope="col">Nombre de participants qui ont fourni des échantillons biologiques &dagger;</th>
+            <th class="text-right" style="width: 50%;" scope="col">Nombre de participants qui ont fourni des échantillons biologiques&nbsp;&dagger;</th>
           </tr>
         </thead>
         <tbody>
@@ -34,7 +34,7 @@
     </div>
 
     <p>* Extrait ou en attente d'extraction.</p>
-    <p>&dagger; Comptage des échantillons en date de décembre 2024.</p>
+    <p>&dagger; Nombre d'échantillons en décembre 2024.</p>
 
     <h5 class="mt-5 mb-3 border-bottom" style="border-bottom-width: thick !important">Aperçu des échantillons biologiques disponibles</h5>
     <p>Les dons d'échantillons biologiques ont été fournis peu après l'inscription ou lors de campagnes de collecte d'échantillons subséquentes. Les échantillons biologiques disponibles comprennent le sérum, le plasma, l'ADN, les globules rouges, le sang entier cryoconservé et les échantillons d'urine. L'heure depuis le dernier repas a été consignée au moment du don de sang. Les échantillons d'urine sont collectés à différents moments dans la journée. Si un participant était dans l'impossibilité de fournir un échantillon sanguin pour des raisons médicales ou géographiques, il a été tenté, dans la mesure du possible, d'obtenir un échantillon de salive ou une goutte de sang.</p>
