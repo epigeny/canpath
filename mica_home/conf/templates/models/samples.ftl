@@ -6,29 +6,29 @@
       <thead>
         <tr>
           <th scope="col">Sample type</th>
-          <th scope="col">Number of participants who provided biosamples</th>
+          <th class="text-right" scope="col">Number of participants who provided biosamples</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>SST: serum</td>
-          <td>146,603</td>
+          <td class="text-right">146,603</td>
         </tr>
         <tr>
           <td>EDTA: plasma</td>
-          <td>146,078</td>
+          <td class="text-right">146,078</td>
         </tr>
         <tr>
-          <td>EDTA: RBC</td>
-          <td>135,854</td>
+          <td>EDTA: red blood cells</td>
+          <td class="text-right">135,854</td>
         </tr>
         <tr>
           <td>Urine</td>
-          <td>100,593</td>
+          <td class="text-right">100,593</td>
         </tr>
         <tr>
           <td>DNA source material (*)</td>
-          <td>162,627</td>
+          <td class="text-right">162,627</td>
         </tr>
       </tbody>
     </table>
