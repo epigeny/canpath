@@ -5,7 +5,7 @@
         <thead>
           <tr>
             <th scope="col">Type d'échantillon</th>
-            <th class="text-right" scope="col">Nombre de participants qui ont fourni des échantillons biologiques</th>
+            <th class="text-right" style="width: 50%;" scope="col">Nombre de participants qui ont fourni des échantillons biologiques</th>
           </tr>
         </thead>
         <tbody>

@@ -6,7 +6,7 @@
       <thead>
         <tr>
           <th scope="col">Sample type</th>
-          <th class="text-right" scope="col">Number of participants who provided biosamples</th>
+          <th class="text-right"  style="width: 50%;" scope="col">Number of participants who provided biosamples</th>
         </tr>
       </thead>
       <tbody>
