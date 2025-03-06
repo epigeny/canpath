@@ -4,34 +4,37 @@
       <table class="table table-striped col-xs-12 col-lg-6">
         <thead>
           <tr>
+            <th scope="col">Type d'échantillon</th>
             <th scope="col">Nombre de participants qui ont fourni des échantillons biologiques</th>
-            <th scope="col">Total</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Sang veineux</td>
-            <td>145 760</td>
+            <td>SST: sérum</td>
+            <td>146,603</td>
+          </tr>
+          <tr>
+            <td>EDTA: plasma</td>
+            <td>146,078</td>
+          </tr>
+          <tr>
+            <td>EDTA: globules rouges</td>
+            <td>135,854</td>
           </tr>
           <tr>
             <td>Urine</td>
-            <td>99 500</td>
+            <td>100,593</td>
           </tr>
           <tr>
-            <td>Taches de sang</td>
-            <td>10 642</td>
-          </tr>
-          <tr>
-            <td>Salive</td>
-            <td>18 799</td>
-          </tr>
-          <tr>
-            <td>Matériel source d'ADN</td>
-            <td>159 266</td>
+            <td>Matériel source d'ADN (*)</td>
+            <td>162,627</td>
           </tr>
         </tbody>
       </table>
     </div>
+
+    <p>* Il est possible de demander de l'ADN et non le matériel d'origine.  Une partie des échantillons a déjà été extraite.</p>
+
     <h5 class="mt-5 mb-3 border-bottom" style="border-bottom-width: thick !important">Aperçu des échantillons biologiques disponibles</h5>
     <p>Les dons d'échantillons biologiques ont été fournis peu après l'inscription ou lors de campagnes de collecte d'échantillons subséquentes. Les échantillons biologiques disponibles comprennent le sérum, le plasma, l'ADN, les globules rouges, le sang entier cryoconservé et les échantillons d'urine. L'heure depuis le dernier repas a été consignée au moment du don de sang. Les échantillons d'urine sont collectés à différents moments dans la journée. Si un participant était dans l'impossibilité de fournir un échantillon sanguin pour des raisons médicales ou géographiques, il a été tenté, dans la mesure du possible, d'obtenir un échantillon de salive ou une goutte de sang.</p>
     <h5 class="mt-5 mb-3 border-bottom" style="border-bottom-width: thick !important">Collecte des échantillons biologiques</h5>

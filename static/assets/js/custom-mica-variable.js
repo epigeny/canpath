@@ -246,7 +246,7 @@ const makeSummary = function(showHarmonizedVariableSummarySelector) {
           <td>${summary.n === 0 ? '-' : numberFormatter.format(summary.mean.toFixed(2))}</td>
           <td>${summary.n === 0 ? '-' : numberFormatter.format(summary.stdDeviation.toFixed(2))}</td>
           <td>${data.n === 0 ? '-' : numberFormatter.format(data.n)}<p class="text-muted text-small">(${numberFormatter.format((100 * data.n / data.total).toFixed(2))}%)</p></td>
-          ${missingTotals.length === 0 ? '-' : missingTotals} // adds TDs
+          ${missingTotals.length === 0 ? '<td>-</td>' : missingTotals} // adds TDs
           <td>${data.total === 0 ? '-' : numberFormatter.format(data.total)}</td>
         </tr>
       `);

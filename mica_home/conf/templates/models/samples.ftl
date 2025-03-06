@@ -5,37 +5,36 @@
     <table class="table table-striped col-xs-12 col-lg-6">
       <thead>
         <tr>
-          <th scope="col">Number of participants who provided biosample</th>
-          <th scope="col">Total</th>
+          <th scope="col">Sample type</th>
+          <th scope="col">Number of participants who provided biosamples</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Venous blood</td>
-          <td>145,760</td>
+          <td>SST: serum</td>
+          <td>146,603</td>
+        </tr>
+        <tr>
+          <td>EDTA: plasma</td>
+          <td>146,078</td>
+        </tr>
+        <tr>
+          <td>EDTA: RBC</td>
+          <td>135,854</td>
         </tr>
         <tr>
           <td>Urine</td>
-          <td>99,500</td>
+          <td>100,593</td>
         </tr>
         <tr>
-          <td>Blood Spots</td>
-          <td>10,642</td>
-        </tr>
-        <tr>
-          <td>Saliva</td>
-          <td>18,799</td>
-        </tr>
-        <tr>
-          <td>DNA source material</td>
-          <td>159,266</td>
+          <td>DNA source material (*)</td>
+          <td>162,627</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-
-
+  <p>* DNA and not the source material can be requested.  A portion of the samples have already been extracted.</p>
 
   <h5 class="mt-5 mb-3 border-bottom" style="border-bottom-width: thick !important">Overview of Available Biological Samples</h5>
   <p>Biological samples were donated near the time of enrollment or during a subsequent sample collection campaign. Biological samples available for access include serum, plasma, DNA, red blood cells, cryo-preserved whole blood, and urine samples. When participant donated a sample to CanPath, a sample donation questionnaire about the physical state of the participant at the time of donation that may influence markers in the blood and/or urine was administered. The time since last meal was recorded at the time of blood donation.  Urine samples were collected at a random time of day. If a participant was unable to provide a blood sample due to medical or geographical reasons, a saliva sample or blood spot was sought whenever possible.</p>
