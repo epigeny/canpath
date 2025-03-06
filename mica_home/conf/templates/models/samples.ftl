@@ -6,7 +6,7 @@
       <thead>
         <tr>
           <th scope="col">Sample type</th>
-          <th class="text-right"  style="width: 50%;" scope="col">Number of participants who provided biosamples</th>
+          <th class="text-right"  style="width: 50%;" scope="col">Number of participants who provided biosamples&nbsp;&dagger;</th>
         </tr>
       </thead>
       <tbody>
@@ -27,14 +27,15 @@
           <td class="text-right">100,593</td>
         </tr>
         <tr>
-          <td>DNA source material (*)</td>
+          <td>DNA*</td>
           <td class="text-right">162,627</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <p>* DNA and not the source material can be requested.  A portion of the samples have already been extracted.</p>
+  <p>* Extracted or pending extraction.</p>
+  <p>&dagger; Sample counts as of December 2024.</p>
 
   <h5 class="mt-5 mb-3 border-bottom" style="border-bottom-width: thick !important">Overview of Available Biological Samples</h5>
   <p>Biological samples were donated near the time of enrollment or during a subsequent sample collection campaign. Biological samples available for access include serum, plasma, DNA, red blood cells, cryo-preserved whole blood, and urine samples. When participant donated a sample to CanPath, a sample donation questionnaire about the physical state of the participant at the time of donation that may influence markers in the blood and/or urine was administered. The time since last meal was recorded at the time of blood donation.  Urine samples were collected at a random time of day. If a participant was unable to provide a blood sample due to medical or geographical reasons, a saliva sample or blood spot was sought whenever possible.</p>
