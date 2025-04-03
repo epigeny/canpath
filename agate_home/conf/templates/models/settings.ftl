@@ -12,6 +12,7 @@
 
 <!-- Mica portal -->
 <#assign portalUrl = "http://localhost:8082"/>
+<#assign portalLink = "${config.portalUrl!contextPath}"/>
 
 <!-- Search -->
 <#assign defaultSearchState = "#lists?type=variables"/>
