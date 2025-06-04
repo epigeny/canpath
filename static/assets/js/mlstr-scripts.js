@@ -241,7 +241,7 @@ class MlstrStudyTablePopoverFactory {
     let colName = title;
 
     if (study.description) {
-      const description = marked(localizedString(study.description));
+      const description = marked.parse(localizedString(study.description));
       colName =
           '<a class="text-decoration-none" style="cursor: help;" href="javascript:void(0)" ' +
           'data-type="description" ' +
@@ -371,7 +371,7 @@ Vue.filter("localize-string", (input) => {
 });
 
 Vue.filter("markdown", (input) => {
-  return marked(input);
+  return marked.parse(input);
 });
 
 Vue.filter("localize-number", (input) => {
