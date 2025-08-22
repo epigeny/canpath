@@ -95,7 +95,7 @@
 
             <ul>
               <li>The Applicant is a bona fide researcher (i.e. evidence that the researcher has relevant experience and qualifications);</li>
-              <li>The research project is in conformity with both the Guiding Principles of CanPath and the informed consents signed by the Research Participants (see Sections 2 and 4a of the <a href="#access_policies">CanPath Access Policy</a>);</li>
+              <li>The research project is in conformity with both the Guiding Principles of CanPath and the informed consents signed by the Research Participants (see Sections 2 and 4a of the <a href="https://canpath.ca/policies/" target="_blank">CanPath Access Policy</a>);</li>
               <li>The application has passed administrative completeness review and feasibility assesment phases.</li>
             </ul>
 
@@ -168,7 +168,7 @@
             </p>
 
             <p>
-              As noted in the <a href="#access_policies">CanPath Access Policy</a>, the following criteria are used to determine if applications qualify for an Expedited Review:
+              As noted in the <a href="https://canpath.ca/policies/" target="_blank">CanPath Access Policy</a>, the following criteria are used to determine if applications qualify for an Expedited Review:
             </p>
 
             <ul>
@@ -192,7 +192,7 @@
         <div id="collapseFive" class="collapse" data-parent="#accessProcessAccordion">
           <div class="card-body">
             <p>
-              As noted in the <a href="#access_policies">CanPath Access Policy</a>, Access Applications meeting <strong>any of the following criteria</strong> will require a Full Access Committee Review:
+              As noted in the <a href="https://canpath.ca/policies/" target="_blank">CanPath Access Policy</a>, Access Applications meeting <strong>any of the following criteria</strong> will require a Full Access Committee Review:
             </p>
 
             <ul>
