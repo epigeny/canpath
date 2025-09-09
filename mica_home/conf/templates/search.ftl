@@ -147,7 +147,7 @@
                                   <i class="fas fa-cart-plus"></i> <@message "sets.cart.add-to-cart"/></button>
                               </#if>
                           <#else>
-                            <a href="${contextPath}/signin?redirect=${contextPath}/search" class="btn btn-sm btn-info" title="<@message "sets.cart.signin-to-add-to-cart"/>">
+                            <a id="cart-add-redirect" href="${contextPath}/signin?redirect=${contextPath}/search" class="btn btn-sm btn-info" title="<@message "sets.cart.signin-to-add-to-cart"/>">
                               <i class="fas fa-cart-plus"></i> <@message "sets.cart.add-to-cart"/></a>
                           </#if>
                       </#if>

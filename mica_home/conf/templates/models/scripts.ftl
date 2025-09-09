@@ -89,6 +89,20 @@
     }
   }
 
+  class MlstrUrlHelper {
+    static updateAnchorRedirect(elementId) {
+      const anchor = document.querySelector(elementId);
+      if (anchor) {
+        const href = anchor.getAttribute('href');
+        if (href.search(/redirect=/)) {
+          const location = window.location;
+          const redirect = location.pathname + encodeURIComponent(location.hash);
+          anchor.setAttribute('href', href.replace(/(redirect=).*/, "$1"+redirect));
+        }
+      }
+    }
+  }
+
   const MlstrTranslations = {
     "all": "<@message "all"/>",
     "variables": "<@message "variables"/>",

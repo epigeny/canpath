@@ -1087,6 +1087,8 @@ class TableFixedHeaderUtility {
         EventBus.$emit(EVENTS.QUERY_TYPE_SELECTION, { bucket });
       },
       onResult(payload) {
+        MlstrUrlHelper.updateAnchorRedirect('#cart-add-redirect');
+        
         this.display = DISPLAYS.LISTS;
         const data = payload.response;
         this.counts = {
