@@ -1088,7 +1088,7 @@ class TableFixedHeaderUtility {
       },
       onResult(payload) {
         MlstrUrlHelper.updateAnchorRedirect('#cart-add-redirect');
-        
+
         this.display = DISPLAYS.LISTS;
         const data = payload.response;
         this.counts = {
@@ -1381,7 +1381,7 @@ class TableFixedHeaderUtility {
             targetQueries.push(`${contextPath}/ws/taxonomies/_filter?target=${target.name}`);
           }
 
-          return axios.all(targetQueries.map(query => axios.get(query))).then(axios.spread((...responses) => {
+          return TaxonomyHelper.getTargetTaxonomies(this.targets).then(axios.spread((...responses) => {
             responses.forEach((response) => {
               for (let taxo of response.data) {
                 TaxonomyHelper.newInstance().sortVocabulariesTerms(taxo);
