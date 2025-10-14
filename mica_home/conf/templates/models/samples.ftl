@@ -49,6 +49,12 @@
   <p>Blood and urine samples are stored at -80<sup>o</sup>C or at -190<sup>o</sup>C. DNA is stored at -20<sup>o</sup>C or colder. Oragene™ saliva samples are stored at ambient temperature as per the manufacturer's suggested storage.</p>
   <h5 class="mt-5 mb-3 border-bottom" style="border-bottom-width: thick !important">Legacy Biological Samples</h5>
   <p>A portion of each participant's biological sample is reserved for Legacy.  Studies requiring access to Legacy biological samples will require further evaluation as they represent the last available amount for a given biological sample.  Such studies must be unable to use other biological samples within the biobank and are of exceptional scientific merit and cannot be answered using another readily available resource.</p>
+  <h5 class="mt-5 mb-3 border-bottom" style="border-bottom-width: thick !important">Regional Samples and Cancer Cases</h5>
+  <p class="mb-0">Some CanPath regional cohorts provide additional information on available biosamples and their association with cancer cases through regional cancer data linkages. To learn more, please visit:</p>
+  <ul>
+    <li><a href="https://bcgpresearch.ca/data-and-biosamples/" target="_blank">BC Generations Project - Cancers Diagnosed in BC Generations Project Participants through Linkage to the BC Cancer Registry</a></li>
+    <li><a href="https://myatpresearch.ca/data-summary/"  target="_blank">Alberta’s Tomorrow Project - Data summary, including linkage with the Alberta Cancer Research Biobank</a></li>
+  </ul>
   <h5 class="mt-5 mb-3 border-bottom" style="border-bottom-width: thick !important">Applying for Biological Sample Access</h5>
   <p>Researchers interested in accessing CanPath biosamples are encouraged to review the biosample <a href="/assets/files/Guidelines%20For%20Biosample%20Access_March2020.pdf">guidelines</a> and <a href="/assets/files/Biosample%20Feasiblity%20Review_March2020.pdf">feasibility review criteria</a>, as well as to contact the Access Office with any questions prior to completing and submitting the CanPath Data and Material Access Application Form. The <a href="/assets/files/CanPath%20Biosample%20Order%20Request%20Workbook_v1.xls">CanPath Sample Order Request Workbook</a> is available to assist you with identifying your operational requirements and available support from CanPath.</p>
   <h5 class="mt-5 mb-3 border-bottom" style="border-bottom-width: thick !important">Biological Sample Release to Approved Users</h5>
