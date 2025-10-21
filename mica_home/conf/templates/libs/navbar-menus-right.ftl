@@ -59,9 +59,11 @@
     </li>
   <#else>
     <@staticTopMenus/>
+    <#if !showMaintenance>
     <li class="nav-item">
       <a class="nav-link pr-1" href="${contextPath}/signup"><@message "sign-up"/></a>
     </li>
+    </#if>
     <li class="nav-item">
       <span class="nav-link pl-0 pr-0">|</span>
     </li>

@@ -22,9 +22,11 @@
       </li>
     </ul>
   </li>
+  <#if !showMaintenance>
   <li id="dataAccessMenu" class="nav-item">
     <a href="${contextPath}/data-accesses" class="btn btn-warning"><@message "data-access"/> <i class="fas fa-arrow-circle-right"></i></a>
   </li>
+  </#if>
   <li id="searchMenu" class="nav-item <#if rc.requestUri?ends_with("/harmonization-search")>active</#if>">
     <a href="${contextPath}/harmonization-search${defaultSearchState}" class="nav-link"><@message "search"/></a>
   </li>

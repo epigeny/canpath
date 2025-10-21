@@ -80,4 +80,4 @@
 
 <#assign portalNavOverviewUrl = {"en" :"https://www.youtube.com/watch?v=cA-9SBqcAiQ&t=0", "fr": "https://www.youtube.com/watch?v=cA-9SBqcAiQ&t=0"}/>
 
-<#assign showMaintenance = false/>
+<#assign showMaintenance = true/>
