@@ -63,12 +63,12 @@
     <li class="nav-item">
       <a class="nav-link pr-1" href="${contextPath}/signup"><@message "sign-up"/></a>
     </li>
-    </#if>
     <li class="nav-item">
       <span class="nav-link pl-0 pr-0">|</span>
     </li>
     <li class="nav-item">
       <a class="nav-link pl-1" href="${contextPath}/signin<#if rc.requestUri != "/" && !rc.requestUri?contains("/forgot-password") && !rc.requestUri?contains("/just-registered") && !rc.requestUri?contains("/error") && !rc.requestUri?contains("/signin")>?redirect=${rc.requestUri}</#if>"><@message "sign-in"/></a>
     </li>
+    </#if>
   </#if>
 </#macro>
