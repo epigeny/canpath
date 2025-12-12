@@ -1,4 +1,4 @@
-<footer class="main-footer d-print-none">
+<footer class="app-footer d-print-none">
   <div class="container">
     <div class="row mt-4">
       <!-- About -->
@@ -41,7 +41,7 @@
       <!-- End Address -->
     </div>
   </div>
-  <div class="d-print-none float-right" style="height: 220px; margin-top: -200px;">
+  <div class="d-print-none float-end" style="height: 220px; margin-top: -200px;">
     <img alt="" src="/assets/images/footImg.png" style="width: 385px; height: 220px;">
   </div>
   <div class="clearfix"></div>

@@ -1,0 +1,66 @@
+/* Override AdminLTE 4 font with Gothic A1 */
+body {
+  font-family: 'Gothic A1', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* Logo size fix for custom two-navbar layout */
+.app-header .brand-image {
+  height: 33px;
+  max-height: 33px;
+  width: auto;
+}
+
+/* Ensure brand link doesn't add extra spacing */
+.app-header .navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* AdminLTE 4 small-box-footer link styles - override custom.css */
+.small-box a.small-box-footer,
+.small-box a.small-box-footer:hover {
+  text-decoration: none !important;
+}
+
+/* AdminLTE 4 small-box-footer link color on warning background - override custom.css */
+.small-box.bg-warning a.small-box-footer,
+.small-box.bg-warning a.small-box-footer:hover {
+  color: #1f2d3d !important;
+}
+
+.can_path_footer a {
+  text-decoration: none;
+  color: #1f2d3d !important;
+}
+
+
+/**
+  Footer
+*/
+
+
+/*
+ * Footer
+ * NOTE: Once Mica FTLs are upgraded to latest AdminLTE and BS, these can be removed
+ */
+
+footer.app-footer h1, footer.app-footer .h1, footer.app-footer h2, footer.app-footer .h2, footer.app-footer h3,
+footer.app-footer .h3, footer.app-footer h4, footer.app-footer .h4, footer.app-footer h5, footer.app-footer .h5,
+footer.app-footer h6, footer.app-footer .h6 {
+  font-weight: 600;
+  color: #002F65;
+}
+
+.app-footer {
+  padding: 0;
+}
+
+.can_path_footer {
+  background-color: #f8f8f8;
+}
+
+
+.content-header h1 {
+  font-size: 1.8rem !important;
+  margin-top: 0.5em !important;
+}
