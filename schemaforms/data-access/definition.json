@@ -186,6 +186,30 @@
       {
         "type": "section",
         "items": [
+          {
+            "type": "help",
+            "helpvalue": "<p>t(data-access-request.staff.request-led-by-post-doc)</p>"
+          },
+          {
+            "key": "requestLedByPostDoc",
+            "type": "radios-inline",
+            "notitle": true,
+            "titleMap": [
+              {
+                "value": true,
+                "name": "t(data-access-request.custom.response.affirmative)"
+              },
+              {
+                "value": false,
+                "name": "t(data-access-request.custom.response.negative)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "items": [
           "hasMembersAnotherInst",
           {
             "type": "help",
@@ -194,7 +218,7 @@
           },
           {
             "type": "section",
-            "htmlClass": "row",
+            "htmlClass": "row mb-3",
             "items": [
               {
                 "type": "section",
@@ -225,6 +249,11 @@
                 "condition": "model.hasMembersAnotherInst==true"
               }
             ]
+          },
+          {
+            "type": "textarea",
+            "key": "discloseConflictsInterest",
+            "condition": "model.hasMembersAnotherInst==true"
           }
         ]
       }
@@ -460,7 +489,7 @@
         "notitle": true,
         "rows": 10,
         "type": "textarea",
-        "wordLimit": 500,
+        "wordLimit": "0:500",
         "validationMessage": {
           "wordLimitError": "t(data-access-request.custom.500-word-limit-error)"
         }
@@ -479,7 +508,7 @@
         "rows": 10,
         "notitle": true,
         "type": "textarea",
-        "wordLimit": 500,
+        "wordLimit": "0:500",
         "validationMessage": {
           "wordLimitError": "t(data-access-request.custom.500-word-limit-error)"
         }
@@ -542,7 +571,8 @@
             "type": "textarea"
           }
         ]
-      }
+      },
+      "methodologyInvolvesMlAi"
     ]
   },
   {
@@ -697,6 +727,10 @@
                 "key": "noCostExtensionExplaination",
                 "type": "textarea",
                 "condition": "model.noCostExtension==true"
+              },
+              {
+                "key": "noCostExtensionDate",
+                "condition": "model.noCostExtension==true"
               }
             ]
           }
@@ -760,11 +794,7 @@
     "type": "fieldset",
     "items": [
       {
-        "type": "help",
-        "helpvalue": "<p class='mb-2'><strong>t(data-access-request.custom.I.K.documents-info)</strong></p>"
-      },
-      {
-        "key": "rdCV",
+        "key": "rdPeerReview",
         "type": "obibaFileUpload",
         "validationMessage": {
           "missingFiles": "t(missing-files)",
@@ -773,7 +803,11 @@
         "emptyMessage": "t(data-access-request.no-documents)"
       },
       {
-        "key": "rdPeerReview",
+        "type": "help",
+        "helpvalue": "<p class='mb-2'><strong>t(data-access-request.custom.I.K.documents-info)</strong></p>"
+      },
+      {
+        "key": "rdCV",
         "type": "obibaFileUpload",
         "validationMessage": {
           "missingFiles": "t(missing-files)",
@@ -1388,6 +1422,11 @@
           },
           {
             "type": "help",
+            "helpvalue": "<p class='help-block'>t( data-access-request.custom.variables.abide-canpath-policy)</p>"
+          },
+          "abideCanPathPolicy",
+          {
+            "type": "help",
             "helpvalue": "<strong>t(data-access-request.custom.I.N.always-included)</strong>"
           },
           {
@@ -1449,7 +1488,37 @@
       {
         "type": "help",
         "htmlClass": "help-block",
-        "helpvalue": "t(data-access-request.custom.I.N.always-included-info)"
+        "helpvalue": "t(data-access-request.custom.variables.regional-datasets-info)"
+      },
+      "accessRegionalDatasets",
+      {
+        "key": "regionalDatasets",
+        "type": "checkboxes",
+        "titleMap": [
+          {
+            "value": "ohs",
+            "name": "OHS"
+          },
+          {
+            "value": "bcgp",
+            "name": "BCGP"
+          },
+          {
+            "value": "atp",
+            "name": "ATP"
+          },
+          {
+            "value": "cag",
+            "name": "CaG"
+          },
+          {
+            "value": "atlantic_path",
+            "name": "Atlantic Path"
+          }
+        ],
+        "validationMessage": {
+          "400": "t(data-access-request.error.min-item-1)"
+        }
       },
       {
         "type": "help",

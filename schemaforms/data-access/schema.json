@@ -138,6 +138,10 @@
       "type": "boolean",
       "title": "t(data-access-request.members.has-member)"
     },
+    "discloseConflictsInterest": {
+      "type": "boolean",
+      "title": "t(data-access-request.members.disclose-conflicts-interest)"
+    },
     "membersAnotherInst": {
       "type": "array",
       "minItems": 1,
@@ -184,6 +188,9 @@
       "type": "boolean"
     },
     "requestThesisPostDoc": {
+      "type": "boolean"
+    },
+    "requestLedByPostDoc": {
       "type": "boolean"
     },
     "serviceProvider": {
@@ -339,6 +346,10 @@
     "designMethodology": {
       "type": "string"
     },
+    "methodologyInvolvesMlAi": {
+      "type": "boolean",
+      "title": "t(data-access-request.custom.involve-ml-ai)"
+    },
     "summary": {
       "type": "string"
     },
@@ -378,6 +389,11 @@
       "title": "t(data-access-request.funding.no-cost-extension-explaination)",
       "type": "string"
     },
+    "noCostExtensionDate": {
+      "title": "t(data-access-request.funding.no-cost-extension-date)",
+      "type": "string",
+      "format": "datepicker"
+    },
     "rebExpiryDate": {
       "title": "t(data-access-request.funding.reb-expiry-date)",
       "type": "string",
@@ -411,15 +427,15 @@
       "format": "obibaFiles",
       "title": "t(data-access-request.default.documents.reb-decision-letter)"
     },
-    "rdCV": {
-      "type": "object",
-      "format": "obibaFiles",
-      "title": "t(data-access-request.default.documents.cv)"
-    },
     "rdPeerReview": {
       "type": "object",
       "format": "obibaFiles",
       "title": "t(data-access-request.default.documents.peer-review)"
+    },
+    "rdCV": {
+      "type": "object",
+      "format": "obibaFiles",
+      "title": "t(data-access-request.default.documents.cv)"
     },
     "rdFundingProof": {
       "type": "object",
@@ -759,6 +775,29 @@
       "type": "object",
       "format": "obibaFiles",
       "title": "t(data-access-request.variables-list.variables-file)"
+    },
+    "abideCanPathPolicy": {
+      "type": "boolean",
+      "title": "t(data-access-request.custom.variables.abide-canpath-policy-confirm)"
+    },
+    "accessRegionalDatasets": {
+      "type": "boolean",
+      "title": "t(data-access-request.custom.variables.access-regional-datasets)"
+    },
+    "regionalDatasets": {
+      "type": "array",
+      "title": "t(data-access-request.custom.variables.regional-datasets)",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "ohs",
+          "bcgp",
+          "atp",
+          "cag",
+          "atlantic_path"
+        ]
+      },
+      "default": []
     },
     "dsBlHealthRiskFactorQuestionnaire": {
       "title": "t(data-access-request.variables-list.dsBlHealthRiskFactorQuestionnaire)",
