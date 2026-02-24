@@ -6,7 +6,10 @@
         "type": "help",
         "helpvalue": "<h2 class='text-center'>t(data-access-amendment.custom.form-title)</h2>"
       },
-      { "type": "help", "helpvalue": "<hr>" },
+      {
+        "type": "help",
+        "helpvalue": "<hr>"
+      },
       {
         "key": "titleResearchProject",
         "readonly": true,
@@ -31,7 +34,10 @@
         ],
         "condition": "model.infoDarModification"
       },
-      { "type": "help", "helpvalue": "<hr>" },
+      {
+        "type": "help",
+        "helpvalue": "<hr>"
+      },
       {
         "type": "section",
         "items": [
@@ -46,18 +52,25 @@
               {
                 "type": "section",
                 "htmlClass": "col-md-12",
-                "items": ["startResearchProjectTimeTable"]
+                "items": [
+                  "startResearchProjectTimeTable"
+                ]
               },
               {
                 "type": "section",
                 "htmlClass": "col-md-12",
-                "items": ["endResearchProjectTimeTable"]
+                "items": [
+                  "endResearchProjectTimeTable"
+                ]
               }
             ]
           }
         ]
       },
-      { "type": "help", "helpvalue": "<hr>" },
+      {
+        "type": "help",
+        "helpvalue": "<hr>"
+      },
       {
         "type": "section",
         "items": [
@@ -65,12 +78,18 @@
             "key": "unanticipatedEventChangeRequestAddendum",
             "type": "textarea"
           },
-          { "key": "currentStateProjectDescription", "type": "textarea" },
+          {
+            "key": "currentStateProjectDescription",
+            "type": "textarea"
+          },
           {
             "key": "requestedChangesApprovedProtocolDescription",
             "type": "textarea"
           },
-          { "key": "reasonsRelatedRequestDescription", "type": "textarea" }
+          {
+            "key": "reasonsRelatedRequestDescription",
+            "type": "textarea"
+          }
         ]
       }
     ]
