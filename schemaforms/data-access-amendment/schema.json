@@ -1,6 +1,9 @@
 {
   "type": "object",
   "properties": {
+    "institution": {
+      "type": "string"
+    },
     "infoDarModification": {
       "title": "t(data-access-amendment.custom.info-dar-modification)",
       "type": "boolean",

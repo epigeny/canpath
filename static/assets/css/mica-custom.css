@@ -336,3 +336,17 @@ dl.striped>dd {
   width: 30rem;
   max-width: none;
 }
+
+.visible-print {
+  display: none !important;
+}
+
+@media print {
+  .visible-print {
+    display: block !important;
+  }
+  .hidden-print {
+    display: none !important;
+  }
+}
+
