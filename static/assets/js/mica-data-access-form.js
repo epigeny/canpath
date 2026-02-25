@@ -365,7 +365,7 @@ angular.module('formModule', ['schemaForm', 'hc.marked', 'angularMoment', 'schem
     $scope.model = formModel;
 
     const amdID = window.location.pathname.split('/').slice(-1)[0];
-    const darId = amdID.replace(/-.*/, '');
+    const darId = amdID.replace(/-A\d+$/, '');
 
     $http.get(MicaService.normalizeUrl(`/ws/data-access-request/${darId}/model`), {
       headers: { 'Accept': 'application/json' }
