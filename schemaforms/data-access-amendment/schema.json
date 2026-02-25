@@ -1,9 +1,6 @@
 {
   "type": "object",
   "properties": {
-    "institution": {
-      "type": "string"
-    },
     "infoDarModification": {
       "title": "t(data-access-amendment.custom.info-dar-modification)",
       "type": "boolean",
@@ -58,10 +55,6 @@
       "type": "string",
       "format": "datepicker"
     },
-    "unanticipatedEventChangeRequestAddendum": {
-      "title": "t(data-access-amendment.custom.unanticipated-event-change-request-addendum)",
-      "type": "string"
-    },
     "currentStateProjectDescription": {
       "title": "t(data-access-amendment.custom.current-state-project-description)",
       "type": "string"
@@ -73,6 +66,87 @@
     "reasonsRelatedRequestDescription": {
       "title": "t(data-access-amendment.custom.reasons-related-request-description)",
       "type": "string"
+    },
+    "institution": {
+      "type": "string"
+    },
+    "remainsAffiliated": {
+      "type": "boolean"
+    },
+    "newInstitution": {
+      "type": "string",
+      "title": "t(data-access-amendment.custom.new-institution)"
+    },
+    "newRepresentative": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "t(data-access-request.default.name)",
+          "type": "string"
+        },
+        "position": {
+          "title": "t(data-access-request.default.position)",
+          "type": "string"
+        },
+        "email": {
+          "title": "t(data-access-request.default.institution-email)",
+          "type": "string",
+          "pattern": "^\\S+@\\S+$",
+          "validationMessage": {
+            "202": "t(data-access-request.default.email-validation-message)"
+          }
+        },
+        "mailingAddress": {
+          "title": "t(data-access-request.default.address)",
+          "type": "string"
+        },
+        "phone": {
+          "title": "t(data-access-request.default.phone)",
+          "type": "string"
+        }
+      }
+    },
+    "staff": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "t(data-access-request.default.name)",
+            "type": "string",
+            "required": true
+          },
+          "position": {
+            "title": "t(data-access-request.default.position)",
+            "type": "string",
+            "required": true
+          },
+          "email": {
+            "title": "t(data-access-request.default.email)",
+            "type": "string",
+            "pattern": "^\\S+@\\S+$",
+            "required": true,
+            "validationMessage": {
+              "202": "t(data-access-request.default.email-validation-message)"
+            }
+          },
+          "role": {
+            "title": "t(data-access-request.custom.research-project-role)",
+            "type": "string",
+            "required": true
+          },
+          "institution": {
+            "title": "t(data-access-request.custom.principal-institution)",
+            "type": "string",
+            "required": true
+          },
+          "remove": {
+            "type": "boolean",
+            "title": "t(data-access-amendment.custom.remove-member)"
+          }
+        }
+      }
     }
   },
   "required": [
@@ -80,6 +154,7 @@
     "unanticipatedEventChangeRequestAddendum",
     "currentStateProjectDescription",
     "requestedChangesApprovedProtocolDescription",
-    "reasonsRelatedRequestDescription"
+    "reasonsRelatedRequestDescription",
+    "remainsAffiliated"
   ]
 }

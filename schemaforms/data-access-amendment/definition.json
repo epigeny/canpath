@@ -72,12 +72,60 @@
         "helpvalue": "<hr>"
       },
       {
+        "key": "institution",
+        "readonly": true,
+        "title": "I remain affiliated with",
+        "labelHtmlClass": "font-weight-bold mr-2 mb-0 mt-0",
+        "fieldHtmlClass": "border-0 bg-transparent shadow-none p-0 font-weight-bold w-auto",
+        "htmlClass": "d-flex align-items-center mb-0"
+      },
+      {
+        "key": "remainsAffiliated",
+        "type": "radios-inline",
+        "notitle": true,
+        "htmlClass": "mt-0",
+        "titleMap": [
+          {
+            "value": true,
+            "name": "t(data-access-request.custom.response.affirmative)"
+          },
+          {
+            "value": false,
+            "name": "t(data-access-request.custom.response.negative)"
+          }
+        ]
+      },
+      {
         "type": "section",
+        "htmlClass": "border p-3 mb-3",
+        "condition": "model.remainsAffiliated !== true",
         "items": [
           {
-            "key": "unanticipatedEventChangeRequestAddendum",
-            "type": "textarea"
+            "type": "help",
+            "helpvalue": "<p class='help-block mb-2'>t(data-access-amendment.custom.new-institution-title)</p>"
           },
+          "newInstitution",
+          {
+            "type": "section",
+            "items": [
+              {
+                "key": "newRepresentative",
+                "notitle": true,
+                "items": [
+                  "newRepresentative.name",
+                  "newRepresentative.position",
+                  "newRepresentative.email",
+                  "newRepresentative.phone",
+                  "newRepresentative.mailingAddress"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "items": [
           {
             "key": "currentStateProjectDescription",
             "type": "textarea"
@@ -89,6 +137,42 @@
           {
             "key": "reasonsRelatedRequestDescription",
             "type": "textarea"
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "condition": "model.staff && model.staff.length > 0",
+        "htmlClass": "row",
+        "items": [
+          {
+            "type": "section",
+            "htmlClass": "col-xs-6",
+            "items": [
+              {
+                "key": "staff",
+                "add": null,
+                "remove": null,
+                "notitle": true,
+                "items": [
+                  {
+                    "key": "staff[].remove"
+                  },
+                  {
+                    "key": "staff[].name",
+                    "readonly": true
+                  },
+                  {
+                    "key": "staff[].role",
+                    "readonly": true
+                  },
+                  {
+                    "key": "staff[].institution",
+                    "readonly": true
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
