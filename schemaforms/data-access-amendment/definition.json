@@ -98,16 +98,23 @@
       {
         "type": "section",
         "htmlClass": "border p-3 mb-3",
-        "condition": "model.remainsAffiliated !== true",
+        "condition": "model.remainsAffiliated === false",
         "items": [
           {
             "type": "help",
-            "helpvalue": "<p class='help-block mb-2'>t(data-access-amendment.custom.new-institution-title)</p>"
+            "helpvalue": "<p class='h5 mb-3'>t(data-access-amendment.custom.new-institution-title)</p>"
           },
-          "newInstitution",
+          {
+            "key": "newInstitution",
+            "required": true
+          },
           {
             "type": "section",
             "items": [
+              {
+                "type": "help",
+                "helpvalue": "<p class='h5 mb-3'>t(data-access-amendment.custom.new-representative-section)</p>"
+              },
               {
                 "key": "newRepresentative",
                 "notitle": true,

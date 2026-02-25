@@ -104,7 +104,13 @@
           "title": "t(data-access-request.default.phone)",
           "type": "string"
         }
-      }
+      },
+      "required": [
+        "name",
+        "institution",
+        "position",
+        "email"
+      ]
     },
     "staff": {
       "type": "array",
