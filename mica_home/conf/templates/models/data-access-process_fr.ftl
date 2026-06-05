@@ -231,7 +231,7 @@
           <div class="card-body">
             <p>
               CanPath a <a href="https://canpath.ca/fr/frais-de-recouvrement-des-couts-dacces-fr/" target="_blank">un modèle de recouvrement des coûts</a> adapté aux différents budgets des stagiaires, des chercheurs en début de carrière et des chercheurs établis.
-              Les candidats sont invités à remplir le <a href="https://canpath.ca/wp-content/uploads/2020/08/CanPath-Request-for-LoS-Form-1.docx" target="_blank">formulaire d’estimation des coûts</a> et à le soumettre via <a href="mailto:access@canpath.ca">access@canpath.ca</a>.
+              Les candidats sont invités à remplir le <a href="https://canpath.ca/wp-content/uploads/2026/04/CanPath-Inquiry-form-17April2026.pdf" target="_blank">formulaire d'enquête</a> et à le soumettre via <a href="mailto:access@canpath.ca">access@canpath.ca</a>.
             </p>
           </div>
         </div>

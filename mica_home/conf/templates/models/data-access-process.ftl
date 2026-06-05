@@ -228,7 +228,7 @@
           <div class="card-body">
             <p>
               CanPath has a <a href="https://canpath.ca/canpath-cost-recovery-access-fees/" target="_blank">cost recovery access fees model</a> suited to the different budgets of trainees, early-career researchers, and established researchers.
-              Applicants are invited to complete a <a href="https://canpath.ca/wp-content/uploads/2020/08/CanPath-Request-for-LoS-Form-1.docx" target="_blank">Cost Estimate Form</a> and submit by email to <a href="mailto:access@canpath.ca">access@canpath.ca</a>.
+              Applicants are invited to complete a <a href="https://canpath.ca/wp-content/uploads/2026/04/CanPath-Inquiry-form-17April2026.pdf" target="_blank">Inquiry Form</a> and submit by email to <a href="mailto:access@canpath.ca">access@canpath.ca</a>.
             </p>
           </div>
         </div>
